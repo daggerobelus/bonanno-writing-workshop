@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonanno Writing Workshop | Academic Tutoring and Professional Consultations</title>
+    <meta name="description" content="Private writing tutoring for high school, college, and graduate students. Academic tutoring, college application essays, and writing consultations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ── */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 48px;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            padding: 100px 48px 80px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-logo {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 48px;
+        }
+
+        .hero .tagline {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #444;
+            max-width: 520px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            background: #1a1a1a;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #b8953e;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1a1a1a;
+            border: 1.5px solid #1a1a1a;
+        }
+
+        .btn-outline:hover {
+            background: #b8953e;
+            color: #fff;
+            border-color: #b8953e;
+        }
+
+        /* ── Sections ── */
+        section {
+            padding: 80px 48px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-full {
+            max-width: 100%;
+            border-top: 1px solid #eee;
+        }
+
+        .section-full-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #999;
+            margin-bottom: 32px;
+        }
+
+        section p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .headshot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
+            margin: 0 auto 32px;
+        }
+
+        /* ── Problem ── */
+        .problem {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 80px 48px;
+            max-width: 100%;
+        }
+
+        .problem-inner {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .problem p {
+            font-size: 24px;
+            font-weight: 300;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .problem .answer {
+            font-size: 24px;
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        /* ── Services ── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 12px;
+        }
+
+        .service-item {
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .service-item h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            border-left: 3px solid #c9a84c;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* ── Pricing ── */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin: 12px 0 24px;
+            border: 1px solid #eee;
+        }
+
+        .price-card {
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .price-card:first-child {
+            border-right: 1px solid #eee;
+        }
+
+        .price-card .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .price-card .amount {
+            font-size: 42px;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .price-card .unit {
+            font-size: 14px;
+            color: #999;
+            font-weight: 300;
+        }
+
+        .pricing .note {
+            font-size: 15px;
+            color: #888;
+            font-weight: 300;
+        }
+
+        /* ── How It Works ── */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 12px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid #c9a84c;
+            color: #c9a84c;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .step h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* ── Reviews ── */
+        .review {
+            padding: 32px 0 32px 24px;
+            border-bottom: 1px solid #eee;
+            border-left: 3px solid #c9a84c;
+        }
+
+        .review:last-of-type {
+            border-bottom: none;
+        }
+
+        .review p {
+            font-size: 18px;
+            font-weight: 300;
+            font-style: italic;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .review .attribution {
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 400;
+            color: #999;
+        }
+
+        /* ── Workshops ── */
+        .workshops-section {
+            max-width: 100%;
+            background: #f5f5f3;
+            text-align: center;
+            padding: 80px 48px;
+        }
+
+        .workshops-section .workshops-inner {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .workshops-section p {
+            margin-bottom: 28px;
+        }
+
+        /* ── Credentials ── */
+        .credentials-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credentials-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            font-weight: 300;
+            color: #444;
+        }
+
+        .credentials-list li:last-child {
+            border-bottom: none;
+        }
+
+        .credentials-list li strong {
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        /* ── Contact ── */
+        .contact {
+            background: #fafafa;
+            max-width: 100%;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-inner {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            text-align: center;
+        }
+
+        .contact > p {
+            text-align: center;
+        }
+
+        .contact .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 36px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            border: 1px solid #ddd;
+            background: #fff;
+            color: #1a1a1a;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #c9a84c;
+        }
+
+        .form-group textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .contact .btn {
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            margin-top: 8px;
+            padding: 16px 36px;
+        }
+
+        .email-fallback {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 14px;
+            color: #999;
+            font-weight: 300;
+        }
+
+        .email-fallback a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .email-fallback a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 48px 48px 32px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-logo {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #bbb;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            nav {
+                padding: 16px 24px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 80px 24px 60px;
+            }
+
+            .hero .tagline {
+                font-size: 19px;
+            }
+
+            section {
+                padding: 60px 24px;
+            }
+
+            .problem {
+                padding: 60px 24px;
+            }
+
+            .problem p,
+            .problem .answer {
+                font-size: 20px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-card:first-child {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .workshops-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer {
+                padding: 40px 24px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ── Hero ── -->
+<header class="hero">
+    <img src="logo.png" alt="Bonanno Writing Workshop — Academic Tutoring and Professional Consultations" class="hero-logo">
+    <p class="tagline">Writing is a skill that needs to be practiced and cultivated. I teach students concrete skills that demystify the writing process.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+</header>
+
+<!-- ── About ── -->
+<section id="about">
+    <h2>About</h2>
+    <img src="headshot.jpg" alt="Sarah Bonanno" class="headshot">
+    <p>I'm Sarah Bonanno. Since 2019, I have taught hundreds of students ranging from first-year college students in humanities classes to high school students working on their college admissions essays. I am also proud of my work with advanced students and professionals, including PhD students, new teachers in training, and business professionals.</p>
+    <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. I don't edit your student's work for them — I teach them how to see their own writing more clearly so they can revise with intention.</p>
+    <p>I tutor over Zoom and am available for in-person sessions in the NYC area.</p>
+</section>
+
+<!-- ── Services ── -->
+<section class="section-full" id="services">
+    <div class="section-full-inner">
+        <h2>What I Offer</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Academic Tutoring</h3>
+                <p>I work with students on understanding their humanities assignments, including strategies for reading and annotating texts, analyzing literature, and preparing for classroom discussion or on-demand writing exercises. I typically work with high school, college, and graduate students.</p>
+            </div>
+            <div class="service-item">
+                <h3>Writing Tutoring</h3>
+                <p>I help students at all stages of the writing process for any academic course — brainstorming, first draft review, revised draft review, and copy editing. I work with students on how to understand assignments and prompts, tackle rough drafts, revise effectively, and proofread. I also ask students to perform small writing tasks on-demand, such as drafting a topic sentence or thesis statement, to practice the skills discussed.</p>
+            </div>
+            <div class="service-item">
+                <h3>College Application Essays</h3>
+                <p>Dedicated support for Common App essays, supplements, scholarship essays, and statements of purpose — from brainstorming through final polish.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Pricing ── -->
+<section id="pricing" class="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-grid">
+        <div class="price-card">
+            <div class="label">Academic Tutoring</div>
+            <div class="amount">$150</div>
+            <div class="unit">per hour</div>
+        </div>
+        <div class="price-card">
+            <div class="label">College Applications</div>
+            <div class="amount">$180</div>
+            <div class="unit">per hour</div>
+        </div>
+    </div>
+    <p class="note">Package discounts available. Reach out for details.</p>
+</section>
+
+<!-- ── How It Works ── -->
+<section class="section-full">
+    <div class="section-full-inner">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <h3>Reach Out</h3>
+                <p>Tell me about your student and what they need help with.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <h3>Get a Welcome Packet</h3>
+                <p>I'll respond within 24 hours with full details on pricing, services, and policies.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <h3>Book Your First Session</h3>
+                <p>We'll find a time that works and get started over Zoom. In-person sessions available in the NYC area.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Reviews ── -->
+<section class="section-full">
+    <div class="section-full-inner">
+        <h2>What Families Say</h2>
+
+        <div class="review">
+            <p>"Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient and prepared. I highly recommend her!"</p>
+            <span class="attribution">— Parent Review</span>
+        </div>
+
+        <!-- Add more reviews here as you get them -->
+        <!--
+        <div class="review">
+            <p>"[Your next review goes here.]"</p>
+            <span class="attribution">— Parent Name</span>
+        </div>
+        -->
+    </div>
+</section>
+
+<!-- ── Group Workshops ── -->
+<section class="workshops-section">
+    <div class="workshops-inner">
+        <h2>Group Workshops</h2>
+        <p>I also run small, hands-on writing workshops on topics like thesis statements and literary analysis — available on Outschool.</p>
+        <a href="https://outschool.com/teachers/Sarah-Bonanno?usid=Nqg2P9dx&signup=true&authTrigger=follow_teacher&utm_campaign=share_leader_link" class="btn-outline btn" target="_blank" rel="noopener">Browse on Outschool</a>
+    </div>
+</section>
+
+<!-- ── Credentials ── -->
+<section class="section-full">
+    <div class="section-full-inner">
+        <h2>Credentials</h2>
+        <ul class="credentials-list">
+            <li><strong>PhD Student</strong> — CUNY Graduate Center, English Department</li>
+            <li><strong>Graduate Teaching Fellow</strong> — Brooklyn College, English Department</li>
+            <li><strong>Former Assistant Director</strong> — University of Chicago Writing Program</li>
+            <li><strong>MA</strong> — University of Chicago, Theater and Performance Studies</li>
+            <li><strong>BA</strong> — Bowdoin College, English (cum laude, departmental honors)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ── Contact ── -->
+<section class="contact" id="contact">
+    <div class="contact-inner">
+        <h2>Get in Touch</h2>
+        <p class="intro">Interested in working together? Send me a message and I'll get back to you within 24 hours with a Welcome Packet that includes full pricing, services, and policies.</p>
+
+        <!-- REPLACE: Sign up at formspree.io, create a form, and replace YOUR_FORM_ID below -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <p class="email-fallback">Or email me directly at <a href="mailto:sarahcbonanno@gmail.com">sarahcbonanno@gmail.com</a></p>
+    </div>
+</section>
+
+<footer>
+    <img src="logo-footer.png" alt="Sarah Bonanno" class="footer-logo">
+    <p>&copy; 2026 Bonanno Writing Workshop</p>
+</footer>
+
+</body>
+</html>
