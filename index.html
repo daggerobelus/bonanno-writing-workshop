@@ -7,6 +7,7 @@
     <meta name="description" content="Private writing tutoring for high school, college, and graduate students. Academic tutoring, college application essays, and writing consultations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -291,9 +292,9 @@
 
         /* ── Problem ── */
         .problem {
-            background: linear-gradient(170deg, #c9a84c 0%, #b8953e 50%, #a68530 100%);
+            background: #000000;
+            background-image: radial-gradient(ellipse at center, #000000 30%, #1f2b3e 100%);
             padding: 100px 48px;
-            box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         .problem-inner {
@@ -315,7 +316,7 @@
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 28px;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--gold);
         }
 
         /* ── Services ── */
@@ -520,6 +521,9 @@
 
         .reviews-inner .section-label {
             color: var(--gold);
+            font-size: 15px;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
         }
 
         .review {
@@ -528,23 +532,42 @@
         }
 
         .review-quote {
+            display: none;
+        }
+
+        .review-body {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .quote-mark {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 120px;
-            line-height: 0.6;
-            color: var(--gold);
-            display: block;
-            margin-bottom: 16px;
-            opacity: 0.6;
+            font-size: 64px;
+            color: rgba(255, 255, 255, 0.15);
+            font-style: normal;
+            line-height: 1;
+        }
+
+        .quote-mark-open {
+            align-self: start;
+            margin-top: -8px;
+        }
+
+        .quote-mark-close {
+            align-self: end;
+            margin-bottom: 24px;
         }
 
         .review p {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 400;
             font-style: italic;
             color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-            margin-bottom: 24px;
+            line-height: 1.6;
+            margin-bottom: 16px;
         }
 
         .review .attribution {
@@ -997,9 +1020,14 @@
         <h2 class="section-label">What Families Say</h2>
 
         <div class="review">
-            <span class="review-quote">&ldquo;</span>
-            <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
-            <span class="attribution">Parent Review</span>
+            <div class="review-body">
+                <span class="quote-mark quote-mark-open">&ldquo;</span>
+                <div>
+                    <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
+                    <span class="attribution">Parent Review</span>
+                </div>
+                <span class="quote-mark quote-mark-close">&rdquo;</span>
+            </div>
         </div>
     </div>
 </section>
