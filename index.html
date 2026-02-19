@@ -35,17 +35,35 @@
             color: #1a1a1a;
             background: var(--white);
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "kern" 1, "liga" 1;
+            hanging-punctuation: first allow-end last;
+        }
+
+        * {
+            text-wrap: pretty;
+        }
+
+        h1, h2, h3, h4 {
+            text-wrap: balance;
+        }
+
+        p, li, blockquote, dd {
+            orphans: 2;
+            widows: 2;
+            overflow-wrap: break-word;
         }
 
         /* ── Nav ── */
         .nav-wrapper {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             z-index: 100;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
         nav {
@@ -108,11 +126,10 @@
             max-width: 720px;
             margin: 0 auto;
             text-align: center;
-            background: var(--cream);
         }
 
         .hero-wrapper {
-            background: var(--cream);
+            background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%);
         }
 
         .hero h1 {
@@ -121,7 +138,7 @@
             font-weight: 400;
             font-style: italic;
             line-height: 1.3;
-            color: #1a1a1a;
+            color: var(--white);
             margin-bottom: 24px;
         }
 
@@ -129,9 +146,16 @@
             font-size: 17px;
             font-weight: 300;
             line-height: 1.8;
-            color: #555;
+            color: rgba(255, 255, 255, 0.7);
             max-width: 480px;
             margin: 0 auto 48px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -143,43 +167,70 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none;
+            border-radius: 6px;
             background: var(--navy);
             color: var(--white);
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(28, 42, 58, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .btn:hover {
             background: var(--gold-hover);
+            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
         }
 
         .btn-gold {
-            background: var(--gold);
+            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-hover) 100%);
             color: var(--white);
+            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.25), 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .btn-gold:hover {
-            background: var(--gold-hover);
+            background: linear-gradient(180deg, var(--gold-hover) 0%, #a8832f 100%);
+            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.35), 0 2px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
         }
 
         .btn-dark {
-            background: var(--navy);
+            background: linear-gradient(180deg, #243548 0%, var(--navy) 100%);
             color: var(--white);
         }
 
         .btn-dark:hover {
-            background: var(--gold-hover);
+            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-hover) 100%);
+            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-hero {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.85);
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: none;
+        }
+
+        .btn-outline-hero:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: none;
+            transform: translateY(-1px);
         }
 
         .btn-outline-light {
             background: transparent;
             color: var(--navy);
             border: 1.5px solid var(--navy);
+            box-shadow: none;
         }
 
         .btn-outline-light:hover {
-            background: var(--gold);
+            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-hover) 100%);
             color: var(--white);
             border-color: var(--gold);
+            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
         }
 
         /* ── Section Labels ── */
@@ -218,10 +269,16 @@
             object-fit: cover;
             object-position: center 35%;
             display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 12px 40px rgba(0, 0, 0, 0.06);
         }
 
         .about-text .section-label {
             margin-bottom: 24px;
+            margin-top: 0;
+        }
+
+        .about-image {
+            margin-top: 56px;
         }
 
         .about-text p {
@@ -234,8 +291,9 @@
 
         /* ── Problem ── */
         .problem {
-            background: var(--navy);
+            background: linear-gradient(170deg, #c9a84c 0%, #b8953e 50%, #a68530 100%);
             padding: 100px 48px;
+            box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         .problem-inner {
@@ -248,7 +306,7 @@
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 28px;
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.9);
             line-height: 1.7;
             margin-bottom: 24px;
         }
@@ -256,8 +314,8 @@
         .problem .answer {
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 28px;
-            font-weight: 500;
-            color: var(--gold);
+            font-weight: 600;
+            color: var(--navy);
         }
 
         /* ── Services ── */
@@ -267,36 +325,54 @@
         }
 
         .services-inner {
-            max-width: 800px;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
             margin-top: 12px;
         }
 
         .service-card {
-            background: var(--white);
-            padding: 36px 32px;
-            border-left: 4px solid var(--gold);
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.03);
+            background: linear-gradient(180deg, var(--white) 0%, #fafaf8 100%);
+            padding: 24px 28px 36px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 8px 30px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .service-card .service-num {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 56px;
+            font-weight: 600;
+            line-height: 1;
+            color: var(--gold);
+            opacity: 0.25;
+            margin-bottom: 16px;
+            display: block;
         }
 
         .service-card h3 {
-            font-size: 20px;
-            font-weight: 500;
+            font-size: 19px;
+            font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .service-card p {
             font-size: 16px;
             font-weight: 300;
             color: #555;
-            line-height: 1.8;
+            line-height: 1.85;
             margin-bottom: 0;
         }
 
@@ -322,8 +398,14 @@
             padding: 44px 24px;
             text-align: center;
             border-top: 4px solid var(--gold);
-            background: var(--white);
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.03);
+            background: linear-gradient(180deg, var(--white) 0%, #fafafa 100%);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 8px 30px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .price-card:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 12px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
         }
 
         .price-card .label {
@@ -398,13 +480,14 @@
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: var(--gold);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
             color: var(--white);
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
+            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .step h3 {
@@ -424,8 +507,9 @@
 
         /* ── Reviews ── */
         .reviews-section {
-            background: var(--navy);
+            background: linear-gradient(170deg, #1e2f42 0%, #1c2a3a 40%, #172331 100%);
             padding: 100px 48px;
+            box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.15);
         }
 
         .reviews-inner {
@@ -475,7 +559,7 @@
 
         /* ── Workshops ── */
         .workshops-section {
-            background: var(--warm-accent);
+            background: linear-gradient(180deg, var(--warm-accent) 0%, #e8dfc9 100%);
             text-align: center;
             padding: 100px 48px;
         }
@@ -500,30 +584,46 @@
         }
 
         .credentials-inner {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .credentials-list {
-            list-style: none;
-            padding: 0;
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
         }
 
-        .credentials-list li {
-            padding: 16px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 16px;
-            font-weight: 300;
-            color: #444;
+        .credentials-col h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
+            font-weight: 500;
+            font-style: italic;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ddd;
         }
 
-        .credentials-list li:last-child {
-            border-bottom: none;
+        .credential-item {
+            margin-bottom: 24px;
         }
 
-        .credentials-list li strong {
+        .credential-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .credential-item .credential-title {
+            font-size: 17px;
             font-weight: 500;
             color: #1a1a1a;
+            margin-bottom: 2px;
+        }
+
+        .credential-item .credential-org {
+            font-size: 15px;
+            font-weight: 300;
+            color: #666;
         }
 
         /* ── Contact ── */
@@ -575,12 +675,14 @@
             background: var(--white);
             color: #1a1a1a;
             outline: none;
-            transition: border-color 0.2s;
+            transition: border-color 0.25s, box-shadow 0.25s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12), 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         .form-group textarea {
@@ -617,7 +719,7 @@
 
         /* ── Footer ── */
         footer {
-            background: var(--navy);
+            background: linear-gradient(180deg, #1e2f42 0%, #151f2b 100%);
             text-align: center;
             padding: 56px 48px 40px;
         }
@@ -710,6 +812,10 @@
                 padding: 60px 24px;
             }
 
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
             .service-card {
                 padding: 28px 24px;
             }
@@ -755,6 +861,11 @@
                 padding: 60px 24px;
             }
 
+            .credentials-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
             .contact {
                 padding: 60px 24px;
             }
@@ -785,7 +896,7 @@
     <header class="hero">
         <h1>Demystify the Writing Process</h1>
         <p class="subtitle">Private writing tutoring for high school, college, and graduate students. I teach concrete skills so students can write with clarity and confidence.</p>
-        <a href="#contact" class="btn btn-dark">Get in Touch</a>
+        <a href="#contact" class="btn btn-gold">Get in Touch</a>
     </header>
 </div>
 
@@ -807,8 +918,8 @@
 <!-- ── Problem ── -->
 <section class="problem">
     <div class="problem-inner">
-        <p>Your student stares at the blank page. The assignment is due tomorrow. They know what they want to say — they just can't seem to get it down.</p>
-        <span class="answer">I can help.</span>
+        <p>Clear thinking leads to clear writing. I teach students a repeatable process — how to read critically, build an argument, and revise with purpose. The result isn't just a better paper. It's a stronger thinker.</p>
+        <span class="answer">That's what I teach.</span>
     </div>
 </section>
 
@@ -818,14 +929,17 @@
         <h2 class="section-label">What I Offer</h2>
         <div class="services-grid">
             <div class="service-card">
+                <span class="service-num">01</span>
                 <h3>Academic Tutoring</h3>
                 <p>I work with students on understanding their humanities assignments, including strategies for reading and annotating texts, analyzing literature, and preparing for classroom discussion or on-demand writing exercises. I typically work with high school, college, and graduate students.</p>
             </div>
             <div class="service-card">
+                <span class="service-num">02</span>
                 <h3>Writing Tutoring</h3>
-                <p>I help students at all stages of the writing process for any academic course — brainstorming, first draft review, revised draft review, and copy editing. I work with students on how to understand assignments and prompts, tackle rough drafts, revise effectively, and proofread. I also ask students to perform small writing tasks on-demand, such as drafting a topic sentence or thesis statement, to practice the skills discussed.</p>
+                <p>I help students at all stages of the writing process for any academic course — brainstorming, first draft review, revised draft review, and copyediting. I work with students on how to understand assignments and prompts, tackle rough drafts, revise effectively, and proofread. I also ask students to perform small writing tasks on-demand, such as drafting a topic sentence or thesis statement, to practice the skills discussed.</p>
             </div>
             <div class="service-card">
+                <span class="service-num">03</span>
                 <h3>College Application Essays</h3>
                 <p>Dedicated support for Common App essays, supplements, scholarship essays, and statements of purpose — from brainstorming through final polish.</p>
             </div>
@@ -844,7 +958,7 @@
                 <div class="unit">per hour</div>
             </div>
             <div class="price-card">
-                <div class="label">College Applications</div>
+                <div class="label">Application Essays</div>
                 <div class="amount">$180</div>
                 <div class="unit">per hour</div>
             </div>
@@ -884,7 +998,7 @@
 
         <div class="review">
             <span class="review-quote">&ldquo;</span>
-            <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient and prepared. I highly recommend her!</p>
+            <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
             <span class="attribution">Parent Review</span>
         </div>
     </div>
@@ -903,13 +1017,34 @@
 <section class="credentials-section">
     <div class="credentials-inner">
         <h2 class="section-label">Credentials</h2>
-        <ul class="credentials-list">
-            <li><strong>PhD Student</strong> — CUNY Graduate Center, English Department</li>
-            <li><strong>Graduate Teaching Fellow</strong> — Brooklyn College, English Department</li>
-            <li><strong>Former Assistant Director</strong> — University of Chicago Writing Program</li>
-            <li><strong>MA</strong> — University of Chicago, Theater and Performance Studies</li>
-            <li><strong>BA</strong> — Bowdoin College, English (cum laude, departmental honors)</li>
-        </ul>
+        <div class="credentials-grid">
+            <div class="credentials-col">
+                <h3>Education</h3>
+                <div class="credential-item">
+                    <div class="credential-title">PhD Student, English</div>
+                    <div class="credential-org">CUNY Graduate Center</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-title">MA, Theater and Performance Studies</div>
+                    <div class="credential-org">University of Chicago</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-title">BA, English</div>
+                    <div class="credential-org">Bowdoin College — cum laude, departmental honors</div>
+                </div>
+            </div>
+            <div class="credentials-col">
+                <h3>Experience</h3>
+                <div class="credential-item">
+                    <div class="credential-title">Graduate Teaching Fellow</div>
+                    <div class="credential-org">Brooklyn College, English Department</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-title">Assistant Director</div>
+                    <div class="credential-org">University of Chicago Writing Program</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
