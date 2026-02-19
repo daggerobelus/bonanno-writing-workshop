@@ -133,6 +133,30 @@
             background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%);
         }
 
+        .hero-mark {
+            height: 56px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.15;
+            margin-bottom: 32px;
+        }
+
+        .hero-frame {
+            border: 1px solid rgba(201, 168, 76, 0.25);
+            padding: 48px 56px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .hero-ornament {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
         .hero h1 {
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 52px;
@@ -243,6 +267,25 @@
             letter-spacing: 3px;
             color: var(--gold);
             margin-bottom: 32px;
+        }
+
+        /* ── Hairlines ── */
+        .hairline {
+            display: block;
+            width: 48px;
+            height: 1px;
+            background: var(--gold);
+            border: none;
+            margin: 16px 0;
+        }
+
+        .hairline-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hairline-white {
+            background: var(--gold);
         }
 
         /* ── About ── */
@@ -451,51 +494,70 @@
         }
 
         .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
             margin-top: 12px;
             position: relative;
+            max-width: 560px;
         }
 
         .steps::before {
             content: '';
             position: absolute;
             top: 22px;
-            left: calc(16.67% + 20px);
-            right: calc(16.67% + 20px);
-            height: 2px;
+            bottom: 22px;
+            left: 21px;
+            width: 2px;
             background: var(--gold);
-            opacity: 0.3;
+            opacity: 0.25;
+        }
+
+        .step:last-child::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 44px;
+            bottom: 0;
+            width: 44px;
+            background: var(--light-gray);
+            z-index: 0;
         }
 
         .step {
-            text-align: center;
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            padding: 16px 0;
             position: relative;
         }
 
         .step-number {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             width: 44px;
             height: 44px;
+            min-width: 44px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
             color: var(--white);
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 20px;
             position: relative;
             z-index: 1;
             box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
+        .step-content {
+            padding-top: 8px;
+        }
+
         .step h3 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 500;
             color: #1a1a1a;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .step p {
@@ -523,7 +585,7 @@
             color: var(--gold);
             font-size: 15px;
             letter-spacing: 4px;
-            margin-bottom: 40px;
+            margin-bottom: 12px;
         }
 
         .review {
@@ -856,12 +918,7 @@
             }
 
             .steps {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .steps::before {
-                display: none;
+                max-width: 100%;
             }
 
             .reviews-section {
@@ -918,6 +975,7 @@
 <div class="hero-wrapper">
     <header class="hero">
         <h1>Demystify the Writing Process</h1>
+        <hr class="hairline hairline-center hairline-white">
         <p class="subtitle">Private writing tutoring for high school, college, and graduate students. I teach concrete skills so students can write with clarity and confidence.</p>
         <a href="#contact" class="btn btn-gold">Get in Touch</a>
     </header>
@@ -997,18 +1055,24 @@
         <div class="steps">
             <div class="step">
                 <span class="step-number">1</span>
-                <h3>Reach Out</h3>
-                <p>Tell me about your student and what they need help with.</p>
+                <div class="step-content">
+                    <h3>Reach Out</h3>
+                    <p>Tell me about your student and what they need help with.</p>
+                </div>
             </div>
             <div class="step">
                 <span class="step-number">2</span>
-                <h3>Get a Welcome Packet</h3>
-                <p>I'll respond within 24 hours with full details on pricing, services, and policies.</p>
+                <div class="step-content">
+                    <h3>Get a Welcome Packet</h3>
+                    <p>I'll respond within 24 hours with full details on pricing, services, and policies.</p>
+                </div>
             </div>
             <div class="step">
                 <span class="step-number">3</span>
-                <h3>Book Your First Session</h3>
-                <p>We'll find a time that works and get started over Zoom. In-person sessions available in the NYC area.</p>
+                <div class="step-content">
+                    <h3>Book Your First Session</h3>
+                    <p>We'll find a time that works and get started over Zoom. In-person sessions available in the NYC area.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -1018,12 +1082,14 @@
 <section class="reviews-section">
     <div class="reviews-inner">
         <h2 class="section-label">What Families Say</h2>
+        <hr class="hairline hairline-center hairline-white">
 
         <div class="review">
             <div class="review-body">
                 <span class="quote-mark quote-mark-open">&ldquo;</span>
                 <div>
                     <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
+                    <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
                     <span class="attribution">Parent Review</span>
                 </div>
                 <span class="quote-mark quote-mark-close">&rdquo;</span>
@@ -1105,6 +1171,7 @@
 
 <footer>
     <img src="mark-transparent.png" alt="Bonanno Writing Workshop" class="footer-logo">
+    <hr class="hairline hairline-center hairline-white" style="margin: 20px auto;">
     <p>&copy; 2026 Bonanno Writing Workshop</p>
 </footer>
 
