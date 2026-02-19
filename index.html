@@ -7,134 +7,224 @@
     <meta name="description" content="Private writing tutoring for high school, college, and graduate students. Academic tutoring, college application essays, and writing consultations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --navy: #1c2a3a;
+            --gold: #c9a84c;
+            --gold-hover: #b8953e;
+            --cream: #f8f5ef;
+            --warm-accent: #efe8d8;
+            --white: #ffffff;
+            --light-gray: #f5f5f3;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.7;
             color: #1a1a1a;
-            background: #fff;
+            background: var(--white);
             -webkit-font-smoothing: antialiased;
         }
 
         /* ── Nav ── */
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 48px;
-            border-bottom: 1px solid #eee;
+        .nav-wrapper {
             position: sticky;
             top: 0;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             z-index: 100;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-brand img {
+            height: 28px;
+            width: auto;
+        }
+
+        .nav-brand span {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--navy);
         }
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 36px;
             list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #666;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.3px;
+            color: #555;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             transition: color 0.2s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
         }
 
         .nav-links a:hover {
             color: #1a1a1a;
+            border-bottom-color: var(--gold);
         }
 
         /* ── Hero ── */
         .hero {
-            padding: 100px 48px 80px;
-            max-width: 800px;
+            padding: 120px 48px 100px;
+            max-width: 720px;
             margin: 0 auto;
             text-align: center;
+            background: var(--cream);
         }
 
-        .hero-logo {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto 48px;
+        .hero-wrapper {
+            background: var(--cream);
         }
 
-        .hero .tagline {
-            font-size: 20px;
+        .hero h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 52px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.3;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+        }
+
+        .hero .subtitle {
+            font-size: 17px;
             font-weight: 300;
             line-height: 1.8;
-            color: #444;
-            max-width: 520px;
-            margin: 0 auto 40px;
+            color: #555;
+            max-width: 480px;
+            margin: 0 auto 48px;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 36px;
+            padding: 16px 40px;
             font-family: 'Inter', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
-            letter-spacing: 0.5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             text-decoration: none;
-            background: #1a1a1a;
-            color: #fff;
+            background: var(--navy);
+            color: var(--white);
             transition: all 0.2s ease;
         }
 
         .btn:hover {
-            background: #b8953e;
+            background: var(--gold-hover);
         }
 
-        .btn-outline {
+        .btn-gold {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-hover);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background: var(--gold-hover);
+        }
+
+        .btn-outline-light {
             background: transparent;
-            color: #1a1a1a;
-            border: 1.5px solid #1a1a1a;
+            color: var(--navy);
+            border: 1.5px solid var(--navy);
         }
 
-        .btn-outline:hover {
-            background: #b8953e;
-            color: #fff;
-            border-color: #b8953e;
+        .btn-outline-light:hover {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
         }
 
-        /* ── Sections ── */
-        section {
-            padding: 80px 48px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .section-full {
-            max-width: 100%;
-            border-top: 1px solid #eee;
-        }
-
-        .section-full-inner {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section h2 {
+        /* ── Section Labels ── */
+        .section-label {
+            font-family: 'Inter', sans-serif;
             font-size: 13px;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: #999;
+            color: var(--gold);
             margin-bottom: 32px;
         }
 
-        section p {
+        /* ── About ── */
+        .about-section {
+            background: var(--white);
+            padding: 100px 48px;
+        }
+
+        .about-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .about-image {
+        }
+
+        .about-image .headshot {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
+        }
+
+        .about-text .section-label {
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
             font-size: 17px;
             font-weight: 300;
             color: #333;
@@ -142,22 +232,10 @@
             line-height: 1.8;
         }
 
-        .headshot {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 35%;
-            display: block;
-            margin: 0 auto 32px;
-        }
-
         /* ── Problem ── */
         .problem {
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            padding: 80px 48px;
-            max-width: 100%;
+            background: var(--navy);
+            padding: 100px 48px;
         }
 
         .problem-inner {
@@ -167,68 +245,85 @@
         }
 
         .problem p {
-            font-size: 24px;
-            font-weight: 300;
-            color: #444;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.7;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .problem .answer {
-            font-size: 24px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
             font-weight: 500;
-            color: #1a1a1a;
+            color: var(--gold);
         }
 
         /* ── Services ── */
+        .services-section {
+            background: var(--cream);
+            padding: 100px 48px;
+        }
+
+        .services-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 24px;
             margin-top: 12px;
         }
 
-        .service-item {
-            padding-bottom: 40px;
-            border-bottom: 1px solid #eee;
+        .service-card {
+            background: var(--white);
+            padding: 36px 32px;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.03);
         }
 
-        .service-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .service-item h3 {
+        .service-card h3 {
             font-size: 20px;
             font-weight: 500;
             color: #1a1a1a;
             margin-bottom: 12px;
-            padding-left: 16px;
-            border-left: 3px solid #c9a84c;
         }
 
-        .service-item p {
+        .service-card p {
             font-size: 16px;
+            font-weight: 300;
             color: #555;
+            line-height: 1.8;
             margin-bottom: 0;
         }
 
         /* ── Pricing ── */
+        .pricing-section {
+            background: var(--white);
+            padding: 100px 48px;
+        }
+
+        .pricing-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .pricing-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0;
+            gap: 24px;
             margin: 12px 0 24px;
-            border: 1px solid #eee;
         }
 
         .price-card {
-            padding: 40px 24px;
+            padding: 44px 24px;
             text-align: center;
-        }
-
-        .price-card:first-child {
-            border-right: 1px solid #eee;
+            border-top: 4px solid var(--gold);
+            background: var(--white);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.03);
         }
 
         .price-card .label {
@@ -237,14 +332,16 @@
             letter-spacing: 2px;
             color: #999;
             font-weight: 500;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .price-card .amount {
-            font-size: 42px;
-            font-weight: 300;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 52px;
+            font-weight: 500;
             color: #1a1a1a;
             margin-bottom: 4px;
+            line-height: 1;
         }
 
         .price-card .unit {
@@ -253,36 +350,61 @@
             font-weight: 300;
         }
 
-        .pricing .note {
+        .pricing-inner .note {
             font-size: 15px;
             color: #888;
             font-weight: 300;
         }
 
         /* ── How It Works ── */
+        .how-section {
+            background: var(--light-gray);
+            padding: 100px 48px;
+        }
+
+        .how-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 12px;
+            position: relative;
+        }
+
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 22px;
+            left: calc(16.67% + 20px);
+            right: calc(16.67% + 20px);
+            height: 2px;
+            background: var(--gold);
+            opacity: 0.3;
         }
 
         .step {
             text-align: center;
+            position: relative;
         }
 
         .step-number {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            border: 1.5px solid #c9a84c;
-            color: #c9a84c;
+            background: var(--gold);
+            color: var(--white);
             font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
 
         .step h3 {
@@ -295,42 +417,67 @@
         .step p {
             font-size: 15px;
             color: #666;
+            font-weight: 300;
+            line-height: 1.7;
             margin-bottom: 0;
         }
 
         /* ── Reviews ── */
-        .review {
-            padding: 32px 0 32px 24px;
-            border-bottom: 1px solid #eee;
-            border-left: 3px solid #c9a84c;
+        .reviews-section {
+            background: var(--navy);
+            padding: 100px 48px;
         }
 
-        .review:last-of-type {
-            border-bottom: none;
+        .reviews-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .reviews-inner .section-label {
+            color: var(--gold);
+        }
+
+        .review {
+            padding: 0;
+            border: none;
+        }
+
+        .review-quote {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 120px;
+            line-height: 0.6;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 16px;
+            opacity: 0.6;
         }
 
         .review p {
-            font-size: 18px;
-            font-weight: 300;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
             font-style: italic;
-            color: #333;
+            color: rgba(255, 255, 255, 0.9);
             line-height: 1.8;
-            margin-bottom: 12px;
+            margin-bottom: 24px;
         }
 
         .review .attribution {
+            font-family: 'Inter', sans-serif;
             font-style: normal;
-            font-size: 14px;
-            font-weight: 400;
-            color: #999;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
         }
 
         /* ── Workshops ── */
         .workshops-section {
-            max-width: 100%;
-            background: #f5f5f3;
+            background: var(--warm-accent);
             text-align: center;
-            padding: 80px 48px;
+            padding: 100px 48px;
         }
 
         .workshops-section .workshops-inner {
@@ -339,10 +486,24 @@
         }
 
         .workshops-section p {
-            margin-bottom: 28px;
+            font-size: 17px;
+            font-weight: 300;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 32px;
         }
 
         /* ── Credentials ── */
+        .credentials-section {
+            background: var(--white);
+            padding: 100px 48px;
+        }
+
+        .credentials-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .credentials-list {
             list-style: none;
             padding: 0;
@@ -367,9 +528,8 @@
 
         /* ── Contact ── */
         .contact {
-            background: #fafafa;
-            max-width: 100%;
-            border-top: 1px solid #eee;
+            background: var(--cream);
+            padding: 100px 48px;
         }
 
         .contact-inner {
@@ -377,11 +537,7 @@
             margin: 0 auto;
         }
 
-        .contact h2 {
-            text-align: center;
-        }
-
-        .contact > p {
+        .contact .section-label {
             text-align: center;
         }
 
@@ -390,6 +546,8 @@
             color: #666;
             margin-bottom: 36px;
             font-size: 16px;
+            font-weight: 300;
+            line-height: 1.8;
         }
 
         .form-group {
@@ -414,7 +572,7 @@
             font-size: 15px;
             font-weight: 300;
             border: 1px solid #ddd;
-            background: #fff;
+            background: var(--white);
             color: #1a1a1a;
             outline: none;
             transition: border-color 0.2s;
@@ -422,7 +580,7 @@
 
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #c9a84c;
+            border-color: var(--gold);
         }
 
         .form-group textarea {
@@ -459,30 +617,34 @@
 
         /* ── Footer ── */
         footer {
+            background: var(--navy);
             text-align: center;
-            padding: 48px 48px 32px;
-            border-top: 1px solid #eee;
+            padding: 56px 48px 40px;
         }
 
         .footer-logo {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
+            height: 40px;
+            width: auto;
             margin-bottom: 16px;
-            opacity: 0.6;
+            opacity: 0.7;
+            filter: brightness(0) invert(1);
         }
 
         footer p {
             font-size: 12px;
-            color: #bbb;
+            color: rgba(255, 255, 255, 0.4);
             font-weight: 300;
             letter-spacing: 0.5px;
         }
 
         /* ── Responsive ── */
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             nav {
-                padding: 16px 24px;
+                padding: 12px 24px;
+            }
+
+            .nav-mark {
+                height: 26px;
             }
 
             .nav-links {
@@ -490,19 +652,49 @@
             }
 
             .nav-links a {
-                font-size: 13px;
+                font-size: 11px;
+                letter-spacing: 1px;
             }
 
             .hero {
                 padding: 80px 24px 60px;
             }
 
-            .hero .tagline {
-                font-size: 19px;
+            .hero h1 {
+                font-size: 36px;
             }
 
-            section {
+            .nav-brand img {
+                height: 22px;
+            }
+
+            .nav-brand span {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            /* About stacks to single column */
+            .about-section {
                 padding: 60px 24px;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+
+            .about-image {
+                position: static;
+                display: flex;
+                justify-content: center;
+            }
+
+            .about-image .headshot {
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                aspect-ratio: auto;
             }
 
             .problem {
@@ -511,16 +703,27 @@
 
             .problem p,
             .problem .answer {
-                font-size: 20px;
+                font-size: 22px;
+            }
+
+            .services-section {
+                padding: 60px 24px;
+            }
+
+            .service-card {
+                padding: 28px 24px;
+            }
+
+            .pricing-section {
+                padding: 60px 24px;
             }
 
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
 
-            .price-card:first-child {
-                border-right: none;
-                border-bottom: 1px solid #eee;
+            .how-section {
+                padding: 60px 24px;
             }
 
             .steps {
@@ -528,9 +731,32 @@
                 gap: 32px;
             }
 
-            .workshops-inner {
-                flex-direction: column;
-                text-align: center;
+            .steps::before {
+                display: none;
+            }
+
+            .reviews-section {
+                padding: 60px 24px;
+            }
+
+            .review p {
+                font-size: 19px;
+            }
+
+            .review-quote {
+                font-size: 80px;
+            }
+
+            .workshops-section {
+                padding: 60px 24px;
+            }
+
+            .credentials-section {
+                padding: 60px 24px;
+            }
+
+            .contact {
+                padding: 60px 24px;
             }
 
             footer {
@@ -542,45 +768,64 @@
 <body>
 
 <!-- ── Nav ── -->
-<nav>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<div class="nav-wrapper">
+    <nav>
+        <a href="#" class="nav-brand"><img src="mark-transparent.png" alt=""><span>Bonanno Writing Workshop</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
 
 <!-- ── Hero ── -->
-<header class="hero">
-    <img src="logo.png" alt="Bonanno Writing Workshop — Academic Tutoring and Professional Consultations" class="hero-logo">
-    <p class="tagline">Writing is a skill that needs to be practiced and cultivated. I teach students concrete skills that demystify the writing process.</p>
-    <a href="#contact" class="btn">Get in Touch</a>
-</header>
+<div class="hero-wrapper">
+    <header class="hero">
+        <h1>Demystify the Writing Process</h1>
+        <p class="subtitle">Private writing tutoring for high school, college, and graduate students. I teach concrete skills so students can write with clarity and confidence.</p>
+        <a href="#contact" class="btn btn-dark">Get in Touch</a>
+    </header>
+</div>
 
 <!-- ── About ── -->
-<section id="about">
-    <h2>About</h2>
-    <img src="headshot.jpg" alt="Sarah Bonanno" class="headshot">
-    <p>I'm Sarah Bonanno. Since 2019, I have taught hundreds of students ranging from first-year college students in humanities classes to high school students working on their college admissions essays. I am also proud of my work with advanced students and professionals, including PhD students, new teachers in training, and business professionals.</p>
-    <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. I don't edit your student's work for them — I teach them how to see their own writing more clearly so they can revise with intention.</p>
-    <p>I tutor over Zoom and am available for in-person sessions in the NYC area.</p>
+<section class="about-section" id="about">
+    <div class="about-inner">
+        <div class="about-image">
+            <img src="headshot.jpg" alt="Sarah Bonanno" class="headshot">
+        </div>
+        <div class="about-text">
+            <h2 class="section-label">About</h2>
+            <p>I'm Sarah Bonanno. Since 2019, I have taught hundreds of students ranging from first-year college students in humanities classes to high school students working on their college admissions essays. I am also proud of my work with advanced students and professionals, including PhD students, new teachers in training, and business professionals.</p>
+            <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. I don't edit your student's work for them — I teach them how to see their own writing more clearly so they can revise with intention.</p>
+            <p>I tutor over Zoom and am available for in-person sessions in the NYC area.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── Problem ── -->
+<section class="problem">
+    <div class="problem-inner">
+        <p>Your student stares at the blank page. The assignment is due tomorrow. They know what they want to say — they just can't seem to get it down.</p>
+        <span class="answer">I can help.</span>
+    </div>
 </section>
 
 <!-- ── Services ── -->
-<section class="section-full" id="services">
-    <div class="section-full-inner">
-        <h2>What I Offer</h2>
+<section class="services-section" id="services">
+    <div class="services-inner">
+        <h2 class="section-label">What I Offer</h2>
         <div class="services-grid">
-            <div class="service-item">
+            <div class="service-card">
                 <h3>Academic Tutoring</h3>
                 <p>I work with students on understanding their humanities assignments, including strategies for reading and annotating texts, analyzing literature, and preparing for classroom discussion or on-demand writing exercises. I typically work with high school, college, and graduate students.</p>
             </div>
-            <div class="service-item">
+            <div class="service-card">
                 <h3>Writing Tutoring</h3>
                 <p>I help students at all stages of the writing process for any academic course — brainstorming, first draft review, revised draft review, and copy editing. I work with students on how to understand assignments and prompts, tackle rough drafts, revise effectively, and proofread. I also ask students to perform small writing tasks on-demand, such as drafting a topic sentence or thesis statement, to practice the skills discussed.</p>
             </div>
-            <div class="service-item">
+            <div class="service-card">
                 <h3>College Application Essays</h3>
                 <p>Dedicated support for Common App essays, supplements, scholarship essays, and statements of purpose — from brainstorming through final polish.</p>
             </div>
@@ -589,27 +834,29 @@
 </section>
 
 <!-- ── Pricing ── -->
-<section id="pricing" class="pricing">
-    <h2>Pricing</h2>
-    <div class="pricing-grid">
-        <div class="price-card">
-            <div class="label">Academic Tutoring</div>
-            <div class="amount">$150</div>
-            <div class="unit">per hour</div>
+<section class="pricing-section" id="pricing">
+    <div class="pricing-inner">
+        <h2 class="section-label">Pricing</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="label">Academic Tutoring</div>
+                <div class="amount">$150</div>
+                <div class="unit">per hour</div>
+            </div>
+            <div class="price-card">
+                <div class="label">College Applications</div>
+                <div class="amount">$180</div>
+                <div class="unit">per hour</div>
+            </div>
         </div>
-        <div class="price-card">
-            <div class="label">College Applications</div>
-            <div class="amount">$180</div>
-            <div class="unit">per hour</div>
-        </div>
+        <p class="note">Package discounts available. Reach out for details.</p>
     </div>
-    <p class="note">Package discounts available. Reach out for details.</p>
 </section>
 
 <!-- ── How It Works ── -->
-<section class="section-full">
-    <div class="section-full-inner">
-        <h2>How It Works</h2>
+<section class="how-section">
+    <div class="how-inner">
+        <h2 class="section-label">How It Works</h2>
         <div class="steps">
             <div class="step">
                 <span class="step-number">1</span>
@@ -631,38 +878,31 @@
 </section>
 
 <!-- ── Reviews ── -->
-<section class="section-full">
-    <div class="section-full-inner">
-        <h2>What Families Say</h2>
+<section class="reviews-section">
+    <div class="reviews-inner">
+        <h2 class="section-label">What Families Say</h2>
 
         <div class="review">
-            <p>"Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient and prepared. I highly recommend her!"</p>
-            <span class="attribution">— Parent Review</span>
+            <span class="review-quote">&ldquo;</span>
+            <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient and prepared. I highly recommend her!</p>
+            <span class="attribution">Parent Review</span>
         </div>
-
-        <!-- Add more reviews here as you get them -->
-        <!--
-        <div class="review">
-            <p>"[Your next review goes here.]"</p>
-            <span class="attribution">— Parent Name</span>
-        </div>
-        -->
     </div>
 </section>
 
 <!-- ── Group Workshops ── -->
 <section class="workshops-section">
     <div class="workshops-inner">
-        <h2>Group Workshops</h2>
+        <h2 class="section-label">Group Workshops</h2>
         <p>I also run small, hands-on writing workshops on topics like thesis statements and literary analysis — available on Outschool.</p>
-        <a href="https://outschool.com/teachers/Sarah-Bonanno?usid=Nqg2P9dx&signup=true&authTrigger=follow_teacher&utm_campaign=share_leader_link" class="btn-outline btn" target="_blank" rel="noopener">Browse on Outschool</a>
+        <a href="https://outschool.com/teachers/Sarah-Bonanno?usid=Nqg2P9dx&signup=true&authTrigger=follow_teacher&utm_campaign=share_leader_link" class="btn btn-outline-light" target="_blank" rel="noopener">Browse on Outschool</a>
     </div>
 </section>
 
 <!-- ── Credentials ── -->
-<section class="section-full">
-    <div class="section-full-inner">
-        <h2>Credentials</h2>
+<section class="credentials-section">
+    <div class="credentials-inner">
+        <h2 class="section-label">Credentials</h2>
         <ul class="credentials-list">
             <li><strong>PhD Student</strong> — CUNY Graduate Center, English Department</li>
             <li><strong>Graduate Teaching Fellow</strong> — Brooklyn College, English Department</li>
@@ -676,7 +916,7 @@
 <!-- ── Contact ── -->
 <section class="contact" id="contact">
     <div class="contact-inner">
-        <h2>Get in Touch</h2>
+        <h2 class="section-label">Get in Touch</h2>
         <p class="intro">Interested in working together? Send me a message and I'll get back to you within 24 hours with a Welcome Packet that includes full pricing, services, and policies.</p>
 
         <!-- REPLACE: Sign up at formspree.io, create a form, and replace YOUR_FORM_ID below -->
@@ -693,7 +933,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="btn btn-gold">Send Message</button>
         </form>
 
         <p class="email-fallback">Or email me directly at <a href="mailto:sarahcbonanno@gmail.com">sarahcbonanno@gmail.com</a></p>
@@ -701,7 +941,7 @@
 </section>
 
 <footer>
-    <img src="logo-footer.png" alt="Sarah Bonanno" class="footer-logo">
+    <img src="mark-transparent.png" alt="Bonanno Writing Workshop" class="footer-logo">
     <p>&copy; 2026 Bonanno Writing Workshop</p>
 </footer>
 
