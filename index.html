@@ -422,64 +422,385 @@
 
         /* ── Pricing ── */
         .pricing-section {
-            background: var(--white);
+            background: var(--light-gray);
             padding: 100px 48px;
         }
 
         .pricing-inner {
-            max-width: 800px;
+            max-width: 880px;
             margin: 0 auto;
+            text-align: center;
+        }
+
+        .pricing-inner .section-label {
+            margin-bottom: 16px;
+        }
+
+        .pricing-subtitle {
+            font-size: 17px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.8;
+            max-width: 480px;
+            margin: 0 auto 48px;
         }
 
         .pricing-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 12px 0 24px;
+            gap: 28px;
+            margin: 0 0 36px;
         }
 
         .price-card {
-            padding: 44px 24px;
+            padding: 40px 32px 36px;
             text-align: center;
-            border-top: 4px solid var(--gold);
-            background: linear-gradient(180deg, var(--white) 0%, #fafafa 100%);
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 8px 30px rgba(0, 0, 0, 0.05);
-            transition: box-shadow 0.25s ease, transform 0.25s ease;
+            border-radius: 12px;
+            background: var(--white);
+            border: 1.5px solid #e8e8e8;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03), 0 8px 30px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
         }
 
         .price-card:hover {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 12px 40px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+            border-color: #ddd;
+        }
+
+        .price-card-featured {
+            background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%);
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(28, 42, 58, 0.15), 0 16px 48px rgba(28, 42, 58, 0.2);
+        }
+
+        .price-card-featured:hover {
+            box-shadow: 0 8px 20px rgba(28, 42, 58, 0.2), 0 24px 60px rgba(28, 42, 58, 0.25);
+            border-color: transparent;
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.35);
         }
 
         .price-card .label {
             font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             color: #999;
             font-weight: 500;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .price-card-featured .label {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .consultation-banner {
+            background: var(--white);
+            border: 1.5px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 28px;
+            text-align: left;
+        }
+
+        .consultation-text {
+            flex: 1;
+        }
+
+        .consultation-text .consult-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .consultation-text .consult-desc {
+            font-size: 14px;
+            font-weight: 300;
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .consultation-banner .btn-consult {
+            white-space: nowrap;
+            flex-shrink: 0;
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--navy);
+            border: 1.5px solid var(--navy);
+            transition: all 0.25s ease;
+        }
+
+        .consultation-banner .btn-consult:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .price-card .amount-original {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #ccc;
+            text-decoration: line-through;
+            text-decoration-color: rgba(180, 60, 60, 0.4);
+            text-decoration-thickness: 1.5px;
+            line-height: 1;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+        .price-card .amount-original:empty {
+            height: 0;
+            margin: 0;
+        }
+
+        .price-card-featured .amount-original {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration-color: rgba(220, 100, 100, 0.45);
         }
 
         .price-card .amount {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 52px;
+            font-size: 60px;
             font-weight: 500;
             color: #1a1a1a;
             margin-bottom: 4px;
             line-height: 1;
         }
 
+        .price-card-featured .amount {
+            color: var(--white);
+        }
+
         .price-card .unit {
             font-size: 14px;
             color: #999;
             font-weight: 300;
+            margin-bottom: 8px;
         }
 
-        .pricing-inner .note {
-            font-size: 15px;
-            color: #888;
+        .price-card-featured .unit {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .plan-count {
+            font-weight: 400;
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .plan-toggle-btn.active .plan-count {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .price-card .divider {
+            width: 40px;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 0 auto 24px;
+        }
+
+        .price-card-featured .divider {
+            background: rgba(201, 168, 76, 0.35);
+        }
+
+        .price-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .price-features li {
+            font-size: 14.5px;
+            font-weight: 400;
+            color: #555;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .price-features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 16px;
+            height: 16px;
+            background: rgba(201, 168, 76, 0.15);
+            border-radius: 50%;
+        }
+
+        .price-features li::after {
+            content: '\2713';
+            position: absolute;
+            left: 3px;
+            top: 11px;
+            font-size: 11px;
+            color: var(--gold-hover);
+            font-weight: 700;
+        }
+
+        .price-card-featured .price-features li {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .price-card-featured .price-features li::before {
+            background: rgba(201, 168, 76, 0.2);
+        }
+
+        .price-card-featured .price-features li::after {
+            color: var(--gold);
+        }
+
+        .price-card .btn-card {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-card-outline {
+            background: transparent;
+            color: var(--navy);
+            border: 1.5px solid var(--navy);
+        }
+
+        .btn-card-outline:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-card-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            color: var(--white);
+            border: 1.5px solid transparent;
+            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
+        }
+
+        .btn-card-gold:hover {
+            box-shadow: 0 4px 16px rgba(201, 168, 76, 0.45);
+            transform: translateY(-1px);
+        }
+
+        .availability-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4caf7a;
+            box-shadow: 0 0 0 3px rgba(76, 175, 122, 0.2);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { box-shadow: 0 0 0 3px rgba(76, 175, 122, 0.2); }
+            50% { box-shadow: 0 0 0 6px rgba(76, 175, 122, 0.08); }
+        }
+
+        .availability-text {
+            font-size: 13px;
+            color: #aaa;
             font-weight: 300;
+        }
+
+        .availability-text strong {
+            color: #777;
+            font-weight: 500;
+        }
+
+        /* Plan toggle */
+        .plan-toggle {
+            display: inline-flex;
+            background: var(--white);
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 4px;
+            margin-bottom: 32px;
+        }
+
+        .plan-toggle-btn {
+            padding: 10px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #888;
+            background: transparent;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .plan-toggle-btn:hover {
+            color: #555;
+        }
+
+        .plan-toggle-btn.active {
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: 0 2px 8px rgba(28, 42, 58, 0.2);
+        }
+
+        .plan-toggle-btn .toggle-tag {
+            position: absolute;
+            top: -8px;
+            right: -4px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--gold);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .plan-toggle-btn.active .toggle-tag {
+            background: var(--gold);
         }
 
         /* ── How It Works ── */
@@ -911,6 +1232,19 @@
 
             .pricing-grid {
                 grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .plan-toggle-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+
+            .consultation-banner {
+                flex-direction: column;
+                text-align: center;
             }
 
             .how-section {
@@ -1032,19 +1366,75 @@
 <section class="pricing-section" id="pricing">
     <div class="pricing-inner">
         <h2 class="section-label">Pricing</h2>
+        <p class="pricing-subtitle">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
+
+        <div class="availability-banner">
+            <span class="availability-dot"></span>
+            <span class="availability-text">Currently accepting <strong>4 new students</strong> for Spring 2026</span>
+        </div>
+
+        <div class="plan-toggle">
+            <button class="plan-toggle-btn active" data-plan="session">Per Session</button>
+            <button class="plan-toggle-btn" data-plan="monthly">Monthly <span class="plan-count">(4)</span><span class="toggle-tag">Save 10%</span></button>
+            <button class="plan-toggle-btn" data-plan="semester">Semester <span class="plan-count">(16)</span><span class="toggle-tag">Save 20%</span></button>
+        </div>
+
         <div class="pricing-grid">
-            <div class="price-card">
+            <div class="price-card"
+                 data-price-session="$150"
+                 data-original-session=""
+                 data-unit-session="per session"
+                 data-price-monthly="$540"
+                 data-original-monthly="$600"
+                 data-unit-monthly="per month &middot; 4 sessions"
+                 data-price-semester="$1,920"
+                 data-original-semester="$2,400"
+                 data-unit-semester="per semester &middot; 16 sessions">
                 <div class="label">Academic Tutoring</div>
+                <div class="amount-original"></div>
                 <div class="amount">$150</div>
-                <div class="unit">per hour</div>
+                <div class="unit">per session</div>
+                <div class="divider"></div>
+                <ul class="price-features">
+                    <li>Reading & writing support for any course</li>
+                    <li>Essay brainstorming through final draft</li>
+                    <li>On-demand writing exercises in session</li>
+                    <li>High school through graduate level</li>
+                </ul>
+                <a href="#contact" class="btn-card btn-card-outline">Get in Touch</a>
             </div>
-            <div class="price-card">
+            <div class="price-card price-card-featured"
+                 data-price-session="$180"
+                 data-original-session=""
+                 data-unit-session="per session"
+                 data-price-monthly="$650"
+                 data-original-monthly="$720"
+                 data-unit-monthly="per month &middot; 4 sessions"
+                 data-price-semester="$2,300"
+                 data-original-semester="$2,880"
+                 data-unit-semester="per semester &middot; 16 sessions">
                 <div class="label">Application Essays</div>
+                <div class="amount-original"></div>
                 <div class="amount">$180</div>
-                <div class="unit">per hour</div>
+                <div class="unit">per session</div>
+                <div class="divider"></div>
+                <ul class="price-features">
+                    <li>Common App, supplements & scholarships</li>
+                    <li>Brainstorming through final polish</li>
+                    <li>Statements of purpose for grad school</li>
+                    <li>Dedicated, structured timeline</li>
+                </ul>
+                <a href="#contact" class="btn-card btn-card-gold">Get in Touch</a>
             </div>
         </div>
-        <p class="note">Package discounts available. Reach out for details.</p>
+
+        <div class="consultation-banner">
+            <div class="consultation-text">
+                <div class="consult-title">Not sure where to start?</div>
+                <div class="consult-desc">Book a free 15-minute call to discuss your student's needs and find the right fit.</div>
+            </div>
+            <a href="#contact" class="btn-consult">Book a Free Call</a>
+        </div>
     </div>
 </section>
 
@@ -1056,21 +1446,21 @@
             <div class="step">
                 <span class="step-number">1</span>
                 <div class="step-content">
-                    <h3>Reach Out</h3>
-                    <p>Tell me about your student and what they need help with.</p>
+                    <h3>Schedule a Free Consultation</h3>
+                    <p>A quick 15-minute call to discuss your student's needs and goals.</p>
                 </div>
             </div>
             <div class="step">
                 <span class="step-number">2</span>
                 <div class="step-content">
                     <h3>Get a Welcome Packet</h3>
-                    <p>I'll respond within 24 hours with full details on pricing, services, and policies.</p>
+                    <p>Within 24 hours, you'll receive a packet with my background, approach, full pricing, and policies — everything you need to decide if it's the right fit.</p>
                 </div>
             </div>
             <div class="step">
                 <span class="step-number">3</span>
                 <div class="step-content">
-                    <h3>Book Your First Session</h3>
+                    <h3>Start Your Sessions</h3>
                     <p>We'll find a time that works and get started over Zoom. In-person sessions available in the NYC area.</p>
                 </div>
             </div>
@@ -1103,7 +1493,7 @@
     <div class="workshops-inner">
         <h2 class="section-label">Group Workshops</h2>
         <p>I also run small, hands-on writing workshops on topics like thesis statements and literary analysis — available on Outschool.</p>
-        <a href="https://outschool.com/teachers/Sarah-Bonanno?usid=Nqg2P9dx&signup=true&authTrigger=follow_teacher&utm_campaign=share_leader_link" class="btn btn-outline-light" target="_blank" rel="noopener">Browse on Outschool</a>
+        <a href="https://outschool.com/teachers/Sarah-Bonanno?usid=Nqg2P9dx&signup=true&authTrigger=follow_teacher&utm_campaign=share_leader_link" class="btn btn-outline-light" target="_blank" rel="noopener">View Workshop Schedule</a>
     </div>
 </section>
 
@@ -1174,5 +1564,21 @@
     <p>&copy; 2026 Bonanno Writing Workshop</p>
 </footer>
 
+<script>
+document.querySelectorAll('.plan-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.plan-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const plan = btn.dataset.plan;
+        const key = plan.charAt(0).toUpperCase() + plan.slice(1);
+        document.querySelectorAll('.price-card').forEach(card => {
+            card.querySelector('.amount').textContent = card.dataset['price' + key];
+            card.querySelector('.unit').innerHTML = card.dataset['unit' + key];
+            const original = card.dataset['original' + key];
+            card.querySelector('.amount-original').textContent = original || '';
+        });
+    });
+});
+</script>
 </body>
 </html>
