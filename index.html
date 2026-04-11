@@ -375,7 +375,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 28px;
             margin-top: 12px;
         }
@@ -803,9 +803,183 @@
             background: var(--gold);
         }
 
+        /* ── Essay Review ── */
+        .essay-review-section {
+            background: var(--light-gray);
+            padding: 100px 48px;
+        }
+
+        .essay-review-inner {
+            max-width: 880px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .essay-review-inner .section-label {
+            margin-bottom: 16px;
+        }
+
+        .essay-review-subtitle {
+            font-size: 17px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.8;
+            max-width: 540px;
+            margin: 0 auto 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-bottom: 32px;
+        }
+
+        .review-tier {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 32px 28px;
+            text-align: center;
+        }
+
+        .review-tier h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        .review-prices {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .review-price-option {
+            flex: 1;
+        }
+
+        .review-price-option .price-label {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+
+        .review-price-option .price-amount {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .review-price-option a {
+            display: inline-block;
+            padding: 8px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .review-price-option .btn-standard {
+            background: transparent;
+            color: var(--navy);
+            border: 1.5px solid var(--navy);
+        }
+
+        .review-price-option .btn-standard:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .review-price-option .btn-rush {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            color: var(--white);
+            border: 1.5px solid transparent;
+        }
+
+        .review-price-option .btn-rush:hover {
+            box-shadow: 0 4px 16px rgba(201, 168, 76, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .review-includes {
+            max-width: 540px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .review-includes h4 {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-hover);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .review-includes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .review-includes li {
+            font-size: 14.5px;
+            font-weight: 400;
+            color: #555;
+            padding: 6px 0 6px 28px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .review-includes li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 16px;
+            height: 16px;
+            background: rgba(201, 168, 76, 0.15);
+            border-radius: 50%;
+        }
+
+        .review-includes li::after {
+            content: '\2713';
+            position: absolute;
+            left: 3px;
+            top: 11px;
+            font-size: 11px;
+            color: var(--gold-hover);
+            font-weight: 700;
+        }
+
+        .review-note {
+            font-size: 14px;
+            font-weight: 300;
+            color: #999;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .essay-review-section { padding: 60px 24px; }
+            .review-grid { grid-template-columns: 1fr; }
+            .review-prices { flex-direction: column; gap: 12px; }
+        }
+
         /* ── How It Works ── */
         .how-section {
-            background: var(--light-gray);
+            background: var(--white);
             padding: 100px 48px;
         }
 
@@ -841,7 +1015,7 @@
             top: 44px;
             bottom: 0;
             width: 44px;
-            background: var(--light-gray);
+            background: var(--white);
             z-index: 0;
         }
 
@@ -1300,6 +1474,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#essay-review">Essay Review</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -1357,6 +1532,11 @@
                 <span class="service-num">03</span>
                 <h3>College Application Essays</h3>
                 <p>Dedicated support for Common App essays, supplements, scholarship essays, and statements of purpose. I guide students from brainstorming through final polish on a structured timeline.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-num">04</span>
+                <h3>Async Essay Review</h3>
+                <p>Submit any non-creative writing up to 10 pages and receive detailed margin notes and an endnote summary — no appointment needed. Standard 72-hour and rush 24-hour turnaround available.</p>
             </div>
         </div>
     </div>
@@ -1468,6 +1648,59 @@
     </div>
 </section>
 
+<!-- ── Essay Review ── -->
+<section class="essay-review-section" id="essay-review">
+    <div class="essay-review-inner">
+        <h2 class="section-label">Async Essay Review</h2>
+        <p class="essay-review-subtitle">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary — no appointment needed.</p>
+
+        <div class="review-grid">
+            <div class="review-tier">
+                <h3>Up to 5 Pages</h3>
+                <div class="review-prices">
+                    <div class="review-price-option">
+                        <div class="price-label">Standard (72hr)</div>
+                        <div class="price-amount">$75</div>
+                        <a href="https://buy.stripe.com/4gM7sL50NcUV9ve9H418c00" class="btn-standard">Submit</a>
+                    </div>
+                    <div class="review-price-option">
+                        <div class="price-label">Rush (24hr)</div>
+                        <div class="price-amount">$110</div>
+                        <a href="https://buy.stripe.com/fZudR92SF4op7n6g5s18c02" class="btn-rush">Submit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="review-tier">
+                <h3>5–10 Pages</h3>
+                <div class="review-prices">
+                    <div class="review-price-option">
+                        <div class="price-label">Standard (72hr)</div>
+                        <div class="price-amount">$100</div>
+                        <a href="https://buy.stripe.com/4gMdR99h32ghfTC4mK18c01" class="btn-standard">Submit</a>
+                    </div>
+                    <div class="review-price-option">
+                        <div class="price-label">Rush (24hr)</div>
+                        <div class="price-amount">$150</div>
+                        <a href="https://buy.stripe.com/cNi8wPfFrcUVgXG4mK18c03" class="btn-rush">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-includes">
+            <h4>What's Included</h4>
+            <ul>
+                <li>Detailed margin notes throughout your document</li>
+                <li>Endnote summary with overall feedback and recommendations</li>
+                <li>One follow-up email for clarifying questions</li>
+                <li>Second review of revised draft available at 50% of original price</li>
+            </ul>
+        </div>
+
+        <p class="review-note">Have a longer piece, specialized writing, or questions about the process? <a href="#contact" style="color: var(--navy); text-decoration: underline;">Get in touch</a> to discuss.</p>
+    </div>
+</section>
+
 <!-- ── Reviews ── -->
 <section class="reviews-section">
     <div class="reviews-inner">
@@ -1491,9 +1724,9 @@
 <!-- ── Group Workshops ── -->
 <section class="workshops-section">
     <div class="workshops-inner">
-        <h2 class="section-label">Group Workshops</h2>
-        <p>I also run small, hands-on writing workshops on topics like thesis statements and literary analysis. Get in touch to learn about upcoming sessions.</p>
-        <a href="#contact" class="btn btn-outline-light">Inquire About Workshops</a>
+        <h2 class="section-label">Group Sessions & Custom Workshops</h2>
+        <p>Have a group of students who could use writing support? I can create a custom workshop or group class tailored to what they need — from college essay prep to academic writing skills. Get in touch to discuss your group.</p>
+        <a href="#contact" class="btn btn-outline-light">Inquire About Group Sessions</a>
     </div>
 </section>
 
