@@ -526,6 +526,22 @@
             margin-bottom: 24px;
             color: var(--white);
             text-align: left;
+            border-top: 4px solid var(--gold);
+            position: relative;
+        }
+
+        .app-package-badge {
+            position: absolute;
+            top: -1px;
+            right: 32px;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 0 0 6px 6px;
         }
 
         .app-package-label {
@@ -1833,6 +1849,7 @@
         </div>
 
         <div class="app-package-card">
+            <div class="app-package-badge">Featured</div>
             <div class="app-package-left">
                 <div class="app-package-label">College Application Essay Package</div>
                 <div class="app-package-price">$1,200</div>
