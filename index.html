@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonanno Writing Workshop | Academic Tutoring and Professional Consultations</title>
-    <meta name="description" content="Private writing tutoring for high school, college, and graduate students. Academic tutoring, college application essays, and writing consultations.">
+    <title>Bonanno Writing Workshop | Brooklyn Writing Tutor & College Essay Coach</title>
+    <meta name="description" content="Private writing tutor and college essay coach in Brooklyn, NYC. Academic writing tutoring, college application essays, and async essay review for high school, college, and graduate students. PhD student at CUNY Graduate Center.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -172,8 +172,18 @@
             font-weight: 300;
             line-height: 1.8;
             color: rgba(255, 255, 255, 0.7);
-            max-width: 480px;
-            margin: 0 auto 48px;
+            max-width: 540px;
+            margin: 0 auto 16px;
+        }
+
+        .hero .hero-credential {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--gold);
+            letter-spacing: 0.3px;
+            max-width: 540px;
+            margin: 0 auto 40px;
+            line-height: 1.5;
         }
 
         .hero-ctas {
@@ -1161,6 +1171,146 @@
             margin-bottom: 32px;
         }
 
+        /* ── Reviews carousel ── */
+        .review-carousel {
+            position: relative;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        .carousel-track {
+            position: relative;
+            min-height: 260px;
+        }
+        .carousel-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            pointer-events: none;
+        }
+        .carousel-slide.active {
+            position: relative;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--gold);
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
+            padding: 0;
+        }
+        .carousel-arrow:hover {
+            background: rgba(201, 168, 76, 0.15);
+            border-color: var(--gold);
+            color: #fff;
+        }
+        .carousel-prev { left: 0; }
+        .carousel-next { right: 0; }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s, transform 0.15s;
+            padding: 0;
+        }
+        .carousel-dot:hover { background: rgba(255, 255, 255, 0.45); }
+        .carousel-dot.active {
+            background: var(--gold);
+            transform: scale(1.2);
+        }
+        @media (max-width: 600px) {
+            .review-carousel { padding: 0 32px; }
+            .carousel-arrow { width: 30px; height: 30px; font-size: 18px; }
+        }
+
+        /* ── Async vs Coaching callout ── */
+        .vs-callout {
+            background: rgba(201, 168, 76, 0.08);
+            border-left: 3px solid var(--gold);
+            padding: 14px 18px;
+            margin: 0 auto 32px;
+            max-width: 720px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #333;
+            border-radius: 0 6px 6px 0;
+        }
+        .vs-callout strong { display: block; color: var(--navy); margin-bottom: 4px; font-weight: 600; }
+        .vs-callout em { font-style: italic; color: var(--navy); }
+        .vs-callout a { color: var(--navy); text-decoration: underline; }
+
+        /* ── FAQ ── */
+        .faq-section {
+            background: var(--light-gray);
+            padding: 100px 48px;
+        }
+        .faq-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .faq-item {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            padding: 16px 20px;
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--navy);
+            list-style: none;
+            position: relative;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 22px;
+            top: 14px;
+            font-size: 22px;
+            color: var(--gold);
+            transition: transform 0.2s;
+        }
+        .faq-item[open] summary::after { content: '–'; }
+        .faq-item .faq-body {
+            padding: 0 20px 18px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+        }
+
         /* ── Credentials ── */
         .credentials-section {
             background: var(--white);
@@ -1249,7 +1399,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 14px 16px;
             font-family: 'Inter', sans-serif;
@@ -1264,7 +1415,8 @@
         }
 
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             border-color: var(--gold);
             box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12), 0 1px 3px rgba(0, 0, 0, 0.04);
         }
@@ -1466,6 +1618,10 @@
                 padding: 60px 24px;
             }
 
+            .faq-section {
+                padding: 60px 24px;
+            }
+
             footer {
                 padding: 40px 24px 24px;
             }
@@ -1491,9 +1647,10 @@
 <!-- ── Hero ── -->
 <div class="hero-wrapper">
     <header class="hero">
-        <h1>Demystify the Writing Process</h1>
+        <h1>Private writing coaching.</h1>
         <hr class="hairline hairline-center hairline-white">
-        <p class="subtitle">Private writing tutoring for high school, college, and graduate students. I teach concrete skills so students can write with clarity and confidence.</p>
+        <p class="subtitle">Brooklyn-based writing tutor and college essay coach for high school, college, and graduate students — including support for STEM and research-track writers.</p>
+        <p class="hero-credential">PhD student at CUNY Graduate Center · Currently teaches research writing at Brooklyn College</p>
         <a href="#contact" class="btn btn-gold">Get in Touch</a>
     </header>
 </div>
@@ -1507,6 +1664,7 @@
         <div class="about-text">
             <h2 class="section-label">About</h2>
             <p>I'm Sarah Bonanno. Since 2019, I have taught hundreds of students ranging from first-year college students in humanities classes to high school students working on their college admissions essays. I am also proud of my work with advanced students and professionals, including PhD students, new teachers in training, and business professionals.</p>
+            <p>I have particular depth with <strong>students writing about STEM, research projects, and technical subjects</strong>. At the University of Chicago, I developed and coordinated the writing curriculum for the Phoenix STEM Program — supporting incoming first-year STEM majors — and taught graduate writing in the Biological Sciences Division. My doctoral work centers on natural philosophy and the early history of science, which means I treat technical and research writing as the main event, not foreign territory.</p>
             <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. I don't edit your student's work for them — I teach them how to see their own writing more clearly so they can revise with intention.</p>
             <p>I tutor over Zoom and am available for in-person sessions in the NYC area.</p>
         </div>
@@ -1614,14 +1772,14 @@
         <div class="consultation-banner">
             <div class="consultation-text">
                 <div class="consult-title">Not sure where to start?</div>
-                <div class="consult-desc">Book a free 15-minute call to discuss your student's needs and find the right fit.</div>
+                <div class="consult-desc">Free 15-minute call: tell me about your student's current assignment or goals, and I'll suggest the right approach — no pressure to book.</div>
             </div>
             <a href="#contact" class="btn-consult">Book a Free Call</a>
         </div>
 
         <div class="availability-banner" style="text-align: left; margin-top: 8px;">
             <span class="availability-dot"></span>
-            <span class="availability-text">Currently accepting <strong>4 new students</strong> for Spring 2026</span>
+            <span class="availability-text">Now booking <strong>summer application essay coaching</strong> for rising seniors &middot; Limited fall academic tutoring spots open</span>
         </div>
     </div>
 </section>
@@ -1661,6 +1819,10 @@
     <div class="essay-review-inner">
         <h2 class="section-label">Async Essay Review</h2>
         <p class="essay-review-subtitle">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary — no appointment needed.</p>
+        <div class="vs-callout">
+            <strong>Not sure if you need this or full coaching?</strong>
+            Async essay review is best for <em>strong drafts that need a professional second read</em> before you submit. <a href="#services">Application Essay coaching</a> is best for seniors who want <em>structured brainstorming and multi-draft support</em> across the full Common App + supplements.
+        </div>
 
         <div class="review-grid">
             <div class="review-tier">
@@ -1712,19 +1874,64 @@
 <!-- ── Reviews ── -->
 <section class="reviews-section">
     <div class="reviews-inner">
-        <h2 class="section-label">What Families Say</h2>
+        <h2 class="section-label">What People Say</h2>
         <hr class="hairline hairline-center hairline-white">
 
-        <div class="review">
-            <div class="review-body">
-                <span class="quote-mark quote-mark-open">&ldquo;</span>
-                <div>
-                    <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
-                    <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
-                    <span class="attribution">Parent Review</span>
+        <div class="review-carousel" id="reviewCarousel">
+            <button class="carousel-arrow carousel-prev" onclick="reviewCarouselNav(-1)" aria-label="Previous testimonial">&lsaquo;</button>
+            <div class="carousel-track">
+
+                <div class="review carousel-slide active">
+                    <div class="review-body">
+                        <span class="quote-mark quote-mark-open">&ldquo;</span>
+                        <div>
+                            <p>Sarah is by far one of the strongest teachers that has ever come through the Writing Program.</p>
+                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
+                            <span class="attribution">Former colleague</span>
+                        </div>
+                        <span class="quote-mark quote-mark-close">&rdquo;</span>
+                    </div>
                 </div>
-                <span class="quote-mark quote-mark-close">&rdquo;</span>
+
+                <div class="review carousel-slide">
+                    <div class="review-body">
+                        <span class="quote-mark quote-mark-open">&ldquo;</span>
+                        <div>
+                            <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
+                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
+                            <span class="attribution">Parent of high school student</span>
+                        </div>
+                        <span class="quote-mark quote-mark-close">&rdquo;</span>
+                    </div>
+                </div>
+
+                <div class="review carousel-slide">
+                    <div class="review-body">
+                        <span class="quote-mark quote-mark-open">&ldquo;</span>
+                        <div>
+                            <p>Your ability to teach writing in a way that was clear and approachable was extremely helpful, and I always looked forward to your class. Your classroom was a space where I felt comfortable being myself and openly sharing my thoughts.</p>
+                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
+                            <span class="attribution">Former student</span>
+                        </div>
+                        <span class="quote-mark quote-mark-close">&rdquo;</span>
+                    </div>
+                </div>
+
+                <div class="review carousel-slide">
+                    <div class="review-body">
+                        <span class="quote-mark quote-mark-open">&ldquo;</span>
+                        <div>
+                            <p>You taught me a lot of new stuff and I feel a lot more confident in my skills as a writer. Most importantly you created a really wonderful environment in the classroom.</p>
+                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
+                            <span class="attribution">Former student</span>
+                        </div>
+                        <span class="quote-mark quote-mark-close">&rdquo;</span>
+                    </div>
+                </div>
+
             </div>
+            <button class="carousel-arrow carousel-next" onclick="reviewCarouselNav(1)" aria-label="Next testimonial">&rsaquo;</button>
+            <div class="carousel-dots" id="reviewCarouselDots"></div>
         </div>
     </div>
 </section>
@@ -1773,6 +1980,53 @@
     </div>
 </section>
 
+<!-- ── FAQ ── -->
+<section class="faq-section" id="faq">
+    <div class="faq-inner">
+        <h2 class="section-label">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+            <summary>What ages and grade levels do you work with?</summary>
+            <div class="faq-body">High school through graduate school. Most of my current students are high schoolers tackling AP English and college application essays, plus first-year college students working on academic writing.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you offer in-person tutoring or only Zoom?</summary>
+            <div class="faq-body">Both. Most sessions happen on Zoom, which is flexible and works well for screen-sharing drafts. In-person sessions are available in the NYC area — I currently travel to Brooklyn, Manhattan, and Westchester locations for ongoing students.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What subjects can you support? Do you handle STEM writing?</summary>
+            <div class="faq-body">Yes — I specialize in writing about science, technology, and research, in addition to traditional humanities subjects. My current research and teaching focus on the intersection of literature and STEM, so technical and research-track writing is a strength, not an exception.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How does scheduling work?</summary>
+            <div class="faq-body">After our free consultation, we set a recurring weekly time that works for both of us (most students meet weekly). Async essay review has no scheduling — submit your draft via the Stripe checkout and I return notes within the chosen turnaround window.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What's your cancellation policy?</summary>
+            <div class="faq-body">24-hour notice is required to reschedule without charge. Late cancellations (under 24 hours) are billed at 50% of the session rate; no-shows are billed in full. Full policies are included in the Welcome Packet you receive after your free consultation.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you write or edit essays for students?</summary>
+            <div class="faq-body">No. I teach students how to see and revise their own writing. Students who work with me leave with stronger skills and stronger drafts that are unmistakably their own — both for ethical reasons and because admissions officers and professors can spot adult-edited prose.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Application Essay coaching vs. async essay review — which do we need?</summary>
+            <div class="faq-body">Application Essay coaching is for seniors who want structured brainstorming and multi-draft support across the full Common App and supplements. Async essay review is for strong drafts that need a professional second read before submitting. If you're not sure, book a free 15-minute call and I'll help you decide.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I pay?</summary>
+            <div class="faq-body">Per-session and package clients pay via Venmo (@bonannowriting) or Zelle (sarahcbonanno@gmail.com). Async essay review is paid via Stripe at checkout. Packages are billed upfront; per-session students are invoiced monthly.</div>
+        </details>
+    </div>
+</section>
+
 <!-- ── Contact ── -->
 <section class="contact" id="contact">
     <div class="contact-inner">
@@ -1789,8 +2043,19 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
+                <label for="interest">What are you interested in?</label>
+                <select id="interest" name="interest">
+                    <option value="Not sure yet">Not sure yet — let's talk</option>
+                    <option value="Academic Tutoring">Academic / writing tutoring (ongoing)</option>
+                    <option value="College Application Essays">College application essay coaching</option>
+                    <option value="Async Essay Review">Async essay review (one-off)</option>
+                    <option value="Group Sessions">Group sessions / custom workshop</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" placeholder="Tell me a bit about your student — current grade, what they're working on, what kind of support you're looking for." required></textarea>
             </div>
             <button type="submit" class="btn btn-gold">Send Message</button>
         </form>
@@ -1806,6 +2071,41 @@
 </footer>
 
 <script>
+// ── Reviews carousel ──
+(function() {
+    const carousel = document.getElementById('reviewCarousel');
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dotsContainer = document.getElementById('reviewCarouselDots');
+    let current = 0;
+    let auto = null;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    function goTo(i) {
+        slides[current].classList.remove('active');
+        dotsContainer.children[current].classList.remove('active');
+        current = (i + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dotsContainer.children[current].classList.add('active');
+        resetAuto();
+    }
+
+    window.reviewCarouselNav = function(dir) { goTo(current + dir); };
+
+    function startAuto() { auto = setInterval(() => goTo(current + 1), 7000); }
+    function resetAuto() { if (auto) { clearInterval(auto); startAuto(); } }
+    startAuto();
+    carousel.addEventListener('mouseenter', () => { if (auto) { clearInterval(auto); auto = null; } });
+    carousel.addEventListener('mouseleave', () => { if (!auto) startAuto(); });
+})();
+
 document.querySelectorAll('.plan-toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.plan-toggle-btn').forEach(b => b.classList.remove('active'));
