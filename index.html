@@ -639,6 +639,49 @@
             background: var(--cream);
         }
 
+        .app-package-header {
+            margin-bottom: 28px;
+        }
+
+        .app-package-tiers {
+            display: flex;
+            gap: 0;
+            align-items: flex-start;
+        }
+
+        .app-package-tier {
+            flex: 1;
+        }
+
+        .app-package-tier + .app-package-tier {
+            border-left: 1px solid rgba(255,255,255,0.12);
+            padding-left: 32px;
+            margin-left: 32px;
+        }
+
+        .app-package-tier-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 2px;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 640px) {
+            .app-package-tiers {
+                flex-direction: column;
+            }
+            .app-package-tier + .app-package-tier {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.12);
+                padding-left: 0;
+                margin-left: 0;
+                padding-top: 28px;
+                margin-top: 28px;
+            }
+        }
+
         .consultation-banner {
             background: var(--white);
             border: 1.5px solid #e8e8e8;
@@ -1859,21 +1902,38 @@
 
         <div class="app-package-card">
             <div class="app-package-badge">Intensive</div>
-            <div class="app-package-left">
+            <div class="app-package-header">
                 <div class="app-package-label">College Essay Intensive</div>
-                <div class="app-package-price">$1,200</div>
-                <div class="app-package-meta">Available June – January 15 &middot; Limited to 4 students per season &middot; <span style="color:rgba(255,255,255,0.75);">Accepting reservations for Summer 2026</span></div>
-                <ul class="app-package-features">
-                    <li>4 dedicated one-on-one sessions</li>
-                    <li>Written feedback on up to 4 drafts — included</li>
-                    <li>Additional draft reviews at $75 each</li>
-                    <li>Structured timeline from brainstorming through final polish</li>
-                    <li><strong>Guaranteed outcome: a final, polished Common App essay and at least one supplement</strong></li>
-                </ul>
-                <p class="app-package-results">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
-                <a href="#contact" class="app-package-btn">Reserve Your Spot</a>
-                <p style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;">* Guaranteed outcome contingent on timely draft submission and attendance at all scheduled sessions.</p>
+                <div class="app-package-meta">Available June – January 15 &middot; 4 spots per season &middot; <span style="color:rgba(255,255,255,0.75);">Accepting reservations for Summer 2026</span></div>
             </div>
+            <div class="app-package-tiers">
+                <div class="app-package-tier">
+                    <div class="app-package-tier-name">Common App Bootcamp</div>
+                    <div class="app-package-price">$1,400</div>
+                    <ul class="app-package-features">
+                        <li>5 dedicated one-on-one sessions</li>
+                        <li>Written feedback on up to 5 drafts — included</li>
+                        <li>Additional draft reviews at $50 each</li>
+                        <li>Structured timeline from brainstorming through final polish</li>
+                        <li><strong>Guaranteed outcome: a final, polished Common App essay*</strong></li>
+                    </ul>
+                    <a href="#contact" class="app-package-btn">Reserve Your Spot</a>
+                </div>
+                <div class="app-package-tier">
+                    <div class="app-package-tier-name">Full Application Workshop</div>
+                    <div class="app-package-price">$2,000</div>
+                    <ul class="app-package-features">
+                        <li>7 dedicated one-on-one sessions</li>
+                        <li>Written feedback on up to 8 drafts — included</li>
+                        <li>Additional draft reviews at $50 each</li>
+                        <li>Structured timeline from brainstorming through final polish</li>
+                        <li><strong>Guaranteed outcome: Common App essay + up to 3 supplemental essays*</strong></li>
+                    </ul>
+                    <a href="#contact" class="app-package-btn">Reserve Your Spot</a>
+                </div>
+            </div>
+            <p class="app-package-results" style="margin-top:28px;">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
+            <p style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;">* Guaranteed outcome contingent on timely draft submission and attendance at all scheduled sessions.<br>† A $300 non-refundable deposit is required to reserve your spot. Remaining balance due before your first session.</p>
         </div>
 
         <div class="consultation-banner">
