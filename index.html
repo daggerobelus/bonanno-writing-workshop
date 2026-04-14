@@ -2013,6 +2013,7 @@
                     <li>Essay brainstorming through final draft</li>
                     <li>On-demand writing exercises in session</li>
                     <li>High school through graduate level</li>
+                    <li class="package-only" style="display:none;color:var(--gold);font-weight:500;">Reschedule freely within your package period</li>
                     <li class="semester-only" style="display:none;color:var(--gold);font-weight:500;">4 async essay reviews included</li>
                 </ul>
                 <a href="#contact" class="btn-card btn-card-outline">Get in Touch</a>
@@ -2037,6 +2038,7 @@
                     <li>Brainstorming through final polish</li>
                     <li>Statements of purpose for grad school</li>
                     <li>Dedicated, structured timeline</li>
+                    <li class="package-only" style="display:none;color:var(--gold);font-weight:500;">Reschedule freely within your package period</li>
                     <li class="semester-only" style="display:none;color:var(--gold);font-weight:500;">4 async essay reviews included</li>
                 </ul>
                 <a href="#contact" class="btn-card btn-card-gold">Get in Touch</a>
@@ -2407,6 +2409,9 @@ document.querySelectorAll('.plan-toggle-btn').forEach(btn => {
         });
         document.querySelectorAll('.semester-only').forEach(el => {
             el.style.display = plan === 'semester' ? '' : 'none';
+        });
+        document.querySelectorAll('.package-only').forEach(el => {
+            el.style.display = (plan === 'monthly' || plan === 'semester') ? '' : 'none';
         });
     });
 });
