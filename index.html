@@ -442,46 +442,70 @@
         /* ── Lead magnet ── */
         .lead-magnet-section {
             background: var(--navy);
-            padding: 80px 48px;
-            text-align: center;
+            padding: 96px 48px;
         }
 
         .lead-magnet-inner {
-            max-width: 560px;
+            max-width: 1180px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .lead-magnet-copy {
+            max-width: 480px;
         }
 
         .lead-magnet-section .section-label {
             color: var(--gold);
-            margin-bottom: 16px;
+            margin-bottom: 22px;
         }
 
         .lead-magnet-section h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 38px;
-            font-weight: 600;
+            font-size: 46px;
+            font-weight: 500;
             color: #fff;
-            line-height: 1.2;
-            margin-bottom: 16px;
+            line-height: 1.1;
+            margin-bottom: 22px;
         }
 
         .lead-magnet-section p {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 300;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.8;
-            margin-bottom: 20px;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.55;
+            margin-bottom: 28px;
+        }
+
+        .lead-magnet-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 24px 40px rgba(0,0,0,0.35));
         }
 
         .lead-magnet-section .ml-form-embedContainer {
-            display: flex !important;
-            justify-content: center !important;
+            display: block !important;
+            margin: 0 !important;
         }
 
         .lead-magnet-section .ml-form-align-center {
             width: 100% !important;
-            display: flex !important;
-            justify-content: center !important;
+            display: block !important;
+        }
+
+        @media (max-width: 860px) {
+            .lead-magnet-section { padding: 64px 24px; }
+            .lead-magnet-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .lead-magnet-copy { max-width: 100%; }
+            .lead-magnet-section h2 { font-size: 36px; }
+            .lead-magnet-preview { max-width: 480px; margin: 0 auto; }
         }
 
         /* Strip the white card */
@@ -603,6 +627,36 @@
 
         .price-card-featured .label {
             color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ── Intensive section ── */
+        .intensive-section {
+            background: var(--navy);
+            padding: 80px 48px;
+            border-top: 4px solid var(--gold);
+            position: relative;
+        }
+        .intensive-inner {
+            max-width: 880px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .intensive-section .app-package-card {
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            margin-bottom: 0;
+            border-top: none;
+            box-shadow: none;
+            position: static;
+        }
+        .intensive-section .app-package-badge {
+            top: -80px;
+            right: 0;
+        }
+        @media (max-width: 860px) {
+            .intensive-section { padding: 64px 24px; }
+            .intensive-section .app-package-badge { top: -64px; }
         }
 
         .app-package-card {
@@ -1037,50 +1091,81 @@
 
         /* ── Essay Review ── */
         .essay-review-section {
-            background: var(--light-gray);
-            padding: 100px 48px;
+            background: var(--cream);
+            padding: 80px 48px;
+            border-top: 4px solid var(--gold);
+            position: relative;
         }
 
         .essay-review-inner {
             max-width: 880px;
             margin: 0 auto;
-            text-align: center;
+            position: relative;
+        }
+
+        .essay-review-flag {
+            position: absolute;
+            top: -80px;
+            right: 0;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 0 0 6px 6px;
+        }
+        @media (max-width: 860px) {
+            .essay-review-section { padding: 60px 24px; }
+            .essay-review-flag { top: -60px; right: 0; }
         }
 
         .essay-review-inner .section-label {
-            margin-bottom: 16px;
+            margin-bottom: 8px;
+            text-align: left;
+            color: var(--gold-hover);
         }
 
         .essay-review-subtitle {
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 300;
-            color: #666;
-            line-height: 1.8;
-            max-width: 540px;
-            margin: 0 auto 40px;
+            color: rgba(28, 42, 58, 0.65);
+            line-height: 1.6;
+            margin: 0 0 36px;
+            max-width: 600px;
         }
 
         .review-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-            margin-bottom: 32px;
+            display: flex;
+            gap: 0;
+            align-items: flex-start;
+            margin-bottom: 28px;
         }
 
         .review-tier {
-            background: var(--white);
-            border: 1.5px solid #e8e8e8;
-            border-radius: 12px;
-            padding: 32px 28px;
-            text-align: center;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03), 0 8px 30px rgba(0, 0, 0, 0.04);
+            flex: 1;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            text-align: left;
+            box-shadow: none;
+        }
+
+        .review-tier + .review-tier {
+            border-left: 1px solid rgba(28, 42, 58, 0.15);
+            padding-left: 32px;
+            margin-left: 32px;
         }
 
         .review-tier h3 {
-            font-size: 15px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
             font-weight: 600;
             color: var(--navy);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            letter-spacing: 0.01em;
         }
 
         .review-prices {
@@ -1146,9 +1231,324 @@
             transform: translateY(-1px);
         }
 
+        /* ── Review menu ── */
+        .review-menu {
+            margin: 0;
+        }
+        .menu-group + .menu-group {
+            margin-top: 22px;
+        }
+        .menu-group-label {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 2px;
+            padding: 0 6px 6px;
+            border-bottom: 1px solid rgba(28, 42, 58, 0.18);
+        }
+        .menu-line {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            padding: 11px 6px 11px 18px;
+            text-decoration: none;
+            color: var(--navy);
+            border-bottom: 1px solid rgba(28, 42, 58, 0.08);
+            transition: padding 0.18s ease, background 0.18s ease;
+        }
+        .menu-group .menu-line:last-child {
+            border-bottom: none;
+        }
+        .menu-line:hover {
+            padding-left: 26px;
+            background: rgba(28, 42, 58, 0.035);
+        }
+        .menu-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--navy);
+            white-space: nowrap;
+        }
+        .menu-tier {
+            color: rgba(28, 42, 58, 0.55);
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 6px;
+        }
+        .menu-dots {
+            flex: 1;
+            border-bottom: 1.5px dotted rgba(28, 42, 58, 0.28);
+            margin: 0 4px;
+            position: relative;
+            top: -5px;
+            min-width: 24px;
+        }
+        .menu-price {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--navy);
+            white-space: nowrap;
+            line-height: 1;
+            transition: color 0.18s ease;
+        }
+        .menu-arrow {
+            font-size: 16px;
+            color: rgba(28, 42, 58, 0.4);
+            margin-left: 4px;
+            transition: transform 0.18s ease, color 0.18s ease;
+        }
+        .menu-line:hover .menu-price { color: var(--gold-hover); }
+        .menu-line:hover .menu-arrow { color: var(--gold-hover); transform: translateX(4px); }
+
+        @media (max-width: 600px) {
+            .menu-desc { font-size: 14px; white-space: normal; }
+            .menu-tier { display: block; margin-left: 0; }
+            .menu-price { font-size: 22px; }
+        }
+
+        /* (kept for reference) */
+        .review-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: 0 0 36px;
+        }
+        .review-row {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 18px;
+            align-items: center;
+        }
+        .review-row-label {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+        .review-pill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 14px 20px;
+            background: transparent;
+            border: 1.5px solid rgba(28, 42, 58, 0.35);
+            border-radius: 8px;
+            color: var(--navy);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .review-pill:hover {
+            background: var(--navy);
+            color: var(--cream);
+            border-color: var(--navy);
+        }
+        .review-pill-rush {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            border-color: transparent;
+            color: var(--cream);
+        }
+        .review-pill-rush:hover {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            color: var(--cream);
+            box-shadow: 0 6px 18px rgba(201, 168, 76, 0.35);
+            transform: translateY(-1px);
+        }
+        .review-pill-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            text-align: left;
+        }
+        .review-pill-tier {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            opacity: 0.75;
+        }
+        .review-pill-speed {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.85;
+        }
+        .review-pill-price {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1;
+        }
+        @media (max-width: 700px) {
+            .review-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .review-row-label {
+                padding-top: 10px;
+            }
+        }
+
+        /* (kept for reference) */
+        .review-matrix {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 14px 24px;
+            align-items: center;
+            margin: 0 0 36px;
+        }
+        .rm-header {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(28, 42, 58, 0.55);
+            text-align: center;
+            padding: 0 0 4px;
+            border-bottom: 1px solid rgba(28, 42, 58, 0.18);
+        }
+        .rm-header-spacer { border-bottom: none; }
+        .rm-label {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .rm-chip {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 18px 16px;
+            border-radius: 8px;
+            background: transparent;
+            border: 1.5px solid rgba(28, 42, 58, 0.4);
+            color: var(--navy);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+        .rm-chip:hover {
+            background: var(--navy);
+            color: var(--cream);
+            border-color: var(--navy);
+        }
+        .rm-chip-price {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1;
+        }
+        .rm-chip-action {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+        .rm-chip-rush {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            color: var(--cream);
+            border-color: transparent;
+        }
+        .rm-chip-rush:hover {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+            color: var(--cream);
+            box-shadow: 0 6px 18px rgba(201, 168, 76, 0.35);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 700px) {
+            .review-matrix {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px 12px;
+            }
+            .review-matrix > .rm-header-spacer,
+            .review-matrix > .rm-label { grid-column: 1 / -1; text-align: left; }
+            .review-matrix > .rm-label { padding-top: 8px; }
+            .rm-chip-price { font-size: 22px; }
+        }
+
+        .essay-review-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1fr;
+            gap: 64px;
+            align-items: start;
+            margin-bottom: 28px;
+        }
+        @media (max-width: 760px) {
+            .essay-review-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        /* ── Includes/How-it-works tabs ── */
+        .rit-tabs {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid rgba(28, 42, 58, 0.12);
+        }
+        .rit-tab {
+            background: none;
+            border: none;
+            padding: 0 0 10px;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(28, 42, 58, 0.4);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: color 0.18s ease, border-color 0.18s ease;
+        }
+        .rit-tab:hover { color: var(--gold-hover); }
+        .rit-tab.is-active {
+            color: var(--gold-hover);
+            border-bottom-color: var(--gold);
+        }
+        .rit-panel { display: none; }
+        .rit-panel.is-active { display: block; }
+
+        .review-flow-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .review-flow-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 7px 0;
+        }
+        .step-num {
+            color: var(--gold-hover);
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 1.4;
+            flex-shrink: 0;
+            min-width: 18px;
+        }
+        .step-text {
+            font-size: 14.5px;
+            color: #555;
+            line-height: 1.55;
+        }
+        .review-flow-list li {
+            padding: 6px 0;
+            align-items: baseline;
+        }
+
         .review-includes {
-            max-width: 540px;
-            margin: 0 auto;
+            margin: 0;
             text-align: left;
         }
 
@@ -1158,8 +1558,8 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--gold-hover);
-            margin-bottom: 12px;
-            text-align: center;
+            margin-bottom: 14px;
+            text-align: left;
         }
 
         .review-includes ul {
@@ -1167,7 +1567,7 @@
             padding: 0;
         }
 
-        .review-includes li {
+        .review-includes ul li {
             font-size: 14.5px;
             font-weight: 400;
             color: #555;
@@ -1176,7 +1576,7 @@
             line-height: 1.6;
         }
 
-        .review-includes li::before {
+        .review-includes ul li::before {
             content: '';
             position: absolute;
             left: 0;
@@ -1187,7 +1587,7 @@
             border-radius: 50%;
         }
 
-        .review-includes li::after {
+        .review-includes ul li::after {
             content: '\2713';
             position: absolute;
             left: 3px;
@@ -1929,9 +2329,10 @@
 <!-- ── Lead Magnet ── -->
 <section class="lead-magnet-section" id="free-worksheet">
     <div class="lead-magnet-inner">
+        <div class="lead-magnet-copy">
         <div class="section-label">Free Worksheet</div>
-        <h2>Revising Your Main Claim</h2>
-        <p>A thesis-strengthening tool for any essay — academic, college application, or research paper. Enter your email and I'll send it right over.</p>
+        <h2>Want to see how I work with students?</h2>
+        <p>The same kind of thinking I'd walk you through on your thesis: is your main claim actually doing the work? A worksheet you can run yourself.</p>
 
         <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1775464");</style>
         <style type="text/css">
@@ -1989,6 +2390,10 @@
         </style>
 
         <p style="font-size:12px; color:rgba(255,255,255,0.35); margin-top:12px; margin-bottom:0;">No spam. Unsubscribe anytime.</p>
+        </div>
+        <div class="lead-magnet-preview">
+            <img src="worksheet-preview.png" alt="Preview of the Revising Your Main Claim worksheet" loading="lazy">
+        </div>
     </div>
 </section>
 
@@ -2057,6 +2462,19 @@
             </div>
         </div>
 
+        <div class="consultation-banner">
+            <div class="consultation-text">
+                <div class="consult-title">Not sure where to start?</div>
+                <div class="consult-desc">Free 15-minute call: tell me about your student's current assignment or goals, and I'll suggest the right approach — no pressure to book.</div>
+            </div>
+            <a href="#contact" class="btn-consult">Book a Free Call</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── Intensive ── -->
+<section class="intensive-section" id="intensive">
+    <div class="intensive-inner">
         <div class="app-package-card">
             <div class="app-package-badge">Course</div>
             <div class="app-package-header">
@@ -2086,47 +2504,9 @@
                     <div class="app-package-guarantee">Guaranteed: Common App essay + up to 3 supplementals</div>
                 </div>
             </div>
-            <a href="#contact" class="app-package-btn" style="display:block;margin-top:20px;">Reserve Your Spot</a>
+            <a href="#contact" class="app-package-btn" style="display:block;max-width:280px;margin:24px auto 0;">Reserve Your Spot</a>
             <p class="app-package-results" style="margin-top:20px;">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
             <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,0.65);line-height:1.5;">* Guaranteed outcome contingent on timely draft submission and attendance at all scheduled sessions.<br>† A $300 non-refundable deposit is required to reserve your spot. Remaining balance due before your first session.</p>
-        </div>
-
-        <div class="consultation-banner">
-            <div class="consultation-text">
-                <div class="consult-title">Not sure where to start?</div>
-                <div class="consult-desc">Free 15-minute call: tell me about your student's current assignment or goals, and I'll suggest the right approach — no pressure to book.</div>
-            </div>
-            <a href="#contact" class="btn-consult">Book a Free Call</a>
-        </div>
-    </div>
-</section>
-
-<!-- ── How It Works ── -->
-<section class="how-section">
-    <div class="how-inner">
-        <h2 class="section-label">How It Works</h2>
-        <div class="steps">
-            <div class="step">
-                <span class="step-number">1</span>
-                <div class="step-content">
-                    <h3>Schedule a Free Consultation</h3>
-                    <p>A quick 15-minute call to discuss your student's needs and goals.</p>
-                </div>
-            </div>
-            <div class="step">
-                <span class="step-number">2</span>
-                <div class="step-content">
-                    <h3>Get a Welcome Packet</h3>
-                    <p>Within 24 hours, you'll receive a packet with my background, approach, full pricing, and policies — everything you need to decide if it's the right fit.</p>
-                </div>
-            </div>
-            <div class="step">
-                <span class="step-number">3</span>
-                <div class="step-content">
-                    <h3>Start Your Sessions</h3>
-                    <p>We'll find a time that works and get started over Zoom. In-person sessions available in the NYC area.</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -2134,54 +2514,66 @@
 <!-- ── Essay Review ── -->
 <section class="essay-review-section" id="essay-review">
     <div class="essay-review-inner">
+        <div class="essay-review-flag">On Demand</div>
         <h2 class="section-label">Async Essay Review</h2>
         <p class="essay-review-subtitle">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary — no appointment needed.</p>
-        <div class="vs-callout">
-            <strong>Not sure if you need this or full coaching?</strong>
-            Async essay review is for anyone who prefers <em>detailed written feedback</em> — at any stage, from a rough first draft to a near-final polish. <a href="#services">Application Essay coaching</a> is for students applying to college, graduate school, scholarships, or fellowships who want <em>structured brainstorming and multi-draft support</em> across all their essays.
-        </div>
 
-        <div class="review-grid">
-            <div class="review-tier">
-                <h3>Up to 5 Pages</h3>
-                <div class="review-prices">
-                    <div class="review-price-option">
-                        <div class="price-label">Standard (72hr)</div>
-                        <div class="price-amount">$75</div>
-                        <a href="https://buy.stripe.com/4gM7sL50NcUV9ve9H418c00" class="btn-standard">Submit</a>
-                    </div>
-                    <div class="review-price-option">
-                        <div class="price-label">Rush (24hr)</div>
-                        <div class="price-amount">$110</div>
-                        <a href="https://buy.stripe.com/fZudR92SF4op7n6g5s18c02" class="btn-rush">Submit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="review-tier">
-                <h3>5–10 Pages</h3>
-                <div class="review-prices">
-                    <div class="review-price-option">
-                        <div class="price-label">Standard (72hr)</div>
-                        <div class="price-amount">$100</div>
-                        <a href="https://buy.stripe.com/4gMdR99h32ghfTC4mK18c01" class="btn-standard">Submit</a>
-                    </div>
-                    <div class="review-price-option">
-                        <div class="price-label">Rush (24hr)</div>
-                        <div class="price-amount">$150</div>
-                        <a href="https://buy.stripe.com/cNi8wPfFrcUVgXG4mK18c03" class="btn-rush">Submit</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <div class="essay-review-grid">
         <div class="review-includes">
-            <h4>What's Included</h4>
-            <ul>
-                <li>Detailed margin notes throughout your document</li>
-                <li>Endnote summary with overall feedback and recommendations</li>
-                <li>One follow-up email for clarifying questions</li>
-                <li>Second review of revised draft available at 50% of original price</li>
-            </ul>
+            <div class="rit-tabs">
+                <button class="rit-tab is-active" data-rit="included" type="button">What's Included</button>
+                <button class="rit-tab" data-rit="how" type="button">How It Works</button>
+            </div>
+            <div class="rit-panel is-active" data-rit-panel="included">
+                <ul>
+                    <li>Detailed margin notes throughout your document</li>
+                    <li>Endnote summary with overall feedback and recommendations</li>
+                    <li>One follow-up email for clarifying questions</li>
+                    <li>Second review of revised draft available at 50% of original price</li>
+                </ul>
+            </div>
+            <div class="rit-panel" data-rit-panel="how">
+                <ol class="review-flow-list">
+                    <li><span class="step-num">1.</span><span class="step-text">Pick a price — by essay length and turnaround</span></li>
+                    <li><span class="step-num">2.</span><span class="step-text">Pay via Stripe</span></li>
+                    <li><span class="step-num">3.</span><span class="step-text">Submit your paper — the upload form opens immediately after payment</span></li>
+                    <li><span class="step-num">4.</span><span class="step-text">My notes land in your inbox within the turnaround window</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="review-menu">
+            <div class="menu-group">
+                <div class="menu-group-label">Up to 5 pages</div>
+                <a class="menu-line" href="https://buy.stripe.com/4gM7sL50NcUV9ve9H418c00">
+                    <span class="menu-desc">Standard <span class="menu-tier">(72hr)</span></span>
+                    <span class="menu-dots"></span>
+                    <span class="menu-price">$75</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+                <a class="menu-line" href="https://buy.stripe.com/fZudR92SF4op7n6g5s18c02">
+                    <span class="menu-desc">Rush <span class="menu-tier">(24hr)</span></span>
+                    <span class="menu-dots"></span>
+                    <span class="menu-price">$110</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+            </div>
+            <div class="menu-group">
+                <div class="menu-group-label">5–10 pages</div>
+                <a class="menu-line" href="https://buy.stripe.com/4gMdR99h32ghfTC4mK18c01">
+                    <span class="menu-desc">Standard <span class="menu-tier">(72hr)</span></span>
+                    <span class="menu-dots"></span>
+                    <span class="menu-price">$100</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+                <a class="menu-line" href="https://buy.stripe.com/cNi8wPfFrcUVgXG4mK18c03">
+                    <span class="menu-desc">Rush <span class="menu-tier">(24hr)</span></span>
+                    <span class="menu-dots"></span>
+                    <span class="menu-price">$150</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+            </div>
+        </div>
         </div>
 
         <p class="review-note">Have a longer piece, specialized writing, or questions about the process? <a href="#contact" style="color: var(--navy); text-decoration: underline;">Get in touch</a> to discuss.</p>
@@ -2423,6 +2815,16 @@ document.querySelectorAll('.plan-toggle-btn').forEach(btn => {
         document.querySelectorAll('.package-only').forEach(el => {
             el.style.display = (plan === 'monthly' || plan === 'semester') ? '' : 'none';
         });
+    });
+});
+
+document.querySelectorAll('.rit-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.rit;
+        const container = tab.closest('.review-includes');
+        if (!container) return;
+        container.querySelectorAll('.rit-tab').forEach(t => t.classList.toggle('is-active', t === tab));
+        container.querySelectorAll('.rit-panel').forEach(p => p.classList.toggle('is-active', p.dataset.ritPanel === target));
     });
 });
 </script>
