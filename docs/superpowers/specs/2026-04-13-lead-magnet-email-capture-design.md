@@ -54,8 +54,11 @@ A free downloadable worksheet ("Building Your Main Claim") used to capture email
 ## Manual Steps (Sarah, one-time)
 
 - [x] Create MailerLite account
-- [ ] Upload PDF to MailerLite as lead magnet
-- [ ] Create and configure signup form
+- [x] Upload PDF to MailerLite File Manager
+- [x] Create and configure signup form
+- [x] Configure automation to deliver PDF on signup
+- [x] Turn off double opt-in
+- [x] Set brand colors and logo in MailerLite
 - [ ] Add existing client emails to list manually
 
 ---

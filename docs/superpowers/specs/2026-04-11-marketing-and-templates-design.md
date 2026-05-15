@@ -51,12 +51,20 @@ Direct clients at $150-180/hr through bonannoworkshop.com. No platforms. Every d
 
 ## Part 2: Professional Templates
 
+### File Locations
+
+All templates and business documents live in `/Users/sarahbonanno/Documents/Freelance/` — NOT in the website repo. No financials or client data in the public repo.
+
+- `Documents/Freelance/templates/` — invoice, welcome packet, session summary, receipt
+- `Documents/Freelance/` — overhauled income tracker, marketing strategy reference
+- `Documents/Freelance/bonanno-writing-workshop/` — public website only
+
 ### Design System
 
 All templates match the bonannoworkshop.com brand:
 - **Colors:** Navy (#1c2a3a), Gold (#c9a84c), Cream (#f8f5ef), White (#ffffff)
 - **Fonts:** Cormorant Garamond (headings), Inter (body)
-- **Logo:** mark-transparent.png (small mark) or logo-transparent.png (full logo)
+- **Logo:** Copies of mark-transparent.png / logo-transparent.png in the templates folder (not symlinked from repo)
 - **Format:** Single-file HTML, printable to PDF from browser. No dependencies beyond Google Fonts.
 
 ### Template 1: Invoice
@@ -91,7 +99,7 @@ Updated, branded version of the existing draft. Structured as:
    - Semester packages expire 20 weeks from purchase
    - Unused sessions are forfeited upon expiration, no refunds
    - Packages may be shared between siblings in the same family
-7. **Policies** — payment terms (net 15, Venmo/Zelle), cancellation (24hr notice, 50% late cancel fee, full no-show fee, one freebie), referral program ($25 off for both parties)
+7. **Policies** — payment terms (net 15, Venmo/Zelle), cancellation (24hr notice, 50% late cancel fee, full no-show fee, no exceptions), referral program ($25 off for both parties)
 8. **Contact info** — email, website, Venmo handle
 
 ### Template 3: Session Summary
