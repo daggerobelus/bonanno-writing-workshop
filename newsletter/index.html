@@ -206,7 +206,31 @@
             font-weight: 400;
             color: #555;
             line-height: 1.6;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
+        }
+
+        .issue-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+            margin-bottom: 18px;
+        }
+
+        .issue-tag {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #888;
+            padding: 4px 10px;
+            background: rgba(28,42,58,0.05);
+            border-radius: 3px;
+            transition: background 0.18s, color 0.18s;
+        }
+
+        .issue:hover .issue-tag {
+            background: rgba(201,168,76,0.12);
+            color: var(--navy);
         }
 
         .issue-read {
@@ -309,7 +333,7 @@
     <main>
         <section class="intro">
             <div class="section-label">Newsletter</div>
-            <h1>From the desk of Sarah Bonanno</h1>
+            <h1>Notes and advice from the Workshop</h1>
             <p class="lede">Once a month, a writing tip drawn from my work with students — useful for anyone who writes. Back issues live here.</p>
         </section>
 
@@ -325,6 +349,13 @@
                 </div>
                 <div class="issue-title">Start with your evidence — not your claim.</div>
                 <div class="issue-desc">The first thing I teach my students: a method for drafting that gets you past flat, predictable arguments and to a claim that's genuinely yours.</div>
+                <div class="issue-tags">
+                    <span class="issue-tag">Thesis</span>
+                    <span class="issue-tag">Drafting</span>
+                    <span class="issue-tag">Evidence</span>
+                    <span class="issue-tag">Argument</span>
+                    <span class="issue-tag">Reasoning</span>
+                </div>
                 <span class="issue-read">
                     Read issue
                     <span class="arrow">→</span>
