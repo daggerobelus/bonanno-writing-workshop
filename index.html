@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonanno Writing Workshop | Brooklyn Writing Tutor & College Essay Coach</title>
     <meta name="description" content="Private writing tutor and college essay coach in Brooklyn, NYC. Academic writing tutoring, college application essays, and async essay review for high school, college, and graduate students. PhD student at CUNY Graduate Center.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bonanno Writing Workshop | Brooklyn Writing Tutor & College Essay Coach">
+    <meta property="og:description" content="Private writing tutor and college essay coach in Brooklyn, NYC. Academic tutoring, college application essays, and async essay review.">
+    <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
+    <meta property="og:url" content="https://bonannoworkshop.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bonanno Writing Workshop">
+    <meta name="twitter:description" content="Private writing tutor and college essay coach in Brooklyn, NYC.">
+    <meta name="twitter:image" content="https://bonannoworkshop.com/og-image.png">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL55FCMMMT"></script>
     <script>
@@ -2033,6 +2045,15 @@
             margin-bottom: 8px;
         }
 
+        .optional-tag {
+            text-transform: none;
+            letter-spacing: 0.5px;
+            color: #bbb;
+            font-style: italic;
+            font-weight: 400;
+            margin-left: 6px;
+        }
+
         .form-group input,
         .form-group textarea,
         .form-group select {
@@ -2309,7 +2330,7 @@
 <!-- ── Nav ── -->
 <div class="nav-wrapper">
     <nav>
-        <a href="#" class="nav-brand"><img src="mark-transparent.png" alt=""><span>Bonanno Writing Workshop</span></a>
+        <a href="/" class="nav-brand"><img src="mark-transparent.png" alt=""><span>Bonanno Writing Workshop</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -2806,8 +2827,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell me a bit about your student — current grade, what they're working on, what kind of support you're looking for." required></textarea>
+                <label for="message">Message <span class="optional-tag">(optional)</span></label>
+                <textarea id="message" name="message" placeholder="Tell me a bit about your student — current grade, what they're working on, what kind of support you're looking for."></textarea>
             </div>
             <button type="submit" class="btn btn-gold">Send Message</button>
         </form>
