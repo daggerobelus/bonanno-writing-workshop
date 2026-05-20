@@ -153,6 +153,125 @@
             border-bottom-color: var(--gold);
         }
 
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            color: #555;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0 0 4px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .nav-dropdown-toggle::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-right: 1.5px solid currentColor;
+            border-bottom: 1.5px solid currentColor;
+            transform: rotate(45deg) translateY(-1px);
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-toggle,
+        .nav-dropdown:focus-within .nav-dropdown-toggle,
+        .nav-dropdown.open .nav-dropdown-toggle {
+            color: #1a1a1a;
+            border-bottom-color: var(--gold);
+        }
+
+        .nav-dropdown.open .nav-dropdown-toggle::after {
+            transform: rotate(-135deg) translateY(-1px);
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            margin: 0;
+            padding: 8px;
+            list-style: none;
+            min-width: 230px;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: 10px;
+            box-shadow: 0 12px 32px rgba(28,42,58,0.14);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.18s ease, transform 0.18s ease;
+            z-index: 200;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu,
+        .nav-dropdown.open .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(2px);
+        }
+
+        .nav-dropdown-menu li {
+            display: block;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: none;
+            color: #444;
+            border-radius: 6px;
+            border-bottom: none;
+            white-space: nowrap;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(201,168,76,0.13);
+            color: var(--navy);
+            border-bottom: none;
+        }
+
+        .nav-link-arrow .nav-arrow {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-link-arrow:hover .nav-arrow {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 600px) {
+            .nav-dropdown-menu {
+                left: 0;
+                right: auto;
+                transform: translateX(0) translateY(8px);
+                min-width: 200px;
+            }
+            .nav-dropdown:hover .nav-dropdown-menu,
+            .nav-dropdown:focus-within .nav-dropdown-menu,
+            .nav-dropdown.open .nav-dropdown-menu {
+                transform: translateX(0) translateY(2px);
+            }
+        }
+
         /* ── Hero ── */
         .hero {
             padding: 120px 48px 100px;
@@ -2457,9 +2576,16 @@
         <a href="/" class="nav-brand"><img src="mark-transparent.png" alt=""><span>Bonanno Writing Workshop</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#essay-review">Essay Review</a></li>
+            <li class="nav-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</button>
+                <ul class="nav-dropdown-menu">
+                    <li><a href="#services">Tutoring</a></li>
+                    <li><a href="#intensive">College App Intensive</a></li>
+                    <li><a href="#essay-review">On-Demand Essay Review</a></li>
+                </ul>
+            </li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="/writing-tips" class="nav-link-arrow">Writing Tips <span class="nav-arrow">&rarr;</span></a></li>
         </ul>
     </nav>
 </div>
@@ -2500,14 +2626,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- ── Problem ── -->
-<section class="problem">
-    <div class="problem-inner">
-        <p>Clear thinking leads to clear writing. I teach students a repeatable process — how to read critically, build an argument, and revise with purpose. The result isn't just a better paper. It's a stronger thinker.</p>
-        <span class="answer">That's what I teach.</span>
     </div>
 </section>
 
@@ -3129,6 +3247,31 @@ document.querySelectorAll('.rit-tab').forEach(tab => {
         if (!container) return;
         container.querySelectorAll('.rit-tab').forEach(t => t.classList.toggle('is-active', t === tab));
         container.querySelectorAll('.rit-panel').forEach(p => p.classList.toggle('is-active', p.dataset.ritPanel === target));
+    });
+});
+
+// Nav dropdown: tap to toggle (touch), close on outside click or after choosing an item
+document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const dd = btn.closest('.nav-dropdown');
+        const isOpen = dd.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+});
+document.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        const dd = link.closest('.nav-dropdown');
+        dd.classList.remove('open');
+        dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+    });
+});
+document.addEventListener('click', e => {
+    document.querySelectorAll('.nav-dropdown.open').forEach(dd => {
+        if (!dd.contains(e.target)) {
+            dd.classList.remove('open');
+            dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+        }
     });
 });
 </script>
