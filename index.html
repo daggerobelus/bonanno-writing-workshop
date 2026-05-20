@@ -375,6 +375,44 @@
             line-height: 1.8;
         }
 
+        .about-credentials {
+            margin-top: 32px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px 44px;
+        }
+
+        .about-credentials .about-cred-col {
+            flex: 1 1 200px;
+        }
+
+        .about-credentials .about-cred-label {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .about-credentials .about-cred-item {
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #777;
+            margin: 0 0 12px;
+        }
+
+        .about-credentials .about-cred-item span {
+            display: block;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
         /* ── Problem ── */
         .problem {
             background: #000000;
@@ -2418,7 +2456,6 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#essay-review">Essay Review</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -2446,6 +2483,20 @@
             <p>I'm Sarah Bonanno. Since 2019, I have taught hundreds of students ranging from first-year college students in humanities classes to high school students working on their college admissions essays. I am also proud of my work with advanced students and professionals, including PhD students, new teachers in training, and business professionals.</p>
             <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. I don't edit your student's work for them — I teach them how to see their own writing more clearly so they can revise with intention.</p>
             <p>I tutor over Zoom and am available for in-person sessions in the NYC area.</p>
+
+            <div class="about-credentials">
+                <div class="about-cred-col">
+                    <span class="about-cred-label">Education</span>
+                    <p class="about-cred-item"><span>PhD Student, English</span>CUNY Graduate Center</p>
+                    <p class="about-cred-item"><span>MA, Theater &amp; Performance Studies</span>University of Chicago</p>
+                    <p class="about-cred-item"><span>BA, English</span>Bowdoin College — cum laude, departmental honors</p>
+                </div>
+                <div class="about-cred-col">
+                    <span class="about-cred-label">Experience</span>
+                    <p class="about-cred-item"><span>Graduate Teaching Fellow</span>Brooklyn College, English Department</p>
+                    <p class="about-cred-item"><span>Assistant Director</span>University of Chicago Writing Program</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -2455,35 +2506,6 @@
     <div class="problem-inner">
         <p>Clear thinking leads to clear writing. I teach students a repeatable process — how to read critically, build an argument, and revise with purpose. The result isn't just a better paper. It's a stronger thinker.</p>
         <span class="answer">That's what I teach.</span>
-    </div>
-</section>
-
-<!-- ── Services ── -->
-<section class="services-section" id="services">
-    <div class="services-inner">
-        <h2 class="section-label">What I Offer</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-num">01</span>
-                <h3>Academic Tutoring</h3>
-                <p>I work with students on understanding their humanities assignments, including strategies for reading and annotating texts, analyzing literature, and preparing for classroom discussion or on-demand writing exercises. I typically work with high school, college, and graduate students.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-num">02</span>
-                <h3>Writing Tutoring</h3>
-                <p>I help students at all stages of the writing process for any academic course — from understanding assignments and prompts to drafting, revising, and proofreading. Sessions include on-demand writing exercises so students practice skills in real time.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-num">03</span>
-                <h3>Application Essays</h3>
-                <p>Dedicated support for Common App essays, supplements, scholarship essays, and statements of purpose. I guide students from brainstorming through final polish on a structured timeline.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-num">04</span>
-                <h3>Async Essay Review</h3>
-                <p>Submit any non-creative writing up to 10 pages and receive detailed margin notes and an endnote summary — no appointment needed. Standard 72-hour and rush 24-hour turnaround available.</p>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -2559,9 +2581,9 @@
 </section>
 
 <!-- ── Pricing ── -->
-<section class="pricing-section" id="pricing">
+<section class="pricing-section" id="services">
     <div class="pricing-inner">
-        <h2 class="section-label">Pricing</h2>
+        <h2 class="section-label">Services</h2>
         <p class="pricing-subtitle">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
 
         <div class="plan-toggle">
@@ -2808,39 +2830,6 @@
 
 <!-- ── Group Workshops ── -->
 <!-- ── Credentials ── -->
-<section class="credentials-section">
-    <div class="credentials-inner">
-        <h2 class="section-label">Credentials</h2>
-        <div class="credentials-grid">
-            <div class="credentials-col">
-                <h3>Education</h3>
-                <div class="credential-item">
-                    <div class="credential-title">PhD Student, English</div>
-                    <div class="credential-org">CUNY Graduate Center</div>
-                </div>
-                <div class="credential-item">
-                    <div class="credential-title">MA, Theater and Performance Studies</div>
-                    <div class="credential-org">University of Chicago</div>
-                </div>
-                <div class="credential-item">
-                    <div class="credential-title">BA, English</div>
-                    <div class="credential-org">Bowdoin College — cum laude, departmental honors</div>
-                </div>
-            </div>
-            <div class="credentials-col">
-                <h3>Experience</h3>
-                <div class="credential-item">
-                    <div class="credential-title">Graduate Teaching Fellow</div>
-                    <div class="credential-org">Brooklyn College, English Department</div>
-                </div>
-                <div class="credential-item">
-                    <div class="credential-title">Assistant Director</div>
-                    <div class="credential-org">University of Chicago Writing Program</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ── FAQ ── -->
 <section class="faq-section" id="faq">
