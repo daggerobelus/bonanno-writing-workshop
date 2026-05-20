@@ -284,6 +284,54 @@
             background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%);
         }
 
+        /* ── Availability pills ── */
+        .avail-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #5fb37a;
+            flex-shrink: 0;
+        }
+
+        .avail-pill-row {
+            text-align: center;
+            margin: 14px 0 18px;
+        }
+
+        .avail-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: #3f7a52;
+            background: rgba(95,179,122,0.12);
+            border: 1px solid rgba(95,179,122,0.28);
+        }
+
+        .avail-pill-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin: 12px 0;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
         .hero-mark {
             height: 56px;
             width: auto;
@@ -2579,7 +2627,7 @@
             <li class="nav-dropdown">
                 <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</button>
                 <ul class="nav-dropdown-menu">
-                    <li><a href="#services">Tutoring</a></li>
+                    <li><a href="#services">Tutoring Services</a></li>
                     <li><a href="#intensive">College App Intensive</a></li>
                     <li><a href="#essay-review">On-Demand Essay Review</a></li>
                 </ul>
@@ -2703,7 +2751,8 @@
 <!-- ── Pricing ── -->
 <section class="pricing-section" id="services">
     <div class="pricing-inner">
-        <h2 class="section-label">Services</h2>
+        <h2 class="section-label">Tutoring Services</h2>
+        <div class="avail-pill-row"><span class="avail-pill"><span class="avail-dot"></span>Now accepting new students &middot; Summer 2026</span></div>
         <p class="pricing-subtitle">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
 
         <div class="plan-toggle">
@@ -2782,7 +2831,8 @@
             <div class="app-package-badge">Course</div>
             <div class="app-package-header">
                 <div class="app-package-label">College Essay Intensive</div>
-                <div class="app-package-meta">Available June – January 15 &middot; 4 spots per season &middot; <span style="color:rgba(255,255,255,0.75);">Accepting reservations for Summer 2026</span></div>
+                <span class="avail-pill-dark"><span class="avail-dot"></span>Accepting reservations &middot; Summer 2026</span>
+                <div class="app-package-meta">Available June – January 15 &middot; 4 spots per season</div>
             </div>
             <p style="font-size:13.5px;color:rgba(255,255,255,0.75);margin-bottom:16px;margin-top:8px;line-height:1.6;">A private writing class for your student. Every student moves through a structured program and leaves with a finished, submission-ready essay.</p>
             <div class="app-package-tiers">
@@ -2819,6 +2869,7 @@
     <div class="essay-review-inner">
         <div class="essay-review-flag">On Demand</div>
         <h2 class="section-label">Async Essay Review</h2>
+        <span class="avail-pill"><span class="avail-dot"></span>Currently open</span>
         <p class="essay-review-subtitle">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary — no appointment needed.</p>
 
         <div class="essay-review-grid">
