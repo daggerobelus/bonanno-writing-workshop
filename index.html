@@ -2109,17 +2109,32 @@
             text-decoration: underline;
         }
 
+        .contact-call-alt {
+            text-align: center;
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-call-alt .contact-call-text {
+            font-size: 15px;
+            color: var(--navy);
+            font-weight: 400;
+        }
+
         /* ── Footer ── */
         footer {
             background: linear-gradient(180deg, #1e2f42 0%, #151f2b 100%);
             text-align: center;
-            padding: 56px 48px 40px;
+            padding: 38px 48px 26px;
         }
 
         .footer-signup {
             max-width: 420px !important;
-            margin: 0 auto 40px !important;
-            padding-bottom: 36px;
+            margin: 0 auto 26px !important;
+            padding-bottom: 24px;
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
@@ -2170,6 +2185,73 @@
             color: rgba(255, 255, 255, 0.4);
             font-weight: 300;
             letter-spacing: 0.5px;
+        }
+
+        .footer-contact {
+            max-width: 420px;
+            margin: 0 auto 26px;
+            text-align: center;
+        }
+
+        .footer-contact-links {
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+
+        .footer-contact-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-contact-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-contact-sep {
+            color: rgba(255,255,255,0.3);
+            margin: 0 10px;
+        }
+
+        .footer-consult-card {
+            display: block;
+            border: 1.5px solid var(--gold);
+            border-radius: 10px;
+            padding: 13px 22px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .footer-consult-card .footer-consult-card-title {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--gold);
+            margin-bottom: 5px;
+            transition: color 0.25s ease;
+        }
+
+        .footer-consult-card .footer-consult-card-sub {
+            display: block;
+            font-size: 12px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            transition: color 0.25s ease;
+        }
+
+        .footer-consult-card:hover {
+            background: var(--gold);
+        }
+
+        .footer-consult-card:hover .footer-consult-card-title {
+            color: var(--navy);
+        }
+
+        .footer-consult-card:hover .footer-consult-card-sub {
+            color: rgba(28,42,58,0.85);
         }
 
         /* ── Responsive ── */
@@ -2833,6 +2915,11 @@
             <button type="submit" class="btn btn-gold">Send Message</button>
         </form>
 
+        <div class="contact-call-alt">
+            <span class="contact-call-text">Prefer to talk it through first?</span>
+            <a href="https://calendly.com/sarah-bonannoworkshop/consultation" target="_blank" rel="noopener" class="btn-consult">Book a Free Call</a>
+        </div>
+
         <p class="email-fallback">Or email me directly at <a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></p>
     </div>
 </section>
@@ -2969,6 +3056,17 @@
         <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
         <script>fetch("https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/takel")</script>
         <p class="footer-archive-link"><a href="/newsletter">Read past issues →</a></p>
+    </div>
+    <div class="footer-contact">
+        <div class="footer-contact-links">
+            <a href="/">bonannoworkshop.com</a>
+            <span class="footer-contact-sep">·</span>
+            <a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a>
+        </div>
+        <a href="https://calendly.com/sarah-bonannoworkshop/consultation" target="_blank" rel="noopener" class="footer-consult-card">
+            <span class="footer-consult-card-title">Book a Free Consultation</span>
+            <span class="footer-consult-card-sub">A free 15-minute call — no pressure to book</span>
+        </a>
     </div>
     <img src="mark-transparent.png" alt="Bonanno Writing Workshop" class="footer-logo">
     <hr class="hairline hairline-center hairline-white" style="margin: 20px auto;">
