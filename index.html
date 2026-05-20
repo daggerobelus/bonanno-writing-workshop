@@ -319,6 +319,37 @@
             margin: 6px 0 16px;
         }
 
+        /* Async review open/closed toggle: add `is-closed` to .essay-review-section */
+        .avail-pill-closed {
+            color: #8a8a8a;
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.14);
+        }
+
+        .avail-dot-closed {
+            background: #b0b0b0;
+        }
+
+        .pill-closed {
+            display: none;
+        }
+
+        .essay-review-section.is-closed .pill-open {
+            display: none;
+        }
+
+        .essay-review-section.is-closed .pill-closed {
+            display: inline-flex;
+        }
+
+        .essay-review-section.is-closed .review-menu {
+            opacity: 0.5;
+        }
+
+        .essay-review-section.is-closed .menu-line {
+            pointer-events: none;
+        }
+
         .avail-pill-dark {
             display: inline-flex;
             align-items: center;
@@ -2871,11 +2902,12 @@
 </section>
 
 <!-- ── Essay Review ── -->
-<section class="essay-review-section" id="essay-review">
+<section class="essay-review-section is-closed" id="essay-review">
     <div class="essay-review-inner">
         <div class="essay-review-flag">On Demand</div>
         <h2 class="section-label">Async Essay Review</h2>
-        <span class="avail-pill"><span class="avail-dot"></span>Currently open</span>
+        <span class="avail-pill pill-open"><span class="avail-dot"></span>Currently open</span>
+        <span class="avail-pill avail-pill-closed pill-closed"><span class="avail-dot avail-dot-closed"></span>Currently closed &middot; accepting submissions May 28</span>
         <p class="essay-review-subtitle">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary — no appointment needed.</p>
 
         <div class="essay-review-grid">
