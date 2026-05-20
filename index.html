@@ -416,7 +416,9 @@
         /* ── Problem ── */
         .problem {
             background: #000000;
-            background-image: radial-gradient(ellipse at center, #000000 30%, #1f2b3e 100%);
+            background-image:
+                linear-gradient(to bottom, transparent 55%, var(--navy) 100%),
+                radial-gradient(ellipse at center, #000000 30%, #1f2b3e 100%);
             padding: 100px 48px;
         }
 
