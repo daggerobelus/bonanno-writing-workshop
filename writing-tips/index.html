@@ -291,18 +291,20 @@
         }
 
         .issue {
+            --issue-accent: var(--gold);
             display: block;
             text-decoration: none;
             background: #ffffff;
             border: 1px solid rgba(28,42,58,0.1);
             border-radius: 6px;
             padding: 28px 32px;
+            box-shadow: inset 4px 0 0 var(--issue-accent);
             transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
         }
 
         .issue:hover {
-            border-color: var(--gold);
-            box-shadow: 0 4px 18px rgba(28,42,58,0.08);
+            border-color: var(--issue-accent);
+            box-shadow: inset 4px 0 0 var(--issue-accent), 0 4px 18px rgba(28,42,58,0.08);
         }
 
         .issue-meta {
@@ -314,11 +316,12 @@
             font-weight: 600;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--issue-accent);
         }
 
         .issue-meta .dot {
-            color: rgba(201,168,76,0.6);
+            color: var(--issue-accent);
+            opacity: 0.55;
         }
 
         .issue-meta .date {
@@ -364,7 +367,7 @@
         }
 
         .issue:hover .issue-tag {
-            background: rgba(201,168,76,0.12);
+            background: color-mix(in srgb, var(--issue-accent) 13%, transparent);
             color: var(--navy);
         }
 
@@ -372,14 +375,14 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--gold);
+            color: var(--issue-accent);
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 0.04em;
         }
 
         .issue:hover .issue-read {
-            color: var(--gold-hover);
+            color: color-mix(in srgb, var(--issue-accent) 82%, #000);
         }
 
         .issue-read .arrow {
@@ -558,7 +561,31 @@
         </section>
 
         <div class="issues">
+            <a class="issue" href="/writing-tips/issue-02.pdf" target="_blank" rel="noopener"
+               style="--issue-accent:#bd6a4e;"
+               data-tags="college-admissions personal-essay drafting main-point"
+               data-date="2026-06"
+               data-issue="02">
+                <div class="issue-meta">
+                    <span class="number">Issue 02</span>
+                    <span class="dot">·</span>
+                    <span class="date">June 2026</span>
+                </div>
+                <div class="issue-title">A great college essay is about something.</div>
+                <div class="issue-desc">The difference between an essay that's read and one that's remembered — and how to make sure your main point actually lands on the page.</div>
+                <div class="issue-tags">
+                    <span class="issue-tag">College Admissions</span>
+                    <span class="issue-tag">Personal Essay</span>
+                    <span class="issue-tag">Drafting</span>
+                    <span class="issue-tag">Main Point</span>
+                </div>
+                <span class="issue-read">
+                    Read issue
+                    <span class="arrow">→</span>
+                </span>
+            </a>
             <a class="issue" href="/writing-tips/issue-01.pdf" target="_blank" rel="noopener"
+               style="--issue-accent:#c9a84c;"
                data-tags="thesis drafting evidence argument method"
                data-date="2026-05"
                data-issue="01">
