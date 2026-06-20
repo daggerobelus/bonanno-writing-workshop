@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Tutoring · Getting Started — Bonanno Writing Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: #1c2a3a; --gold: #c9a84c; --gold-hover: #b8953e; --cream: #f8f5ef; --white: #ffffff; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f0f0f0; font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--navy); line-height: 1.55; text-wrap: pretty; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .packet { max-width: 800px; margin: 40px auto; background: var(--white); box-shadow: 0 4px 40px rgba(0,0,0,0.13); border-radius: 2px; overflow: hidden; }
+    .packet-header { background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%); padding: 30px 48px 26px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .packet-header img.logo { height: 32px; width: auto; filter: brightness(0) invert(1); display: block; }
+    .packet-header .packet-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 40px; color: var(--white); letter-spacing: 0.01em; line-height: 1.15; }
+    .packet-header .packet-tagline { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .section { padding: 18px 40px; border-bottom: 1px solid #e8e2d8; }
+    .section:last-child { border-bottom: none; }
+    .section-label { font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .section-divider { width: 48px; height: 1px; background: var(--gold); margin-bottom: 12px; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; color: var(--navy); margin-bottom: 18px; line-height: 1.25; }
+    .section p { color: #3a4a5a; margin-bottom: 8px; }
+    .section p:last-child { margin-bottom: 0; }
+    .lead { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: var(--navy); line-height: 1.5; margin-bottom: 12px; }
+    .steps-list { list-style: none; padding: 0; margin-top: 4px; margin-bottom: 18px; }
+    .steps-list li { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 12px; }
+    .steps-list li:last-child { margin-bottom: 0; }
+    .step-number { flex-shrink: 0; width: 34px; height: 34px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; line-height: 1; margin-top: 2px; }
+    .step-content strong { font-family: 'Inter', sans-serif; font-weight: 600; color: var(--navy); display: block; margin-bottom: 3px; font-size: 14.5px; }
+    .step-content span { color: #4a5a6a; font-size: 14px; }
+    .cover-block h3 { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .cover-block ul { list-style: none; padding: 0; }
+    .cover-block ul li { color: #3a4a5a; padding: 5px 0; padding-left: 18px; position: relative; line-height: 1.6; }
+    .cover-block ul li::before { content: ''; position: absolute; left: 0; top: 13px; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+    .logistics-list { list-style: none; padding: 0; }
+    .logistics-list li { padding: 7px 0; border-bottom: 1px solid #efe9df; line-height: 1.6; color: #3a4a5a; }
+    .logistics-list li:last-child { border-bottom: none; }
+    .logistics-list li strong { font-family: 'Inter', sans-serif; font-weight: 600; color: var(--navy); }
+    .individual-rate { font-size: 14px; color: #3a4a5a; margin-bottom: 18px; line-height: 1.55; }
+    .individual-rate strong { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 19px; color: var(--navy); }
+    .pkg-group-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
+    .package-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 4px; align-items: stretch; }
+    .package-card { background: var(--cream); border-radius: 2px; padding: 20px 18px 22px; border-top: 3px solid var(--gold); text-align: center; display: flex; flex-direction: column; }
+    .package-card.featured { background: var(--navy); border-top-color: var(--gold); }
+    .pkg-name { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 14px; }
+    .package-card.featured .pkg-name { color: var(--gold); }
+    .pkg-price { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 34px; color: var(--navy); line-height: 1; }
+    .package-card.featured .pkg-price { color: var(--white); }
+    .pkg-unit { font-family: 'Inter', sans-serif; font-size: 12px; color: #6a7a8a; margin-top: 7px; }
+    .package-card.featured .pkg-unit { color: rgba(255,255,255,0.6); }
+    .pkg-rate { font-family: 'Inter', sans-serif; font-size: 12.5px; color: #4a5a6a; margin-top: 10px; }
+    .package-card.featured .pkg-rate { color: rgba(255,255,255,0.8); }
+    .pkg-save { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-top: 12px; }
+    .pkg-extra { font-family: 'Inter', sans-serif; font-size: 12px; color: #4a5a6a; margin-top: 6px; line-height: 1.4; }
+    .package-card.featured .pkg-extra { color: rgba(255,255,255,0.75); }
+    .pkg-policies { margin-top: 20px; background: var(--cream); border-left: 3px solid var(--gold); border-radius: 2px; padding: 14px 18px; }
+    .pkg-policies-label { font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
+    .pkg-policies ul { list-style: none; padding: 0; margin: 0; }
+    .pkg-policies li { font-size: 12.5px; color: #4a5a6a; line-height: 1.55; padding: 3px 0 3px 16px; position: relative; }
+    .pkg-policies li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+    .pkg-policies li strong { color: var(--navy); font-weight: 600; }
+    .pricing-note { font-size: 12.5px; color: #6a7a8a; margin-top: 12px; line-height: 1.55; }
+    .contact-footer { background: var(--cream); padding: 16px 40px; text-align: center; border-top: 1px solid #ddd8ce; }
+    .contact-footer .contact-line { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--navy); display: block; margin-bottom: 6px; letter-spacing: 0.02em; }
+    .contact-footer .contact-line a { color: var(--navy); text-decoration: none; }
+    .contact-footer .copyright { font-family: 'Inter', sans-serif; font-size: 11px; color: #8a9aaa; letter-spacing: 0.08em; margin-top: 6px; display: block; }
+    @media print {
+      @page { margin: 0.45in; }
+      body { background: white; }
+      .packet { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; overflow: visible; }
+      .section { break-inside: avoid; page-break-inside: avoid; }
+      .section-label, .section-divider { break-after: avoid; page-break-after: avoid; }
+      .steps-list li, .cover-block, .pricing-table, .contact-footer { break-inside: avoid; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="packet">
+
+    <header class="packet-header">
+      <img class="logo" src="/logo-transparent.png" alt="Bonanno Writing Workshop" />
+      <div class="packet-title">Welcome to the Workshop</div>
+      <div class="packet-tagline">Your Guide to Getting Started</div>
+    </header>
+
+    <!-- Welcome -->
+    <section class="section">
+      <p class="section-label">Welcome</p>
+      <div class="section-divider"></div>
+      <p class="lead">I'm so glad we're working together. Here's everything you need to know to get started — what our time together looks like, how things run, and the options for moving forward.</p>
+    </section>
+
+    <!-- How a Session Works -->
+    <section class="section">
+      <p class="section-label">How a Session Works</p>
+      <div class="section-divider"></div>
+      <p>Each session runs about 60 minutes, over Zoom or in person in the NYC area, and follows a simple, repeating rhythm:</p>
+      <ol class="steps-list">
+        <li>
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <strong>We meet.</strong>
+            <span>Sessions are built around whatever your student is working on that week — we start from their current assignment or goal and work through it together.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <strong>You get a recap.</strong>
+            <span>After each session, you'll receive a short summary of what we covered, plus any out-of-session work to keep the momentum going before we meet again.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <strong>We meet again.</strong>
+            <span>We pick up from the recap, so nothing gets lost between sessions.</span>
+          </div>
+        </li>
+      </ol>
+      <div class="cover-block">
+        <h3>What a Session Can Cover</h3>
+        <ul>
+          <li>Reading, annotating, and analyzing literature, and prepping for class discussion</li>
+          <li>Understanding an assignment and planning an approach before drafting</li>
+          <li>Drafting, revising, and editing — at any stage of a paper</li>
+          <li>Targeted drafting and revision exercises to build writing skills in real time</li>
+          <li>Research papers, literary analysis, and writing-focused coursework across subjects</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Logistics -->
+    <section class="section">
+      <p class="section-label">Logistics</p>
+      <div class="section-divider"></div>
+      <ul class="logistics-list">
+        <li><strong>Scheduling:</strong> Most students meet once a week at a recurring time. Some meet as often as twice a week, others biweekly or as needed — whatever fits your student's workload and goals.</li>
+        <li><strong>Format:</strong> Zoom or in person in the NYC area.</li>
+        <li><strong>Payment:</strong> Venmo (@bonannowriting) or Zelle (914-960-4398).</li>
+      </ul>
+    </section>
+
+    <!-- Pricing Options -->
+    <section class="section">
+      <p class="section-label">Pricing Options</p>
+      <div class="section-divider"></div>
+      <p class="individual-rate">Individual sessions are charged at <strong>$150/hr</strong>.</p>
+      <div class="pkg-policies">
+        <div class="pkg-policies-label">Single Session Terms</div>
+        <ul>
+          <li><strong>Billing:</strong> Single sessions are billed monthly on the 1st and payment is due within 7 days.</li>
+          <li><strong>Cancellations:</strong> 24 hours notice to reschedule freely. Under 24 hours is charged at 50%, no-shows at the full rate.</li>
+        </ul>
+      </div>
+      <div class="pkg-group-label" style="margin-top:24px;">Packages</div>
+      <div class="package-grid">
+        <div class="package-card">
+          <div class="pkg-name">Monthly</div>
+          <div class="pkg-price">$540</div>
+          <div class="pkg-unit">4 sessions</div>
+          <div class="pkg-rate">$135 / session</div>
+        </div>
+        <div class="package-card featured">
+          <div class="pkg-name">Semester</div>
+          <div class="pkg-price">$1,920</div>
+          <div class="pkg-unit">16 sessions</div>
+          <div class="pkg-rate">$120 / session</div>
+          <div class="pkg-extra">+ 4 async reviews included</div>
+        </div>
+      </div>
+      <div class="pkg-policies">
+        <div class="pkg-policies-label">Package Terms</div>
+        <ul>
+          <li><strong>Payment:</strong> Monthly and semester packages are paid in full upfront.</li>
+          <li><strong>Use-by window:</strong> Monthly packages are used within 6 weeks of purchase, semester packages within 20 weeks.</li>
+          <li><strong>Rescheduling:</strong> Reschedule sessions freely anytime within your package window.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="contact-footer">
+      <p class="section-label" style="margin-bottom:8px;">Contact</p>
+      <span class="contact-line"><a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></span>
+      <span class="contact-line"><a href="https://bonannoworkshop.com" target="_blank">bonannoworkshop.com</a></span>
+      <span class="copyright">&copy; 2026 Bonanno Writing Workshop</span>
+    </footer>
+
+  </div>
+</body>
+</html>
