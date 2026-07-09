@@ -240,6 +240,26 @@
   footer .mid{color:var(--ink-faint);}
   footer a{color:inherit;text-decoration:none;}
 
+  /* ── License ── */
+  .license{
+    margin-top:16px;
+    padding-top:12px;
+    border-top:1px solid var(--rule);
+    font-size:10.5px;
+    line-height:1.6;
+    color:var(--ink-faint);
+    text-align:center;
+    letter-spacing:0.2px;
+    text-wrap:pretty;
+  }
+  .license a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:2px;}
+  .license .cc{
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
   @media print{
     @page{size:letter;margin:0;}
     html,body{background:#fff;padding:0;}
@@ -260,6 +280,7 @@
     .test .col p{font-size:13px;}
     .callback{margin-top:18px;font-size:15px;}
     .foot-rule{margin:14px 0 10px;}
+    .license{margin-top:12px;padding-top:9px;font-size:9.5px;}
     h1{font-size:42px;}
     .bignum{font-size:132px;}
   }
@@ -349,6 +370,10 @@
     <span class="mid">Read back issues &middot; <a href="https://bonannoworkshop.com/writing-tips">/writing-tips</a></span>
     <span><a href="mailto:sarah@bonannoworkshop.com">Reply to book a free call</a></span>
   </footer>
+
+  <div class="license">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><span class="cc">CC BY-NC-ND 4.0</span></a>
+  </div>
 
 </div>
 </body>

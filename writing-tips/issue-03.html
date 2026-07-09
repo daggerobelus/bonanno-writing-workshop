@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Issue 02 — A great college essay is about something</title>
+<title>Issue 03 — Crafting strong main claims</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
     --navy:#1c2a3a;
     --cream:#f8f5ef;
     /* ── ROTATING ACCENT — change this one line per issue ── */
-    --accent:#bd6a4e;          /* Issue 02: terracotta (Issue 01 was #c9a84c gold) */
-    --accent-pale:#e6c4b6;     /* tint of the accent for the big numeral */
+    --accent:#3d7d74;          /* Issue 03: teal (01 was #c9a84c gold, 02 was #bd6a4e terracotta) */
+    --accent-pale:#bcd6d1;     /* tint of the accent for the big numeral */
     --ink-soft:#5d6470;
     --ink-faint:#9aa1ab;
     --rule:rgba(28,42,58,0.14);
@@ -92,39 +92,23 @@
   }
   .rule-accent.tight{margin:30px 0 28px;}
 
-  /* ── Two-column intro ── */
-  .intro{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:42px;
-  }
+  /* ── Intro (full-width lede; Issues 01–02 use a two-column variant) ── */
+  .intro{max-width:66ch;}
   .intro p{
-    font-size:14px;
-    line-height:1.72;
+    font-size:15px;
+    line-height:1.75;
     color:var(--navy);
     text-wrap:pretty;
   }
-  .intro p + p{margin-top:14px;}
+  .intro p + p{margin-top:16px;}
   .intro em{font-style:italic;}
-  .pullquote{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-style:italic;
-    font-weight:500;
-    font-size:23px;
-    line-height:1.32;
-    color:var(--navy);
-    padding-top:6px;
-    border-top:2px solid var(--accent);
-    margin-bottom:18px;
-    text-wrap:balance;
-  }
 
   /* ── Method box ── */
   .method{
     background:var(--navy);
     color:#fff;
     padding:30px 34px 26px;
-    margin:34px 0 30px;
+    margin:34px 0 0;
   }
   .method-head{
     display:flex;
@@ -174,23 +158,40 @@
     text-wrap:pretty;
   }
 
-  /* ── Three-part test ── */
+  /* ── Spectrum (opinion ↔ claim ↔ fact) ── */
   .test-label{
     color:var(--accent);
     font-size:10.5px;
     letter-spacing:2.6px;
     text-transform:uppercase;
     font-weight:600;
-    margin-bottom:18px;
+    margin:36px 0 16px;
   }
-  .test{
+  /* bar + columns share one track template so the ticks land on the labels */
+  .spectrum-bar{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1fr 20px 1fr 20px 1fr;
+    gap:0 22px;
+    height:2px;
+    background:var(--accent);
+    opacity:0.85;
+    margin-bottom:22px;
+  }
+  .spectrum-bar .tick{
+    width:2px;
+    height:12px;
+    margin-top:-5px;
+    background:var(--accent);
+    justify-self:center;
+  }
+  .spectrum{
+    display:grid;
+    grid-template-columns:1fr 20px 1fr 20px 1fr;
     align-items:start;
-    gap:0 36px;
+    gap:0 22px;
     text-align:center;
   }
-  .test .col h3{
+  .spectrum .col h3{
     font-family:'Cormorant Garamond',Georgia,serif;
     font-weight:600;
     font-size:22px;
@@ -198,7 +199,8 @@
     color:var(--navy);
     margin-bottom:8px;
   }
-  .test .col p{
+  .spectrum .col.mid h3{color:var(--accent);}
+  .spectrum .col p{
     font-family:'Cormorant Garamond',Georgia,serif;
     font-style:italic;
     font-size:13.5px;
@@ -207,24 +209,13 @@
     padding:0 4px;
     text-wrap:balance;
   }
-  .test .arrow{
+  .spectrum .arrow{
     align-self:start;
-    margin-top:8px;
+    margin-top:6px;
     color:var(--accent);
     font-size:20px;
     line-height:1;
   }
-  .callback{
-    text-align:center;
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-style:italic;
-    font-size:16px;
-    color:var(--ink-soft);
-    margin:26px auto 0;
-    max-width:80%;
-    line-height:1.45;
-  }
-
   /* ── Footer ── */
   .foot-rule{height:1px;background:var(--accent);opacity:0.5;margin:30px 0 14px;}
   footer{
@@ -267,18 +258,16 @@
     .method{break-inside:avoid;}
     .rule-accent{margin:10px 0 18px;}
     .rule-accent.tight{margin:20px 0 18px;}
-    .intro{gap:34px;}
-    .intro p{font-size:13px;line-height:1.6;}
-    .pullquote{font-size:21px;margin-bottom:14px;}
-    .method{margin:22px 0 22px;padding:22px 26px 18px;}
+    .intro p{font-size:13.5px;line-height:1.62;}
+    .method{margin:26px 0 0;padding:22px 26px 18px;}
     .move{padding:9px 0;}
     .move .n{font-size:31px;}
     .move .t{font-size:14px;}
     .move .d{font-size:13.5px;line-height:1.32;}
-    .test-label{margin-bottom:14px;}
-    .test .col h3{font-size:20px;}
-    .test .col p{font-size:13px;}
-    .callback{margin-top:18px;font-size:15px;}
+    .test-label{margin:26px 0 12px;}
+    .spectrum-bar{margin-bottom:18px;}
+    .spectrum .col h3{font-size:20px;}
+    .spectrum .col p{font-size:13px;}
     .foot-rule{margin:14px 0 10px;}
     .license{margin-top:12px;padding-top:9px;font-size:9.5px;}
     h1{font-size:42px;}
@@ -291,79 +280,77 @@
 
   <div class="masthead">
     <span class="brand">Bonanno Writing Workshop</span>
-    <span class="issue-line">Newsletter &middot; No. 02 &middot; College Essays</span>
+    <span class="issue-line">Newsletter &middot; No. 03 &middot; Claims &amp; Thesis Statements</span>
   </div>
   <div class="rule-accent"></div>
 
   <div class="titleblock">
     <div class="title-text">
-      <div class="eyebrow">Issue Two &middot; From the desk of Sarah Bonanno</div>
-      <h1>A great college essay is <em>about</em> something.</h1>
-      <div class="subtitle">Making sure your main point makes it onto the page.</div>
+      <div class="eyebrow">Issue Three &middot; From the desk of Sarah Bonanno</div>
+      <h1>Crafting strong main claims</h1>
+      <div class="subtitle">The argumentative thesis statement.</div>
     </div>
-    <div class="bignum">02</div>
+    <div class="bignum">03</div>
   </div>
   <div class="rule-accent tight"></div>
 
   <div class="intro">
-    <div class="left">
-      <p>When I applied to college, I wrote about a game. Every day at recess, my best friend and I played the same one: we were two orphans breaking out of an orphanage &mdash; a little bit <em>Annie</em>, mostly our own invention &mdash; and every afternoon we built that whole world back up from scratch.</p>
-      <p>I didn't write about it to prove I was imaginative. I wrote about it because that game was the truest thing I could point to about who I am: that I build worlds, that creativity and imagination are how I make sense of things &mdash; and that building worlds was exactly what I wanted to keep doing once I got to college.</p>
+    <p>Students are often taught that a thesis statement should encompass and reflect the overall topic and discussion of the paper.</p>
+    <p>But for upper level high school classes and college classes, the thesis statement often needs to be argumentative in nature. You're no longer proving that you read the book and can identify rhetorical and literary devices &mdash; you have your own unique perspective, and you present it through an argumentative claim.</p>
+    <p>Moving from descriptive to argumentative thesis statements can be challenging. But here's what readers look for when deciding if a thesis statement makes an argumentative claim that moves beyond fact and isn't simply pure opinion.</p>
+  </div>
+
+  <div class="test-label">The Spectrum of Opinion, Claim, and Fact</div>
+  <div class="spectrum-bar">
+    <span class="tick"></span>
+    <span></span>
+    <span class="tick"></span>
+    <span></span>
+    <span class="tick"></span>
+  </div>
+  <div class="spectrum">
+    <div class="col">
+      <h3>Opinion</h3>
+      <p>A debatable statement someone can doubt, but that doesn't rely on evidence or reasoning.</p>
     </div>
-    <div class="right">
-      <div class="pullquote">Your admissions officer should be able to write your main point in one sentence in their notes &mdash; they shouldn't have to guess.</div>
-      <p>That essay worked because of one quiet thing: it was <em>about</em> something. An admissions reader gets through thousands of essays a season, and the ones that blur together are the r&eacute;sum&eacute; in paragraph form and the beautifully-written piece you finish without being able to say what it was <em>about</em>. Here's how I get students to the other kind.</p>
+    <div class="arrow">&#8596;</div>
+    <div class="col mid">
+      <h3>Claim</h3>
+      <p>A specific, contestable, and significant statement that is substantiated by evidence.</p>
+    </div>
+    <div class="arrow">&#8596;</div>
+    <div class="col">
+      <h3>Fact</h3>
+      <p>A verifiable statement based in evidence and data that is not contestable or debatable.</p>
     </div>
   </div>
 
   <div class="method">
     <div class="method-head">
-      <span class="label">The Method</span>
-      <span class="sub">five moves from blank page to a point</span>
+      <span class="label">The Test</span>
+      <span class="sub">one &ldquo;C&rdquo; and three &ldquo;S&rdquo;</span>
     </div>
     <div class="move">
       <div class="n">01</div>
-      <div class="t">Start with one real moment</div>
-      <div class="d">Not a theme &mdash; a moment. One specific scene you can still picture. The more specific it is, the easier everything after this gets.</div>
+      <div class="t">Contestable</div>
+      <div class="d">A reasonable reader can doubt your claim. If nobody could disagree, there's nothing to argue.</div>
     </div>
     <div class="move">
       <div class="n">02</div>
-      <div class="t">Ask what it shows about you</div>
-      <div class="d">Sit with the moment and ask why it stuck. What does it reveal that a list of your accomplishments never could? That's your main point.</div>
+      <div class="t">Specific</div>
+      <div class="d">It explains how and why your key terms are connected &mdash; not just that they are.</div>
     </div>
     <div class="move">
       <div class="n">03</div>
-      <div class="t">Skip the lesson you think they want</div>
-      <div class="d">"I learned that hard work pays off" is the line everyone reaches for because it sounds safe. Cross it out. The honest version is always the better essay.</div>
+      <div class="t">Significant</div>
+      <div class="d">It answers the question &ldquo;so what?&rdquo; Why does this argument matter to a reader?</div>
     </div>
     <div class="move">
       <div class="n">04</div>
-      <div class="t">Show it before you tell it</div>
-      <div class="d">Put the reader in the moment first. Then, and only then, tell them what it meant to you. The order matters.</div>
-    </div>
-    <div class="move">
-      <div class="n">05</div>
-      <div class="t">Answer "so what?"</div>
-      <div class="d">Say why this matters &mdash; not just to you, but to a reader who's never met you. Your reader looks for that in your opening and again at your close.</div>
+      <div class="t">Supportable</div>
+      <div class="d">It is grounded in evidence and reasoning &mdash; something you can actually go and demonstrate.</div>
     </div>
   </div>
-
-  <div class="test-label">The Test of a Real Point</div>
-  <div class="test">
-    <div class="col">
-      <h3>Only you could write it</h3>
-      <p>Built from the details of your one moment, not a theme anyone could borrow.</p>
-    </div>
-    <div class="col">
-      <h3>You actually mean it</h3>
-      <p>The honest thing the moment taught you, not the lesson you think admissions wants to hear.</p>
-    </div>
-    <div class="col">
-      <h3>It matters beyond the moment</h3>
-      <p>It points past the story to who you are.</p>
-    </div>
-  </div>
-  <div class="callback">That recess game checked all three &mdash; only I could've written it, I meant every word, and it pointed straight at who I was becoming.</div>
 
   <div class="foot-rule"></div>
   <footer>
