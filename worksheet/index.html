@@ -27,249 +27,255 @@
       gtag('config', 'G-KL55FCMMMT');
     </script>
 
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2266162');
+    </script>
+    <!-- End MailerLite Universal -->
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --navy: #1c2a3a;
-            --gold: #c9a84c;
-            --gold-hover: #b8953e;
-            --cream: #f8f5ef;
+            --paper: #faf5ea;
+            --paper-card: #fffdf6;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --rule: rgba(38, 33, 23, 0.14);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html, body {
-            min-height: 100%;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background: var(--navy);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            font-feature-settings: "kern" 1, "liga" 1;
+            font-family: var(--body);
+            font-size: 17.5px;
+            line-height: 1.75;
+            color: var(--ink);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            overflow-x: clip;
+            background-color: var(--paper);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
         }
 
         .page-header {
             text-align: center;
-            padding: 40px 24px 0;
+            padding: 30px 20px 0;
         }
 
-        .page-header .wordmark {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--gold);
+        .wordmark {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
             text-decoration: none;
+            color: var(--ink);
         }
+
+        .wordmark em { font-style: italic; font-weight: 500; color: var(--pencil); }
 
         main {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 48px 20px 70px;
         }
 
-        /* ── Lead magnet ── */
-        .lead-magnet-section {
-            background: var(--navy);
-            padding: 80px 48px 96px;
+        .clipout {
+            position: relative;
+            max-width: 940px;
             width: 100%;
-        }
-
-        .lead-magnet-inner {
-            max-width: 1180px;
-            margin: 0 auto;
+            border: 1.5px dashed var(--pencil-soft);
+            background: var(--paper-card);
+            padding: 52px 56px 48px;
             display: grid;
-            grid-template-columns: 1fr 1.05fr;
-            gap: 72px;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 52px;
             align-items: center;
         }
 
-        .lead-magnet-copy {
-            max-width: 480px;
+        .clipout::before {
+            content: '✂';
+            position: absolute;
+            top: -14px;
+            left: 40px;
+            font-size: 22px;
+            color: var(--pencil);
+            background: var(--paper);
+            padding: 0 8px;
+            transform: rotate(90deg);
         }
 
-        .lead-magnet-section .section-label {
-            color: var(--gold);
-            margin-bottom: 22px;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.12em;
+        .type-label {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
+            color: var(--pencil);
         }
 
-        .lead-magnet-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 46px;
+        h1 {
+            font-family: var(--serif);
+            font-size: 34px;
             font-weight: 500;
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: 22px;
+            line-height: 1.2;
+            margin: 14px 0 14px;
         }
 
-        .lead-magnet-section p {
-            font-size: 17px;
-            font-weight: 300;
-            color: rgba(255,255,255,0.78);
-            line-height: 1.55;
-            margin-bottom: 28px;
+        h1 .squiggle { position: relative; white-space: nowrap; }
+
+        h1 .squiggle svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.12em;
+            width: 104%;
+            height: 0.24em;
+            overflow: visible;
         }
 
-        .lead-magnet-preview img {
-            width: 100%;
-            height: auto;
-            display: block;
-            filter: drop-shadow(0 24px 40px rgba(0,0,0,0.35));
+        h1 .squiggle path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 2.4;
+            stroke-linecap: round;
         }
 
-        .lead-magnet-section .ml-form-embedContainer {
-            display: block !important;
-            margin: 0 !important;
+        .lede {
+            color: var(--ink-soft);
+            margin-bottom: 30px;
+            max-width: 30em;
         }
 
-        .lead-magnet-section .ml-form-align-center {
-            width: 100% !important;
-            display: block !important;
+        form { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        input[type="email"] {
+            flex: 1 1 220px;
+            font-family: var(--mono);
+            font-size: 14.5px;
+            color: var(--ink);
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid var(--ink-soft);
+            padding: 12px 4px;
+            outline: none;
         }
+
+        input[type="email"]:focus { border-bottom-color: var(--pencil); }
+        input::placeholder { color: var(--ink-faint); }
+
+        .btn {
+            font-family: var(--mono);
+            font-size: 13.5px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--paper-card);
+            background: var(--pencil);
+            padding: 14px 26px;
+            border: 1px solid var(--pencil);
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0 var(--pencil-faint);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--pencil-soft); }
+
+        .fineprint {
+            margin-top: 16px;
+            font-size: 13.5px;
+            color: var(--ink-faint);
+        }
+
+        .sheet {
+            position: relative;
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            padding: 12px;
+            box-shadow: 0 1px 2px rgba(38,33,23,0.08), 0 14px 34px rgba(38,33,23,0.13);
+            transform: rotate(1.8deg);
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .sheet::before {
+            content: '';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 100px;
+            height: 28px;
+            background: rgba(214, 195, 150, 0.5);
+            border-left: 1px dashed rgba(38,33,23,0.12);
+            border-right: 1px dashed rgba(38,33,23,0.12);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.08);
+        }
+
+        .sheet img { max-width: 100%; display: block; border: 1px solid var(--rule); }
+
+        footer {
+            text-align: center;
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            color: var(--ink-faint);
+            padding: 0 20px 26px;
+        }
+
+        footer a { color: var(--ink-faint); }
 
         @media (max-width: 860px) {
-            .lead-magnet-section { padding: 48px 24px 64px; }
-            .lead-magnet-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-            .lead-magnet-copy { max-width: 100%; }
-            .lead-magnet-section h2 { font-size: 36px; }
-            .lead-magnet-preview { max-width: 480px; margin: 0 auto; }
-        }
-
-        .lead-magnet-section .ml-form-embedWrapper {
-            background-color: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"] {
-            background-color: rgba(255,255,255,0.08) !important;
-            border: 1.5px solid rgba(255,255,255,0.35) !important;
-            color: #ffffff !important;
-            border-radius: 4px !important;
-        }
-
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-webkit-input-placeholder { color: rgba(255,255,255,0.75) !important; }
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-moz-placeholder { color: rgba(255,255,255,0.75) !important; }
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::placeholder { color: rgba(255,255,255,0.75) !important; }
-
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
-            background-color: #c9a84c !important;
-            color: #1c2a3a !important;
-            font-weight: 700 !important;
-            border: none !important;
-            padding: 12px !important;
-        }
-
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
-            background-color: #b8963e !important;
-        }
-
-        .page-footer {
-            text-align: center;
-            padding: 24px;
-            color: rgba(255,255,255,0.4);
-            font-size: 13px;
-        }
-
-        .page-footer a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-        }
-
-        .page-footer a:hover {
-            color: var(--gold);
+            .clipout { grid-template-columns: 1fr; padding: 42px 28px 38px; gap: 44px; }
+            h1 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
-    <header class="page-header">
-        <a href="/" class="wordmark">Bonanno Writing Workshop</a>
-    </header>
 
-    <main>
-        <section class="lead-magnet-section" id="free-worksheet">
-            <div class="lead-magnet-inner">
-                <div class="lead-magnet-copy">
-                <div class="section-label">Free Worksheet</div>
-                <h2>Want to see how I work with students?</h2>
-                <p>The same kind of thinking I'd walk you through on your thesis: is your main claim actually doing the work? A worksheet you can run yourself.</p>
+<header class="page-header">
+    <a href="/" class="wordmark">Bonanno <em>Writing</em> Workshop</a>
+</header>
 
-                <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1775464");</style>
-                <style type="text/css">
-                .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}.ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#ffffff #ffffff #ffffff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}@keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}#mlb2-39862397.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper{background-color:#ffffff;border-width:0px;border-color:transparent;border-radius:4px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:400px;width:100%}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody{padding:20px 20px 0 20px}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent{text-align:left;margin:0 0 20px 0}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4{display:none}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p{display:none}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 10px 0;width:100%}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#ffffff!important;color:#333333!important;border-color:#cccccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;height:auto;line-height:21px!important;padding:10px!important;width:100%!important;box-sizing:border-box!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 20px 0;float:left;width:100%}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#1c2a3a!important;border:none!important;border-radius:4px!important;color:#ffffff!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;font-weight:700!important;height:auto;padding:10px!important;width:100%!important;box-sizing:border-box!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#c9a84c!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:20px}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#000000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;margin:0 0 10px 0}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#000000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px;line-height:20px;margin:0}
-                </style>
+<main>
+    <div class="clipout">
+        <div>
+            <span class="type-label">Free Worksheet</span>
+            <h1>Want to see how I work <span class="squiggle">with students?<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></span></h1>
+            <p class="lede">The same kind of thinking I'd walk you through on your thesis: is your main claim actually doing the work? A worksheet you can run yourself.</p>
 
-                <div id="mlb2-39862397" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-39862397">
-                    <div class="ml-form-align-center">
-                        <div class="ml-form-embedWrapper embedForm">
-                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                                <div class="ml-form-embedContent"></div>
-                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2266162/forms/184672809325168012/subscribe" data-code="" method="post" target="_blank">
-                                    <div class="ml-form-formContent">
-                                        <div class="ml-form-fieldRow ml-last-item">
-                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email address" autocomplete="email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" name="ml-submit" value="1">
-                                    <div class="ml-form-embedSubmit">
-                                        <button type="submit" class="primary">Send it to me</button>
-                                        <button disabled="disabled" style="display:none;" type="button" class="loading">
-                                            <div class="ml-form-embedSubmitLoad"></div>
-                                            <span class="sr-only">Loading...</span>
-                                        </button>
-                                    </div>
-                                    <input type="hidden" name="anticsrf" value="true">
-                                </form>
-                            </div>
-                            <div class="ml-form-successBody row-success" style="display:none">
-                                <div class="ml-form-successContent">
-                                    <h4>Check your inbox!</h4>
-                                    <p>The worksheet is on its way.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function ml_webform_success_39862397(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-39862397 .row-success').show();$('.ml-subscribe-form-39862397 .row-form').hide();}
-                </script>
-                <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
-                <script>fetch("https://assets.mailerlite.com/jsonp/2266162/forms/184672809325168012/takel")</script>
+            <form action="https://assets.mailerlite.com/jsonp/2266162/forms/184672809325168012/subscribe" method="post" target="_blank">
+                <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" autocomplete="email" required>
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+                <button type="submit" class="btn">Send it to me</button>
+            </form>
+            <p class="fineprint">You'll also hear from me occasionally. Unsubscribe anytime.</p>
+        </div>
+        <figure class="sheet">
+            <img src="/worksheet-preview.png" alt="Preview of the Revising Your Main Claim worksheet">
+        </figure>
+    </div>
+</main>
 
-                <p style="font-size:12px; color:rgba(255,255,255,0.35); margin-top:12px; margin-bottom:0;">You'll also hear from me occasionally. Unsubscribe anytime.</p>
-                </div>
-                <div class="lead-magnet-preview">
-                    <img src="../worksheet-preview.png" alt="Preview of the Revising Your Main Claim worksheet" loading="lazy">
-                </div>
-            </div>
-        </section>
-    </main>
+<footer>© 2026 Bonanno Writing Workshop · <a href="https://bonannoworkshop.com">bonannoworkshop.com</a></footer>
 
-    <footer class="page-footer">
-        <a href="/">bonannoworkshop.com</a>
-    </footer>
 </body>
 </html>

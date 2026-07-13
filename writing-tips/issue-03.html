@@ -1,368 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Issue 03 — Crafting strong main claims</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#1c2a3a;
-    --cream:#f8f5ef;
-    /* ── ROTATING ACCENT — change this one line per issue ── */
-    --accent:#3d7d74;          /* Issue 03: teal (01 was #c9a84c gold, 02 was #bd6a4e terracotta) */
-    --accent-pale:#bcd6d1;     /* tint of the accent for the big numeral */
-    --ink-soft:#5d6470;
-    --ink-faint:#9aa1ab;
-    --rule:rgba(28,42,58,0.14);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue 03 — Crafting strong main claims</title>
+    <meta name="description" content="What readers look for when deciding whether your thesis is a claim — one that moves beyond fact and isn't simply pure opinion.">
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html,body{background:#e9e4da;}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    color:var(--navy);
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    font-feature-settings:"kern" 1,"liga" 1;
-    padding:32px 16px;
-  }
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Issue 03 — Crafting strong main claims">
+    <meta property="og:description" content="What readers look for when deciding whether your thesis is a claim — one that moves beyond fact and isn't simply pure opinion.">
+    <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
+    <meta property="og:url" content="https://bonannoworkshop.com/writing-tips/issue-03">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Issue 03 — Crafting strong main claims">
+    <meta name="twitter:description" content="What readers look for when deciding whether your thesis is a claim — one that moves beyond fact and isn't simply pure opinion.">
+    <meta name="twitter:image" content="https://bonannoworkshop.com/og-image.png">
 
-  .sheet{
-    width:850px;
-    max-width:100%;
-    margin:0 auto;
-    background:var(--cream);
-    padding:56px 60px 40px;
-    box-shadow:0 8px 40px rgba(0,0,0,0.12);
-  }
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL55FCMMMT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KL55FCMMMT');
+    </script>
 
-  /* ── Masthead ── */
-  .masthead{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    font-size:11px;
-    letter-spacing:2.4px;
-    text-transform:uppercase;
-    font-weight:600;
-  }
-  .masthead .brand{color:var(--navy);letter-spacing:3px;}
-  .masthead .issue-line{color:var(--accent);font-weight:600;}
-  .rule-accent{height:1px;background:var(--accent);opacity:0.55;margin:14px 0 26px;}
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  /* ── Title block ── */
-  .titleblock{display:flex;align-items:center;gap:30px;}
-  .title-text{flex:1;min-width:0;}
-  .eyebrow{
-    color:var(--accent);
-    font-size:10.5px;
-    letter-spacing:2.6px;
-    text-transform:uppercase;
-    font-weight:600;
-    margin-bottom:14px;
-  }
-  h1{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600;
-    font-size:46px;
-    line-height:1.04;
-    letter-spacing:-0.5px;
-    color:var(--navy);
-    text-wrap:balance;
-  }
-  h1 em{font-style:italic;font-weight:600;}
-  .subtitle{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-style:italic;
-    font-size:19px;
-    color:var(--ink-soft);
-    margin-top:12px;
-  }
-  .bignum{
-    flex:none;
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:700;
-    font-size:150px;
-    line-height:0.86;
-    color:var(--accent-pale);
-    letter-spacing:-2px;
-  }
-  .rule-accent.tight{margin:30px 0 28px;}
+    <style>
+        :root {
+            --paper: #fffdf6;
+            --paper-tint: #faf5ea;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --rule: rgba(38, 33, 23, 0.16);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
+        }
 
-  /* ── Intro (full-width lede; Issues 01–02 use a two-column variant) ── */
-  .intro{max-width:66ch;}
-  .intro p{
-    font-size:15px;
-    line-height:1.75;
-    color:var(--navy);
-    text-wrap:pretty;
-  }
-  .intro p + p{margin-top:16px;}
-  .intro em{font-style:italic;}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* ── Method box ── */
-  .method{
-    background:var(--navy);
-    color:#fff;
-    padding:30px 34px 26px;
-    margin:34px 0 0;
-  }
-  .method-head{
-    display:flex;
-    align-items:baseline;
-    gap:16px;
-    margin-bottom:10px;
-  }
-  .method-head .label{
-    color:var(--accent);
-    font-size:11px;
-    letter-spacing:2.6px;
-    text-transform:uppercase;
-    font-weight:600;
-  }
-  .method-head .sub{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-style:italic;
-    font-size:16px;
-    color:var(--accent);
-    opacity:0.92;
-  }
-  .move{
-    display:grid;
-    grid-template-columns:54px 1fr;
-    gap:6px 18px;
-    align-items:start;
-    padding:13px 0;
-    border-top:1px solid rgba(255,255,255,0.13);
-  }
-  .move:first-of-type{border-top:1px solid rgba(255,255,255,0.13);}
-  .move .n{
-    grid-row:span 2;
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600;
-    font-size:34px;
-    line-height:0.9;
-    color:var(--accent);
-  }
-  .move .t{font-size:14.5px;font-weight:600;color:#fff;}
-  .move .d{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-style:italic;
-    font-size:15px;
-    line-height:1.4;
-    color:#b9c0ca;
-    margin-top:3px;
-    text-wrap:pretty;
-  }
+        body {
+            font-family: var(--body);
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--ink);
+            background: #e9e2d2;
+            padding: 44px 16px 60px;
+        }
 
-  /* ── Spectrum (opinion ↔ claim ↔ fact) ── */
-  .test-label{
-    color:var(--accent);
-    font-size:10.5px;
-    letter-spacing:2.6px;
-    text-transform:uppercase;
-    font-weight:600;
-    margin:36px 0 16px;
-  }
-  /* bar + columns share one track template so the ticks land on the labels */
-  .spectrum-bar{
-    display:grid;
-    grid-template-columns:1fr 20px 1fr 20px 1fr;
-    gap:0 22px;
-    height:2px;
-    background:var(--accent);
-    opacity:0.85;
-    margin-bottom:22px;
-  }
-  .spectrum-bar .tick{
-    width:2px;
-    height:12px;
-    margin-top:-5px;
-    background:var(--accent);
-    justify-self:center;
-  }
-  .spectrum{
-    display:grid;
-    grid-template-columns:1fr 20px 1fr 20px 1fr;
-    align-items:start;
-    gap:0 22px;
-    text-align:center;
-  }
-  .spectrum .col h3{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600;
-    font-size:22px;
-    line-height:1.1;
-    color:var(--navy);
-    margin-bottom:8px;
-  }
-  .spectrum .col.mid h3{color:var(--accent);}
-  .spectrum .col p{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-style:italic;
-    font-size:13.5px;
-    line-height:1.4;
-    color:var(--ink-soft);
-    padding:0 4px;
-    text-wrap:balance;
-  }
-  .spectrum .arrow{
-    align-self:start;
-    margin-top:6px;
-    color:var(--accent);
-    font-size:20px;
-    line-height:1;
-  }
-  /* ── Footer ── */
-  .foot-rule{height:1px;background:var(--accent);opacity:0.5;margin:30px 0 14px;}
-  footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:10px;
-    letter-spacing:1.8px;
-    text-transform:uppercase;
-    font-weight:600;
-    color:var(--accent);
-  }
-  footer .mid{color:var(--ink-faint);}
-  footer a{color:inherit;text-decoration:none;}
+        a { color: var(--pencil); }
 
-  /* ── License ── */
-  .license{
-    margin-top:16px;
-    padding-top:12px;
-    border-top:1px solid var(--rule);
-    font-size:10.5px;
-    line-height:1.6;
-    color:var(--ink-faint);
-    text-align:center;
-    letter-spacing:0.2px;
-    text-wrap:pretty;
-  }
-  .license a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:2px;}
-  .license .cc{
-    font-weight:600;
-    letter-spacing:0.6px;
-    color:var(--ink-soft);
-    white-space:nowrap;
-  }
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            box-shadow: 0 2px 4px rgba(38,33,23,0.08), 0 18px 44px rgba(38,33,23,0.14);
+            padding: 56px 64px 44px;
+        }
 
-  @media print{
-    @page{size:letter;margin:0;}
-    html,body{background:#fff;padding:0;}
-    .sheet{box-shadow:none;width:auto;margin:0;padding:0.4in 0.62in;zoom:0.86;}
-    .method{break-inside:avoid;}
-    .rule-accent{margin:10px 0 18px;}
-    .rule-accent.tight{margin:20px 0 18px;}
-    .intro p{font-size:13.5px;line-height:1.62;}
-    .method{margin:26px 0 0;padding:22px 26px 18px;}
-    .move{padding:9px 0;}
-    .move .n{font-size:31px;}
-    .move .t{font-size:14px;}
-    .move .d{font-size:13.5px;line-height:1.32;}
-    .test-label{margin:26px 0 12px;}
-    .spectrum-bar{margin-bottom:18px;}
-    .spectrum .col h3{font-size:20px;}
-    .spectrum .col p{font-size:13px;}
-    .foot-rule{margin:14px 0 10px;}
-    .license{margin-top:12px;padding-top:9px;font-size:9.5px;}
-    h1{font-size:42px;}
-    .bignum{font-size:132px;}
-  }
-</style>
+        .type-label {
+            font-family: var(--mono);
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--pencil);
+        }
+
+        .hand-note {
+            font-family: var(--hand);
+            font-weight: 600;
+            color: var(--pencil);
+        }
+
+        /* ── Masthead ── */
+        .masthead {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .masthead .brand {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .masthead .brand em { font-style: italic; font-weight: 500; color: var(--pencil); }
+
+        .rule-double {
+            border-top: 2px solid var(--pencil-faint);
+            margin-bottom: 40px;
+        }
+
+        /* ── Title block ── */
+        .titleblock {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 28px;
+            margin-bottom: 34px;
+        }
+
+        .eyebrow {
+            font-family: var(--mono);
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+            margin-bottom: 14px;
+        }
+
+        .titleblock h1 {
+            font-family: var(--serif);
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.15;
+            margin-bottom: 12px;
+            max-width: 12em;
+        }
+
+        .titleblock h1 .squiggle { position: relative; white-space: nowrap; }
+
+        .titleblock h1 .squiggle svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.12em;
+            width: 104%;
+            height: 0.24em;
+            overflow: visible;
+        }
+
+        .titleblock h1 .squiggle path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 2.6;
+            stroke-linecap: round;
+        }
+
+        .subtitle {
+            font-family: var(--body);
+            font-style: italic;
+            font-size: 18px;
+            color: var(--ink-soft);
+        }
+
+        .bignum {
+            font-family: var(--serif);
+            font-size: 96px;
+            font-weight: 500;
+            line-height: 0.9;
+            color: var(--pencil-faint);
+            flex-shrink: 0;
+        }
+
+        /* ── Intro two-col ── */
+        .intro {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 44px;
+            padding-top: 30px;
+            border-top: 1px solid var(--rule);
+            margin-bottom: 44px;
+        }
+
+        .intro p { margin-bottom: 16px; color: var(--ink-soft); }
+        .intro p:last-child { margin-bottom: 0; }
+
+        .pullquote {
+            position: relative;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--ink);
+            padding-left: 34px;
+            margin-bottom: 18px;
+        }
+
+        .pullquote::before {
+            content: '“';
+            position: absolute;
+            left: -4px;
+            top: -14px;
+            font-family: var(--serif);
+            font-size: 58px;
+            line-height: 1;
+            color: var(--pencil-soft);
+        }
+
+        /* ── Dinkus ── */
+        .dinkus {
+            display: flex;
+            justify-content: center;
+            color: var(--pencil-soft);
+            transform: rotate(-2deg);
+            margin: 40px 0;
+        }
+
+        .dinkus svg { width: 120px; height: 22px; }
+
+        /* ── Method card ── */
+        .method {
+            background: var(--paper-tint);
+            border: 1px solid var(--rule);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.05), 0 8px 22px rgba(38,33,23,0.07);
+            padding: 36px 40px 30px;
+            transform: rotate(-0.3deg);
+            margin-bottom: 44px;
+        }
+
+        .method-head {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-bottom: 14px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--rule);
+            position: relative;
+        }
+
+        .method-head::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 52px;
+            height: 3px;
+            background: var(--pencil-soft);
+        }
+
+        .method-head .sub {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 20px;
+            color: var(--pencil);
+            transform: rotate(-1.5deg);
+        }
+
+        .move {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 4px 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .move:last-child { border-bottom: none; }
+
+        .move .n {
+            grid-row: 1 / 3;
+            font-family: var(--mono);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--pencil);
+            padding-top: 3px;
+        }
+
+        .move .t {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .move .d {
+            font-size: 15.5px;
+            color: var(--ink-soft);
+            line-height: 1.65;
+        }
+
+        /* ── Components ── */
+        .test-label { margin-bottom: 18px; }
+
+        .test {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid var(--rule);
+            background: var(--paper);
+            margin-bottom: 8px;
+        }
+
+        .test .col {
+            padding: 22px 22px 20px;
+        }
+
+        .test .col + .col { border-left: 1px solid var(--rule); }
+
+        .test h3 {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 19px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--pencil);
+        }
+
+        .test p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; }
+
+        /* ── Footer ── */
+        .foot {
+            margin-top: 44px;
+            padding-top: 16px;
+            border-top: 1px solid var(--ink);
+            display: flex;
+            justify-content: space-between;
+            gap: 12px 24px;
+            flex-wrap: wrap;
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: 0.04em;
+        }
+
+        .foot a { color: var(--ink-soft); }
+        .foot a:hover { color: var(--pencil); }
+
+        .license {
+            text-align: center;
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.08em;
+            color: var(--ink-faint);
+            margin-top: 26px;
+        }
+
+        .license a { color: var(--ink-faint); text-decoration: none; }
+
+        @media (max-width: 700px) {
+            .page { padding: 36px 26px; }
+            .titleblock h1 { font-size: 30px; }
+            .bignum { font-size: 64px; }
+            .intro { grid-template-columns: 1fr; gap: 26px; }
+            .test { grid-template-columns: 1fr; }
+            .test .col + .col { border-left: none; border-top: 1px solid var(--rule); }
+            .method { padding: 26px 22px; }
+        }
+
+        /* ── Issue-specific ── */
+        .callback {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 22px;
+            color: var(--pencil);
+            text-align: center;
+            transform: rotate(-1.2deg);
+            max-width: 30em;
+            margin: 34px auto 0;
+            line-height: 1.35;
+        }
+
+        .spectrum {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            align-items: stretch;
+            gap: 0;
+            border: 1px solid var(--rule);
+            background: var(--paper);
+            margin-bottom: 44px;
+        }
+
+        .spectrum .col { padding: 22px 20px 20px; }
+
+        .spectrum .col h3 {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 19px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--ink-soft);
+        }
+
+        .spectrum .col.mid { background: var(--paper-tint); }
+        .spectrum .col.mid h3 { color: var(--pencil); }
+
+        .spectrum .col p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; }
+
+        .spectrum .arrow {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            color: var(--pencil-soft);
+            font-size: 20px;
+            border-left: 1px solid var(--rule);
+            border-right: 1px solid var(--rule);
+        }
+
+        .intro.single { display: block; }
+        .intro.single p { max-width: 40em; }
+
+        @media (max-width: 700px) {
+            .spectrum { grid-template-columns: 1fr; }
+            .spectrum .arrow { border: none; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); justify-content: center; padding: 6px 0; transform: rotate(90deg); }
+        }
+    </style>
 </head>
 <body>
-<div class="sheet">
 
-  <div class="masthead">
-    <span class="brand">Bonanno Writing Workshop</span>
-    <span class="issue-line">Newsletter &middot; No. 03 &middot; Claims &amp; Thesis Statements</span>
-  </div>
-  <div class="rule-accent"></div>
+<div class="page">
+    <div class="masthead">
+        <a href="/" class="brand">Bonanno <em>Writing</em> Workshop</a>
+        <span class="type-label">Newsletter · No. 03 · Claims &amp; Thesis Statements</span>
+    </div>
+    <div class="rule-double"></div>
 
-  <div class="titleblock">
-    <div class="title-text">
-      <div class="eyebrow">Issue Three &middot; From the desk of Sarah Bonanno</div>
-      <h1>Crafting strong main claims</h1>
-      <div class="subtitle">The argumentative thesis statement.</div>
+    <div class="titleblock">
+        <div>
+            <div class="eyebrow">Issue Three · From the desk of Sarah Bonanno</div>
+            <h1>Crafting strong <span class="squiggle">main claims<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></span></h1>
+            <div class="subtitle">The argumentative thesis statement.</div>
+        </div>
+        <div class="bignum">03</div>
     </div>
-    <div class="bignum">03</div>
-  </div>
-  <div class="rule-accent tight"></div>
 
-  <div class="intro">
-    <p>Students are often taught that a thesis statement should encompass and reflect the overall topic and discussion of the paper.</p>
-    <p>But for upper level high school classes and college classes, the thesis statement often needs to be argumentative in nature. You're no longer proving that you read the book and can identify rhetorical and literary devices &mdash; you have your own unique perspective, and you present it through an argumentative claim.</p>
-    <p>Moving from descriptive to argumentative thesis statements can be challenging. But here's what readers look for when deciding if a thesis statement makes an argumentative claim that moves beyond fact and isn't simply pure opinion.</p>
-  </div>
+    <div class="intro single">
+        <p>Students are often taught that a thesis statement should encompass and reflect the overall topic and discussion of the paper.</p>
+        <p>But for upper level high school classes and college classes, the thesis statement often needs to be argumentative in nature. You're no longer proving that you read the book and can identify rhetorical and literary devices — you have your own unique perspective, and you present it through an argumentative claim.</p>
+        <p>Moving from descriptive to argumentative thesis statements can be challenging. But here's what readers look for when deciding if a thesis statement makes an argumentative claim that moves beyond fact and isn't simply pure opinion.</p>
+    </div>
 
-  <div class="test-label">The Spectrum of Opinion, Claim, and Fact</div>
-  <div class="spectrum-bar">
-    <span class="tick"></span>
-    <span></span>
-    <span class="tick"></span>
-    <span></span>
-    <span class="tick"></span>
-  </div>
-  <div class="spectrum">
-    <div class="col">
-      <h3>Opinion</h3>
-      <p>A debatable statement someone can doubt, but that doesn't rely on evidence or reasoning.</p>
+    <div class="type-label test-label">The Spectrum of Opinion, Claim, and Fact</div>
+    <div class="spectrum">
+        <div class="col">
+            <h3>Opinion</h3>
+            <p>A debatable statement someone can doubt, but that doesn't rely on evidence or reasoning.</p>
+        </div>
+        <div class="arrow">&#8596;</div>
+        <div class="col mid">
+            <h3>Claim</h3>
+            <p>A specific, contestable, and significant statement that is substantiated by evidence.</p>
+        </div>
+        <div class="arrow">&#8596;</div>
+        <div class="col">
+            <h3>Fact</h3>
+            <p>A verifiable statement based in evidence and data that is not contestable or debatable.</p>
+        </div>
     </div>
-    <div class="arrow">&#8596;</div>
-    <div class="col mid">
-      <h3>Claim</h3>
-      <p>A specific, contestable, and significant statement that is substantiated by evidence.</p>
-    </div>
-    <div class="arrow">&#8596;</div>
-    <div class="col">
-      <h3>Fact</h3>
-      <p>A verifiable statement based in evidence and data that is not contestable or debatable.</p>
-    </div>
-  </div>
 
-  <div class="method">
-    <div class="method-head">
-      <span class="label">The Test</span>
-      <span class="sub">one &ldquo;C&rdquo; and three &ldquo;S&rdquo;</span>
-    </div>
-    <div class="move">
-      <div class="n">01</div>
-      <div class="t">Contestable</div>
-      <div class="d">A reasonable reader can doubt your claim. If nobody could disagree, there's nothing to argue.</div>
-    </div>
-    <div class="move">
-      <div class="n">02</div>
-      <div class="t">Specific</div>
-      <div class="d">It explains how and why your key terms are connected &mdash; not just that they are.</div>
-    </div>
-    <div class="move">
-      <div class="n">03</div>
-      <div class="t">Significant</div>
-      <div class="d">It answers the question &ldquo;so what?&rdquo; Why does this argument matter to a reader?</div>
-    </div>
-    <div class="move">
-      <div class="n">04</div>
-      <div class="t">Supportable</div>
-      <div class="d">It is grounded in evidence and reasoning &mdash; something you can actually go and demonstrate.</div>
-    </div>
-  </div>
+    <div class="dinkus" aria-hidden="true"><svg viewBox="0 0 140 24"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"><g transform="translate(22,12) rotate(-8)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g><g transform="translate(70,12) rotate(5)"><path d="M-7 0 L7 0 M-3.5 -6.5 L3.5 6.5 M3.5 -6.5 L-3.5 6.5"/></g><g transform="translate(118,12) rotate(-3)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g></g></svg></div>
 
-  <div class="foot-rule"></div>
-  <footer>
-    <span><a href="https://bonannoworkshop.com">bonannoworkshop.com</a></span>
-    <span class="mid">Read back issues &middot; <a href="https://bonannoworkshop.com/writing-tips">/writing-tips</a></span>
-    <span><a href="mailto:sarah@bonannoworkshop.com">Reply to book a free call</a></span>
-  </footer>
+    <div class="method">
+        <div class="method-head">
+            <span class="type-label">The Test</span>
+            <span class="sub">one “C” and three “S”</span>
+        </div>
+        <div class="move">
+            <div class="n">01</div>
+            <div class="t">Contestable</div>
+            <div class="d">A reasonable reader can doubt your claim. If nobody could disagree, there's nothing to argue.</div>
+        </div>
+        <div class="move">
+            <div class="n">02</div>
+            <div class="t">Specific</div>
+            <div class="d">It explains how and why your key terms are connected — not just that they are.</div>
+        </div>
+        <div class="move">
+            <div class="n">03</div>
+            <div class="t">Significant</div>
+            <div class="d">It answers the question “so what?” Why does this argument matter to a reader?</div>
+        </div>
+        <div class="move">
+            <div class="n">04</div>
+            <div class="t">Supportable</div>
+            <div class="d">It is grounded in evidence and reasoning — something you can actually go and demonstrate.</div>
+        </div>
+    </div>
 
-  <div class="license">
-    <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><span class="cc">CC BY-NC-ND 4.0</span></a>
-  </div>
+    <footer class="foot">
+        <span><a href="https://bonannoworkshop.com">bonannoworkshop.com</a></span>
+        <span>Read back issues · <a href="/writing-tips">/writing-tips</a></span>
+        <span><a href="mailto:sarah@bonannoworkshop.com">Reply to book a free call</a></span>
+    </footer>
 
+    <div class="license">
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    </div>
 </div>
+
 </body>
 </html>

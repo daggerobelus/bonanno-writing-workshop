@@ -9,12 +9,12 @@
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Advice from the Workshop — Bonanno Writing Workshop">
-    <meta property="og:description" content="Monthly writing tips drawn from my work with students. Read past issues.">
+    <meta property="og:description" content="Back issues of the Bonanno Writing Workshop newsletter — monthly writing tips drawn from Sarah Bonanno's work with her students.">
     <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
     <meta property="og:url" content="https://bonannoworkshop.com/writing-tips">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Advice from the Workshop — Bonanno Writing Workshop">
-    <meta name="twitter:description" content="Monthly writing tips drawn from my work with students. Read past issues.">
+    <meta name="twitter:description" content="Back issues of the Bonanno Writing Workshop newsletter — monthly writing tips drawn from Sarah Bonanno's work with her students.">
     <meta name="twitter:image" content="https://bonannoworkshop.com/og-image.png">
 
     <!-- Google tag (gtag.js) -->
@@ -26,788 +26,525 @@
       gtag('config', 'G-KL55FCMMMT');
     </script>
 
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2266162');
+    </script>
+    <!-- End MailerLite Universal -->
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --navy: #1c2a3a;
-            --gold: #c9a84c;
-            --gold-hover: #b8953e;
-            --cream: #f8f5ef;
+            --paper: #faf5ea;
+            --paper-deep: #f2ead7;
+            --paper-card: #fffdf6;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --teal: #2f6f62;
+            --sienna: #b35a2d;
+            --gold: #b08d3c;
+            --rule: rgba(38, 33, 23, 0.14);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { min-height: 100%; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--navy);
-            background: var(--cream);
+            font-family: var(--body);
+            font-size: 17.5px;
+            line-height: 1.75;
+            color: var(--ink);
+            background-color: var(--paper);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            font-feature-settings: "kern" 1, "liga" 1;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
-        .site-nav {
-            border-bottom: 1px solid rgba(28,42,58,0.08);
+        ::selection { background: var(--pencil-faint); }
+
+        a { color: var(--ink); }
+
+        .type-label {
+            font-family: var(--mono);
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--pencil);
         }
 
-        .site-nav nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 48px;
-            max-width: 1200px;
+        .hand-note {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 1.25;
+            color: var(--pencil);
+        }
+
+        /* ── Nav ── */
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 245, 234, 0.94);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .nav-wrapper::after {
+            content: '';
+            display: block;
+            height: 3px;
+            border-top: 1px solid var(--pencil-faint);
+        }
+
+        nav {
+            max-width: 1180px;
             margin: 0 auto;
+            padding: 18px 40px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 24px;
         }
 
         .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .nav-brand img {
-            height: 28px;
-            width: auto;
-        }
-
-        .nav-brand span {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
+            font-family: var(--serif);
+            font-size: 19px;
             font-weight: 600;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--navy);
+            text-decoration: none;
+            color: var(--ink);
+            white-space: nowrap;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 36px;
-            list-style: none;
-        }
+        .nav-brand em { font-style: italic; font-weight: 500; color: var(--pencil); }
+
+        .nav-links { display: flex; gap: 30px; list-style: none; align-items: baseline; }
 
         .nav-links a {
-            text-decoration: none;
-            color: #555;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
+            text-decoration: none;
+            color: var(--ink-soft);
+            padding-bottom: 3px;
+            border-bottom: 1px solid transparent;
             transition: color 0.2s, border-color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: #1a1a1a;
-            border-bottom-color: var(--gold);
-        }
+        .nav-links a:hover { color: var(--pencil); border-bottom-color: var(--pencil-soft); }
 
-        .nav-links a.nav-current {
-            color: #1a1a1a;
-            border-bottom-color: var(--gold);
-        }
+        .nav-links a.current { color: var(--pencil); border-bottom-color: var(--pencil-soft); }
 
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown-toggle {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
+        .nav-toggle {
+            display: none;
             background: none;
             border: none;
             cursor: pointer;
-            font-family: inherit;
-            color: #555;
+            font-family: var(--mono);
             font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            padding: 0 0 4px;
-            border-bottom: 2px solid transparent;
-            transition: color 0.2s, border-color 0.2s;
+            color: var(--ink);
+            padding: 6px 2px;
         }
 
-        .nav-dropdown-toggle::after {
-            content: "";
-            width: 5px;
-            height: 5px;
-            border-right: 1.5px solid currentColor;
-            border-bottom: 1.5px solid currentColor;
-            transform: rotate(45deg) translateY(-1px);
-            transition: transform 0.2s;
-        }
-
-        .nav-dropdown:hover .nav-dropdown-toggle,
-        .nav-dropdown:focus-within .nav-dropdown-toggle,
-        .nav-dropdown.open .nav-dropdown-toggle {
-            color: #1a1a1a;
-            border-bottom-color: var(--gold);
-        }
-
-        .nav-dropdown.open .nav-dropdown-toggle::after {
-            transform: rotate(-135deg) translateY(-1px);
-        }
-
-        .nav-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(8px);
-            margin: 0;
-            padding: 8px;
-            list-style: none;
-            min-width: 230px;
-            background: #fff;
-            border: 1px solid rgba(0,0,0,0.07);
-            border-radius: 10px;
-            box-shadow: 0 12px 32px rgba(28,42,58,0.14);
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: opacity 0.18s ease, transform 0.18s ease;
-            z-index: 200;
-        }
-
-        .nav-dropdown:hover .nav-dropdown-menu,
-        .nav-dropdown:focus-within .nav-dropdown-menu,
-        .nav-dropdown.open .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transform: translateX(-50%) translateY(2px);
-        }
-
-        .nav-dropdown-menu li {
-            display: block;
-        }
-
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 10px 14px;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-            text-transform: none;
-            color: #444;
-            border-radius: 6px;
-            border-bottom: none;
-            white-space: nowrap;
-            transition: background 0.15s, color 0.15s;
-        }
-
-        .nav-dropdown-menu a:hover {
-            background: rgba(201,168,76,0.13);
-            color: var(--navy);
-            border-bottom: none;
-        }
-
-        .nav-link-arrow .nav-arrow {
-            display: inline-block;
-            transition: transform 0.2s ease;
-        }
-
-        .nav-link-arrow:hover .nav-arrow {
-            transform: translateX(3px);
-        }
-
-        @media (max-width: 720px) {
-            .site-nav nav { padding: 14px 20px; flex-wrap: wrap; gap: 12px; }
-            .nav-links { gap: 20px; }
-            .nav-links a { font-size: 11px; letter-spacing: 1px; }
-        }
-
-        @media (max-width: 600px) {
-            .nav-dropdown-menu {
-                left: 0;
-                right: auto;
-                transform: translateX(0) translateY(8px);
-                min-width: 200px;
-            }
-            .nav-dropdown:hover .nav-dropdown-menu,
-            .nav-dropdown:focus-within .nav-dropdown-menu,
-            .nav-dropdown.open .nav-dropdown-menu {
-                transform: translateX(0) translateY(2px);
-            }
-        }
-
-        main {
-            flex: 1;
-            padding: 64px 24px 80px;
-        }
-
-        .intro {
-            max-width: 640px;
-            margin: 0 auto 64px;
-            text-align: center;
-        }
-
-        .section-label {
-            color: var(--gold);
-            margin-bottom: 22px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 500;
-            color: var(--navy);
-            line-height: 1.05;
-            margin-bottom: 22px;
-        }
-
-        .lede {
-            font-size: 17px;
-            font-weight: 400;
-            color: #555;
-            line-height: 1.6;
-            max-width: 540px;
+        /* ── Page ── */
+        .page {
+            max-width: 860px;
             margin: 0 auto;
+            padding: 84px 32px 110px;
         }
 
-        /* ── Back issues list ── */
-        .issues {
-            max-width: 760px;
-            margin: 0 auto;
+        .page-head { margin-bottom: 70px; }
+
+        .page-head h1 {
+            font-family: var(--serif);
+            font-size: clamp(38px, 5vw, 54px);
+            font-weight: 500;
+            line-height: 1.15;
+            margin: 16px 0 22px;
+        }
+
+        .page-head h1 em { font-style: italic; }
+
+        .page-head .lede {
+            font-size: 19px;
+            color: var(--ink-soft);
+            max-width: 30em;
+            margin-bottom: 26px;
+        }
+
+        .subscribe-line {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            align-items: baseline;
+            gap: 14px;
+            flex-wrap: wrap;
         }
+
+        .link-under {
+            font-family: var(--mono);
+            font-size: 13.5px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 2px solid var(--pencil-soft);
+            padding-bottom: 3px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .link-under:hover { color: var(--pencil); border-bottom-color: var(--pencil); }
+
+        /* ── Issue cards ── */
+        .issue-stack { display: grid; gap: 44px; }
 
         .issue {
-            --issue-accent: var(--gold);
-            display: block;
-            text-decoration: none;
-            background: #ffffff;
-            border: 1px solid rgba(28,42,58,0.1);
-            border-radius: 6px;
-            padding: 28px 32px;
-            box-shadow: inset 4px 0 0 var(--issue-accent);
-            transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+            position: relative;
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 12px 28px rgba(38,33,23,0.09);
+            padding: 40px 46px 36px;
+            --accent: var(--pencil);
         }
 
-        .issue:hover {
-            border-color: var(--issue-accent);
-            box-shadow: inset 4px 0 0 var(--issue-accent), 0 4px 18px rgba(28,42,58,0.08);
+        .issue:nth-child(3n+1) { transform: rotate(-0.4deg); --accent: var(--teal); }
+        .issue:nth-child(3n+2) { transform: rotate(0.5deg); --accent: var(--sienna); }
+        .issue:nth-child(3n)   { transform: rotate(-0.3deg); --accent: var(--gold); }
+
+        .issue::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent);
+            opacity: 0.75;
         }
 
         .issue-meta {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             gap: 14px;
-            margin-bottom: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.12em;
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--issue-accent);
-        }
-
-        .issue-meta .dot {
-            color: var(--issue-accent);
-            opacity: 0.55;
-        }
-
-        .issue-meta .date {
-            color: #888;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-        }
-
-        .issue-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 30px;
-            font-weight: 500;
-            color: var(--navy);
-            line-height: 1.15;
-            margin-bottom: 10px;
-        }
-
-        .issue-desc {
-            font-size: 15px;
-            font-weight: 400;
-            color: #555;
-            line-height: 1.6;
             margin-bottom: 14px;
         }
 
-        .issue-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px 10px;
-            margin-bottom: 18px;
+        .issue-meta .no { color: var(--accent); font-weight: 700; }
+        .issue-meta .date { color: var(--ink-faint); }
+
+        .issue h2 {
+            font-family: var(--serif);
+            font-size: 29px;
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 12px;
         }
 
-        .issue-tag {
+        .issue h2 a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.15s;
+        }
+
+        .issue h2 a:hover { color: var(--pencil); }
+
+        .issue p { color: var(--ink-soft); max-width: 38em; margin-bottom: 18px; }
+
+        .tag-row { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 22px; }
+
+        .tag {
+            font-family: var(--mono);
             font-size: 11px;
-            font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: #888;
-            padding: 4px 10px;
-            background: rgba(28,42,58,0.05);
-            border-radius: 3px;
-            transition: background 0.18s, color 0.18s;
+            color: var(--ink-soft);
+            border: 1px solid var(--rule);
+            border-radius: 2px;
+            padding: 3px 9px;
+            background: var(--paper);
         }
 
-        .issue:hover .issue-tag {
-            background: color-mix(in srgb, var(--issue-accent) 13%, transparent);
-            color: var(--navy);
-        }
-
-        .issue-read {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--issue-accent);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-        }
-
-        .issue:hover .issue-read {
-            color: color-mix(in srgb, var(--issue-accent) 82%, #000);
-        }
-
-        .issue-read .arrow {
-            transition: transform 0.18s ease;
-        }
-
-        .issue:hover .issue-read .arrow {
-            transform: translateX(3px);
-        }
-
-        /* ── Subscribe arrow link ── */
-        .subscribe-cta {
-            margin: 24px auto 0;
-            max-width: 560px;
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--navy);
-        }
-
-        .subscribe-cta a {
-            color: var(--navy);
-            font-weight: 600;
+        .read-link {
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
             text-decoration: none;
-            border-bottom: 1.5px solid var(--gold);
-            padding-bottom: 1px;
-            transition: color 0.2s ease, border-color 0.2s ease;
+            color: var(--accent);
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            transition: border-color 0.15s;
         }
 
-        .subscribe-cta a:hover {
-            color: var(--gold);
+        .read-link:hover { border-bottom-color: var(--accent); }
+
+        .archive-note {
+            text-align: center;
+            margin-top: 60px;
         }
+
+        .archive-note .hand-note { display: inline-block; transform: rotate(-1.5deg); color: var(--ink-faint); }
 
         /* ── Footer ── */
         footer {
-            background: linear-gradient(180deg, #1e2f42 0%, #151f2b 100%);
-            text-align: left;
-            padding: 48px 56px 26px;
+            background: var(--ink);
+            color: rgba(250, 245, 234, 0.75);
+            padding: 64px 40px 30px;
         }
 
         .footer-grid {
-            max-width: 1080px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
+            gap: 44px 64px;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px 56px;
         }
 
-        .footer-col-brand { flex: 1 1 0; }
-
-        .footer-tagline {
-            font-size: 13px;
-            line-height: 1.55;
-            color: rgba(255,255,255,0.55);
-            font-weight: 300;
-            margin: 0 0 16px;
+        .footer-brand {
+            font-family: var(--serif);
+            font-size: 20px;
+            color: var(--paper);
+            margin-bottom: 12px;
         }
 
-        .footer-contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            font-size: 13px;
-            letter-spacing: 0.02em;
-        }
+        .footer-col p { font-size: 15px; max-width: 22em; line-height: 1.7; }
 
-        .footer-contact-links a {
-            color: rgba(255,255,255,0.7);
+        .footer-col .type-label { color: rgba(250, 245, 234, 0.55); display: block; margin-bottom: 14px; }
+
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 9px; }
+
+        .footer-links a {
+            color: rgba(250, 245, 234, 0.8);
             text-decoration: none;
-            transition: color 0.2s;
+            font-size: 15px;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
         }
 
-        .footer-contact-links a:hover { color: var(--gold); }
+        .footer-links a:hover { color: var(--paper); border-bottom-color: var(--pencil-soft); }
 
-        .footer-signup {
-            flex: 1 1 0;
-            max-width: none !important;
-            margin: 0 !important;
-        }
+        .footer-sub form { display: flex; gap: 10px; }
 
-        .footer-signup .signup-prompt,
-        .footer-col-heading {
-            font-family: 'Inter', sans-serif;
+        .footer-sub input[type="email"] {
+            font-family: var(--mono);
             font-size: 14px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 14px;
+            color: var(--paper);
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid rgba(250, 245, 234, 0.4);
+            padding: 9px 2px;
+            outline: none;
+            min-width: 200px;
         }
 
-        .footer-archive-link {
-            text-align: left;
-            margin-top: 14px;
-            font-size: 13px !important;
-            letter-spacing: 0.04em !important;
-        }
+        .footer-sub input:focus { border-bottom-color: var(--paper); }
+        .footer-sub input::placeholder { color: rgba(250, 245, 234, 0.4); }
 
-        .footer-archive-link a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-archive-link a:hover { color: var(--gold); }
-
-        .footer-col-cta { flex: 1 1 0; }
-
-        .footer-logo {
-            height: 34px;
-            width: auto;
-            margin-bottom: 14px;
-            opacity: 0.8;
-            filter: brightness(0) invert(1);
+        .footer-sub .btn {
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            background: var(--paper);
+            color: var(--ink);
+            border: 1px solid var(--paper);
+            border-radius: 2px;
+            padding: 11px 20px;
+            cursor: pointer;
         }
 
         .footer-bottom {
-            max-width: 1080px;
-            margin: 36px auto 0;
-            padding-top: 18px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        footer p {
+            max-width: 1100px;
+            margin: 44px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(250, 245, 234, 0.14);
+            font-family: var(--mono);
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-            font-weight: 300;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.06em;
+            color: rgba(250, 245, 234, 0.45);
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 900px) {
-            footer { padding: 36px 28px 24px; }
-            .footer-grid { gap: 28px; }
-            .footer-col-brand,
-            .footer-signup,
-            .footer-col-cta { flex: 1 1 100%; }
-            .footer-signup { max-width: 100% !important; }
-            .footer-tagline { max-width: none; }
-        }
+        /* ── Responsive ── */
+        @media (max-width: 760px) {
+            nav { padding: 14px 22px; position: relative; }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 34px; }
-            main { padding: 48px 18px 56px; }
-            .issue { padding: 24px 22px; }
-            .issue-title { font-size: 24px; }
+            .nav-toggle { display: block; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: var(--paper);
+                border-bottom: 1px solid var(--rule);
+                padding: 8px 22px 18px;
+                box-shadow: 0 18px 30px rgba(38, 33, 23, 0.12);
+            }
+
+            .nav-links.open { display: flex; }
+            .nav-links li { border-bottom: 1px solid var(--rule); }
+            .nav-links li:last-child { border-bottom: none; }
+            .nav-links a { display: block; padding: 14px 0; border-bottom: none; }
+
+            .page { padding: 56px 22px 80px; }
+            .issue { padding: 30px 26px 28px; }
+            .issue h2 { font-size: 24px; }
+
+            .footer-sub form { flex-wrap: wrap; }
         }
     </style>
 </head>
 <body>
-    <header class="site-nav">
-        <nav>
-            <a href="/" class="nav-brand">
-                <img src="../mark-transparent.png" alt="">
-                <span>Bonanno Writing Workshop</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/#about">About</a></li>
-                <li class="nav-dropdown">
-                    <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</button>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="/#services">Tutoring Services</a></li>
-                        <li><a href="/#intensive">College App Intensive</a></li>
-                        <li><a href="/#essay-review">On-Demand Essay Review</a></li>
-                    </ul>
-                </li>
-                <li><a href="/#contact">Contact</a></li>
-                <li><a href="/writing-tips" class="nav-current" aria-current="page">Writing Tips</a></li>
-            </ul>
-        </nav>
+
+<!-- ── Nav ── -->
+<div class="nav-wrapper">
+    <nav>
+        <a href="/" class="nav-brand">Bonanno <em>Writing</em> Workshop</a>
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+        <ul class="nav-links">
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#services">Tutoring</a></li>
+            <li><a href="/#intensive">Intensive</a></li>
+            <li><a href="/#essay-review">Essay Review</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/writing-tips" class="current" aria-current="page">Writing Tips</a></li>
+        </ul>
+    </nav>
+</div>
+
+<main class="page">
+    <header class="page-head">
+        <span class="type-label">The newsletter · monthly</span>
+        <h1>Advice from <em>the Workshop</em></h1>
+        <p class="lede">Once a month, a writing tip drawn from my work with students — useful for anyone who writes. Back issues live here.</p>
+        <div class="subscribe-line">
+            <span class="hand-note" style="transform: rotate(-1.5deg);">not on the list yet?</span>
+            <a href="/subscribe" class="link-under">Get next month's issue in your inbox →</a>
+        </div>
     </header>
 
-    <main>
-        <section class="intro">
-            <h1>Advice from the Workshop</h1>
-            <p class="lede">Once a month, a writing tip drawn from my work with students — useful for anyone who writes. Back issues live here.</p>
-            <p class="subscribe-cta">Not on the list yet? <a href="/subscribe">Get next month's issue in your inbox&nbsp;&rarr;</a></p>
-        </section>
-
-        <div class="issues">
-            <a class="issue" href="/writing-tips/issue-03.html"
-               style="--issue-accent:#3d7d74;"
-               data-tags="thesis main-claim argument academic-writing"
-               data-date="2026-07-09"
-               data-issue="03">
-                <div class="issue-meta">
-                    <span class="number">Issue 03</span>
-                    <span class="dot">·</span>
-                    <span class="date">July 9, 2026</span>
-                </div>
-                <div class="issue-title">Crafting strong main claims</div>
-                <div class="issue-desc">In upper level high school and college classes, a thesis statement needs to be argumentative. Here's what readers look for when deciding whether yours is a claim — one that moves beyond fact and isn't simply pure opinion.</div>
-                <div class="issue-tags">
-                    <span class="issue-tag">Thesis</span>
-                    <span class="issue-tag">Main Claim</span>
-                    <span class="issue-tag">Argument</span>
-                    <span class="issue-tag">Academic Writing</span>
-                </div>
-                <span class="issue-read">
-                    Read issue
-                    <span class="arrow">→</span>
-                </span>
-            </a>
-            <a class="issue" href="/writing-tips/issue-02.html"
-               style="--issue-accent:#bd6a4e;"
-               data-tags="college-admissions personal-essay drafting main-point"
-               data-date="2026-06-01"
-               data-issue="02">
-                <div class="issue-meta">
-                    <span class="number">Issue 02</span>
-                    <span class="dot">·</span>
-                    <span class="date">June 1, 2026</span>
-                </div>
-                <div class="issue-title">A great college essay is about something.</div>
-                <div class="issue-desc">The difference between an essay that's read and one that's remembered — and how to make sure your main point actually lands on the page.</div>
-                <div class="issue-tags">
-                    <span class="issue-tag">College Admissions</span>
-                    <span class="issue-tag">Personal Essay</span>
-                    <span class="issue-tag">Drafting</span>
-                    <span class="issue-tag">Main Point</span>
-                </div>
-                <span class="issue-read">
-                    Read issue
-                    <span class="arrow">→</span>
-                </span>
-            </a>
-            <a class="issue" href="/writing-tips/issue-01.html"
-               style="--issue-accent:#c9a84c;"
-               data-tags="thesis drafting evidence argument method"
-               data-date="2026-05-19"
-               data-issue="01">
-                <div class="issue-meta">
-                    <span class="number">Issue 01</span>
-                    <span class="dot">·</span>
-                    <span class="date">May 19, 2026</span>
-                </div>
-                <div class="issue-title">Start with your evidence — not your claim.</div>
-                <div class="issue-desc">The first thing I teach my students: a method for drafting that gets you past flat, predictable arguments and to a claim that's genuinely yours.</div>
-                <div class="issue-tags">
-                    <span class="issue-tag">Thesis</span>
-                    <span class="issue-tag">Drafting</span>
-                    <span class="issue-tag">Evidence</span>
-                    <span class="issue-tag">Argument</span>
-                </div>
-                <span class="issue-read">
-                    Read issue
-                    <span class="arrow">→</span>
-                </span>
-            </a>
-        </div>
-    </main>
-
-    <footer>
-      <div class="footer-grid">
-        <div class="footer-col footer-col-brand">
-            <img src="../mark-transparent.png" alt="Bonanno Writing Workshop" class="footer-logo">
-            <p class="footer-tagline">Brooklyn-based writing tutor &amp; college essay coach for high school, college, and graduate students.</p>
-        </div>
-        <div class="footer-signup">
-            <p class="signup-prompt">Want some writing tips?</p>
-            <style type="text/css">
-                .footer-signup #mlb2-41461487.ml-form-embedContainer,
-                .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper,
-                .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-embedBody {
-                    background: transparent !important;
-                    background-color: transparent !important;
-                    box-shadow: none !important;
-                    border: none !important;
-                    padding: 0 !important;
-                    max-width: 100% !important;
-                    width: 100% !important;
-                    display: block !important;
-                }
-                .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-successBody {
-                    background: transparent !important;
-                    background-color: transparent !important;
-                    box-shadow: none !important;
-                    border: none !important;
-                    padding: 0 !important;
-                }
-                .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
-                    max-width: 100% !important;
-                    display: block !important;
-                    width: 100% !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-align-center {
-                    display: block !important;
-                    width: 100% !important;
-                    text-align: left !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-block-form {
-                    display: flex !important;
-                    gap: 8px !important;
-                    align-items: stretch !important;
-                    width: 100% !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-formContent {
-                    flex: 1 1 auto !important;
-                    margin: 0 !important;
-                    min-width: 0 !important;
-                    width: auto !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-fieldRow,
-                .footer-signup #mlb2-41461487 .ml-field-group {
-                    margin: 0 !important;
-                    width: 100% !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-embedSubmit {
-                    flex: 0 0 auto !important;
-                    margin: 0 !important;
-                    width: auto !important;
-                    float: none !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"] {
-                    background-color: rgba(255,255,255,0.06) !important;
-                    border: 1px solid rgba(255,255,255,0.2) !important;
-                    color: #ffffff !important;
-                    border-radius: 4px !important;
-                    padding: 10px 12px !important;
-                    font-size: 13px !important;
-                    width: 100% !important;
-                    box-sizing: border-box !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"]::placeholder { color: rgba(255,255,255,0.5) !important; }
-                .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-webkit-input-placeholder { color: rgba(255,255,255,0.5) !important; }
-                .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-moz-placeholder { color: rgba(255,255,255,0.5) !important; }
-                .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-embedSubmit button.primary {
-                    background-color: var(--gold) !important;
-                    color: var(--navy) !important;
-                    font-weight: 700 !important;
-                    border: none !important;
-                    padding: 10px 18px !important;
-                    font-size: 13px !important;
-                    width: auto !important;
-                    white-space: nowrap !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
-                    background-color: var(--gold-hover) !important;
-                }
-                .footer-signup #mlb2-41461487 .ml-form-successBody .ml-form-successContent h4,
-                .footer-signup #mlb2-41461487 .ml-form-successBody .ml-form-successContent p {
-                    color: #ffffff !important;
-                    text-align: center !important;
-                }
-                @media (max-width: 480px) {
-                    .footer-signup #mlb2-41461487 .ml-block-form { flex-direction: column !important; }
-                    .footer-signup #mlb2-41461487 .ml-form-embedSubmit button.primary { width: 100% !important; }
-                }
-            </style>
-
-            <div id="mlb2-41461487" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41461487">
-                <div class="ml-form-align-center">
-                    <div class="ml-form-embedWrapper embedForm">
-                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                            <div class="ml-form-embedContent" style="display:none;"></div>
-                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/subscribe" data-code="" method="post" target="_blank">
-                                <div class="ml-form-formContent">
-                                    <div class="ml-form-fieldRow ml-last-item">
-                                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                            <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Your email" autocomplete="email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="hidden" name="ml-submit" value="1">
-                                <div class="ml-form-embedSubmit">
-                                    <button type="submit" class="primary">Subscribe</button>
-                                    <button disabled="disabled" style="display:none;" type="button" class="loading">
-                                        <div class="ml-form-embedSubmitLoad"></div>
-                                        <span class="sr-only">Loading...</span>
-                                    </button>
-                                </div>
-                                <input type="hidden" name="anticsrf" value="true">
-                            </form>
-                        </div>
-                        <div class="ml-form-successBody row-success" style="display:none">
-                            <div class="ml-form-successContent">
-                                <h4>Thank you!</h4>
-                                <p>You're on the list.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="issue-stack">
+        <article class="issue">
+            <div class="issue-meta"><span class="no">Issue 03</span><span class="date">July 9, 2026</span></div>
+            <h2><a href="/writing-tips/issue-03">Crafting strong main claims</a></h2>
+            <p>In upper level high school and college classes, a thesis statement needs to be argumentative. Here's what readers look for when deciding whether yours is a claim — one that moves beyond fact and isn't simply pure opinion.</p>
+            <div class="tag-row">
+                <span class="tag">Thesis</span>
+                <span class="tag">Main Claim</span>
+                <span class="tag">Argument</span>
+                <span class="tag">Academic Writing</span>
             </div>
-            <script>
-                function ml_webform_success_41461487(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-41461487 .row-success').show();$('.ml-subscribe-form-41461487 .row-form').hide();}
-            </script>
-            <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
-            <script>fetch("https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/takel")</script>
-        </div>
-        <div class="footer-col footer-col-cta">
-            <p class="footer-col-heading">Get in touch</p>
-            <div class="footer-contact-links">
-                <a href="/">bonannoworkshop.com</a>
-                <a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a>
-            </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Bonanno Writing Workshop</p>
-      </div>
-    </footer>
+            <a class="read-link" href="/writing-tips/issue-03">Read issue →</a>
+        </article>
 
-    <script>
-    // Nav dropdown: tap to toggle (touch), close on outside click or after choosing an item
-    document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
-        btn.addEventListener('click', e => {
-            e.stopPropagation();
-            const dd = btn.closest('.nav-dropdown');
-            const isOpen = dd.classList.toggle('open');
-            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-    });
-    document.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            const dd = link.closest('.nav-dropdown');
-            dd.classList.remove('open');
-            dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
-        });
-    });
-    document.addEventListener('click', e => {
-        document.querySelectorAll('.nav-dropdown.open').forEach(dd => {
-            if (!dd.contains(e.target)) {
-                dd.classList.remove('open');
-                dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
-    </script>
+        <article class="issue">
+            <div class="issue-meta"><span class="no">Issue 02</span><span class="date">June 1, 2026</span></div>
+            <h2><a href="/writing-tips/issue-02">A great college essay is about something.</a></h2>
+            <p>The difference between an essay that's read and one that's remembered — and how to make sure your main point actually lands on the page.</p>
+            <div class="tag-row">
+                <span class="tag">College Admissions</span>
+                <span class="tag">Personal Essay</span>
+                <span class="tag">Drafting</span>
+                <span class="tag">Main Point</span>
+            </div>
+            <a class="read-link" href="/writing-tips/issue-02">Read issue →</a>
+        </article>
+
+        <article class="issue">
+            <div class="issue-meta"><span class="no">Issue 01</span><span class="date">May 19, 2026</span></div>
+            <h2><a href="/writing-tips/issue-01">Start with your evidence — not your claim.</a></h2>
+            <p>The first thing I teach my students: a method for drafting that gets you past flat, predictable arguments and to a claim that's genuinely yours.</p>
+            <div class="tag-row">
+                <span class="tag">Thesis</span>
+                <span class="tag">Drafting</span>
+                <span class="tag">Evidence</span>
+                <span class="tag">Argument</span>
+            </div>
+            <a class="read-link" href="/writing-tips/issue-01">Read issue →</a>
+        </article>
+    </div>
+
+    <div class="archive-note">
+        <span class="hand-note">more coming — one a month</span>
+    </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">Bonanno Writing Workshop</div>
+            <p>Brooklyn-based writing tutor &amp; college essay coach for high school, college, and graduate students.</p>
+        </div>
+        <div class="footer-col footer-sub">
+            <span class="type-label">Want some writing tips?</span>
+            <form action="https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/subscribe" method="post" target="_blank">
+                <input aria-label="email" type="email" name="fields[email]" placeholder="Your email" autocomplete="email" required>
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-col">
+            <span class="type-label">Get in touch</span>
+            <ul class="footer-links">
+                <li><a href="https://bonannoworkshop.com">bonannoworkshop.com</a></li>
+                <li><a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Bonanno Writing Workshop</span>
+        <span>Brooklyn, N.Y.</span>
+    </div>
+</footer>
+
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+document.addEventListener('click', e => {
+    if (navLinks.classList.contains('open') && !e.target.closest('nav')) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+</script>
 </body>
 </html>

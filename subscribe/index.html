@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writing Tips — Bonanno Writing Workshop</title>
     <meta name="description" content="Writing tips from the Bonanno Writing Workshop, delivered to your inbox.">
-    <meta name="robots" content="noindex">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Writing Tips Newsletter — Bonanno Writing Workshop">
-    <meta property="og:description" content="A free monthly writing tip drawn from my work with students — useful for anyone who writes.">
+    <meta property="og:title" content="Writing Tips — Bonanno Writing Workshop">
+    <meta property="og:description" content="Writing tips from the Bonanno Writing Workshop, delivered to your inbox.">
     <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
     <meta property="og:url" content="https://bonannoworkshop.com/subscribe">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Writing Tips Newsletter — Bonanno Writing Workshop">
-    <meta name="twitter:description" content="A free monthly writing tip drawn from my work with students — useful for anyone who writes.">
+    <meta name="twitter:title" content="Writing Tips — Bonanno Writing Workshop">
+    <meta name="twitter:description" content="Writing tips from the Bonanno Writing Workshop, delivered to your inbox.">
     <meta name="twitter:image" content="https://bonannoworkshop.com/og-image.png">
 
     <!-- Google tag (gtag.js) -->
@@ -27,170 +26,6 @@
       gtag('config', 'G-KL55FCMMMT');
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --navy: #1c2a3a;
-            --gold: #c9a84c;
-            --gold-hover: #b8953e;
-            --cream: #f8f5ef;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html, body { min-height: 100%; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background: var(--navy);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            font-feature-settings: "kern" 1, "liga" 1;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .page-header {
-            text-align: center;
-            padding: 40px 24px 0;
-        }
-
-        .page-header .wordmark {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 64px 24px;
-        }
-
-        .signup-card {
-            max-width: 460px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .signup-card .section-label {
-            color: var(--gold);
-            margin-bottom: 22px;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .signup-card h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 44px;
-            font-weight: 500;
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: 18px;
-        }
-
-        .signup-card .lede {
-            font-size: 17px;
-            font-weight: 300;
-            color: rgba(255,255,255,0.78);
-            line-height: 1.55;
-            margin-bottom: 36px;
-        }
-
-        /* ── MailerLite form overrides ── */
-        #mlb2-41461487.ml-form-embedContainer,
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper,
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedBody,
-        #mlb2-41461487.ml-form-embedContainer .ml-form-successBody {
-            background-color: transparent !important;
-            background: transparent !important;
-            box-shadow: none !important;
-            border: none !important;
-            padding: 0 !important;
-            max-width: 100% !important;
-        }
-
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
-            max-width: 100% !important;
-        }
-
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"] {
-            background-color: rgba(255,255,255,0.08) !important;
-            border: 1.5px solid rgba(255,255,255,0.35) !important;
-            color: #ffffff !important;
-            border-radius: 4px !important;
-            padding: 14px !important;
-            font-size: 15px !important;
-        }
-
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-webkit-input-placeholder { color: rgba(255,255,255,0.6) !important; }
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-moz-placeholder { color: rgba(255,255,255,0.6) !important; }
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::placeholder { color: rgba(255,255,255,0.6) !important; }
-
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
-            background-color: var(--gold) !important;
-            color: var(--navy) !important;
-            font-weight: 700 !important;
-            border: none !important;
-            padding: 14px !important;
-            font-size: 15px !important;
-        }
-
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
-            background-color: var(--gold-hover) !important;
-        }
-
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4,
-        #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
-            color: #ffffff !important;
-            font-family: 'Inter', sans-serif !important;
-            text-align: center !important;
-        }
-
-        .microcopy {
-            font-size: 12px;
-            color: rgba(255,255,255,0.4);
-            margin-top: 16px;
-        }
-
-        .page-footer {
-            text-align: center;
-            padding: 24px;
-            color: rgba(255,255,255,0.4);
-            font-size: 13px;
-        }
-
-        .page-footer a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-        }
-
-        .page-footer a:hover {
-            color: var(--gold);
-        }
-
-        @media (max-width: 640px) {
-            .signup-card h1 { font-size: 34px; }
-            main { padding: 48px 24px; }
-        }
-    </style>
-
     <!-- MailerLite Universal -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -200,68 +35,243 @@
         ml('account', '2266162');
     </script>
     <!-- End MailerLite Universal -->
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #faf5ea;
+            --paper-card: #fffdf6;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --rule: rgba(38, 33, 23, 0.14);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--body);
+            font-size: 17.5px;
+            line-height: 1.75;
+            color: var(--ink);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--paper);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 30px 20px 0;
+        }
+
+        .wordmark {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .wordmark em { font-style: italic; font-weight: 500; color: var(--pencil); }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 20px 70px;
+        }
+
+        .clipout {
+            position: relative;
+            max-width: 560px;
+            width: 100%;
+            border: 1.5px dashed var(--pencil-soft);
+            background: var(--paper-card);
+            padding: 52px 54px 44px;
+        }
+
+        .clipout::before {
+            content: '✂';
+            position: absolute;
+            top: -14px;
+            left: 40px;
+            font-size: 22px;
+            color: var(--pencil);
+            background: var(--paper);
+            padding: 0 8px;
+            transform: rotate(90deg);
+        }
+
+        .type-label {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--pencil);
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: 34px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin: 14px 0 14px;
+        }
+
+        h1 .squiggle { position: relative; white-space: nowrap; }
+
+        h1 .squiggle svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.12em;
+            width: 104%;
+            height: 0.24em;
+            overflow: visible;
+        }
+
+        h1 .squiggle path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 2.4;
+            stroke-linecap: round;
+        }
+
+        .lede {
+            color: var(--ink-soft);
+            margin-bottom: 30px;
+        }
+
+        form { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        input[type="email"] {
+            flex: 1 1 220px;
+            font-family: var(--mono);
+            font-size: 14.5px;
+            color: var(--ink);
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid var(--ink-soft);
+            padding: 12px 4px;
+            outline: none;
+        }
+
+        input[type="email"]:focus { border-bottom-color: var(--pencil); }
+        input::placeholder { color: var(--ink-faint); }
+
+        .btn {
+            font-family: var(--mono);
+            font-size: 13.5px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--paper-card);
+            background: var(--pencil);
+            padding: 14px 26px;
+            border: 1px solid var(--pencil);
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0 var(--pencil-faint);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--pencil-soft); }
+
+        .fineprint {
+            margin-top: 16px;
+            font-size: 13.5px;
+            color: var(--ink-faint);
+        }
+
+        .archive-link {
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px solid var(--rule);
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hand-note {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 21px;
+            color: var(--pencil);
+            transform: rotate(-1.5deg);
+        }
+
+        .link-under {
+            font-family: var(--mono);
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 2px solid var(--pencil-soft);
+            padding-bottom: 3px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .link-under:hover { color: var(--pencil); border-bottom-color: var(--pencil); }
+
+        footer {
+            text-align: center;
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            color: var(--ink-faint);
+            padding: 0 20px 26px;
+        }
+
+        @media (max-width: 560px) {
+            .clipout { padding: 40px 26px 36px; }
+            h1 { font-size: 28px; }
+        }
+    </style>
 </head>
 <body>
-    <header class="page-header">
-        <a href="/" class="wordmark">Bonanno Writing Workshop</a>
-    </header>
 
-    <main>
-        <div class="signup-card">
-            <div class="section-label">Writing Tips</div>
-            <h1>Writing tips from the Workshop</h1>
-            <p class="lede">Writing advice from my work with students, sent straight to your inbox when I have something useful to share.</p>
+<header class="page-header">
+    <a href="/" class="wordmark">Bonanno <em>Writing</em> Workshop</a>
+</header>
 
-            <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1778769");</style>
-            <style type="text/css">
-                .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}.ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#ffffff #ffffff #ffffff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}@keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}#mlb2-41461487.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper{background-color:#f6f6f6;border-width:0px;border-color:transparent;border-radius:4px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:400px;width:100%}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody{padding:20px 20px 0 20px}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent{display:none}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 10px 0;width:100%}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#ffffff!important;color:#333333!important;border-color:#cccccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;height:auto;line-height:21px!important;padding:10px!important;width:100%!important;box-sizing:border-box!important}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 20px 0;float:left;width:100%}#mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#000000!important;border:none!important;border-radius:4px!important;color:#ffffff!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;font-weight:700!important;padding:10px!important;width:100%!important;box-sizing:border-box!important}.ml-error input{border-color:red!important}
-            </style>
+<main>
+    <div class="clipout">
+        <span class="type-label">Writing Tips · Monthly</span>
+        <h1>Writing tips from <span class="squiggle">the Workshop<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></span></h1>
+        <p class="lede">Writing advice from my work with students, sent straight to your inbox when I have something useful to share.</p>
 
-            <div id="mlb2-41461487" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41461487">
-                <div class="ml-form-align-center">
-                    <div class="ml-form-embedWrapper embedForm">
-                        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                            <div class="ml-form-embedContent"></div>
-                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/subscribe" data-code="" method="post" target="_blank">
-                                <div class="ml-form-formContent">
-                                    <div class="ml-form-fieldRow ml-last-item">
-                                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email address" autocomplete="email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="hidden" name="ml-submit" value="1">
-                                <div class="ml-form-embedSubmit">
-                                    <button type="submit" class="primary">Subscribe</button>
-                                    <button disabled="disabled" style="display:none;" type="button" class="loading">
-                                        <div class="ml-form-embedSubmitLoad"></div>
-                                        <span class="sr-only">Loading...</span>
-                                    </button>
-                                </div>
-                                <input type="hidden" name="anticsrf" value="true">
-                            </form>
-                        </div>
-                        <div class="ml-form-successBody row-success" style="display:none">
-                            <div class="ml-form-successContent">
-                                <h4>Thank you!</h4>
-                                <p>You're on the list.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                function ml_webform_success_41461487(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-41461487 .row-success').show();$('.ml-subscribe-form-41461487 .row-form').hide();}
-            </script>
-            <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
-            <script>fetch("https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/takel")</script>
+        <form action="https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/subscribe" method="post" target="_blank">
+            <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" autocomplete="email" required>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="fineprint">Once a month or so. Unsubscribe anytime.</p>
 
-            <p class="microcopy">You'll also hear from me occasionally. Unsubscribe anytime.</p>
+        <div class="archive-link">
+            <span class="hand-note">want a preview?</span>
+            <a href="/writing-tips" class="link-under">Read the back issues →</a>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer class="page-footer">
-        <a href="/">bonannoworkshop.com</a>
-    </footer>
+<footer>© 2026 Bonanno Writing Workshop · Brooklyn, N.Y.</footer>
+
 </body>
 </html>

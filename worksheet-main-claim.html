@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Revising Your Main Claim — Worksheet (Redesign Draft)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #fffdf6;
+            --paper-tint: #faf5ea;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --rule: rgba(38, 33, 23, 0.16);
+            --writeline: rgba(38, 33, 23, 0.22);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--body);
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--ink);
+            background: #e9e2d2;
+            padding: 40px 16px;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto 40px;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            box-shadow: 0 2px 4px rgba(38,33,23,0.08), 0 18px 44px rgba(38,33,23,0.14);
+            padding: 56px 64px 48px;
+        }
+
+        /* ── Masthead ── */
+        .masthead {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .masthead .brand {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .masthead .brand em { font-style: italic; font-weight: 500; color: var(--pencil); }
+
+        .type-label {
+            font-family: var(--mono);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--pencil);
+        }
+
+        .rule-double {
+            border-top: 2px solid var(--pencil-faint);
+            margin-bottom: 34px;
+        }
+
+        .titleblock { margin-bottom: 10px; }
+
+        .titleblock h1 {
+            font-family: var(--serif);
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.12;
+            margin-bottom: 12px;
+        }
+
+        .titleblock h1 .squiggle { position: relative; white-space: nowrap; }
+
+        .titleblock h1 .squiggle svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.14em;
+            width: 104%;
+            height: 0.24em;
+            overflow: visible;
+        }
+
+        .titleblock h1 .squiggle path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 2.6;
+            stroke-linecap: round;
+        }
+
+        .subtitle {
+            font-size: 16.5px;
+            color: var(--ink-soft);
+            max-width: 34em;
+            margin-bottom: 26px;
+        }
+
+        /* ── Name / date ── */
+        .id-row {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 38px;
+        }
+
+        .id-field { flex: 1; display: flex; align-items: baseline; gap: 10px; }
+        .id-field:last-child { flex: 0 0 200px; }
+
+        .id-field label {
+            font-family: var(--mono);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+        }
+
+        .id-field .line { flex: 1; border-bottom: 1.5px solid var(--writeline); height: 1.4em; }
+
+        /* ── Sections ── */
+        .ws-section { margin-bottom: 36px; }
+
+        .ws-head {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .ws-no {
+            font-family: var(--mono);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--pencil);
+        }
+
+        .ws-head h2 {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .ws-section > .instructions {
+            color: var(--ink-soft);
+            font-size: 15px;
+            max-width: 42em;
+            margin-bottom: 14px;
+        }
+
+        .instructions em { font-style: italic; }
+
+        /* ── Ruled write-in areas ── */
+        .write-area {
+            border: 1px solid var(--rule);
+            background-color: var(--paper);
+            background-image: repeating-linear-gradient(transparent, transparent 31px, var(--writeline) 31px, var(--writeline) 32px);
+            background-origin: content-box;
+            height: 130px;
+            padding: 0 14px;
+            border-radius: 2px;
+        }
+
+        .write-area.tall { height: 165px; }
+        .write-area.short { height: 98px; }
+
+        /* ── Checklist items ── */
+        .check-item { margin: 18px 0 0; }
+
+        .check-line {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 4px;
+        }
+
+        .box {
+            flex-shrink: 0;
+            width: 15px;
+            height: 15px;
+            border: 1.5px solid var(--ink-soft);
+            border-radius: 2px;
+            transform: translateY(2px);
+        }
+
+        .check-line h3 {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .check-item .detail {
+            color: var(--ink-soft);
+            font-size: 14.5px;
+            margin-left: 27px;
+            max-width: 44em;
+            margin-bottom: 10px;
+        }
+
+        .check-item .write-area { margin-left: 27px; }
+
+        /* ── Pitfalls ── */
+        .pitfall { margin: 16px 0 0; }
+
+        .pitfall .detail {
+            color: var(--ink-soft);
+            font-size: 14.5px;
+            margin-left: 27px;
+            max-width: 46em;
+        }
+
+        .pitfall .try {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--pencil);
+        }
+
+        /* ── Footer CTA ── */
+        .ws-footer {
+            margin-top: 44px;
+            background: var(--ink);
+            color: rgba(255, 253, 246, 0.85);
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+            border-radius: 2px;
+        }
+
+        .ws-footer .cta { font-size: 14.5px; }
+        .ws-footer .cta strong { color: #fffdf6; font-weight: 500; }
+
+        .ws-footer .site {
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 253, 246, 0.7);
+        }
+
+        .license {
+            text-align: center;
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.08em;
+            color: var(--ink-faint);
+            margin-top: 14px;
+        }
+
+        /* ── Print ── */
+        @page { size: letter; margin: 0.45in; }
+
+        @media print {
+            body { background: #fff; padding: 0; font-size: 13px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .page { box-shadow: none; border: none; max-width: none; margin: 0; padding: 8px 14px; }
+            .page + .page { page-break-before: always; }
+            .titleblock h1 { font-size: 32px; }
+            .subtitle { font-size: 14.5px; margin-bottom: 18px; }
+            .id-row { margin-bottom: 26px; }
+            .ws-section { margin-bottom: 26px; }
+            .ws-head h2 { font-size: 19px; }
+            .ws-section > .instructions, .check-item .detail, .pitfall .detail { font-size: 12.5px; }
+            .write-area { height: 96px; background-image: repeating-linear-gradient(transparent, transparent 25px, var(--writeline) 25px, var(--writeline) 26px); }
+            .write-area.short { height: 74px; }
+            .write-area.tall { height: 120px; }
+            .check-item { margin-top: 14px; }
+            .check-line h3 { font-size: 16px; }
+            .pitfall { margin-top: 11px; }
+            .pitfall .try { font-size: 15px; }
+            .write-area.tall { height: 96px; }
+            .ws-footer { margin-top: 18px; padding: 12px 20px; }
+            .ws-footer .cta { font-size: 12.5px; }
+            .license { margin-top: 8px; }
+            .move .d, .check-item .detail, .pitfall .detail { line-height: 1.5; }
+            .ws-section > .instructions { margin-bottom: 10px; }
+        }
+
+        @media (max-width: 700px) {
+            .page { padding: 36px 26px; }
+            .id-row { flex-direction: column; gap: 22px; }
+            .id-field:last-child { flex: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Page 1 ── -->
+<div class="page">
+    <div class="masthead">
+        <span class="brand">Bonanno <em>Writing</em> Workshop</span>
+        <span class="type-label">Free Worksheet</span>
+    </div>
+    <div class="rule-double"></div>
+
+    <div class="titleblock">
+        <h1>Revising Your <span class="squiggle">Main Claim<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></span></h1>
+        <p class="subtitle">Test and strengthen the thesis you already have — so the argument that drives your essay is as clear and sharp as it can be.</p>
+    </div>
+
+    <div class="id-row">
+        <div class="id-field"><label>Name</label><span class="line"></span></div>
+        <div class="id-field"><label>Date</label><span class="line"></span></div>
+    </div>
+
+    <section class="ws-section">
+        <div class="ws-head"><span class="ws-no">1.</span><h2>Your Current Claim</h2></div>
+        <p class="instructions">Write your current thesis or main claim below — exactly as it stands in your draft. Don't clean it up yet.</p>
+        <div class="write-area"></div>
+    </section>
+
+    <section class="ws-section">
+        <div class="ws-head"><span class="ws-no">2.</span><h2>Test Your Claim</h2></div>
+        <p class="instructions">A strong main claim is specific, contestable, and significant. Check each box once you're satisfied, and use the notes to think through how you might strengthen it.</p>
+
+        <div class="check-item">
+            <div class="check-line"><span class="box"></span><h3>Is it specific?</h3></div>
+            <p class="detail">Is the claim based in evidence? Does it unpack key terms? Does it explain the relationship between ideas? Does it answer questions of "how" and "why?"</p>
+            <div class="write-area short"></div>
+        </div>
+
+        <div class="check-item">
+            <div class="check-line"><span class="box"></span><h3>Is it contestable?</h3></div>
+            <p class="detail">Is the claim something a knowledgeable reader could reasonably doubt? Or is it merely an observation about something factual or obvious?</p>
+            <div class="write-area short"></div>
+        </div>
+    </section>
+</div>
+
+<!-- ── Page 2 ── -->
+<div class="page">
+    <section class="ws-section">
+        <div class="check-item" style="margin-top: 0;">
+            <div class="check-line"><span class="box"></span><h3>Is it significant?</h3></div>
+            <p class="detail">Does the claim answer "so what?" Why does this argument matter? How does it help a reader understand something new or nonobvious about the topic?</p>
+            <div class="write-area short"></div>
+        </div>
+    </section>
+
+    <section class="ws-section">
+        <div class="ws-head"><span class="ws-no">3.</span><h2>Watch Out for Common Pitfalls</h2></div>
+        <p class="instructions">Sometimes claims <em>look</em> strong but fall into familiar traps. Check any that apply to your current draft.</p>
+
+        <div class="pitfall">
+            <div class="check-line"><span class="box"></span><h3>Five-Paragraph Essay Claim</h3></div>
+            <p class="detail">Makes interpretive moves but doesn't offer something nonobvious. Its structure suggests one paragraph per example, each proving the same point. <span class="try">Try:</span> choosing a more specific angle, complicating the claim, or defining key terms more precisely.</p>
+        </div>
+
+        <div class="pitfall">
+            <div class="check-line"><span class="box"></span><h3>Overstated Claim</h3></div>
+            <p class="detail">General and absolute — may create a false debate between two options and pick one, ignoring complicating evidence. Watch for "obviously," "only," or "has to." <span class="try">Try:</span> adding specificity and accounting for reader doubt.</p>
+        </div>
+
+        <div class="pitfall">
+            <div class="check-line"><span class="box"></span><h3>Understated Claim</h3></div>
+            <p class="detail">Contains interesting observations, but the connection between them isn't stated — a reader has to guess. <span class="try">Try:</span> spelling out the how/why relationship between your ideas explicitly.</p>
+        </div>
+
+        <div class="pitfall">
+            <div class="check-line"><span class="box"></span><h3>Descriptive Claim</h3></div>
+            <p class="detail">Describes what happens but doesn't make an argument a reader would doubt. <span class="try">Try:</span> asking "so what?" and "yes, and?" about what you've described.</p>
+        </div>
+    </section>
+
+    <section class="ws-section">
+        <div class="ws-head"><span class="ws-no">4.</span><h2>Revise Your Claim</h2></div>
+        <p class="instructions">Based on everything above, write a revised version. It may look very different from where you started — that's a good sign.</p>
+        <div class="write-area tall"></div>
+    </section>
+
+    <div class="ws-footer">
+        <span class="cta"><strong>Want guided support with your writing?</strong> Book a free 15-minute call at bonannoworkshop.com</span>
+        <span class="site">bonannoworkshop.com</span>
+    </div>
+    <p class="license">CC BY-NC-ND 4.0</p>
+</div>
+
+</body>
+</html>

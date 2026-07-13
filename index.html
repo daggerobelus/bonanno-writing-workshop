@@ -9,12 +9,12 @@
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bonanno Writing Workshop | Brooklyn Writing Tutor & College Essay Coach">
-    <meta property="og:description" content="Private writing tutor and college essay coach in Brooklyn, NYC. Academic tutoring, college application essays, and async essay review.">
+    <meta property="og:description" content="Private writing tutor and college essay coach in Brooklyn, NYC. Academic writing tutoring, college application essays, and async essay review for high school, college, and graduate students. PhD student at CUNY Graduate Center.">
     <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
     <meta property="og:url" content="https://bonannoworkshop.com/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bonanno Writing Workshop">
-    <meta name="twitter:description" content="Private writing tutor and college essay coach in Brooklyn, NYC.">
+    <meta name="twitter:title" content="Bonanno Writing Workshop | Brooklyn Writing Tutor & College Essay Coach">
+    <meta name="twitter:description" content="Private writing tutor and college essay coach in Brooklyn, NYC. Academic writing tutoring, college application essays, and async essay review for high school, college, and graduate students. PhD student at CUNY Graduate Center.">
     <meta name="twitter:image" content="https://bonannoworkshop.com/og-image.png">
 
     <!-- Google tag (gtag.js) -->
@@ -23,13 +23,8 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-KL55FCMMMT');
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- MailerLite Universal -->
     <script>
@@ -41,2615 +36,1546 @@
     </script>
     <!-- End MailerLite Universal -->
 
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --navy: #1c2a3a;
-            --gold: #c9a84c;
-            --gold-hover: #b8953e;
-            --cream: #f8f5ef;
-            --warm-accent: #efe8d8;
-            --white: #ffffff;
-            --light-gray: #f5f5f3;
+            --paper: #faf5ea;
+            --paper-deep: #f2ead7;
+            --paper-card: #fffdf6;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --gold: #b08d3c;
+            --rule: rgba(38, 33, 23, 0.14);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background: var(--white);
+            font-family: var(--body);
+            font-size: 17.5px;
+            line-height: 1.75;
+            color: var(--ink);
+            overflow-x: clip;
+            background-color: var(--paper);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            font-feature-settings: "kern" 1, "liga" 1;
-            hanging-punctuation: first allow-end last;
         }
 
-        * {
-            text-wrap: pretty;
+        ::selection { background: var(--pencil-faint); }
+
+        img { max-width: 100%; display: block; }
+        a { color: var(--ink); }
+
+        /* ── Typewriter labels ── */
+        .type-label {
+            font-family: var(--mono);
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--pencil);
         }
 
-        h1, h2, h3, h4 {
-            text-wrap: balance;
+        .type-meta {
+            font-family: var(--mono);
+            font-size: 13px;
+            letter-spacing: 0.06em;
+            color: var(--ink-soft);
         }
 
-        p, li, blockquote, dd {
-            orphans: 2;
-            widows: 2;
-            overflow-wrap: break-word;
+        /* ── Hand-written notes ── */
+        .hand-note {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 1.25;
+            color: var(--pencil);
         }
 
         /* ── Nav ── */
         .nav-wrapper {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             z-index: 100;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 20px rgba(0, 0, 0, 0.03);
+            background: rgba(250, 245, 234, 0.94);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .nav-wrapper::after {
+            content: '';
+            display: block;
+            height: 3px;
+            border-top: 1px solid var(--pencil-faint);
         }
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 48px;
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
+            padding: 18px 40px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 24px;
         }
 
         .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .nav-brand img {
-            height: 28px;
-            width: auto;
-        }
-
-        .nav-brand span {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
+            font-family: var(--serif);
+            font-size: 19px;
             font-weight: 600;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--navy);
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            color: var(--ink);
+            white-space: nowrap;
+        }
+
+        .nav-brand em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--pencil);
         }
 
         .nav-links {
             display: flex;
-            gap: 36px;
+            gap: 30px;
             list-style: none;
+            align-items: baseline;
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: #555;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+            font-family: var(--mono);
+            font-size: 12.5px;
+            font-weight: 400;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            transition: color 0.2s;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
+            text-decoration: none;
+            color: var(--ink-soft);
+            padding-bottom: 3px;
+            border-bottom: 1px solid transparent;
             transition: color 0.2s, border-color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #1a1a1a;
-            border-bottom-color: var(--gold);
+            color: var(--pencil);
+            border-bottom-color: var(--pencil-soft);
         }
 
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown-toggle {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
+        .nav-toggle {
+            display: none;
             background: none;
             border: none;
             cursor: pointer;
-            font-family: inherit;
-            color: #555;
+            font-family: var(--mono);
             font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            padding: 0 0 4px;
-            border-bottom: 2px solid transparent;
-            transition: color 0.2s, border-color 0.2s;
+            color: var(--ink);
+            padding: 6px 2px;
         }
 
-        .nav-dropdown-toggle::after {
-            content: "";
-            width: 5px;
-            height: 5px;
-            border-right: 1.5px solid currentColor;
-            border-bottom: 1.5px solid currentColor;
-            transform: rotate(45deg) translateY(-1px);
-            transition: transform 0.2s;
+        /* ── Manuscript container ── */
+        .ms {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
         }
 
-        .nav-dropdown:hover .nav-dropdown-toggle,
-        .nav-dropdown:focus-within .nav-dropdown-toggle,
-        .nav-dropdown.open .nav-dropdown-toggle {
-            color: #1a1a1a;
-            border-bottom-color: var(--gold);
+        section { position: relative; overflow: visible; }
+
+        .section-head {
+            display: flex;
+            align-items: baseline;
+            gap: 18px;
+            margin-bottom: 40px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--rule);
+            position: relative;
         }
 
-        .nav-dropdown.open .nav-dropdown-toggle::after {
-            transform: rotate(-135deg) translateY(-1px);
-        }
-
-        .nav-dropdown-menu {
+        .section-head::after {
+            content: '';
             position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(8px);
-            margin: 0;
-            padding: 8px;
-            list-style: none;
-            min-width: 230px;
-            background: #fff;
-            border: 1px solid rgba(0,0,0,0.07);
-            border-radius: 10px;
-            box-shadow: 0 12px 32px rgba(28,42,58,0.14);
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: opacity 0.18s ease, transform 0.18s ease;
-            z-index: 200;
+            bottom: -2px;
+            left: 0;
+            width: 64px;
+            height: 3px;
+            background: var(--pencil-soft);
         }
 
-        .nav-dropdown:hover .nav-dropdown-menu,
-        .nav-dropdown:focus-within .nav-dropdown-menu,
-        .nav-dropdown.open .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transform: translateX(-50%) translateY(2px);
+        .section-no {
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--pencil);
+            letter-spacing: 0.08em;
         }
 
-        .nav-dropdown-menu li {
-            display: block;
-        }
-
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 10px 14px;
-            font-size: 12px;
+        .section-head h2 {
+            font-family: var(--serif);
+            font-size: 34px;
             font-weight: 500;
-            letter-spacing: 0.04em;
-            text-transform: none;
-            color: #444;
-            border-radius: 6px;
-            border-bottom: none;
+            line-height: 1.2;
+        }
+
+        /* ── Squiggle underline (animates in) ── */
+        .squiggle {
+            position: relative;
             white-space: nowrap;
-            transition: background 0.15s, color 0.15s;
         }
 
-        .nav-dropdown-menu a:hover {
-            background: rgba(201,168,76,0.13);
-            color: var(--navy);
-            border-bottom: none;
+        .squiggle svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.18em;
+            width: 104%;
+            height: 0.28em;
+            overflow: visible;
         }
 
-        .nav-link-arrow .nav-arrow {
-            display: inline-block;
-            transition: transform 0.2s ease;
+        .squiggle path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 620;
+            stroke-dashoffset: 620;
         }
 
-        .nav-link-arrow:hover .nav-arrow {
-            transform: translateX(3px);
+        .revealed .squiggle path,
+        .squiggle.revealed path {
+            animation: draw 0.9s ease-out 0.3s forwards;
         }
 
-        @media (max-width: 600px) {
-            .nav-dropdown-menu {
-                left: 0;
-                right: auto;
-                transform: translateX(0) translateY(8px);
-                min-width: 200px;
-            }
-            .nav-dropdown:hover .nav-dropdown-menu,
-            .nav-dropdown:focus-within .nav-dropdown-menu,
-            .nav-dropdown.open .nav-dropdown-menu {
-                transform: translateX(0) translateY(2px);
-            }
+        @keyframes draw { to { stroke-dashoffset: 0; } }
+
+        /* ── Reveal on scroll ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .squiggle path { stroke-dashoffset: 0; animation: none; }
         }
 
         /* ── Hero ── */
         .hero {
-            padding: 120px 48px 100px;
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
+            padding-top: 96px;
+            padding-bottom: 110px;
         }
 
-        .hero-wrapper {
-            background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%);
-        }
-
-        /* ── Availability pills ── */
-        .avail-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #5fb37a;
-            flex-shrink: 0;
-        }
-
-        .avail-pill-row {
-            text-align: center;
-            margin: 14px 0 18px;
-        }
-
-        .avail-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 14px;
-            padding: 3px 10px;
-            border-radius: 999px;
-            font-family: 'Inter', sans-serif;
-            font-size: 10.5px;
-            font-weight: 600;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-            color: #3f7a52;
-            background: rgba(95,179,122,0.12);
-            border: 1px solid rgba(95,179,122,0.28);
-        }
-
-        .essay-review-inner .avail-pill {
-            margin: 6px 0 16px;
-        }
-
-        /* Async review open/closed toggle: add `is-closed` to .essay-review-section */
-        .avail-pill-closed {
-            color: #8a8a8a;
-            background: rgba(0,0,0,0.04);
-            border-color: rgba(0,0,0,0.14);
-        }
-
-        .avail-dot-closed {
-            background: #b0b0b0;
-        }
-
-        .pill-closed {
-            display: none;
-        }
-
-        .essay-review-section.is-closed .pill-open {
-            display: none;
-        }
-
-        .essay-review-section.is-closed .pill-closed {
-            display: inline-flex;
-        }
-
-        .essay-review-section.is-closed .review-menu {
-            opacity: 0.5;
-        }
-
-        .essay-review-section.is-closed .menu-line {
-            pointer-events: none;
-        }
-
-        .avail-pill-dark {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin: 12px 0;
-            padding: 3px 10px;
-            border-radius: 999px;
-            font-family: 'Inter', sans-serif;
-            font-size: 10.5px;
-            font-weight: 600;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.88);
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .hero-mark {
-            height: 56px;
-            width: auto;
-            filter: brightness(0) invert(1);
-            opacity: 0.15;
-            margin-bottom: 32px;
-        }
-
-        .hero-frame {
-            border: 1px solid rgba(201, 168, 76, 0.25);
-            padding: 48px 56px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .hero-ornament {
-            display: block;
-            text-align: center;
-            font-size: 18px;
-            color: var(--gold);
-            margin-bottom: 20px;
-            opacity: 0.7;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 52px;
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.3;
-            color: var(--white);
-            margin-bottom: 24px;
-        }
-
-        .hero .subtitle {
-            font-size: 17px;
-            font-weight: 300;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 540px;
-            margin: 0 auto 16px;
-        }
-
-        .hero .hero-credential {
-            font-size: 13px;
-            font-weight: 400;
-            color: var(--gold);
-            letter-spacing: 0.3px;
-            max-width: 540px;
-            margin: 0 auto 40px;
-            line-height: 1.5;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 40px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 6px;
-            background: var(--navy);
-            color: var(--white);
-            transition: all 0.25s ease;
-            box-shadow: 0 2px 8px rgba(28, 42, 58, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn:hover {
-            background: var(--gold-hover);
-            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-1px);
-        }
-
-        .btn-gold {
-            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--white);
-            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.25), 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-gold:hover {
-            background: linear-gradient(180deg, var(--gold-hover) 0%, #a8832f 100%);
-            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.35), 0 2px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-1px);
-        }
-
-        .btn-dark {
-            background: linear-gradient(180deg, #243548 0%, var(--navy) 100%);
-            color: var(--white);
-        }
-
-        .btn-dark:hover {
-            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-hover) 100%);
-            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-1px);
-        }
-
-        .btn-outline-hero {
-            background: transparent;
-            color: rgba(255, 255, 255, 0.85);
-            border: 1.5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: none;
-        }
-
-        .btn-outline-hero:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border-color: rgba(255, 255, 255, 0.6);
-            box-shadow: none;
-            transform: translateY(-1px);
-        }
-
-        .btn-outline-light {
-            background: transparent;
-            color: var(--navy);
-            border: 1.5px solid var(--navy);
-            box-shadow: none;
-        }
-
-        .btn-outline-light:hover {
-            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--white);
-            border-color: var(--gold);
-            box-shadow: 0 4px 16px rgba(185, 149, 62, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-1px);
-        }
-
-        /* ── Section Labels ── */
-        .section-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--gold);
-            margin-bottom: 32px;
-        }
-
-        /* ── Hairlines ── */
-        .hairline {
-            display: block;
-            width: 48px;
-            height: 1px;
-            background: var(--gold);
-            border: none;
-            margin: 16px 0;
-        }
-
-        .hairline-center {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hairline-white {
-            background: var(--gold);
-        }
-
-        /* ── About ── */
-        .about-section {
-            background: var(--white);
-            padding: 100px 48px;
-        }
-
-        .about-inner {
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-grid {
             display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 64px;
-            align-items: start;
-        }
-
-        .about-image {
-        }
-
-        .about-image .headshot {
-            width: 100%;
-            aspect-ratio: 1;
-            border-radius: 8px;
-            object-fit: cover;
-            object-position: center 35%;
-            display: block;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 12px 40px rgba(0, 0, 0, 0.06);
-        }
-
-        .about-text .section-label {
-            margin-bottom: 24px;
-            margin-top: 0;
-        }
-
-        .about-image {
-            margin-top: 56px;
-        }
-
-        .about-text p {
-            font-size: 17px;
-            font-weight: 300;
-            color: #333;
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-
-        .about-credentials {
-            margin-top: 32px;
-            padding-top: 26px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 22px 44px;
-        }
-
-        .about-credentials .about-cred-col {
-            flex: 1 1 200px;
-        }
-
-        .about-credentials .about-cred-label {
-            display: block;
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 14px;
-        }
-
-        .about-credentials .about-cred-item {
-            font-size: 13px;
-            font-weight: 300;
-            line-height: 1.4;
-            color: #777;
-            margin: 0 0 12px;
-        }
-
-        .about-credentials .about-cred-item span {
-            display: block;
-            color: var(--navy);
-            font-weight: 600;
-        }
-
-        /* ── Problem ── */
-        .problem {
-            background: #000000;
-            background-image:
-                linear-gradient(to bottom, transparent 55%, var(--navy) 100%),
-                radial-gradient(ellipse at center, #000000 30%, #1f2b3e 100%);
-            padding: 100px 48px;
-        }
-
-        .problem-inner {
-            max-width: 640px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .problem p {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 28px;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-
-        .problem .answer {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--gold);
-        }
-
-        /* ── Services ── */
-        .services-section {
-            background: var(--cream);
-            padding: 100px 48px;
-        }
-
-        .services-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            margin-top: 12px;
-        }
-
-        .service-card {
-            background: linear-gradient(180deg, var(--white) 0%, #fafaf8 100%);
-            padding: 24px 28px 36px;
-            border-radius: 8px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 8px 30px rgba(0, 0, 0, 0.05);
-            transition: box-shadow 0.25s ease, transform 0.25s ease;
-            position: relative;
-        }
-
-        .service-card:hover {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.08);
-            transform: translateY(-3px);
-        }
-
-        .service-card .service-num {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 56px;
-            font-weight: 600;
-            line-height: 1;
-            color: var(--gold);
-            opacity: 0.25;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .service-card h3 {
-            font-size: 19px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 14px;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            font-weight: 300;
-            color: #555;
-            line-height: 1.85;
-            margin-bottom: 0;
-        }
-
-        /* ── Lead magnet ── */
-        .lead-magnet-section {
-            background: var(--navy);
-            padding: 96px 48px;
-        }
-
-        .lead-magnet-inner {
-            max-width: 1180px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.05fr;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
             gap: 72px;
             align-items: center;
         }
 
-        .lead-magnet-copy {
-            max-width: 480px;
+        .hero-kicker {
+            margin-bottom: 26px;
         }
 
-        .lead-magnet-section .section-label {
-            color: var(--gold);
-            margin-bottom: 22px;
-        }
-
-        .lead-magnet-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 46px;
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(44px, 5.6vw, 68px);
             font-weight: 500;
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: 22px;
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            margin-bottom: 30px;
         }
 
-        .lead-magnet-section p {
-            font-size: 17px;
-            font-weight: 300;
-            color: rgba(255,255,255,0.78);
-            line-height: 1.55;
-            margin-bottom: 28px;
-        }
-
-        .lead-magnet-preview img {
-            width: 100%;
-            height: auto;
-            display: block;
-            filter: drop-shadow(0 24px 40px rgba(0,0,0,0.35));
-        }
-
-        .lead-magnet-section .ml-form-embedContainer {
-            display: block !important;
-            margin: 0 !important;
-        }
-
-        .lead-magnet-section .ml-form-align-center {
-            width: 100% !important;
-            display: block !important;
-        }
-
-        @media (max-width: 860px) {
-            .lead-magnet-section { padding: 64px 24px; }
-            .lead-magnet-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-            .lead-magnet-copy { max-width: 100%; }
-            .lead-magnet-section h2 { font-size: 36px; }
-            .lead-magnet-preview { max-width: 480px; margin: 0 auto; }
-        }
-
-        /* Strip the white card */
-        .lead-magnet-section .ml-form-embedWrapper {
-            background-color: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-
-        /* Transparent input with white border */
-        .lead-magnet-section .ml-form-embedBody .ml-form-fieldRow input {
-            background-color: rgba(255,255,255,0.08) !important;
-            border: 1.5px solid rgba(255,255,255,0.35) !important;
-            color: #ffffff !important;
-            border-radius: 4px !important;
-        }
-
-        .lead-magnet-section .ml-form-embedBody .ml-form-fieldRow input::placeholder {
-            color: rgba(255,255,255,0.75) !important;
-        }
-
-        /* Gold button, navy text */
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
-            background-color: #c9a84c !important;
-            color: #1c2a3a !important;
-            font-weight: 700 !important;
-            border: none !important;
-            padding: 12px !important;
-        }
-
-        #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
-            background-color: #b8963e !important;
-        }
-
-        /* ── Pricing ── */
-        .pricing-section {
-            background: var(--light-gray);
-            padding: 100px 48px;
-        }
-
-        .pricing-inner {
-            max-width: 880px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .pricing-inner .section-label {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .pricing-subtitle {
-            font-size: 14px;
-            font-weight: 300;
-            color: #666;
-            line-height: 1.7;
-            max-width: 420px;
-            margin: 0 auto 48px;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-            margin: 0 0 36px;
-        }
-
-        .price-card {
-            padding: 40px 32px 36px;
-            text-align: center;
-            border-radius: 12px;
-            background: var(--white);
-            border: 1.5px solid #e8e8e8;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03), 0 8px 30px rgba(0, 0, 0, 0.04);
-            transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-            position: relative;
-        }
-
-        .price-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.08);
-            transform: translateY(-4px);
-            border-color: #ddd;
-        }
-
-        .price-card-featured {
-            background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%);
-            border-color: transparent;
-            box-shadow: 0 4px 12px rgba(28, 42, 58, 0.15), 0 16px 48px rgba(28, 42, 58, 0.2);
-        }
-
-        .price-card-featured:hover {
-            box-shadow: 0 8px 20px rgba(28, 42, 58, 0.2), 0 24px 60px rgba(28, 42, 58, 0.25);
-            border-color: transparent;
-        }
-
-        .price-badge {
-            position: absolute;
-            top: -13px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 5px 18px;
-            border-radius: 20px;
-            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.35);
-        }
-
-        .price-card .label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: #999;
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
-
-        .price-card-featured .label {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* ── Intensive section ── */
-        .intensive-section {
-            background: var(--navy);
-            padding: 80px 48px;
-            border-top: 4px solid var(--gold);
-            position: relative;
-        }
-        .intensive-inner {
-            max-width: 880px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .intensive-section .app-package-card {
-            background: transparent;
-            border-radius: 0;
-            padding: 0;
-            margin-bottom: 0;
-            border-top: none;
-            box-shadow: none;
-            position: static;
-        }
-        .intensive-section .app-package-badge {
-            top: -80px;
-            right: 0;
-        }
-        @media (max-width: 860px) {
-            .intensive-section { padding: 64px 24px; }
-            .intensive-section .app-package-badge { top: -64px; }
-        }
-
-        .app-package-card {
-            background: linear-gradient(135deg, #1c2a3a 0%, #2e4460 100%);
-            border-radius: 12px;
-            padding: 32px 36px;
-            margin-bottom: 24px;
-            color: var(--white);
-            text-align: left;
-            border-top: 4px solid var(--gold);
-            position: relative;
-        }
-
-        .app-package-badge {
-            position: absolute;
-            top: -1px;
-            right: 32px;
-            background: var(--gold);
-            color: var(--navy);
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 4px 12px;
-            border-radius: 0 0 6px 6px;
-        }
-
-        .app-package-label {
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 8px;
-        }
-
-        .app-package-price {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 42px;
-            font-weight: 600;
-            color: var(--white);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .app-package-meta {
-            font-size: 12px;
-            color: rgba(255,255,255,0.55);
-            margin-bottom: 20px;
-        }
-
-        .app-package-features {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .app-package-features li {
-            font-size: 13px;
-            font-weight: 300;
-            color: rgba(255,255,255,0.85);
-            padding-left: 20px;
-            position: relative;
-            text-align: left;
-        }
-
-        .app-package-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-            font-weight: 600;
-        }
-
-        .app-package-results {
-            font-size: 12px;
-            color: rgba(255,255,255,0.55);
+        .hero h1 em {
             font-style: italic;
-            border-top: 1px solid rgba(255,255,255,0.12);
-            padding-top: 14px;
-            margin-top: 4px;
-        }
-
-        .app-package-results strong {
-            color: rgba(255,255,255,0.8);
-            font-style: normal;
-        }
-
-        .app-package-guarantee {
-            margin-top: 14px;
-            padding-top: 14px;
-            border-top: 1px solid rgba(201,168,76,0.35);
-            font-size: 13px;
-            color: var(--gold);
-            font-weight: 600;
-            text-align: left;
-            letter-spacing: 0.01em;
-        }
-
-
-        .app-package-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 28px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
             font-weight: 500;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 8px;
-            background: var(--white);
-            color: var(--navy);
-            border: none;
-            transition: all 0.25s ease;
         }
 
-        .app-package-btn:hover {
-            background: var(--cream);
-        }
-
-        .app-package-header {
-            margin-bottom: 28px;
-        }
-
-        .app-package-tiers {
-            display: flex;
-            gap: 0;
-            align-items: flex-start;
-        }
-
-        .app-package-tier {
-            flex: 1;
-        }
-
-        .app-package-tier + .app-package-tier {
-            border-left: 1px solid rgba(255,255,255,0.12);
-            padding-left: 32px;
-            margin-left: 32px;
-        }
-
-        .app-package-tier-name {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--gold);
-            margin-bottom: 2px;
-            letter-spacing: 0.01em;
-        }
-
-        @media (max-width: 640px) {
-            .app-package-tiers {
-                flex-direction: column;
-            }
-            .app-package-tier + .app-package-tier {
-                border-left: none;
-                border-top: 1px solid rgba(255,255,255,0.12);
-                padding-left: 0;
-                margin-left: 0;
-                padding-top: 28px;
-                margin-top: 28px;
-            }
-        }
-
-        .consultation-banner {
-            background: var(--white);
-            border: 1.5px solid #e8e8e8;
-            border-radius: 12px;
-            padding: 24px 32px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            margin-bottom: 28px;
-            text-align: left;
-        }
-
-        .consultation-text {
-            flex: 1;
-        }
-
-        .consultation-text .consult-title {
-            font-size: 16px;
-            font-weight: 500;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-        }
-
-        .consultation-text .consult-desc {
-            font-size: 14px;
-            font-weight: 300;
-            color: #888;
-            line-height: 1.6;
-        }
-
-        .consultation-banner .btn-consult {
-            white-space: nowrap;
-            flex-shrink: 0;
-            display: inline-block;
-            padding: 12px 28px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 8px;
-            background: transparent;
-            color: var(--navy);
-            border: 1.5px solid var(--navy);
-            transition: all 0.25s ease;
-        }
-
-        .consultation-banner .btn-consult:hover {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .price-card .amount-original {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 24px;
-            font-weight: 400;
-            color: #ccc;
-            text-decoration: line-through;
-            text-decoration-color: rgba(180, 60, 60, 0.4);
-            text-decoration-thickness: 1.5px;
-            line-height: 1;
-            height: 24px;
-            margin-bottom: 4px;
-        }
-
-        .price-card .amount-original:empty {
-            height: 0;
-            margin: 0;
-        }
-
-        .price-card-featured .amount-original {
-            color: rgba(255, 255, 255, 0.3);
-            text-decoration-color: rgba(220, 100, 100, 0.45);
-        }
-
-        .price-card .amount {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 60px;
-            font-weight: 500;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-            line-height: 1;
-        }
-
-        .price-card-featured .amount {
-            color: var(--white);
-        }
-
-        .price-card .unit {
-            font-size: 14px;
-            color: #999;
-            font-weight: 300;
-            margin-bottom: 8px;
-        }
-
-        .price-card-featured .unit {
-            color: rgba(255, 255, 255, 0.45);
-        }
-
-        .plan-count {
-            font-weight: 400;
-            color: #aaa;
-            font-size: 12px;
-        }
-
-        .plan-toggle-btn.active .plan-count {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .price-card .divider {
-            width: 40px;
-            height: 1px;
-            background: #e0e0e0;
-            margin: 0 auto 24px;
-        }
-
-        .price-card-featured .divider {
-            background: rgba(201, 168, 76, 0.35);
-        }
-
-        .price-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 32px;
-        }
-
-        .price-features li {
-            font-size: 14.5px;
-            font-weight: 400;
-            color: #555;
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-            line-height: 1.5;
-        }
-
-        .price-features li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 12px;
-            width: 16px;
-            height: 16px;
-            background: rgba(201, 168, 76, 0.15);
-            border-radius: 50%;
-        }
-
-        .price-features li::after {
-            content: '\2713';
-            position: absolute;
-            left: 3px;
-            top: 11px;
-            font-size: 11px;
-            color: var(--gold-hover);
-            font-weight: 700;
-        }
-
-        .price-card-featured .price-features li {
-            color: rgba(255, 255, 255, 0.75);
-        }
-
-        .price-card-featured .price-features li::before {
-            background: rgba(201, 168, 76, 0.2);
-        }
-
-        .price-card-featured .price-features li::after {
-            color: var(--gold);
-        }
-
-        .price-card .btn-card {
-            display: block;
-            width: 100%;
-            padding: 14px 24px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 8px;
-            transition: all 0.25s ease;
-        }
-
-        .btn-card-outline {
-            background: transparent;
-            color: var(--navy);
-            border: 1.5px solid var(--navy);
-        }
-
-        .btn-card-outline:hover {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .btn-card-gold {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--white);
-            border: 1.5px solid transparent;
-            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
-        }
-
-        .btn-card-gold:hover {
-            box-shadow: 0 4px 16px rgba(201, 168, 76, 0.45);
-            transform: translateY(-1px);
-        }
-
-        /* Plan toggle */
-        .plan-toggle {
-            display: inline-flex;
-            background: var(--white);
-            border: 1.5px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 4px;
-            margin-bottom: 32px;
-            margin-top: 12px;
-        }
-
-        .plan-toggle-btn {
-            padding: 10px 28px 10px 24px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            color: #888;
-            background: transparent;
-            border: none;
-            border-radius: 7px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .plan-toggle-btn:hover {
-            color: #555;
-        }
-
-        .plan-toggle-btn.active {
-            background: var(--navy);
-            color: var(--white);
-            box-shadow: 0 2px 8px rgba(28, 42, 58, 0.2);
-        }
-
-        .plan-toggle-btn .toggle-tag {
-            position: absolute;
-            top: -10px;
-            right: -8px;
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: var(--white);
-            background: var(--gold);
-            padding: 2px 6px;
-            border-radius: 3px;
-            white-space: nowrap;
-        }
-
-        .plan-toggle-btn.active .toggle-tag {
-            background: var(--gold);
-        }
-
-        /* ── Essay Review ── */
-        .essay-review-section {
-            background: var(--cream);
-            padding: 80px 48px;
-            border-top: 4px solid var(--gold);
-            position: relative;
-        }
-
-        .essay-review-inner {
-            max-width: 880px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .essay-review-flag {
-            position: absolute;
-            top: -80px;
-            right: 0;
-            background: var(--gold);
-            color: var(--navy);
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 4px 12px;
-            border-radius: 0 0 6px 6px;
-        }
-        @media (max-width: 860px) {
-            .essay-review-section { padding: 60px 24px; }
-            .essay-review-flag { top: -60px; right: 0; }
-        }
-
-        .essay-review-inner .section-label {
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            text-align: left;
-            color: var(--gold-hover);
-        }
-
-        .essay-review-subtitle {
-            font-size: 14px;
-            font-weight: 300;
-            color: rgba(28, 42, 58, 0.65);
-            line-height: 1.6;
-            margin: 0 0 36px;
-            max-width: 600px;
-        }
-
-        .review-grid {
-            display: flex;
-            gap: 0;
-            align-items: flex-start;
-            margin-bottom: 28px;
-        }
-
-        .review-tier {
-            flex: 1;
-            background: transparent;
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            text-align: left;
-            box-shadow: none;
-        }
-
-        .review-tier + .review-tier {
-            border-left: 1px solid rgba(28, 42, 58, 0.15);
-            padding-left: 32px;
-            margin-left: 32px;
-        }
-
-        .review-tier h3 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 18px;
-            letter-spacing: 0.01em;
-        }
-
-        .review-prices {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .review-price-option {
-            flex: 1;
-        }
-
-        .review-price-option .price-label {
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #999;
-            margin-bottom: 4px;
-        }
-
-        .review-price-option .price-amount {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 32px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 8px;
-        }
-
-        .review-price-option a {
-            display: inline-block;
-            padding: 8px 20px;
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.25s ease;
-        }
-
-        .review-price-option .btn-standard {
-            background: transparent;
-            color: var(--navy);
-            border: 1.5px solid var(--navy);
-        }
-
-        .review-price-option .btn-standard:hover {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .review-price-option .btn-rush {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--white);
-            border: 1.5px solid transparent;
-        }
-
-        .review-price-option .btn-rush:hover {
-            box-shadow: 0 4px 16px rgba(201, 168, 76, 0.35);
-            transform: translateY(-1px);
-        }
-
-        /* ── Review menu ── */
-        .review-menu {
-            margin: 0;
-        }
-        .menu-group + .menu-group {
-            margin-top: 36px;
-        }
-        .menu-group-label {
-            font-family: 'Cormorant Garamond', Georgia, serif;
+        .hero-sub {
             font-size: 20px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 2px;
-            padding: 0 6px 6px;
-            border-bottom: 1px solid rgba(28, 42, 58, 0.18);
-        }
-        .menu-line {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            padding: 11px 6px 11px 18px;
-            text-decoration: none;
-            color: var(--navy);
-            border-bottom: 1px solid rgba(28, 42, 58, 0.08);
-            transition: padding 0.18s ease, background 0.18s ease;
-        }
-        .menu-group .menu-line:last-child {
-            border-bottom: none;
-        }
-        .menu-line:hover {
-            padding-left: 26px;
-            background: rgba(28, 42, 58, 0.035);
-        }
-        .menu-desc {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--navy);
-            white-space: nowrap;
-        }
-        .menu-tier {
-            color: rgba(28, 42, 58, 0.55);
-            font-weight: 400;
-            font-size: 14px;
-            margin-left: 6px;
-        }
-        .menu-dots {
-            flex: 1;
-            border-bottom: 1.5px dotted rgba(28, 42, 58, 0.28);
-            margin: 0 4px;
-            position: relative;
-            top: -5px;
-            min-width: 24px;
-        }
-        .menu-price {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--navy);
-            white-space: nowrap;
-            line-height: 1;
-            transition: color 0.18s ease;
-        }
-        .menu-arrow {
-            font-size: 16px;
-            color: rgba(28, 42, 58, 0.4);
-            margin-left: 4px;
-            transition: transform 0.18s ease, color 0.18s ease;
-        }
-        .menu-line:hover .menu-price { color: var(--gold-hover); }
-        .menu-line:hover .menu-arrow { color: var(--gold-hover); transform: translateX(4px); }
-
-        @media (max-width: 600px) {
-            .menu-desc { font-size: 14px; white-space: normal; }
-            .menu-tier { display: block; margin-left: 0; }
-            .menu-price { font-size: 22px; }
+            line-height: 1.7;
+            color: var(--ink-soft);
+            max-width: 30em;
+            margin-bottom: 38px;
         }
 
-        /* (kept for reference) */
-        .review-rows {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            margin: 0 0 36px;
-        }
-        .review-row {
-            display: grid;
-            grid-template-columns: 1.3fr 1fr 1fr;
-            gap: 18px;
-            align-items: center;
-        }
-        .review-row-label {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--navy);
-            line-height: 1.2;
-        }
-        .review-pill {
+        .hero-ctas {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            padding: 14px 20px;
-            background: transparent;
-            border: 1.5px solid rgba(28, 42, 58, 0.35);
-            border-radius: 8px;
-            color: var(--navy);
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .review-pill:hover {
-            background: var(--navy);
-            color: var(--cream);
-            border-color: var(--navy);
-        }
-        .review-pill-rush {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            border-color: transparent;
-            color: var(--cream);
-        }
-        .review-pill-rush:hover {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--cream);
-            box-shadow: 0 6px 18px rgba(201, 168, 76, 0.35);
-            transform: translateY(-1px);
-        }
-        .review-pill-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-            text-align: left;
-        }
-        .review-pill-tier {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            opacity: 0.75;
-        }
-        .review-pill-speed {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            opacity: 0.85;
-        }
-        .review-pill-price {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 1;
-        }
-        @media (max-width: 700px) {
-            .review-row {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            .review-row-label {
-                padding-top: 10px;
-            }
-        }
-
-        /* (kept for reference) */
-        .review-matrix {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
-            gap: 14px 24px;
-            align-items: center;
-            margin: 0 0 36px;
-        }
-        .rm-header {
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(28, 42, 58, 0.55);
-            text-align: center;
-            padding: 0 0 4px;
-            border-bottom: 1px solid rgba(28, 42, 58, 0.18);
-        }
-        .rm-header-spacer { border-bottom: none; }
-        .rm-label {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--navy);
-        }
-        .rm-chip {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-            padding: 18px 16px;
-            border-radius: 8px;
-            background: transparent;
-            border: 1.5px solid rgba(28, 42, 58, 0.4);
-            color: var(--navy);
-            text-decoration: none;
-            transition: all 0.2s ease;
-            font-family: 'Cormorant Garamond', Georgia, serif;
-        }
-        .rm-chip:hover {
-            background: var(--navy);
-            color: var(--cream);
-            border-color: var(--navy);
-        }
-        .rm-chip-price {
-            font-size: 30px;
-            font-weight: 600;
-            line-height: 1;
-        }
-        .rm-chip-action {
-            font-family: 'Inter', sans-serif;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            opacity: 0.7;
-        }
-        .rm-chip-rush {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--cream);
-            border-color: transparent;
-        }
-        .rm-chip-rush:hover {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--cream);
-            box-shadow: 0 6px 18px rgba(201, 168, 76, 0.35);
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 700px) {
-            .review-matrix {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px 12px;
-            }
-            .review-matrix > .rm-header-spacer,
-            .review-matrix > .rm-label { grid-column: 1 / -1; text-align: left; }
-            .review-matrix > .rm-label { padding-top: 8px; }
-            .rm-chip-price { font-size: 22px; }
-        }
-
-        .essay-review-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1fr;
-            gap: 64px;
-            align-items: start;
-            margin-bottom: 28px;
-        }
-        @media (max-width: 760px) {
-            .essay-review-grid { grid-template-columns: 1fr; gap: 32px; }
-        }
-
-        /* ── Includes/How-it-works tabs ── */
-        .rit-tabs {
-            display: flex;
             gap: 28px;
-            margin-bottom: 18px;
-            border-bottom: 1px solid rgba(28, 42, 58, 0.12);
-        }
-        .rit-tab {
-            background: none;
-            border: none;
-            padding: 0 0 10px;
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(28, 42, 58, 0.4);
-            cursor: pointer;
-            border-bottom: 2px solid transparent;
-            margin-bottom: -1px;
-            transition: color 0.18s ease, border-color 0.18s ease;
-        }
-        .rit-tab:hover { color: var(--gold-hover); }
-        .rit-tab.is-active {
-            color: var(--gold-hover);
-            border-bottom-color: var(--gold);
-        }
-        .rit-panel { display: none; }
-        .rit-panel.is-active { display: block; }
-
-        .review-flow-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .review-flow-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            padding: 7px 0;
-        }
-        .step-num {
-            color: var(--gold-hover);
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-weight: 600;
-            font-size: 17px;
-            line-height: 1.4;
-            flex-shrink: 0;
-            min-width: 18px;
-        }
-        .step-text {
-            font-size: 14.5px;
-            font-weight: 400;
-            color: #555;
-            line-height: 1.6;
-        }
-        .review-flow-list li {
-            padding: 6px 0;
-            align-items: baseline;
+            flex-wrap: wrap;
         }
 
-        .review-includes {
-            margin: 0;
-            text-align: left;
-        }
-
-        .review-includes h4 {
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--gold-hover);
-            margin-bottom: 14px;
-            text-align: left;
-        }
-
-        .review-includes ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .review-includes ul li {
-            font-size: 14.5px;
-            font-weight: 400;
-            color: #555;
-            padding: 6px 0 6px 28px;
+        .hero-cta-note {
             position: relative;
-            line-height: 1.6;
+            transform: rotate(-2deg);
         }
 
-        .review-includes ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 12px;
-            width: 16px;
-            height: 16px;
-            background: rgba(201, 168, 76, 0.15);
-            border-radius: 50%;
-        }
-
-        .review-includes ul li::after {
-            content: '\2713';
-            position: absolute;
-            left: 3px;
-            top: 11px;
-            font-size: 11px;
-            color: var(--gold-hover);
+        /* ── Buttons ── */
+        .btn {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 13.5px;
             font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--paper);
+            background: var(--ink);
+            padding: 15px 30px;
+            border: 1px solid var(--ink);
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0 var(--pencil-faint);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s;
         }
 
-        .review-note {
-            font-size: 14px;
-            font-weight: 300;
-            color: #999;
-            margin-top: 24px;
-            text-align: center;
+        .btn:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0 var(--pencil-soft);
         }
 
-        @media (max-width: 768px) {
-            .essay-review-section { padding: 60px 24px; }
-            .review-grid { grid-template-columns: 1fr; }
-            .review-prices { flex-direction: column; gap: 12px; }
+        .btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0 var(--pencil-faint);
         }
 
-        /* ── How It Works ── */
-        .how-section {
-            background: var(--white);
-            padding: 100px 48px;
+        .btn-pencil {
+            background: var(--pencil);
+            border-color: var(--pencil);
+            color: var(--paper);
         }
 
-        .how-inner {
-            max-width: 800px;
-            margin: 0 auto;
+        .btn-ghost {
+            background: transparent;
+            color: var(--ink);
+            box-shadow: none;
+            border: 1px solid var(--ink-soft);
         }
 
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            margin-top: 12px;
+        .btn-ghost:hover {
+            border-color: var(--ink);
+            box-shadow: 3px 3px 0 var(--pencil-faint);
+        }
+
+        .link-under {
+            font-family: var(--mono);
+            font-size: 13.5px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 2px solid var(--pencil-soft);
+            padding-bottom: 3px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .link-under:hover { color: var(--pencil); border-bottom-color: var(--pencil); }
+
+        /* ── Taped sheet (hero worksheet) ── */
+        .sheet {
             position: relative;
-            max-width: 560px;
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            padding: 14px;
+            box-shadow: 0 1px 2px rgba(38,33,23,0.08), 0 14px 34px rgba(38,33,23,0.13);
+            transform: rotate(1.6deg);
         }
 
-        .steps::before {
+        .sheet::before {
             content: '';
             position: absolute;
-            top: 22px;
-            bottom: 22px;
-            left: 21px;
-            width: 2px;
-            background: var(--gold);
-            opacity: 0.25;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 110px;
+            height: 30px;
+            background: rgba(214, 195, 150, 0.5);
+            border-left: 1px dashed rgba(38,33,23,0.12);
+            border-right: 1px dashed rgba(38,33,23,0.12);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.08);
         }
 
-        .step:last-child::after {
+        .sheet img { border: 1px solid var(--rule); }
+
+        .hero-sheet .sheet { max-width: 330px; margin: 0 auto; }
+
+        /* ── Animated marked-up draft (hero) ── */
+        .draft-card {
+            max-width: 470px !important;
+            padding: 30px 34px 36px;
+            font-family: var(--mono);
+        }
+
+        .draft-meta {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 10px;
+            margin-bottom: 22px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .draft-line {
+            font-family: var(--mono);
+            font-size: 17px;
+            line-height: 2.3;
+            color: var(--ink);
+            padding-right: 112px;
+        }
+
+        .draft-slides { display: grid; }
+
+        .draft-slide {
+            grid-area: 1 / 1;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .draft-slide.is-active {
+            opacity: 1;
+            pointer-events: auto;
+            transition-delay: 0.4s;
+        }
+
+        .draft-anim { opacity: 0; }
+
+        .draft-slide.is-active .draft-anim {
+            animation: markIn 0.5s ease forwards;
+        }
+
+        @keyframes markIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: none; }
+        }
+
+        .draft-line .mark-under,
+        .draft-line .mark-strike {
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .draft-line .mark-under svg,
+        .draft-line .mark-strike svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.05em;
+            width: 104%;
+            height: 0.3em;
+            overflow: visible;
+        }
+
+        .draft-line .mark-strike svg {
+            bottom: 0.42em;
+        }
+
+        .draft-line .mark-under path,
+        .draft-line .mark-strike path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 2.4;
+            stroke-linecap: round;
+            stroke-dasharray: 320;
+            stroke-dashoffset: 320;
+        }
+
+        .draft-slide.is-active .mark-under path,
+        .draft-slide.is-active .mark-strike path {
+            animation: draw 0.7s ease-out 0.9s forwards;
+        }
+
+        /* Wrapping-safe wavy underline for long marked phrases */
+        .mark-wavy {
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            text-decoration-color: transparent;
+        }
+
+        .draft-slide.is-active .mark-wavy {
+            animation: wavyIn 0.4s ease forwards;
+        }
+
+        @keyframes wavyIn {
+            to { text-decoration-color: var(--pencil); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .mark-wavy { text-decoration-color: var(--pencil); animation: none !important; }
+        }
+
+        .ins-caret {
+            display: inline-block;
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 24px;
+            color: var(--pencil);
+            line-height: 0;
+            vertical-align: -0.35em;
+            margin: 0 1px;
+        }
+
+        .ins-text {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 20px;
+            color: var(--pencil);
+            position: relative;
+            top: -9px;
+            line-height: 1;
+            margin: 0 3px;
+        }
+
+        .draft-margin-note {
+            position: absolute;
+            top: 86px;
+            right: 22px;
+            width: 96px;
+            font-size: 19px;
+            transform: rotate(-4deg);
+            text-align: right;
+            line-height: 1.15;
+        }
+
+        .draft-endnote {
+            display: block;
+            font-size: 19px;
+            line-height: 1.2;
+            margin-top: 12px;
+            padding-right: 60px;
+            transform: rotate(-1.5deg);
+        }
+
+        .draft-check {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 34px;
+            transform: rotate(6deg);
+            line-height: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .draft-anim { opacity: 1; animation: none !important; }
+            .draft-line .mark-under path { stroke-dashoffset: 0; animation: none !important; }
+        }
+
+        /* ── Dinkus section break ── */
+        .dinkus {
+            display: flex;
+            justify-content: center;
+            color: var(--pencil-soft);
+            transform: rotate(-2deg);
+        }
+
+        .dinkus svg { width: 140px; height: 24px; }
+
+        /* ── Torn paper band edges ── */
+        .torn {
+            position: relative;
+            border-top: none !important;
+            border-bottom: none !important;
+        }
+
+        .torn::before,
+        .torn::after {
             content: '';
             position: absolute;
             left: 0;
-            top: 44px;
-            bottom: 0;
-            width: 44px;
-            background: var(--white);
+            right: 0;
+            height: 14px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='14' viewBox='0 0 240 14'%3E%3Cpath fill='%23faf5ea' d='M0 0 H240 V6 L226 9 L214 5 L202 7 L190 3 L178 10 L166 6 L154 9 L142 4 L130 8 L118 5 L106 11 L94 7 L82 3 L70 9 L58 5 L45 10 L36 4 L24 8 L12 3 L0 6 Z'/%3E%3C/svg%3E") repeat-x;
+            background-size: 240px 14px;
+            pointer-events: none;
+        }
+
+        .torn::before { top: -1px; }
+        .torn::after { bottom: -1px; transform: scaleY(-1); }
+
+        /* ── Proof-mark watermarks ── */
+        .proofmark {
+            position: absolute;
+            font-family: var(--serif);
+            color: var(--ink);
+            opacity: 0.05;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
             z-index: 0;
         }
 
-        .step {
-            display: flex;
-            align-items: flex-start;
-            gap: 28px;
+        .proofmark-hand { font-family: var(--hand); font-weight: 600; }
+
+        @media (max-width: 1100px) {
+            .proofmark { display: none; }
+        }
+
+        .sheet-caption {
+            position: absolute;
+            bottom: -44px;
+            right: 6px;
+            transform: rotate(-2.5deg);
+        }
+
+        /* ── Ticker rule band ── */
+        .cred-band {
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
             padding: 16px 0;
-            position: relative;
+            margin: 0 0 0;
         }
 
-        .step-number {
+        .cred-band-inner {
             display: flex;
-            align-items: center;
             justify-content: center;
-            width: 44px;
-            height: 44px;
-            min-width: 44px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: 600;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-content {
-            padding-top: 8px;
-        }
-
-        .step h3 {
-            font-size: 17px;
-            font-weight: 500;
-            color: #1a1a1a;
-            margin-bottom: 6px;
-        }
-
-        .step p {
-            font-size: 15px;
-            color: #666;
-            font-weight: 300;
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-        /* ── Reviews ── */
-        .reviews-section {
-            background: linear-gradient(170deg, #1e2f42 0%, #1c2a3a 40%, #172331 100%);
-            padding: 100px 48px;
-            box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .reviews-inner {
-            max-width: 680px;
-            margin: 0 auto;
+            gap: 18px;
+            flex-wrap: wrap;
             text-align: center;
         }
 
-        .reviews-inner .section-label {
-            color: var(--gold);
-            font-size: 15px;
-            letter-spacing: 4px;
+        .cred-band .type-meta { color: var(--ink-faint); }
+
+        /* ── Inline hand notes ── */
+        .margin-note {
+            display: inline-block;
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.2;
+            color: var(--pencil);
+            transform: rotate(-2deg);
             margin-bottom: 12px;
         }
 
-        .review {
-            padding: 0;
-            border: none;
+        /* ── About ── */
+        .about {
+            padding-top: 96px;
+            padding-bottom: 90px;
         }
 
-        .review-quote {
-            display: none;
-        }
-
-        .review-body {
+        .about-grid {
             display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 16px;
+            grid-template-columns: 300px minmax(0, 1fr);
+            gap: 70px;
             align-items: start;
         }
 
-        .quote-mark {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 64px;
-            color: rgba(255, 255, 255, 0.15);
-            font-style: normal;
-            line-height: 1;
+        .polaroid {
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            padding: 12px 12px 18px;
+            transform: rotate(-2.2deg);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.08), 0 12px 30px rgba(38,33,23,0.12);
+            margin-top: 8px;
         }
 
-        .quote-mark-open {
-            align-self: start;
-            margin-top: -8px;
+        .polaroid img {
+            aspect-ratio: 1 / 1.05;
+            object-fit: cover;
+            object-position: center 35%;
+            border: 1px solid var(--rule);
         }
 
-        .quote-mark-close {
-            align-self: end;
-            margin-bottom: 24px;
-        }
-
-        .review p {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 26px;
-            font-weight: 400;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        .review .attribution {
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
-
-        /* ── Workshops ── */
-        .workshops-section {
-            background: linear-gradient(180deg, var(--warm-accent) 0%, #e8dfc9 100%);
+        .polaroid figcaption {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 21px;
+            color: var(--ink-soft);
             text-align: center;
-            padding: 100px 48px;
+            padding-top: 12px;
         }
 
-        .workshops-section .workshops-inner {
-            max-width: 560px;
-            margin: 0 auto;
+        .about-text p {
+            margin-bottom: 20px;
+            max-width: 38em;
         }
 
-        .workshops-section p {
+        .pencil-under {
+            background-image: linear-gradient(to right, var(--pencil-soft), var(--pencil-soft));
+            background-repeat: no-repeat;
+            background-size: 100% 2px;
+            background-position: 0 96%;
+            font-weight: 500;
+        }
+
+        .about-creds {
+            margin-top: 38px;
+            padding-top: 28px;
+            border-top: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 28px 44px;
+        }
+
+        .cred-col .type-label { display: block; margin-bottom: 14px; }
+
+        .cred-item {
+            margin-bottom: 13px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .cred-item strong {
+            display: block;
+            font-family: var(--body);
+            font-weight: 500;
             font-size: 17px;
-            font-weight: 300;
-            color: #333;
-            line-height: 1.8;
-            margin-bottom: 32px;
         }
 
-        /* ── Reviews carousel ── */
-        .review-carousel {
-            position: relative;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 48px;
+        .cred-item span { color: var(--ink-soft); font-size: 15.5px; }
+
+        /* ── Worksheet clip-out ── */
+        .worksheet {
+            padding-top: 40px;
+            padding-bottom: 110px;
         }
-        .carousel-track {
+
+        .clipout {
             position: relative;
-            min-height: 260px;
+            border: 1.5px dashed var(--pencil-soft);
+            background: var(--paper-card);
+            padding: 54px 58px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 56px;
+            align-items: center;
         }
-        .carousel-slide {
+
+        .clipout::before {
+            content: '✂';
             position: absolute;
-            inset: 0;
-            opacity: 0;
-            transform: translateY(8px);
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            pointer-events: none;
-        }
-        .carousel-slide.active {
-            position: relative;
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--gold);
+            top: -14px;
+            left: 44px;
             font-size: 22px;
+            color: var(--pencil);
+            background: var(--paper);
+            padding: 0 8px;
+            transform: rotate(90deg);
+        }
+
+        .clipout h2 {
+            font-family: var(--serif);
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.25;
+            margin: 14px 0 16px;
+        }
+
+        .clipout p { color: var(--ink-soft); max-width: 32em; }
+
+        .clipout-form { margin-top: 28px; }
+
+        .clipout-form form {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .clipout-form input[type="email"] {
+            flex: 1 1 220px;
+            font-family: var(--mono);
+            font-size: 14.5px;
+            color: var(--ink);
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid var(--ink-soft);
+            padding: 12px 4px;
+            outline: none;
+        }
+
+        .clipout-form input[type="email"]:focus { border-bottom-color: var(--pencil); }
+
+        .clipout-form input::placeholder { color: var(--ink-faint); }
+
+        .clipout-fineprint {
+            margin-top: 14px;
+            font-size: 13.5px !important;
+            color: var(--ink-faint) !important;
+        }
+
+        .clipout .sheet { max-width: 300px; margin: 0 auto; transform: rotate(2deg); }
+
+        /* ── Services / rates ── */
+        .services { padding-top: 90px; padding-bottom: 40px; }
+
+        .avail-note {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 10px;
+            margin: -22px 0 42px;
+        }
+
+        .avail-note .hand-note { transform: rotate(-1.5deg); }
+
+        .rate-sheets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 34px;
+            margin-bottom: 44px;
+        }
+
+        .rate-sheet {
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 10px 26px rgba(38,33,23,0.09);
+            padding: 40px 40px 36px;
+            position: relative;
+        }
+
+        .rate-sheet:first-child { transform: rotate(-0.5deg); }
+        .rate-sheet:last-child { transform: rotate(0.6deg); }
+
+        .rate-sheet .type-label { color: var(--ink-soft); letter-spacing: 0.18em; }
+
+        .rate-price {
+            font-family: var(--serif);
+            font-size: 62px;
+            font-weight: 500;
             line-height: 1;
-            cursor: pointer;
+            margin: 18px 0 2px;
+        }
+
+        .rate-price sup {
+            font-size: 28px;
+            font-weight: 400;
+            vertical-align: 0.9em;
+            margin-right: 2px;
+        }
+
+        .rate-unit { margin-bottom: 26px; display: block; }
+
+        .rate-list {
+            list-style: none;
+            border-top: 1px solid var(--rule);
+            padding-top: 22px;
+            margin-bottom: 30px;
+        }
+
+        .rate-list li {
+            position: relative;
+            padding: 6px 0 6px 30px;
+            font-size: 16.5px;
+            line-height: 1.55;
+        }
+
+        .rate-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 2px;
+            top: 6px;
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 21px;
+            color: var(--pencil);
+        }
+
+        .rate-note {
+            text-align: center;
+            margin: -12px 0 48px;
+        }
+
+        .rate-note .hand-note { display: inline-block; transform: rotate(-1.2deg); }
+
+        /* ── Consult banner ── */
+        .consult {
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: background 0.15s, border-color 0.15s, color 0.15s;
-            padding: 0;
-        }
-        .carousel-arrow:hover {
-            background: rgba(201, 168, 76, 0.15);
-            border-color: var(--gold);
-            color: #fff;
-        }
-        .carousel-prev { left: 0; }
-        .carousel-next { right: 0; }
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 24px;
-        }
-        .carousel-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
-            border: none;
-            cursor: pointer;
-            transition: background 0.15s, transform 0.15s;
-            padding: 0;
-        }
-        .carousel-dot:hover { background: rgba(255, 255, 255, 0.45); }
-        .carousel-dot.active {
-            background: var(--gold);
-            transform: scale(1.2);
-        }
-        @media (max-width: 600px) {
-            .review-carousel { padding: 0 32px; }
-            .carousel-arrow { width: 30px; height: 30px; font-size: 18px; }
+            gap: 40px;
+            justify-content: space-between;
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: 34px 8px;
+            flex-wrap: wrap;
         }
 
-        /* ── Async vs Coaching callout ── */
-        .vs-callout {
-            background: rgba(201, 168, 76, 0.08);
-            border-left: 3px solid var(--gold);
-            padding: 14px 18px;
-            margin: 0 auto 32px;
-            max-width: 720px;
-            font-size: 14px;
-            line-height: 1.7;
-            color: #333;
-            border-radius: 0 6px 6px 0;
-        }
-        .vs-callout strong { display: block; color: var(--navy); margin-bottom: 4px; font-weight: 600; }
-        .vs-callout em { font-style: italic; color: var(--navy); }
-        .vs-callout a { color: var(--navy); text-decoration: underline; }
-
-        /* ── FAQ ── */
-        .faq-section {
-            background: var(--light-gray);
-            padding: 100px 48px;
-        }
-        .faq-inner {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-        .faq-section h2 {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .faq-item {
-            background: #fff;
-            border: 1px solid #e5e5e5;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            overflow: hidden;
-        }
-        .faq-item summary {
-            cursor: pointer;
-            padding: 16px 20px;
+        .consult h3 {
+            font-family: var(--serif);
+            font-size: 25px;
             font-weight: 500;
-            font-size: 15px;
-            color: var(--navy);
-            list-style: none;
+            margin-bottom: 6px;
+        }
+
+        .consult p { color: var(--ink-soft); max-width: 34em; font-size: 16.5px; }
+
+        /* ── Intensive ── */
+        .intensive-band {
+            background: var(--paper-deep);
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: 96px 0 90px;
+            margin-top: 90px;
             position: relative;
         }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary::after {
-            content: '+';
+
+        .stamp {
             position: absolute;
-            right: 22px;
-            top: 14px;
-            font-size: 22px;
-            color: var(--gold);
-            transition: transform 0.2s;
-        }
-        .faq-item[open] summary::after { content: '–'; }
-        .faq-item .faq-body {
-            padding: 0 20px 18px;
-            font-size: 14px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        /* ── Credentials ── */
-        .credentials-section {
-            background: var(--white);
-            padding: 100px 48px;
+            top: 54px;
+            right: 40px;
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--pencil);
+            border: 2px solid var(--pencil-soft);
+            border-radius: 3px;
+            padding: 8px 14px;
+            transform: rotate(6deg);
+            opacity: 0.85;
+            background: transparent;
         }
 
-        .credentials-inner {
-            max-width: 900px;
-            margin: 0 auto;
+        .intensive-intro {
+            max-width: 40em;
+            color: var(--ink-soft);
+            margin: -16px 0 20px;
         }
 
-        .credentials-grid {
+        .tier-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0;
+            border: 1px solid var(--rule);
+            background: var(--paper-card);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 12px 30px rgba(38,33,23,0.09);
+            margin: 44px 0 26px;
         }
 
-        .credentials-col h3 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
+        .tier {
+            padding: 42px 44px 38px;
+        }
+
+        .tier + .tier { border-left: 1px solid var(--rule); }
+
+        .tier h3 {
+            font-family: var(--serif);
             font-size: 24px;
             font-weight: 500;
-            font-style: italic;
-            color: #1a1a1a;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #ddd;
+            margin-bottom: 4px;
         }
 
-        .credential-item {
-            margin-bottom: 24px;
-        }
-
-        .credential-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .credential-item .credential-title {
-            font-size: 17px;
+        .tier-price {
+            font-family: var(--serif);
+            font-size: 44px;
             font-weight: 500;
-            color: #1a1a1a;
-            margin-bottom: 2px;
+            color: var(--pencil);
+            margin: 10px 0 20px;
         }
 
-        .credential-item .credential-org {
-            font-size: 15px;
-            font-weight: 300;
-            color: #666;
+        .tier ul { list-style: none; }
+
+        .tier li {
+            position: relative;
+            padding: 5px 0 5px 26px;
+            font-size: 16px;
+            line-height: 1.55;
         }
+
+        .tier li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--pencil);
+        }
+
+        .tier li.guarantee {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .tier li.guarantee em {
+            font-style: normal;
+            background-image: linear-gradient(to right, var(--pencil-soft), var(--pencil-soft));
+            background-repeat: no-repeat;
+            background-size: 100% 2px;
+            background-position: 0 96%;
+        }
+
+        .intensive-meta { margin: 6px 0 30px; }
+
+        .intensive-cta-row {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footnotes {
+            font-size: 13.5px;
+            color: var(--ink-faint);
+            line-height: 1.6;
+            font-family: var(--mono);
+            max-width: 46em;
+        }
+
+        .worked-with {
+            margin-top: 26px;
+            font-size: 16px;
+            color: var(--ink-soft);
+            max-width: 38em;
+        }
+
+        /* ── Async review ── */
+        .review { padding-top: 96px; padding-bottom: 90px; }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 56px;
+            align-items: start;
+        }
+
+        .included-card {
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 10px 26px rgba(38,33,23,0.09);
+            padding: 34px 36px 30px;
+            transform: rotate(-0.4deg);
+        }
+
+        .included-card .caret-list li:last-child { border-bottom: none; }
+
+        .caret-list { list-style: none; margin-top: 8px; }
+
+        .caret-list li {
+            position: relative;
+            padding: 9px 0 9px 34px;
+            border-bottom: 1px solid var(--rule);
+            font-size: 16.5px;
+            line-height: 1.6;
+        }
+
+        .caret-list li::before {
+            content: '^';
+            position: absolute;
+            left: 4px;
+            top: 12px;
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1;
+            color: var(--pencil);
+        }
+
+        .how-list {
+            list-style: none;
+            counter-reset: step;
+            margin-top: 30px;
+        }
+
+        .how-list li {
+            counter-increment: step;
+            position: relative;
+            padding: 7px 0 7px 40px;
+            font-size: 16px;
+            color: var(--ink-soft);
+        }
+
+        .how-list li::before {
+            content: counter(step) '.';
+            position: absolute;
+            left: 4px;
+            font-family: var(--mono);
+            font-weight: 700;
+            color: var(--pencil);
+        }
+
+        .menu-block h3 {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 30px 0 8px;
+        }
+
+        .menu-block h3:first-child { margin-top: 0; }
+
+        .menu-line {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 13px 0;
+            border-bottom: 1px solid var(--rule);
+            text-decoration: none;
+            transition: background 0.15s;
+        }
+
+        .menu-line:hover { background: rgba(168, 60, 40, 0.05); }
+
+        .menu-line .m-name {
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 17px;
+            white-space: nowrap;
+        }
+
+        .menu-line .m-turn {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--ink-faint);
+            white-space: nowrap;
+        }
+
+        .menu-line .m-dots {
+            flex: 1;
+            border-bottom: 2px dotted rgba(38, 33, 23, 0.28);
+            transform: translateY(-4px);
+        }
+
+        .menu-line .m-price {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .menu-line .m-arrow {
+            color: var(--pencil);
+            font-size: 16px;
+            transition: transform 0.15s;
+        }
+
+        .menu-line:hover .m-arrow { transform: translateX(3px); }
+
+        .review-open-note {
+            display: inline-block;
+            margin: -18px 0 34px;
+        }
+
+        .review-footline {
+            margin-top: 34px;
+            font-size: 16px;
+            color: var(--ink-soft);
+        }
+
+        .review-footline a { color: var(--pencil); }
+
+        /* ── Testimonials ── */
+        .quotes-band {
+            background: var(--paper-deep);
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: 96px 0 84px;
+        }
+
+        .quote-carousel {
+            max-width: 800px;
+        }
+
+        .quote-track { display: grid; }
+
+        .quote-track blockquote {
+            grid-area: 1 / 1;
+            opacity: 0;
+            transition: opacity 0.45s ease;
+            pointer-events: none;
+        }
+
+        .quote-track blockquote.is-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .quote-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 36px;
+            padding-left: 44px;
+        }
+
+        .q-arrow {
+            background: none;
+            border: 1px solid var(--rule);
+            border-radius: 2px;
+            font-family: var(--serif);
+            font-size: 20px;
+            line-height: 1;
+            padding: 6px 14px 8px;
+            cursor: pointer;
+            color: var(--ink-soft);
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .q-arrow:hover { color: var(--pencil); border-color: var(--pencil-soft); }
+
+        .q-dots { display: flex; gap: 9px; }
+
+        .q-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 1.5px solid var(--pencil-soft);
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .q-dot.is-active { background: var(--pencil); border-color: var(--pencil); }
+
+        blockquote.pull {
+            position: relative;
+            padding-left: 44px;
+        }
+
+        blockquote.pull::before {
+            content: '“';
+            position: absolute;
+            left: -6px;
+            top: -18px;
+            font-family: var(--serif);
+            font-size: 74px;
+            line-height: 1;
+            color: var(--pencil-soft);
+        }
+
+        blockquote.pull p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        blockquote.pull cite {
+            font-family: var(--mono);
+            font-style: normal;
+            font-size: 13px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+        }
+
+        blockquote.pull cite::before {
+            content: '— ';
+            color: var(--pencil);
+        }
+
+        /* ── FAQ ── */
+        .faq { padding-top: 96px; padding-bottom: 80px; }
+
+        .faq-list { max-width: 800px; }
+
+        .faq-list details {
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .faq-list summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: baseline;
+            gap: 18px;
+            padding: 22px 6px;
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.4;
+            transition: color 0.15s;
+        }
+
+        .faq-list summary::-webkit-details-marker { display: none; }
+
+        .faq-list summary:hover { color: var(--pencil); }
+
+        .faq-list summary::before {
+            content: 'Q.';
+            font-family: var(--mono);
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--pencil);
+            flex-shrink: 0;
+        }
+
+        .faq-list summary::after {
+            content: '+';
+            margin-left: auto;
+            font-family: var(--mono);
+            font-size: 20px;
+            color: var(--ink-faint);
+            transition: transform 0.2s;
+        }
+
+        .faq-list details[open] summary::after { transform: rotate(45deg); color: var(--pencil); }
+
+        .faq-answer {
+            display: flex;
+            gap: 18px;
+            padding: 0 6px 26px;
+        }
+
+        .faq-answer::before {
+            content: 'A.';
+            font-family: var(--mono);
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--ink-faint);
+            flex-shrink: 0;
+            line-height: 1.9;
+        }
+
+        .faq-answer div { color: var(--ink-soft); font-size: 16.5px; max-width: 40em; }
+
+        .faq-answer p + p { margin-top: 12px; }
+
+        .faq-answer a { color: var(--pencil); }
 
         /* ── Contact ── */
-        .contact {
-            background: var(--cream);
-            padding: 100px 48px;
+        .contact { padding-top: 90px; padding-bottom: 110px; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 80px;
+            align-items: start;
         }
 
-        .contact-inner {
-            max-width: 480px;
-            margin: 0 auto;
+        .contact-intro p {
+            color: var(--ink-soft);
+            max-width: 26em;
+            margin: 0 0 30px;
         }
 
-        .contact .section-label {
-            text-align: center;
-        }
-
-        .contact .intro {
-            text-align: center;
-            color: #666;
-            margin-bottom: 36px;
+        .contact-alt {
+            border-top: 1px solid var(--rule);
+            padding-top: 24px;
             font-size: 16px;
-            font-weight: 300;
-            line-height: 1.8;
+            color: var(--ink-soft);
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .contact-alt p { margin-bottom: 12px; }
+        .contact-alt a { color: var(--pencil); }
+
+        .paper-form {
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 12px 30px rgba(38,33,23,0.09);
+            padding: 46px 48px 42px;
+            transform: rotate(0.4deg);
         }
 
-        .form-group label {
+        .paper-form .field { margin-bottom: 26px; }
+
+        .paper-form label {
             display: block;
+            font-family: var(--mono);
             font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #999;
-            font-weight: 500;
-            margin-bottom: 8px;
+            color: var(--ink-soft);
+            margin-bottom: 6px;
         }
 
-        .optional-tag {
+        .paper-form label .opt {
+            font-weight: 400;
             text-transform: none;
-            letter-spacing: 0.5px;
-            color: #bbb;
-            font-style: italic;
-            font-weight: 400;
-            margin-left: 6px;
+            letter-spacing: 0.04em;
+            color: var(--ink-faint);
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .paper-form input,
+        .paper-form select,
+        .paper-form textarea {
             width: 100%;
-            padding: 14px 16px;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 300;
-            border: 1px solid #ddd;
-            background: var(--white);
-            color: #1a1a1a;
-            outline: none;
-            transition: border-color 0.25s, box-shadow 0.25s;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12), 0 1px 3px rgba(0, 0, 0, 0.04);
-        }
-
-        .form-group textarea {
-            height: 130px;
-            resize: vertical;
-        }
-
-        .contact .btn {
-            width: 100%;
-            text-align: center;
-            cursor: pointer;
+            font-family: var(--body);
+            font-size: 17px;
+            color: var(--ink);
+            background: transparent;
             border: none;
-            margin-top: 8px;
-            padding: 16px 36px;
+            border-bottom: 1.5px solid rgba(38, 33, 23, 0.3);
+            padding: 8px 2px;
+            outline: none;
+            border-radius: 0;
         }
 
-        .email-fallback {
-            text-align: center;
-            margin-top: 28px;
-            font-size: 14px;
-            color: #999;
-            font-weight: 300;
+        .paper-form select { cursor: pointer; }
+
+        .paper-form textarea {
+            min-height: 120px;
+            resize: vertical;
+            line-height: 1.9;
+            background-image: repeating-linear-gradient(transparent, transparent calc(1.9em - 1px), var(--rule) calc(1.9em - 1px), var(--rule) 1.9em);
         }
 
-        .email-fallback a {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-weight: 400;
-        }
-
-        .email-fallback a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-call-alt {
-            text-align: center;
-            margin: 24px auto 0;
-            max-width: 520px;
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--navy);
-        }
-
-        .contact-call-link {
-            color: var(--navy);
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 1.5px solid var(--gold);
-            padding-bottom: 1px;
-            transition: color 0.2s ease, border-color 0.2s ease;
-        }
-
-        .contact-call-link:hover {
-            color: var(--gold);
-        }
+        .paper-form input:focus,
+        .paper-form select:focus,
+        .paper-form textarea:focus { border-bottom-color: var(--pencil); }
 
         /* ── Footer ── */
         footer {
-            background: linear-gradient(180deg, #1e2f42 0%, #151f2b 100%);
-            text-align: left;
-            padding: 48px 56px 26px;
+            background: var(--ink);
+            color: rgba(250, 245, 234, 0.75);
+            padding: 64px 40px 30px;
         }
 
         .footer-grid {
-            max-width: 1080px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
+            gap: 44px 64px;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px 56px;
         }
 
-        .footer-col-brand {
-            flex: 1 1 0;
+        .footer-brand {
+            font-family: var(--serif);
+            font-size: 20px;
+            color: var(--paper);
+            margin-bottom: 12px;
         }
 
-        .footer-tagline {
-            font-size: 13px;
-            line-height: 1.55;
-            color: rgba(255,255,255,0.55);
-            font-weight: 300;
-            margin: 0 0 16px;
-        }
+        .footer-col p { font-size: 15px; max-width: 22em; line-height: 1.7; }
 
-        .footer-contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            font-size: 13px;
-            letter-spacing: 0.02em;
-        }
+        .footer-col .type-label { color: rgba(250, 245, 234, 0.55); display: block; margin-bottom: 14px; }
 
-        .footer-contact-links a {
-            color: rgba(255,255,255,0.7);
+        .footer-links { list-style: none; }
+
+        .footer-links li { margin-bottom: 9px; }
+
+        .footer-links a {
+            color: rgba(250, 245, 234, 0.8);
             text-decoration: none;
-            transition: color 0.2s;
+            font-size: 15px;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
         }
 
-        .footer-contact-links a:hover {
-            color: var(--gold);
-        }
+        .footer-links a:hover { color: var(--paper); border-bottom-color: var(--pencil-soft); }
 
-        .footer-signup {
-            flex: 1 1 0;
-            max-width: none !important;
-            margin: 0 !important;
-        }
+        .footer-sub form { display: flex; gap: 10px; }
 
-        .footer-signup .signup-prompt,
-        .footer-col-heading {
-            font-family: 'Inter', sans-serif;
+        .footer-sub input[type="email"] {
+            font-family: var(--mono);
             font-size: 14px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 14px;
+            color: var(--paper);
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid rgba(250, 245, 234, 0.4);
+            padding: 9px 2px;
+            outline: none;
+            min-width: 200px;
         }
 
-        .footer-archive-link {
-            text-align: left;
-            margin-top: 14px;
-            font-size: 13px !important;
-            letter-spacing: 0.04em !important;
+        .footer-sub input:focus { border-bottom-color: var(--paper); }
+        .footer-sub input::placeholder { color: rgba(250, 245, 234, 0.4); }
+
+        .footer-sub .btn {
+            background: var(--paper);
+            color: var(--ink);
+            border-color: var(--paper);
+            box-shadow: none;
+            padding: 11px 20px;
         }
 
-        .footer-archive-link a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+        .footer-archive { margin-top: 16px; font-size: 14px; }
 
-        .footer-archive-link a:hover {
-            color: var(--gold);
-        }
-
-        .footer-col-cta {
-            flex: 1 1 0;
-        }
-
-        .footer-logo {
-            height: 34px;
-            width: auto;
-            margin-bottom: 14px;
-            opacity: 0.8;
-            filter: brightness(0) invert(1);
-        }
+        .footer-archive a { color: rgba(250, 245, 234, 0.6); }
 
         .footer-bottom {
-            max-width: 1080px;
-            margin: 36px auto 0;
-            padding-top: 18px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        footer p {
+            max-width: 1100px;
+            margin: 44px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(250, 245, 234, 0.14);
+            font-family: var(--mono);
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 900px) {
-            footer {
-                padding: 36px 28px 24px;
-            }
-            .footer-grid {
-                gap: 28px;
-            }
-            .footer-col-brand,
-            .footer-signup,
-            .footer-col-cta {
-                flex: 1 1 100%;
-            }
-            .footer-signup {
-                max-width: 100% !important;
-            }
-            .footer-tagline {
-                max-width: none;
-            }
+            letter-spacing: 0.06em;
+            color: rgba(250, 245, 234, 0.45);
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
         /* ── Responsive ── */
-        @media (max-width: 768px) {
-            nav {
-                padding: 12px 24px;
-            }
+        @media (max-width: 960px) {
+            .ms { padding: 0 28px; }
 
-            .nav-mark {
-                height: 26px;
-            }
+            .hero { padding-top: 64px; padding-bottom: 80px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 64px; }
+            .hero-sheet { max-width: 380px; margin: 0 auto; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 54px; }
+            .polaroid { max-width: 280px; margin: 0 auto; }
+
+            .clipout { grid-template-columns: 1fr; padding: 44px 32px; gap: 48px; }
+
+            .review-grid { grid-template-columns: 1fr; gap: 56px; }
+
+            .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+            .paper-form { padding: 36px 28px; transform: none; }
+
+            .stamp { position: static; display: inline-block; margin-bottom: 24px; }
+        }
+
+        @media (max-width: 760px) {
+            nav { padding: 14px 22px; }
+
+            .nav-toggle { display: block; }
 
             .nav-links {
-                gap: 14px;
-            }
-
-            .nav-links a {
-                font-size: 10px;
-                letter-spacing: 0.8px;
-            }
-
-            .nav-brand span {
                 display: none;
-            }
-
-            .hero {
-                padding: 80px 24px 60px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .nav-brand img {
-                height: 22px;
-            }
-
-            .nav-brand span {
-                font-size: 10px;
-                letter-spacing: 1.5px;
-            }
-
-            /* About stacks to single column */
-            .about-section {
-                padding: 60px 24px;
-            }
-
-            .about-inner {
-                grid-template-columns: 1fr;
-                gap: 32px;
-                text-align: center;
-            }
-
-            .about-image {
-                position: static;
-                display: flex;
-                justify-content: center;
-            }
-
-            .about-image .headshot {
-                width: 180px;
-                height: 180px;
-                border-radius: 50%;
-                aspect-ratio: auto;
-            }
-
-            .problem {
-                padding: 60px 24px;
-            }
-
-            .problem p,
-            .problem .answer {
-                font-size: 22px;
-            }
-
-            .services-section {
-                padding: 60px 24px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                padding: 28px 24px;
-            }
-
-            .pricing-section {
-                padding: 60px 24px;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .plan-toggle-btn {
-                padding: 8px 16px;
-                font-size: 12px;
-            }
-
-            .consultation-banner {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
                 flex-direction: column;
-                text-align: center;
+                gap: 0;
+                background: var(--paper);
+                border-bottom: 1px solid var(--rule);
+                padding: 8px 22px 18px;
+                box-shadow: 0 18px 30px rgba(38, 33, 23, 0.12);
             }
 
-            .how-section {
-                padding: 60px 24px;
-            }
+            .nav-links.open { display: flex; }
 
-            .steps {
-                max-width: 100%;
-            }
+            .nav-links li { border-bottom: 1px solid var(--rule); }
+            .nav-links li:last-child { border-bottom: none; }
+            .nav-links a { display: block; padding: 14px 0; border-bottom: none; }
 
-            .reviews-section {
-                padding: 60px 24px;
-            }
+            nav { position: relative; }
 
-            .review p {
-                font-size: 19px;
-            }
+            .section-head h2 { font-size: 28px; }
 
-            .review-quote {
-                font-size: 80px;
-            }
+            .tier { padding: 32px 26px; }
+            .tier + .tier { border-left: none; border-top: 1px solid var(--rule); }
 
-            .workshops-section {
-                padding: 60px 24px;
-            }
+            blockquote.pull p { font-size: 20px; }
 
-            .credentials-section {
-                padding: 60px 24px;
-            }
+            .consult { padding: 28px 2px; }
 
-            .credentials-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .contact {
-                padding: 60px 24px;
-            }
-
-            .faq-section {
-                padding: 60px 24px;
-            }
-
-            footer {
-                padding: 40px 24px 24px;
-            }
+            .footer-sub form { flex-wrap: wrap; }
         }
     </style>
 </head>
@@ -2658,717 +1584,531 @@
 <!-- ── Nav ── -->
 <div class="nav-wrapper">
     <nav>
-        <a href="/" class="nav-brand"><img src="mark-transparent.png" alt=""><span>Bonanno Writing Workshop</span></a>
+        <a href="#top" class="nav-brand">Bonanno <em>Writing</em> Workshop</a>
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li class="nav-dropdown">
-                <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</button>
-                <ul class="nav-dropdown-menu">
-                    <li><a href="#services">Tutoring Services</a></li>
-                    <li><a href="#intensive">College App Intensive</a></li>
-                    <li><a href="#essay-review">On-Demand Essay Review</a></li>
-                </ul>
-            </li>
+            <li><a href="#services">Tutoring</a></li>
+            <li><a href="#intensive">Intensive</a></li>
+            <li><a href="#essay-review">Essay Review</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="/writing-tips" class="nav-link-arrow">Writing Tips <span class="nav-arrow">&rarr;</span></a></li>
+            <li><a href="/writing-tips">Writing Tips →</a></li>
         </ul>
     </nav>
 </div>
 
 <!-- ── Hero ── -->
-<div class="hero-wrapper">
-    <header class="hero">
-        <h1>Demystify the Writing Process</h1>
-        <hr class="hairline hairline-center hairline-white">
-        <p class="subtitle">Brooklyn-based writing tutor and college essay coach for high school, college, and graduate students.</p>
-        <a href="#contact" class="btn btn-gold">Get in Touch</a>
-    </header>
+<header class="hero ms" id="top">
+    <div class="hero-grid">
+        <div class="reveal revealed">
+            <p class="type-label hero-kicker">Brooklyn, N.Y. · Writing tutor &amp; essay coach</p>
+            <h1>Demystify the <em class="squiggle">writing process<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></em></h1>
+            <p class="hero-sub">Brooklyn-based writing tutor and college essay coach for high school, college, and graduate students.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-pencil">Get in Touch</a>
+                <span class="hand-note hero-cta-note">or grab the free worksheet ↓</span>
+            </div>
+        </div>
+        <div class="hero-sheet reveal revealed">
+            <figure class="sheet draft-card">
+                <div class="draft-meta"><span>Student draft</span><span>p. 1</span></div>
+                <!-- Examples + margin notes drawn from the "Imposter Claims" deck — adjust freely -->
+                <div class="draft-slides">
+                    <div class="draft-slide is-active">
+                        <p class="draft-line">In <em>The Iliad</em>, the <span class="mark-wavy" style="animation-delay: 2.1s;">prevailing victory of fate</span> is the <span class="mark-strike">only<svg viewBox="0 0 100 10" aria-hidden="true"><path d="M2 5 C 25 3, 50 7, 75 4 S 92 6, 98 5"/></svg></span> reasonable interpretation.</p>
+                        <span class="draft-margin-note hand-note draft-anim" style="animation-delay: 1.5s;">account for reader doubt —</span>
+                        <span class="draft-endnote hand-note draft-anim" style="animation-delay: 2.8s;">how does the poem envision fate vs. free will?</span>
+                        <span class="draft-check hand-note draft-anim" style="animation-delay: 3.7s;">✓</span>
+                    </div>
+                    <div class="draft-slide">
+                        <p class="draft-line">Through <span class="mark-under">Tom, Daisy, and Gatsby<svg viewBox="0 0 100 10" aria-hidden="true"><path d="M2 6 C 20 2, 35 9, 55 5 S 85 3, 98 6"/></svg></span>, the novel demonstrates that the American dream is <span class="mark-under">an illusion<svg viewBox="0 0 100 10" aria-hidden="true"><path style="animation-delay: 2.1s;" d="M2 6 C 20 2, 35 9, 55 5 S 85 3, 98 6"/></svg></span>.</p>
+                        <span class="draft-margin-note hand-note draft-anim" style="animation-delay: 1.5s;">one ¶ per example? organize by sub-claim —</span>
+                        <span class="draft-endnote hand-note draft-anim" style="animation-delay: 2.8s;">which part? what vision of the dream?</span>
+                        <span class="draft-check hand-note draft-anim" style="animation-delay: 3.7s;">✓</span>
+                    </div>
+                    <div class="draft-slide">
+                        <p class="draft-line">In <em>King Lear</em>, the nobility behave <span class="mark-under">immorally<svg viewBox="0 0 100 10" aria-hidden="true"><path d="M2 6 C 20 2, 35 9, 55 5 S 85 3, 98 6"/></svg></span>, valuing <span class="mark-wavy" style="animation-delay: 2.1s;">relationships as business transactions</span>.</p>
+                        <span class="draft-margin-note hand-note draft-anim" style="animation-delay: 1.5s;">how does the text construct morality?</span>
+                        <span class="draft-endnote hand-note draft-anim" style="animation-delay: 2.8s;">promising — pivot toward close reading</span>
+                        <span class="draft-check hand-note draft-anim" style="animation-delay: 3.7s;">✓</span>
+                    </div>
+                    <div class="draft-slide">
+                        <p class="draft-line">“The River” <span class="mark-under">personifies<svg viewBox="0 0 100 10" aria-hidden="true"><path d="M2 6 C 20 2, 35 9, 55 5 S 85 3, 98 6"/></svg></span> a supernatural river to <span class="mark-wavy" style="animation-delay: 2.1s;">critique gentrification</span>.</p>
+                        <span class="draft-margin-note hand-note draft-anim" style="animation-delay: 1.5s;">yes, and? so what?</span>
+                        <span class="draft-endnote hand-note draft-anim" style="animation-delay: 2.8s;">how does the supernatural fit into the critique?</span>
+                        <span class="draft-check hand-note draft-anim" style="animation-delay: 3.7s;">✓</span>
+                    </div>
+                    <div class="draft-slide">
+                        <p class="draft-line">In <em>The Iliad</em>, comparing warriors to women suggests men can be weak — revealing <span class="mark-wavy" style="animation-delay: 0.9s;">the gender politics of the time</span>.</p>
+                        <span class="draft-margin-note hand-note draft-anim" style="animation-delay: 1.5s;">what evidence do we have for this?</span>
+                        <span class="draft-endnote hand-note draft-anim" style="animation-delay: 2.8s;">pivot to the text — how does the poem think about gender?</span>
+                        <span class="draft-check hand-note draft-anim" style="animation-delay: 3.7s;">✓</span>
+                    </div>
+                    <div class="draft-slide">
+                        <p class="draft-line">Boland uses <span class="mark-under">loss of identity<svg viewBox="0 0 100 10" aria-hidden="true"><path d="M2 6 C 20 2, 35 9, 55 5 S 85 3, 98 6"/></svg></span> and <span class="mark-wavy" style="animation-delay: 2.1s;">imagery of suffering</span> to expose how governments treat citizens.</p>
+                        <span class="draft-margin-note hand-note draft-anim" style="animation-delay: 1.5s;">how are these linked?</span>
+                        <span class="draft-endnote hand-note draft-anim" style="animation-delay: 2.8s;">state the how + why relationship on the page</span>
+                        <span class="draft-check hand-note draft-anim" style="animation-delay: 3.7s;">✓</span>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+</header>
+
+<!-- ── Credentials band ── -->
+<div class="cred-band">
+    <div class="cred-band-inner">
+        <span class="type-meta">Teaching since 2019</span>
+        <span class="type-meta">·</span>
+        <span class="type-meta">Hundreds of students</span>
+        <span class="type-meta">·</span>
+        <span class="type-meta">High school through graduate level</span>
+        <span class="type-meta">·</span>
+        <span class="type-meta">Zoom or in person in NYC</span>
+    </div>
 </div>
 
 <!-- ── About ── -->
-<section class="about-section" id="about">
-    <div class="about-inner">
-        <div class="about-image">
-            <img src="headshot.jpg" alt="Sarah Bonanno" class="headshot">
-        </div>
-        <div class="about-text">
-            <h2 class="section-label">About</h2>
+<section class="about ms" id="about">
+    <span class="proofmark" aria-hidden="true" style="top: 30px; right: 1%; font-size: 300px;">&para;</span>
+    <div class="section-head reveal">
+        <span class="section-no">§ 1</span>
+        <h2>About the tutor</h2>
+    </div>
+    <div class="about-grid">
+        <figure class="polaroid reveal">
+            <img src="headshot.jpg" alt="Sarah Bonanno">
+            <figcaption>Sarah Bonanno</figcaption>
+        </figure>
+        <div class="about-text reveal">
+            <span class="margin-note">the short version —</span>
             <p>I'm Sarah Bonanno. Since 2019, I have taught hundreds of students ranging from first-year college students in humanities classes to high school students working on their college admissions essays. I am also proud of my work with advanced students and professionals, including PhD students, new teachers in training, and business professionals.</p>
-            <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. I don't edit your student's work for them — I teach them how to see their own writing more clearly so they can revise with intention.</p>
+            <p>I believe in a collaborative approach where students are active participants in sessions and retain ownership over their ideas and writing. <span class="pencil-under">I don't edit your student's work for them</span> — I teach them how to see their own writing more clearly so they can revise with intention.</p>
             <p>I tutor over Zoom and am available for in-person sessions in the NYC area.</p>
 
-            <div class="about-credentials">
-                <div class="about-cred-col">
-                    <span class="about-cred-label">Education</span>
-                    <p class="about-cred-item"><span>PhD Student, English</span>CUNY Graduate Center</p>
-                    <p class="about-cred-item"><span>MA, Theater &amp; Performance Studies</span>University of Chicago</p>
-                    <p class="about-cred-item"><span>BA, English</span>Bowdoin College — cum laude, departmental honors</p>
+            <div class="about-creds">
+                <div class="cred-col">
+                    <span class="type-label">Education</span>
+                    <p class="cred-item"><strong>PhD Student, English</strong><span>CUNY Graduate Center</span></p>
+                    <p class="cred-item"><strong>MA, Theater &amp; Performance Studies</strong><span>University of Chicago</span></p>
+                    <p class="cred-item"><strong>BA, English</strong><span>Bowdoin College — cum laude, departmental honors</span></p>
                 </div>
-                <div class="about-cred-col">
-                    <span class="about-cred-label">Experience</span>
-                    <p class="about-cred-item"><span>Graduate Teaching Fellow</span>Brooklyn College, English Department</p>
-                    <p class="about-cred-item"><span>Assistant Director</span>University of Chicago Writing Program</p>
+                <div class="cred-col">
+                    <span class="type-label">Experience</span>
+                    <p class="cred-item"><strong>Graduate Teaching Fellow</strong><span>Brooklyn College, English Department</span></p>
+                    <p class="cred-item"><strong>Assistant Director</strong><span>University of Chicago Writing Program</span></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ── Lead Magnet ── -->
-<section class="lead-magnet-section" id="free-worksheet">
-    <div class="lead-magnet-inner">
-        <div class="lead-magnet-copy">
-        <div class="section-label">Free Worksheet</div>
-        <h2>Want to see how I work with students?</h2>
-        <p>The same kind of thinking I'd walk you through on your thesis: is your main claim actually doing the work? A worksheet you can run yourself.</p>
+<div class="dinkus" aria-hidden="true"><svg viewBox="0 0 140 24"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"><g transform="translate(22,12) rotate(-8)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g><g transform="translate(70,12) rotate(5)"><path d="M-7 0 L7 0 M-3.5 -6.5 L3.5 6.5 M3.5 -6.5 L-3.5 6.5"/></g><g transform="translate(118,12) rotate(-3)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g></g></svg></div>
 
-        <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1775464");</style>
-        <style type="text/css">
-        .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}.ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#ffffff #ffffff #ffffff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}@keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}#mlb2-39862397.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper{background-color:#ffffff;border-width:0px;border-color:transparent;border-radius:4px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:400px;width:100%}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody{padding:20px 20px 0 20px}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent{text-align:left;margin:0 0 20px 0}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4{display:none}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p{display:none}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 10px 0;width:100%}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#ffffff!important;color:#333333!important;border-color:#cccccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;height:auto;line-height:21px!important;padding:10px!important;width:100%!important;box-sizing:border-box!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 20px 0;float:left;width:100%}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#1c2a3a!important;border:none!important;border-radius:4px!important;color:#ffffff!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;font-weight:700!important;height:auto;padding:10px!important;width:100%!important;box-sizing:border-box!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#c9a84c!important}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:20px}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#000000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;margin:0 0 10px 0}#mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#000000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px;line-height:20px;margin:0}
-        </style>
-
-        <div id="mlb2-39862397" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-39862397">
-          <div class="ml-form-align-center">
-            <div class="ml-form-embedWrapper embedForm">
-              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                <div class="ml-form-embedContent"></div>
-                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2266162/forms/184672809325168012/subscribe" data-code="" method="post" target="_blank">
-                  <div class="ml-form-formContent">
-                    <div class="ml-form-fieldRow ml-last-item">
-                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email address" autocomplete="email">
-                      </div>
-                    </div>
-                  </div>
-                  <input type="hidden" name="ml-submit" value="1">
-                  <div class="ml-form-embedSubmit">
-                    <button type="submit" class="primary">Send it to me</button>
-                    <button disabled="disabled" style="display:none;" type="button" class="loading">
-                      <div class="ml-form-embedSubmitLoad"></div>
-                      <span class="sr-only">Loading...</span>
-                    </button>
-                  </div>
-                  <input type="hidden" name="anticsrf" value="true">
+<!-- ── Worksheet clip-out ── -->
+<section class="worksheet ms" id="free-worksheet">
+    <div class="clipout reveal">
+        <div>
+            <span class="type-label">Free worksheet</span>
+            <h2>Want to see how I work with students?</h2>
+            <p>The same kind of thinking I'd walk you through on your thesis: is your main claim actually doing the work? A worksheet you can run yourself.</p>
+            <div class="clipout-form">
+                <form action="https://assets.mailerlite.com/jsonp/2266162/forms/184672809325168012/subscribe" method="post" target="_blank">
+                    <input aria-label="email" aria-required="true" type="email" name="fields[email]" placeholder="Email address" autocomplete="email" required>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="btn">Send it to me</button>
                 </form>
-              </div>
-              <div class="ml-form-successBody row-success" style="display:none">
-                <div class="ml-form-successContent">
-                  <h4>Check your inbox!</h4>
-                  <p>The worksheet is on its way.</p>
-                </div>
-              </div>
+                <p class="clipout-fineprint">You'll also hear from me occasionally. Unsubscribe anytime.</p>
             </div>
-          </div>
         </div>
-        <script>
-          function ml_webform_success_39862397(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-39862397 .row-success').show();$('.ml-subscribe-form-39862397 .row-form').hide();}
-        </script>
-        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript"></script>
-        <script>fetch("https://assets.mailerlite.com/jsonp/2266162/forms/184672809325168012/takel")</script>
-
-        <style>
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper { background-color: transparent !important; box-shadow: none !important; border: none !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody { padding-top: 0 !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"] { background-color: rgba(255,255,255,0.08) !important; border: 1.5px solid rgba(255,255,255,0.35) !important; color: #ffffff !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-webkit-input-placeholder { color: rgba(255,255,255,0.75) !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-moz-placeholder { color: rgba(255,255,255,0.75) !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input[type="email"]::placeholder { color: rgba(255,255,255,0.75) !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary { background-color: #c9a84c !important; color: #1c2a3a !important; font-weight: 700 !important; border: none !important; }
-          #mlb2-39862397.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover { background-color: #b8963e !important; }
-        </style>
-
-        <p style="font-size:12px; color:rgba(255,255,255,0.35); margin-top:12px; margin-bottom:0;">You'll also hear from me occasionally. Unsubscribe anytime.</p>
-        </div>
-        <div class="lead-magnet-preview">
-            <img src="worksheet-preview.png" alt="Preview of the Revising Your Main Claim worksheet" loading="lazy">
-        </div>
+        <figure class="sheet">
+            <img src="worksheet-preview.png" alt="Preview of the Revising Your Main Claim worksheet">
+        </figure>
     </div>
 </section>
 
-<!-- ── Pricing ── -->
-<section class="pricing-section" id="services">
-    <div class="pricing-inner">
-        <h2 class="section-label">Tutoring Services</h2>
-        <div class="avail-pill-row"><span class="avail-pill"><span class="avail-dot"></span>Now accepting new students &middot; Summer 2026</span></div>
-        <p class="pricing-subtitle">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
+<div class="dinkus" aria-hidden="true"><svg viewBox="0 0 140 24"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"><g transform="translate(22,12) rotate(6)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g><g transform="translate(70,12) rotate(-4)"><path d="M-7 0 L7 0 M-3.5 -6.5 L3.5 6.5 M3.5 -6.5 L-3.5 6.5"/></g><g transform="translate(118,12) rotate(7)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g></g></svg></div>
 
-        <div class="plan-toggle">
-            <button class="plan-toggle-btn active" data-plan="session">Per Session</button>
-            <button class="plan-toggle-btn" data-plan="monthly">Monthly <span class="plan-count">(4)</span><span class="toggle-tag">Save 10%</span></button>
-            <button class="plan-toggle-btn" data-plan="semester">Semester <span class="plan-count">(16)</span><span class="toggle-tag">Save 20%</span></button>
-        </div>
+<!-- ── Services / rates ── -->
+<section class="services ms" id="services">
+    <span class="proofmark proofmark-hand" aria-hidden="true" style="top: 60px; right: 4%; font-size: 250px; transform: rotate(8deg);">&#10003;</span>
+    <div class="section-head reveal">
+        <span class="section-no">§ 2</span>
+        <h2>Tutoring services &amp; rates</h2>
+    </div>
+    <div class="avail-note reveal">
+        <span class="hand-note">now accepting new students — summer 2026</span>
+    </div>
+    <p class="reveal" style="color: var(--ink-soft); max-width: 36em; margin: -26px 0 44px;">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
 
-        <div class="pricing-grid">
-            <div class="price-card"
-                 data-price-session="$150"
-                 data-original-session=""
-                 data-unit-session="per session"
-                 data-price-monthly="$540"
-                 data-original-monthly="$600"
-                 data-unit-monthly="per month &middot; 4 sessions"
-                 data-price-semester="$1,920"
-                 data-original-semester="$2,400"
-                 data-unit-semester="per semester &middot; 16 sessions">
-                <div class="label">Academic Tutoring</div>
-                <div class="amount-original"></div>
-                <div class="amount">$150</div>
-                <div class="unit">per session</div>
-                <div class="divider"></div>
-                <ul class="price-features">
-                    <li>Reading & writing support for any course</li>
-                    <li>Essay brainstorming through final draft</li>
-                    <li>On-demand writing exercises in session</li>
-                    <li>High school through graduate level</li>
-                    <li class="package-only" style="display:none;color:var(--gold);font-weight:500;">Reschedule freely within your package period</li>
-                    <li class="semester-only" style="display:none;color:var(--gold);font-weight:500;">4 async essay reviews included</li>
-                </ul>
-                <a href="#contact" class="btn-card btn-card-outline">Get in Touch</a>
-            </div>
-            <div class="price-card price-card-featured"
-                 data-price-session="$180"
-                 data-original-session=""
-                 data-unit-session="per session"
-                 data-price-monthly="$650"
-                 data-original-monthly="$720"
-                 data-unit-monthly="per month &middot; 4 sessions"
-                 data-price-semester="$2,300"
-                 data-original-semester="$2,880"
-                 data-unit-semester="per semester &middot; 16 sessions">
-                <div class="label">Application Essays</div>
-                <div class="amount-original"></div>
-                <div class="amount">$180</div>
-                <div class="unit">per session</div>
-                <div class="divider"></div>
-                <ul class="price-features">
-                    <li>Common App, supplements & scholarships</li>
-                    <li>Statements of purpose for grad school</li>
-                    <li>Brainstorming through final polish</li>
-                    <li>Dedicated, structured timeline</li>
-                    <li class="package-only" style="display:none;color:var(--gold);font-weight:500;">Reschedule freely within your package period</li>
-                    <li class="semester-only" style="display:none;color:var(--gold);font-weight:500;">4 async essay reviews included</li>
-                </ul>
-                <a href="#contact" class="btn-card btn-card-gold">Get in Touch</a>
-            </div>
-        </div>
+    <div class="rate-sheets">
+        <article class="rate-sheet reveal">
+            <span class="type-label">Academic Tutoring</span>
+            <div class="rate-price"><sup>$</sup>150</div>
+            <span class="type-meta rate-unit">per session</span>
+            <ul class="rate-list">
+                <li>Reading &amp; writing support for any course</li>
+                <li>Essay brainstorming through final draft</li>
+                <li>On-demand writing exercises in session</li>
+                <li>High school through graduate level</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </article>
+        <article class="rate-sheet reveal">
+            <span class="type-label">Application Essays</span>
+            <div class="rate-price"><sup>$</sup>180</div>
+            <span class="type-meta rate-unit">per session</span>
+            <ul class="rate-list">
+                <li>Common App, supplements &amp; scholarships</li>
+                <li>Statements of purpose for grad school</li>
+                <li>Brainstorming through final polish</li>
+                <li>Dedicated, structured timeline</li>
+            </ul>
+            <a href="#contact" class="btn btn-pencil">Get in Touch</a>
+        </article>
+    </div>
 
-        <div class="consultation-banner">
-            <div class="consultation-text">
-                <div class="consult-title">Not sure where to start?</div>
-                <div class="consult-desc">Free 15-minute call: tell me about your student's current assignment or goals, and I'll suggest the right approach — no pressure to book.</div>
-            </div>
-            <a href="https://calendly.com/sarah-bonannoworkshop/consultation" target="_blank" rel="noopener" class="btn-consult">Book a Free Call</a>
+    <div class="rate-note reveal">
+        <span class="hand-note">booking monthly (4 sessions) saves 10% — a full semester (16) saves 20%</span>
+        <p class="type-meta" style="margin-top: 10px;">Packages include free rescheduling within the package period · semester packages also include 4 async essay reviews</p>
+    </div>
+
+    <div class="consult reveal">
+        <div>
+            <h3>Not sure where to start?</h3>
+            <p>Free 15-minute call: tell me about your student's current assignment or goals, and I'll suggest the right approach — no pressure to book.</p>
         </div>
+        <a href="https://calendly.com/sarah-bonannoworkshop/consultation" target="_blank" rel="noopener" class="btn btn-ghost">Book a Free Call</a>
     </div>
 </section>
 
 <!-- ── Intensive ── -->
-<section class="intensive-section" id="intensive">
-    <div class="intensive-inner">
-        <div class="app-package-card">
-            <div class="app-package-badge">Course</div>
-            <div class="app-package-header">
-                <div class="app-package-label">College Essay Intensive</div>
-                <span class="avail-pill-dark"><span class="avail-dot"></span>Accepting reservations &middot; Summer 2026</span>
-                <div class="app-package-meta">Available June – January 15 &middot; 4 spots per season</div>
-            </div>
-            <p style="font-size:13.5px;color:rgba(255,255,255,0.75);margin-bottom:16px;margin-top:8px;line-height:1.6;">A private writing class for your student. Every student moves through a structured program and leaves with a finished, submission-ready essay.</p>
-            <div class="app-package-tiers">
-                <div class="app-package-tier">
-                    <div class="app-package-tier-name">Common App Bootcamp</div>
-                    <div class="app-package-price">$1,400</div>
-                    <ul class="app-package-features">
-                        <li>Structured 5-session program</li>
-                        <li>Written feedback on up to 5 drafts — included</li>
-                        <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
-                    </ul>
-                    <div class="app-package-guarantee">Guaranteed: a final, polished Common App essay</div>
-                </div>
-                <div class="app-package-tier">
-                    <div class="app-package-tier-name">Full Application Workshop</div>
-                    <div class="app-package-price">$2,000</div>
-                    <ul class="app-package-features">
-                        <li>Structured 7-session program</li>
-                        <li>Written feedback on up to 8 drafts — included</li>
-                        <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
-                    </ul>
-                    <div class="app-package-guarantee">Guaranteed: Common App essay + up to 3 supplementals</div>
-                </div>
-            </div>
-            <a href="#contact" class="app-package-btn" style="display:block;max-width:280px;margin:24px auto 0;">Reserve Your Spot</a>
-            <p class="app-package-results" style="margin-top:20px;">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
-            <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,0.65);line-height:1.5;">* Guaranteed outcome contingent on timely draft submission and attendance at all scheduled sessions.<br>† A $300 non-refundable deposit is required to reserve your spot. Remaining balance due before your first session.</p>
+<div class="intensive-band torn" id="intensive">
+    <section class="ms">
+        <span class="stamp">4 spots per season</span>
+        <div class="section-head reveal">
+            <span class="section-no">§ 3</span>
+            <h2>College Essay Intensive</h2>
         </div>
-    </div>
-</section>
+        <p class="type-meta intensive-meta reveal">Accepting reservations · Summer 2026 — available June – January 15</p>
+        <p class="intensive-intro reveal">A private writing class for your student. Every student moves through a structured program and leaves with a finished, submission-ready essay.</p>
 
-<!-- ── Essay Review ── -->
-<section class="essay-review-section" id="essay-review">
-    <div class="essay-review-inner">
-        <div class="essay-review-flag">On Demand</div>
-        <h2 class="section-label">Async Essay Review</h2>
-        <span class="avail-pill pill-open"><span class="avail-dot"></span>Currently open</span>
-        <span class="avail-pill avail-pill-closed pill-closed"><span class="avail-dot avail-dot-closed"></span>Currently closed &middot; accepting submissions June 1</span>
-        <p class="essay-review-subtitle">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary — no appointment needed.</p>
-
-        <div class="essay-review-grid">
-        <div class="review-includes">
-            <div class="rit-tabs">
-                <button class="rit-tab is-active" data-rit="included" type="button">What's Included</button>
-                <button class="rit-tab" data-rit="how" type="button">How It Works</button>
-            </div>
-            <div class="rit-panel is-active" data-rit-panel="included">
+        <div class="tier-grid reveal">
+            <div class="tier">
+                <h3>Common App Bootcamp</h3>
+                <div class="tier-price">$1,400</div>
                 <ul>
-                    <li>Detailed margin notes throughout your document</li>
-                    <li>Endnote summary with overall feedback and recommendations</li>
-                    <li>One follow-up email for clarifying questions</li>
-                    <li>Second review of revised draft available at 50% of original price</li>
+                    <li>Structured 5-session program</li>
+                    <li>Written feedback on up to 5 drafts — included</li>
+                    <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
+                    <li class="guarantee">Guaranteed: <em>a final, polished Common App essay</em>*</li>
                 </ul>
             </div>
-            <div class="rit-panel" data-rit-panel="how">
-                <ol class="review-flow-list">
-                    <li><span class="step-num">1.</span><span class="step-text">Pick a price — by essay length and turnaround</span></li>
-                    <li><span class="step-num">2.</span><span class="step-text">Pay via Stripe</span></li>
-                    <li><span class="step-num">3.</span><span class="step-text">Submit your paper — the upload form opens immediately after payment</span></li>
-                    <li><span class="step-num">4.</span><span class="step-text">My notes land in your inbox within the turnaround window</span></li>
-                </ol>
+            <div class="tier">
+                <h3>Full Application Workshop</h3>
+                <div class="tier-price">$2,000</div>
+                <ul>
+                    <li>Structured 7-session program</li>
+                    <li>Written feedback on up to 8 drafts — included</li>
+                    <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
+                    <li class="guarantee">Guaranteed: <em>Common App essay + up to 3 supplementals</em>*</li>
+                </ul>
             </div>
         </div>
 
-        <div class="review-menu">
-            <div class="menu-group">
-                <div class="menu-group-label">Up to 5 pages</div>
-                <a class="menu-line" href="https://buy.stripe.com/4gM7sL50NcUV9ve9H418c00">
-                    <span class="menu-desc">Standard <span class="menu-tier">(72hr)</span></span>
-                    <span class="menu-dots"></span>
-                    <span class="menu-price">$75</span>
-                    <span class="menu-arrow">→</span>
-                </a>
-                <a class="menu-line" href="https://buy.stripe.com/fZudR92SF4op7n6g5s18c02">
-                    <span class="menu-desc">Rush <span class="menu-tier">(24hr)</span></span>
-                    <span class="menu-dots"></span>
-                    <span class="menu-price">$110</span>
-                    <span class="menu-arrow">→</span>
-                </a>
-            </div>
-            <div class="menu-group">
-                <div class="menu-group-label">5–10 pages</div>
-                <a class="menu-line" href="https://buy.stripe.com/4gMdR99h32ghfTC4mK18c01">
-                    <span class="menu-desc">Standard <span class="menu-tier">(72hr)</span></span>
-                    <span class="menu-dots"></span>
-                    <span class="menu-price">$100</span>
-                    <span class="menu-arrow">→</span>
-                </a>
-                <a class="menu-line" href="https://buy.stripe.com/cNi8wPfFrcUVgXG4mK18c03">
-                    <span class="menu-desc">Rush <span class="menu-tier">(24hr)</span></span>
-                    <span class="menu-dots"></span>
-                    <span class="menu-price">$150</span>
-                    <span class="menu-arrow">→</span>
-                </a>
-            </div>
-        </div>
+        <div class="intensive-cta-row reveal">
+            <a href="#contact" class="btn btn-pencil">Reserve Your Spot</a>
+            <span class="hand-note" style="transform: rotate(-1.5deg);">deposit holds your spot †</span>
         </div>
 
-        <p class="review-note">Have a longer piece, specialized writing, or questions about the process? <a href="#contact" style="color: var(--navy); text-decoration: underline;">Get in touch</a> to discuss.</p>
+        <p class="worked-with reveal">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
+
+        <p class="footnotes reveal" style="margin-top: 18px;">* Guaranteed outcome contingent on timely draft submission and attendance at all scheduled sessions.<br>† A $300 non-refundable deposit is required to reserve your spot. Remaining balance due before your first session.</p>
+    </section>
+</div>
+
+<!-- ── Async review ── -->
+<section class="review ms" id="essay-review">
+    <span class="proofmark proofmark-hand" aria-hidden="true" style="top: 20px; right: 6%; font-size: 280px;">^</span>
+    <div class="section-head reveal">
+        <span class="section-no">§ 4</span>
+        <h2>Async essay review</h2>
     </div>
-</section>
+    <span class="hand-note review-open-note reveal" style="transform: rotate(-1.5deg);">currently open — no appointment needed</span>
+    <p class="reveal" style="color: var(--ink-soft); max-width: 34em; margin-bottom: 48px;">Don't need a full session? Submit your writing and receive detailed margin notes and an endnote summary.</p>
 
-<!-- ── Reviews ── -->
-<section class="reviews-section">
-    <div class="reviews-inner">
-        <h2 class="section-label">What People Say</h2>
-        <hr class="hairline hairline-center hairline-white">
+    <div class="review-grid">
+        <div class="included-card reveal">
+            <span class="type-label">What's included</span>
+            <ul class="caret-list">
+                <li>Detailed margin notes throughout your document</li>
+                <li>Endnote summary with overall feedback and recommendations</li>
+                <li>One follow-up email for clarifying questions</li>
+                <li>Second review of revised draft available at 50% of original price</li>
+            </ul>
 
-        <div class="review-carousel" id="reviewCarousel">
-            <button class="carousel-arrow carousel-prev" onclick="reviewCarouselNav(-1)" aria-label="Previous testimonial">&lsaquo;</button>
-            <div class="carousel-track">
+            <span class="type-label" style="display:block; margin-top: 40px;">How it works</span>
+            <ol class="how-list">
+                <li>Pick a price — by essay length and turnaround</li>
+                <li>Pay via Stripe</li>
+                <li>Submit your paper — the upload form opens immediately after payment</li>
+                <li>My notes land in your inbox within the turnaround window</li>
+            </ol>
+        </div>
 
-                <div class="review carousel-slide active">
-                    <div class="review-body">
-                        <span class="quote-mark quote-mark-open">&ldquo;</span>
-                        <div>
-                            <p>Sarah is by far one of the strongest teachers that has ever come through the Writing Program.</p>
-                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
-                            <span class="attribution">Former colleague</span>
-                        </div>
-                        <span class="quote-mark quote-mark-close">&rdquo;</span>
-                    </div>
-                </div>
+        <div class="menu-block reveal">
+            <h3>Up to 5 pages</h3>
+            <a class="menu-line" href="#contact"><span class="m-name">Standard</span><span class="m-turn">(72hr)</span><span class="m-dots"></span><span class="m-price">$75</span><span class="m-arrow">→</span></a>
+            <a class="menu-line" href="#contact"><span class="m-name">Rush</span><span class="m-turn">(24hr)</span><span class="m-dots"></span><span class="m-price">$110</span><span class="m-arrow">→</span></a>
 
-                <div class="review carousel-slide">
-                    <div class="review-body">
-                        <span class="quote-mark quote-mark-open">&ldquo;</span>
-                        <div>
-                            <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
-                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
-                            <span class="attribution">Parent of high school student</span>
-                        </div>
-                        <span class="quote-mark quote-mark-close">&rdquo;</span>
-                    </div>
-                </div>
+            <h3>5–10 pages</h3>
+            <a class="menu-line" href="#contact"><span class="m-name">Standard</span><span class="m-turn">(72hr)</span><span class="m-dots"></span><span class="m-price">$100</span><span class="m-arrow">→</span></a>
+            <a class="menu-line" href="#contact"><span class="m-name">Rush</span><span class="m-turn">(24hr)</span><span class="m-dots"></span><span class="m-price">$150</span><span class="m-arrow">→</span></a>
 
-                <div class="review carousel-slide">
-                    <div class="review-body">
-                        <span class="quote-mark quote-mark-open">&ldquo;</span>
-                        <div>
-                            <p>Your ability to teach writing in a way that was clear and approachable was extremely helpful, and I always looked forward to your class. Your classroom was a space where I felt comfortable being myself and openly sharing my thoughts.</p>
-                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
-                            <span class="attribution">Former student</span>
-                        </div>
-                        <span class="quote-mark quote-mark-close">&rdquo;</span>
-                    </div>
-                </div>
-
-                <div class="review carousel-slide">
-                    <div class="review-body">
-                        <span class="quote-mark quote-mark-open">&ldquo;</span>
-                        <div>
-                            <p>You taught me a lot of new stuff and I feel a lot more confident in my skills as a writer. Most importantly you created a really wonderful environment in the classroom.</p>
-                            <hr class="hairline hairline-center hairline-white" style="margin: 12px auto;">
-                            <span class="attribution">Former student</span>
-                        </div>
-                        <span class="quote-mark quote-mark-close">&rdquo;</span>
-                    </div>
-                </div>
-
-            </div>
-            <button class="carousel-arrow carousel-next" onclick="reviewCarouselNav(1)" aria-label="Next testimonial">&rsaquo;</button>
-            <div class="carousel-dots" id="reviewCarouselDots"></div>
+            <p class="review-footline">Have a longer piece, specialized writing, or questions about the process? <a href="#contact">Get in touch</a> to discuss.</p>
         </div>
     </div>
 </section>
 
-<!-- ── Group Workshops ── -->
-<!-- ── Credentials ── -->
+<!-- ── Testimonials ── -->
+<div class="quotes-band torn">
+    <section class="ms">
+        <div class="section-head reveal">
+            <span class="section-no">§ 5</span>
+            <h2>What people say</h2>
+        </div>
+        <div class="quote-carousel reveal">
+            <div class="quote-track">
+                <blockquote class="pull is-active">
+                    <p>Sarah is by far one of the strongest teachers that has ever come through the Writing Program.</p>
+                    <cite>Former colleague</cite>
+                </blockquote>
+                <blockquote class="pull">
+                    <p>Sarah worked with my son last year when he took AP Language, and she is continuing to work with him this year as he navigates AP Lit and works on getting his writing in great shape for college. Sarah is an experienced tutor and teacher, and she is always positive, patient, and prepared. I highly recommend her!</p>
+                    <cite>Parent of high school student</cite>
+                </blockquote>
+                <blockquote class="pull">
+                    <p>Your ability to teach writing in a way that was clear and approachable was extremely helpful, and I always looked forward to your class. Your classroom was a space where I felt comfortable being myself and openly sharing my thoughts.</p>
+                    <cite>Former student</cite>
+                </blockquote>
+                <blockquote class="pull">
+                    <p>You taught me a lot of new stuff and I feel a lot more confident in my skills as a writer. Most importantly you created a really wonderful environment in the classroom.</p>
+                    <cite>Former student</cite>
+                </blockquote>
+            </div>
+            <div class="quote-nav">
+                <button type="button" class="q-arrow" data-dir="-1" aria-label="Previous quote">&lsaquo;</button>
+                <div class="q-dots" role="tablist" aria-label="Testimonials"></div>
+                <button type="button" class="q-arrow" data-dir="1" aria-label="Next quote">&rsaquo;</button>
+            </div>
+        </div>
+    </section>
+</div>
 
 <!-- ── FAQ ── -->
-<section class="faq-section" id="faq">
-    <div class="faq-inner">
-        <h2 class="section-label">Frequently Asked Questions</h2>
-
-        <details class="faq-item">
+<section class="faq ms" id="faq">
+    <span class="proofmark proofmark-hand" aria-hidden="true" style="top: 50px; right: 3%; font-size: 110px; transform: rotate(-6deg);">stet.</span>
+    <div class="section-head reveal">
+        <span class="section-no">§ 6</span>
+        <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-list reveal">
+        <details>
             <summary>What ages and grade levels do you work with?</summary>
-            <div class="faq-body">
-                <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px;">
-                    <li>I mainly work with high school through graduate school students. Most of my current students are high schoolers tackling AP English and college application essays, plus first-year college students working on academic writing.</li>
-                    <li>While most of my students are in high school and college, I also work with middle grade students — especially when their coursework is demanding or they're building writing skills that will matter down the road.</li>
-                    <li>In the past, I have also worked with PhD students in molecular engineering, MA students in the social sciences, and business professionals.</li>
-                </ul>
-            </div>
+            <div class="faq-answer"><div>
+                <p>I mainly work with high school through graduate school students. Most of my current students are high schoolers tackling AP English and college application essays, plus first-year college students working on academic writing.</p>
+                <p>While most of my students are in high school and college, I also work with middle grade students — especially when their coursework is demanding or they're building writing skills that will matter down the road.</p>
+                <p>In the past, I have also worked with PhD students in molecular engineering, MA students in the social sciences, and business professionals.</p>
+            </div></div>
         </details>
-
-        <details class="faq-item">
+        <details>
             <summary>Do you offer in-person tutoring or only Zoom?</summary>
-            <div class="faq-body">Both. Most sessions happen on Zoom, which is flexible and works well for screen-sharing drafts. In-person sessions are available in the NYC area — I currently travel to Brooklyn, Manhattan, and Westchester locations for ongoing students.</div>
+            <div class="faq-answer"><div>
+                <p>Both. Most sessions happen on Zoom, which is flexible and works well for screen-sharing drafts. In-person sessions are available in the NYC area — I currently travel to Brooklyn, Manhattan, and Westchester locations for ongoing students.</p>
+            </div></div>
         </details>
-
-        <details class="faq-item">
+        <details>
             <summary>How does scheduling work?</summary>
-            <div class="faq-body">After our free consultation, we set a recurring weekly time that works for both of us (most students meet weekly). Async essay review has no scheduling — submit your draft via the Stripe checkout and I return notes within the chosen turnaround window.</div>
+            <div class="faq-answer"><div>
+                <p>After our free consultation, we set a recurring weekly time that works for both of us (most students meet weekly). Async essay review has no scheduling — submit your draft via the Stripe checkout and I return notes within the chosen turnaround window.</p>
+            </div></div>
         </details>
-
-        <details class="faq-item">
+        <details>
             <summary>What's your cancellation policy?</summary>
-            <div class="faq-body">24-hour notice is required to reschedule without charge. Late cancellations (under 24 hours) are billed at 50% of the session rate; no-shows are billed in full. Package holders may reschedule sessions freely within their package period.</div>
+            <div class="faq-answer"><div>
+                <p>24-hour notice is required to reschedule without charge. Late cancellations (under 24 hours) are billed at 50% of the session rate; no-shows are billed in full. Package holders may reschedule sessions freely within their package period.</p>
+            </div></div>
         </details>
-
-        <details class="faq-item">
+        <details>
             <summary>How do I pay?</summary>
-            <div class="faq-body">Per-session and package clients pay via Zelle (914-960-4398), which I prefer, or Venmo (@bonannowriting), which I'm also happy to accept. Async essay review is paid via Stripe at checkout. Packages are billed upfront; per-session students are invoiced monthly.</div>
+            <div class="faq-answer"><div>
+                <p>Per-session and package clients pay via Zelle (914-960-4398), which I prefer, or Venmo (@bonannowriting), which I'm also happy to accept. Async essay review is paid via Stripe at checkout. Packages are billed upfront; per-session students are invoiced monthly.</p>
+            </div></div>
         </details>
-
-        <details class="faq-item">
+        <details>
             <summary>Do you write or edit essays for students?</summary>
-            <div class="faq-body">No. I teach students how to see and revise their own writing. Students who work with me leave with stronger skills and stronger drafts that are unmistakably their own.</div>
+            <div class="faq-answer"><div>
+                <p>No. I teach students how to see and revise their own writing. Students who work with me leave with stronger skills and stronger drafts that are unmistakably their own.</p>
+            </div></div>
         </details>
-
-        <details class="faq-item">
+        <details>
             <summary>Do you offer any additional resources for writing help?</summary>
-            <div class="faq-body">Yes! I send out a free monthly newsletter with one writing tip drawn from my work with students — useful for anyone who writes. You can <a href="/writing-tips">read past issues here</a> or subscribe via the form at the bottom of the page.</div>
+            <div class="faq-answer"><div>
+                <p>Yes! I send out a free monthly newsletter with one writing tip drawn from my work with students — useful for anyone who writes. You can <a href="/writing-tips">read past issues here</a> or subscribe via the form at the bottom of the page.</p>
+            </div></div>
         </details>
     </div>
 </section>
+
+<div class="dinkus" aria-hidden="true"><svg viewBox="0 0 140 24"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"><g transform="translate(22,12) rotate(-5)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g><g transform="translate(70,12) rotate(3)"><path d="M-7 0 L7 0 M-3.5 -6.5 L3.5 6.5 M3.5 -6.5 L-3.5 6.5"/></g><g transform="translate(118,12) rotate(-7)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g></g></svg></div>
 
 <!-- ── Contact ── -->
-<section class="contact" id="contact">
-    <div class="contact-inner">
-        <h2 class="section-label">Get in Touch</h2>
-        <p class="intro">Interested in working together? Send me a message and I'll get back to you within 2 business days with a link to schedule a consultation call.</p>
-
-        <form action="https://formspree.io/f/xvzbbozg" method="POST">
-            <div class="form-group">
+<section class="contact ms" id="contact">
+    <div class="section-head reveal">
+        <span class="section-no">§ 7</span>
+        <h2>Get in touch</h2>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-intro reveal">
+            <p>Interested in working together? Send me a message and I'll get back to you within 2 business days with a link to schedule a consultation call.</p>
+            <div class="contact-alt">
+                <p>Rather start with a conversation? You can <a href="https://calendly.com/sarah-bonannoworkshop/consultation" target="_blank" rel="noopener">book a free 15-minute consultation call →</a></p>
+                <p>Or email me directly at <a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></p>
+            </div>
+        </div>
+        <form class="paper-form reveal" action="https://formspree.io/f/xvzbbozg" method="POST">
+            <div class="field">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" autocomplete="name" required>
             </div>
-            <div class="form-group">
+            <div class="field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
-            <div class="form-group">
+            <div class="field">
                 <label for="interest">What are you interested in?</label>
                 <select id="interest" name="interest">
-                    <option value="Not sure yet">Not sure yet — let's talk</option>
-                    <option value="Academic Tutoring">Academic / writing tutoring (ongoing)</option>
-                    <option value="College Application Essays">College application essay coaching</option>
-                    <option value="Async Essay Review">Async essay review (one-off)</option>
-                    <option value="Group Sessions">Group sessions / custom workshop</option>
-                    <option value="Other">Other</option>
+                    <option>Not sure yet — let's talk</option>
+                    <option>Academic / writing tutoring (ongoing)</option>
+                    <option>College application essay coaching</option>
+                    <option>Async essay review (one-off)</option>
+                    <option>Group sessions / custom workshop</option>
+                    <option>Other</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="message">Message <span class="optional-tag">(optional)</span></label>
-                <textarea id="message" name="message" placeholder="Tell me a bit about your student — current grade, what they're working on, what kind of support you're looking for."></textarea>
+            <div class="field">
+                <label for="message">Message <span class="opt">(optional)</span></label>
+                <textarea id="message" name="message"></textarea>
             </div>
-            <button type="submit" class="btn btn-gold">Send Message</button>
+            <button type="submit" class="btn btn-pencil">Send Message</button>
         </form>
-
-        <p class="contact-call-alt">Rather start with a conversation? You can <a href="https://calendly.com/sarah-bonannoworkshop/consultation" target="_blank" rel="noopener" class="contact-call-link">book a free 15-minute consultation call&nbsp;→</a></p>
-
-        <p class="email-fallback">Or email me directly at <a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></p>
     </div>
 </section>
 
+<!-- ── Footer ── -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-col footer-col-brand">
-        <img src="mark-transparent.png" alt="Bonanno Writing Workshop" class="footer-logo">
-        <p class="footer-tagline">Brooklyn-based writing tutor &amp; college essay coach for high school, college, and graduate students.</p>
-    </div>
-    <div class="footer-signup">
-        <p class="signup-prompt">Want some writing tips?</p>
-        <style type="text/css">
-            .footer-signup #mlb2-41461487.ml-form-embedContainer,
-            .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper,
-            .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-embedBody {
-                background: transparent !important;
-                background-color: transparent !important;
-                box-shadow: none !important;
-                border: none !important;
-                padding: 0 !important;
-                max-width: 100% !important;
-                width: 100% !important;
-                display: block !important;
-            }
-            .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-successBody {
-                background: transparent !important;
-                background-color: transparent !important;
-                box-shadow: none !important;
-                border: none !important;
-                padding: 0 !important;
-            }
-            .footer-signup #mlb2-41461487.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
-                max-width: 100% !important;
-                display: block !important;
-                width: 100% !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-align-center {
-                display: block !important;
-                width: 100% !important;
-                text-align: left !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-block-form {
-                display: flex !important;
-                gap: 8px !important;
-                align-items: stretch !important;
-                width: 100% !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-formContent {
-                flex: 1 1 auto !important;
-                margin: 0 !important;
-                min-width: 0 !important;
-                width: auto !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-fieldRow,
-            .footer-signup #mlb2-41461487 .ml-field-group {
-                margin: 0 !important;
-                width: 100% !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-embedSubmit {
-                flex: 0 0 auto !important;
-                margin: 0 !important;
-                width: auto !important;
-                float: none !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"] {
-                background-color: rgba(255,255,255,0.06) !important;
-                border: 1px solid rgba(255,255,255,0.2) !important;
-                color: #ffffff !important;
-                border-radius: 4px !important;
-                padding: 10px 12px !important;
-                font-size: 13px !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"]::placeholder { color: rgba(255,255,255,0.5) !important; }
-            .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-webkit-input-placeholder { color: rgba(255,255,255,0.5) !important; }
-            .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-fieldRow input[type="email"]::-moz-placeholder { color: rgba(255,255,255,0.5) !important; }
-            .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-embedSubmit button.primary {
-                background-color: var(--gold) !important;
-                color: var(--navy) !important;
-                font-weight: 700 !important;
-                border: none !important;
-                padding: 10px 18px !important;
-                font-size: 13px !important;
-                width: auto !important;
-                white-space: nowrap !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
-                background-color: var(--gold-hover) !important;
-            }
-            .footer-signup #mlb2-41461487 .ml-form-successBody .ml-form-successContent h4,
-            .footer-signup #mlb2-41461487 .ml-form-successBody .ml-form-successContent p {
-                color: #ffffff !important;
-                text-align: center !important;
-            }
-            @media (max-width: 480px) {
-                .footer-signup #mlb2-41461487 .ml-block-form { flex-direction: column !important; }
-                .footer-signup #mlb2-41461487 .ml-form-embedSubmit button.primary { width: 100% !important; }
-            }
-        </style>
-
-        <div id="mlb2-41461487" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41461487">
-            <div class="ml-form-align-center">
-                <div class="ml-form-embedWrapper embedForm">
-                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                        <div class="ml-form-embedContent" style="display:none;"></div>
-                        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/subscribe" data-code="" method="post" target="_blank">
-                            <div class="ml-form-formContent">
-                                <div class="ml-form-fieldRow ml-last-item">
-                                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                        <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Your email" autocomplete="email">
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="hidden" name="ml-submit" value="1">
-                            <div class="ml-form-embedSubmit">
-                                <button type="submit" class="primary">Subscribe</button>
-                                <button disabled="disabled" style="display:none;" type="button" class="loading">
-                                    <div class="ml-form-embedSubmitLoad"></div>
-                                    <span class="sr-only">Loading...</span>
-                                </button>
-                            </div>
-                            <input type="hidden" name="anticsrf" value="true">
-                        </form>
-                    </div>
-                    <div class="ml-form-successBody row-success" style="display:none">
-                        <div class="ml-form-successContent">
-                            <h4>Thank you!</h4>
-                            <p>You're on the list.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-brand">Bonanno Writing Workshop</div>
+            <p>Brooklyn-based writing tutor &amp; college essay coach for high school, college, and graduate students.</p>
         </div>
-        <script>
-            function ml_webform_success_41461487(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-41461487 .row-success').show();$('.ml-subscribe-form-41461487 .row-form').hide();}
-        </script>
-        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
-        <script>fetch("https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/takel")</script>
-        <p class="footer-archive-link"><a href="/writing-tips">Read past issues →</a></p>
-    </div>
-    <div class="footer-col footer-col-cta">
-        <p class="footer-col-heading">Get in touch</p>
-        <div class="footer-contact-links">
-            <a href="/">bonannoworkshop.com</a>
-            <a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a>
+        <div class="footer-col footer-sub">
+            <span class="type-label">Want some writing tips?</span>
+            <form action="https://assets.mailerlite.com/jsonp/2266162/forms/187831801884968350/subscribe" method="post" target="_blank">
+                <input aria-label="email" type="email" name="fields[email]" placeholder="Your email" autocomplete="email" required>
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <p class="footer-archive"><a href="/writing-tips">Read past issues →</a></p>
+        </div>
+        <div class="footer-col">
+            <span class="type-label">Get in touch</span>
+            <ul class="footer-links">
+                <li><a href="https://bonannoworkshop.com">bonannoworkshop.com</a></li>
+                <li><a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></li>
+            </ul>
         </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Bonanno Writing Workshop</p>
-  </div>
+    <div class="footer-bottom">
+        <span>© 2026 Bonanno Writing Workshop</span>
+        <span>Brooklyn, N.Y.</span>
+    </div>
 </footer>
 
 <script>
-// ── Reviews carousel ──
-(function() {
-    const carousel = document.getElementById('reviewCarousel');
-    if (!carousel) return;
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const dotsContainer = document.getElementById('reviewCarouselDots');
-    let current = 0;
-    let auto = null;
-
-    slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
-    });
-
-    function goTo(i) {
-        slides[current].classList.remove('active');
-        dotsContainer.children[current].classList.remove('active');
-        current = (i + slides.length) % slides.length;
-        slides[current].classList.add('active');
-        dotsContainer.children[current].classList.add('active');
-        resetAuto();
-    }
-
-    window.reviewCarouselNav = function(dir) { goTo(current + dir); };
-
-    function startAuto() { auto = setInterval(() => goTo(current + 1), 7000); }
-    function resetAuto() { if (auto) { clearInterval(auto); startAuto(); } }
-    startAuto();
-    carousel.addEventListener('mouseenter', () => { if (auto) { clearInterval(auto); auto = null; } });
-    carousel.addEventListener('mouseleave', () => { if (!auto) startAuto(); });
-})();
-
-document.querySelectorAll('.plan-toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.plan-toggle-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const plan = btn.dataset.plan;
-        const key = plan.charAt(0).toUpperCase() + plan.slice(1);
-        document.querySelectorAll('.price-card').forEach(card => {
-            card.querySelector('.amount').textContent = card.dataset['price' + key];
-            card.querySelector('.unit').innerHTML = card.dataset['unit' + key];
-            const original = card.dataset['original' + key];
-            card.querySelector('.amount-original').textContent = original || '';
-        });
-        document.querySelectorAll('.semester-only').forEach(el => {
-            el.style.display = plan === 'semester' ? '' : 'none';
-        });
-        document.querySelectorAll('.package-only').forEach(el => {
-            el.style.display = (plan === 'monthly' || plan === 'semester') ? '' : 'none';
-        });
-    });
+// Mobile nav
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 });
-
-document.querySelectorAll('.rit-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = tab.dataset.rit;
-        const container = tab.closest('.review-includes');
-        if (!container) return;
-        container.querySelectorAll('.rit-tab').forEach(t => t.classList.toggle('is-active', t === tab));
-        container.querySelectorAll('.rit-panel').forEach(p => p.classList.toggle('is-active', p.dataset.ritPanel === target));
-    });
-});
-
-// Nav dropdown: tap to toggle (touch), close on outside click or after choosing an item
-document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
-    btn.addEventListener('click', e => {
-        e.stopPropagation();
-        const dd = btn.closest('.nav-dropdown');
-        const isOpen = dd.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-});
-document.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        const dd = link.closest('.nav-dropdown');
-        dd.classList.remove('open');
-        dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
-    });
-});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+}));
 document.addEventListener('click', e => {
-    document.querySelectorAll('.nav-dropdown.open').forEach(dd => {
-        if (!dd.contains(e.target)) {
-            dd.classList.remove('open');
-            dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+    if (navLinks.classList.contains('open') && !e.target.closest('nav')) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
+// Hero draft-card cycler
+const draftSlides = [...document.querySelectorAll('.draft-slide')];
+if (draftSlides.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let draftCurrent = 0;
+    setInterval(() => {
+        draftSlides[draftCurrent].classList.remove('is-active');
+        draftCurrent = (draftCurrent + 1) % draftSlides.length;
+        draftSlides[draftCurrent].classList.add('is-active');
+    }, 10000);
+}
+
+// Testimonial carousel
+const carousel = document.querySelector('.quote-carousel');
+if (carousel) {
+    const quotes = [...carousel.querySelectorAll('.quote-track blockquote')];
+    const dotsWrap = carousel.querySelector('.q-dots');
+    let current = 0, auto = null;
+    quotes.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'q-dot' + (i === 0 ? ' is-active' : '');
+        d.setAttribute('aria-label', 'Quote ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+    });
+    const dots = [...dotsWrap.children];
+    function goTo(i) {
+        quotes[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+        current = (i + quotes.length) % quotes.length;
+        quotes[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+    }
+    carousel.querySelectorAll('.q-arrow').forEach(btn =>
+        btn.addEventListener('click', () => goTo(current + Number(btn.dataset.dir))));
+    function startAuto() { auto = setInterval(() => goTo(current + 1), 7000); }
+    carousel.addEventListener('mouseenter', () => { clearInterval(auto); auto = null; });
+    carousel.addEventListener('mouseleave', () => { if (!auto) startAuto(); });
+    startAuto();
+}
+
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+        if (en.isIntersecting) {
+            en.target.classList.add('revealed');
+            io.unobserve(en.target);
         }
     });
-});
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
