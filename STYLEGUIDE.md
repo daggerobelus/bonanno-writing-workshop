@@ -166,11 +166,11 @@ override block — search "CLIENT-FACING DOCUMENTS" in its index.html.
 | `/writing-tips/issue-NN.html` | Individual letters (standalone sheets) |
 | `/subscribe/`, `/worksheet/` | Clip-out signup pages (MailerLite form posts) |
 | `worksheet-main-claim.html/.pdf` | The lead-magnet worksheet document (unlinked; PDF uploaded to MailerLite) |
-| `/welcome/academic-tutoring/` | Client welcome packet — **still old navy/gold**, restyle pending |
+| `/welcome/academic-tutoring/` | Client welcome packet (paper-sheet document, print-ready) |
 | `/newsletter/` | Redirect to /writing-tips |
 
 Head requirements for every public page: real `<title>` + meta description, OG/Twitter
-tags (og-image.png — note: still the old-brand image, refresh pending), favicon
-(`/favicon.ico` — also old-brand, refresh pending), Google Analytics `G-KL55FCMMMT`,
-and MailerLite Universal on pages with signup forms. `noindex` only on /worksheet and
-utility documents.
+tags (`og-image.png`, rebranded July 2026), favicon (`/favicon.ico` — the red-pencil
+asterisk on paper), Google Analytics `G-KL55FCMMMT`, and MailerLite Universal on pages
+with signup forms. `noindex` only on /worksheet, the welcome packet, and utility
+documents.
