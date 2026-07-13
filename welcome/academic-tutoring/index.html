@@ -4,75 +4,400 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Academic Tutoring · Getting Started — Bonanno Writing Workshop</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
-    :root { --navy: #1c2a3a; --gold: #c9a84c; --gold-hover: #b8953e; --cream: #f8f5ef; --white: #ffffff; }
+    :root {
+      --paper: #fffdf6;
+      --paper-tint: #faf5ea;
+      --ink: #262117;
+      --ink-soft: #5c5443;
+      --ink-faint: #8a8171;
+      --pencil: #a83c28;
+      --pencil-soft: rgba(168, 60, 40, 0.55);
+      --pencil-faint: rgba(168, 60, 40, 0.22);
+      --rule: rgba(38, 33, 23, 0.16);
+      --serif: 'Fraunces', Georgia, serif;
+      --body: 'Newsreader', Georgia, serif;
+      --hand: 'Caveat', cursive;
+      --mono: 'Courier Prime', 'Courier New', monospace;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #f0f0f0; font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--navy); line-height: 1.55; text-wrap: pretty; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .packet { max-width: 800px; margin: 40px auto; background: var(--white); box-shadow: 0 4px 40px rgba(0,0,0,0.13); border-radius: 2px; overflow: hidden; }
-    .packet-header { background: linear-gradient(170deg, #1e2f42 0%, var(--navy) 40%, #162231 100%); padding: 30px 48px 26px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-    .packet-header img.logo { height: 32px; width: auto; filter: brightness(0) invert(1); display: block; }
-    .packet-header .packet-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 40px; color: var(--white); letter-spacing: 0.01em; line-height: 1.15; }
-    .packet-header .packet-tagline { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-    .section { padding: 18px 40px; border-bottom: 1px solid #e8e2d8; }
-    .section:last-child { border-bottom: none; }
-    .section-label { font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-    .section-divider { width: 48px; height: 1px; background: var(--gold); margin-bottom: 12px; }
-    .section h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; color: var(--navy); margin-bottom: 18px; line-height: 1.25; }
-    .section p { color: #3a4a5a; margin-bottom: 8px; }
+
+    body {
+      background: #e9e2d2;
+      font-family: var(--body);
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+      text-wrap: pretty;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      padding: 40px 16px;
+    }
+
+    .packet {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      box-shadow: 0 2px 4px rgba(38,33,23,0.08), 0 18px 44px rgba(38,33,23,0.14);
+    }
+
+    .type-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pencil);
+    }
+
+    /* ── Masthead ── */
+    .packet-header {
+      padding: 44px 48px 0;
+      text-align: center;
+    }
+
+    .packet-header .brand {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .packet-header .brand em { font-style: italic; font-weight: 500; color: var(--pencil); }
+
+    .packet-header .rules { border-top: 1px solid var(--ink); margin-bottom: 4px; }
+    .packet-header .rules2 { border-top: 2px solid var(--pencil-faint); margin-bottom: 28px; }
+
+    .packet-title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .packet-title .squiggle { position: relative; white-space: nowrap; }
+
+    .packet-title .squiggle svg {
+      position: absolute;
+      left: -2%;
+      bottom: -0.12em;
+      width: 104%;
+      height: 0.24em;
+      overflow: visible;
+    }
+
+    .packet-title .squiggle path {
+      fill: none;
+      stroke: var(--pencil);
+      stroke-width: 2.6;
+      stroke-linecap: round;
+    }
+
+    .packet-tagline {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding-bottom: 26px;
+    }
+
+    /* ── Sections ── */
+    .section { padding: 24px 48px; border-bottom: 1px solid var(--rule); }
+    .section:last-of-type { border-bottom: none; }
+
+    .section-head {
+      display: block;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+
+    .section-head::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--pencil-soft);
+    }
+
+    .section p { color: var(--ink-soft); margin-bottom: 8px; }
     .section p:last-child { margin-bottom: 0; }
-    .lead { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: var(--navy); line-height: 1.5; margin-bottom: 12px; }
-    .steps-list { list-style: none; padding: 0; margin-top: 4px; margin-bottom: 18px; }
-    .steps-list li { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 12px; }
+
+    .lead {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    /* ── Steps ── */
+    .steps-list { list-style: none; margin: 14px 0 20px; }
+
+    .steps-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
     .steps-list li:last-child { margin-bottom: 0; }
-    .step-number { flex-shrink: 0; width: 34px; height: 34px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; line-height: 1; margin-top: 2px; }
-    .step-content strong { font-family: 'Inter', sans-serif; font-weight: 600; color: var(--navy); display: block; margin-bottom: 3px; font-size: 14.5px; }
-    .step-content span { color: #4a5a6a; font-size: 14px; }
-    .cover-block h3 { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-    .cover-block ul { list-style: none; padding: 0; }
-    .cover-block ul li { color: #3a4a5a; padding: 5px 0; padding-left: 18px; position: relative; line-height: 1.6; }
-    .cover-block ul li::before { content: ''; position: absolute; left: 0; top: 13px; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
-    .logistics-list { list-style: none; padding: 0; }
-    .logistics-list li { padding: 7px 0; border-bottom: 1px solid #efe9df; line-height: 1.6; color: #3a4a5a; }
+
+    .step-number {
+      flex-shrink: 0;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--pencil);
+      width: 30px;
+      margin-top: 2px;
+    }
+
+    .step-content strong {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 16.5px;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .step-content span { color: var(--ink-soft); font-size: 14.5px; }
+
+    /* ── Cover block ── */
+    .cover-block h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--pencil);
+      margin-bottom: 10px;
+    }
+
+    .cover-block ul { list-style: none; }
+
+    .cover-block ul li {
+      color: var(--ink-soft);
+      padding: 5px 0 5px 24px;
+      position: relative;
+      line-height: 1.6;
+      font-size: 14.5px;
+    }
+
+    .cover-block ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 2px;
+      top: 4px;
+      font-family: var(--hand);
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--pencil);
+    }
+
+    /* ── Logistics ── */
+    .logistics-list { list-style: none; }
+
+    .logistics-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.6;
+      color: var(--ink-soft);
+      font-size: 14.5px;
+    }
+
     .logistics-list li:last-child { border-bottom: none; }
-    .logistics-list li strong { font-family: 'Inter', sans-serif; font-weight: 600; color: var(--navy); }
-    .individual-rate { font-size: 14px; color: #3a4a5a; margin-bottom: 18px; line-height: 1.55; }
-    .individual-rate strong { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 19px; color: var(--navy); }
-    .pkg-group-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
-    .package-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 4px; align-items: stretch; }
-    .package-card { background: var(--cream); border-radius: 2px; padding: 20px 18px 22px; border-top: 3px solid var(--gold); text-align: center; display: flex; flex-direction: column; }
-    .package-card.featured { background: var(--navy); border-top-color: var(--gold); }
-    .pkg-name { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 14px; }
-    .package-card.featured .pkg-name { color: var(--gold); }
-    .pkg-price { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 34px; color: var(--navy); line-height: 1; }
-    .package-card.featured .pkg-price { color: var(--white); }
-    .pkg-unit { font-family: 'Inter', sans-serif; font-size: 12px; color: #6a7a8a; margin-top: 7px; }
-    .package-card.featured .pkg-unit { color: rgba(255,255,255,0.6); }
-    .pkg-rate { font-family: 'Inter', sans-serif; font-size: 12.5px; color: #4a5a6a; margin-top: 10px; }
-    .package-card.featured .pkg-rate { color: rgba(255,255,255,0.8); }
-    .pkg-save { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-top: 12px; }
-    .pkg-extra { font-family: 'Inter', sans-serif; font-size: 12px; color: #4a5a6a; margin-top: 6px; line-height: 1.4; }
-    .package-card.featured .pkg-extra { color: rgba(255,255,255,0.75); }
-    .pkg-policies { margin-top: 20px; background: var(--cream); border-left: 3px solid var(--gold); border-radius: 2px; padding: 14px 18px; }
-    .pkg-policies-label { font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
-    .pkg-policies ul { list-style: none; padding: 0; margin: 0; }
-    .pkg-policies li { font-size: 12.5px; color: #4a5a6a; line-height: 1.55; padding: 3px 0 3px 16px; position: relative; }
-    .pkg-policies li::before { content: ''; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
-    .pkg-policies li strong { color: var(--navy); font-weight: 600; }
-    .pricing-note { font-size: 12.5px; color: #6a7a8a; margin-top: 12px; line-height: 1.55; }
-    .contact-footer { background: var(--cream); padding: 16px 40px; text-align: center; border-top: 1px solid #ddd8ce; }
-    .contact-footer .contact-line { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--navy); display: block; margin-bottom: 6px; letter-spacing: 0.02em; }
-    .contact-footer .contact-line a { color: var(--navy); text-decoration: none; }
-    .contact-footer .copyright { font-family: 'Inter', sans-serif; font-size: 11px; color: #8a9aaa; letter-spacing: 0.08em; margin-top: 6px; display: block; }
+
+    .logistics-list li strong {
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    /* ── Pricing ── */
+    .individual-rate { font-size: 15px; color: var(--ink-soft); margin-bottom: 16px; }
+
+    .individual-rate strong {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--pencil);
+    }
+
+    .pkg-group-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 4px;
+      align-items: stretch;
+    }
+
+    .package-card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      box-shadow: 0 1px 2px rgba(38,33,23,0.05), 0 6px 18px rgba(38,33,23,0.07);
+      padding: 22px 18px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      transform: rotate(-0.4deg);
+    }
+
+    .package-card.featured {
+      background: var(--paper-tint);
+      border-top: 3px solid var(--pencil);
+      transform: rotate(0.4deg);
+    }
+
+    .pkg-name {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+
+    .package-card.featured .pkg-name { color: var(--pencil); }
+
+    .pkg-price {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 36px;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .pkg-unit { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-top: 8px; }
+    .pkg-rate { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
+
+    .pkg-extra {
+      font-family: var(--hand);
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--pencil);
+      margin-top: 8px;
+      transform: rotate(-1.5deg);
+    }
+
+    /* ── Policy boxes ── */
+    .pkg-policies {
+      margin-top: 20px;
+      background: var(--paper-tint);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--pencil);
+      border-radius: 2px;
+      padding: 14px 18px;
+    }
+
+    .pkg-policies-label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--pencil);
+      margin-bottom: 8px;
+    }
+
+    .pkg-policies ul { list-style: none; }
+
+    .pkg-policies li {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      padding: 3px 0 3px 16px;
+      position: relative;
+    }
+
+    .pkg-policies li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--pencil);
+    }
+
+    .pkg-policies li strong { color: var(--ink); font-weight: 500; }
+
+    /* ── Dinkus ── */
+    .dinkus {
+      display: flex;
+      justify-content: center;
+      color: var(--pencil-soft);
+      transform: rotate(-2deg);
+      padding: 20px 0 4px;
+    }
+
+    .dinkus svg { width: 120px; height: 22px; }
+
+    /* ── Footer ── */
+    .contact-footer {
+      padding: 20px 48px 24px;
+      text-align: center;
+      border-top: 1px solid var(--ink);
+    }
+
+    .contact-footer .contact-line {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-footer .contact-line a { color: var(--ink-soft); text-decoration: none; }
+    .contact-footer .contact-line a:hover { color: var(--pencil); }
+
+    .contact-footer .copyright {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--ink-faint);
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+      display: block;
+    }
+
     @media print {
       @page { margin: 0.45in; }
-      body { background: white; }
-      .packet { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; overflow: visible; }
-      .section { break-inside: avoid; page-break-inside: avoid; }
-      .section-label, .section-divider { break-after: avoid; page-break-after: avoid; }
-      .steps-list li, .cover-block, .pricing-table, .contact-footer { break-inside: avoid; page-break-inside: avoid; }
+      body { background: white; padding: 0; }
+      .packet { box-shadow: none; border: none; margin: 0; max-width: 100%; }
+      .section { break-inside: avoid; page-break-inside: avoid; padding: 20px 32px; }
+      .packet-header { padding: 24px 32px 0; }
+      .steps-list li, .cover-block, .package-grid, .pkg-policies, .contact-footer { break-inside: avoid; page-break-inside: avoid; }
+    }
+
+    @media (max-width: 620px) {
+      .section, .packet-header, .contact-footer { padding-left: 24px; padding-right: 24px; }
+      .package-grid { grid-template-columns: 1fr; }
+      .packet-title { font-size: 30px; }
     }
   </style>
 </head>
@@ -80,40 +405,40 @@
   <div class="packet">
 
     <header class="packet-header">
-      <img class="logo" src="/logo-transparent.png" alt="Bonanno Writing Workshop" />
-      <div class="packet-title">Welcome to the Workshop</div>
+      <div class="brand">Bonanno <em>Writing</em> Workshop</div>
+      <div class="rules"></div>
+      <div class="rules2"></div>
+      <div class="packet-title">Welcome to <span class="squiggle">the Workshop<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></span></div>
       <div class="packet-tagline">Your Guide to Getting Started</div>
     </header>
 
     <!-- Welcome -->
     <section class="section">
-      <p class="section-label">Welcome</p>
-      <div class="section-divider"></div>
+      <div class="section-head"><span class="type-label">Welcome</span></div>
       <p class="lead">I'm so glad we're working together. Here's everything you need to know to get started — what our time together looks like, how things run, and the options for moving forward.</p>
     </section>
 
     <!-- How a Session Works -->
     <section class="section">
-      <p class="section-label">How a Session Works</p>
-      <div class="section-divider"></div>
+      <div class="section-head"><span class="type-label">How a Session Works</span></div>
       <p>Each session runs about 60 minutes, over Zoom or in person in the NYC area, and follows a simple, repeating rhythm:</p>
       <ol class="steps-list">
         <li>
-          <div class="step-number">1</div>
+          <div class="step-number">01</div>
           <div class="step-content">
             <strong>We meet.</strong>
             <span>Sessions are built around whatever your student is working on that week — we start from their current assignment or goal and work through it together.</span>
           </div>
         </li>
         <li>
-          <div class="step-number">2</div>
+          <div class="step-number">02</div>
           <div class="step-content">
             <strong>You get a recap.</strong>
             <span>After each session, you'll receive a short summary of what we covered, plus any out-of-session work to keep the momentum going before we meet again.</span>
           </div>
         </li>
         <li>
-          <div class="step-number">3</div>
+          <div class="step-number">03</div>
           <div class="step-content">
             <strong>We meet again.</strong>
             <span>We pick up from the recap, so nothing gets lost between sessions.</span>
@@ -134,8 +459,7 @@
 
     <!-- Logistics -->
     <section class="section">
-      <p class="section-label">Logistics</p>
-      <div class="section-divider"></div>
+      <div class="section-head"><span class="type-label">Logistics</span></div>
       <ul class="logistics-list">
         <li><strong>Scheduling:</strong> Most students meet once a week at a recurring time. Some meet as often as twice a week, others biweekly or as needed — whatever fits your student's workload and goals.</li>
         <li><strong>Format:</strong> Zoom or in person in the NYC area.</li>
@@ -145,8 +469,7 @@
 
     <!-- Pricing Options -->
     <section class="section">
-      <p class="section-label">Pricing Options</p>
-      <div class="section-divider"></div>
+      <div class="section-head"><span class="type-label">Pricing Options</span></div>
       <p class="individual-rate">Individual sessions are charged at <strong>$150/hr</strong>.</p>
       <div class="pkg-policies">
         <div class="pkg-policies-label">Single Session Terms</div>
@@ -155,7 +478,8 @@
           <li><strong>Cancellations:</strong> 24 hours notice to reschedule freely. Under 24 hours is charged at 50%, no-shows at the full rate.</li>
         </ul>
       </div>
-      <div class="pkg-group-label" style="margin-top:24px;">Packages</div>
+      <div class="dinkus" aria-hidden="true"><svg viewBox="0 0 140 24"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"><g transform="translate(22,12) rotate(-8)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g><g transform="translate(70,12) rotate(5)"><path d="M-7 0 L7 0 M-3.5 -6.5 L3.5 6.5 M3.5 -6.5 L-3.5 6.5"/></g><g transform="translate(118,12) rotate(-3)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g></g></svg></div>
+      <div class="pkg-group-label">Packages</div>
       <div class="package-grid">
         <div class="package-card">
           <div class="pkg-name">Monthly</div>
@@ -182,7 +506,6 @@
     </section>
 
     <footer class="contact-footer">
-      <p class="section-label" style="margin-bottom:8px;">Contact</p>
       <span class="contact-line"><a href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a></span>
       <span class="contact-line"><a href="https://bonannoworkshop.com" target="_blank">bonannoworkshop.com</a></span>
       <span class="copyright">&copy; 2026 Bonanno Writing Workshop</span>
