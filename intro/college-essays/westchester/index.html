@@ -1079,6 +1079,10 @@
             </div>
         </form>
         <p class="fineprint">You'll also hear from me occasionally. Unsubscribe anytime.</p>
+        <div class="reg-success" hidden>
+            <p class="hand-note" style="font-size: 27px; display: inline-block; transform: rotate(-1.5deg); margin-bottom: 10px;">you're registered!</p>
+            <p style="color: var(--ink-soft); max-width: 32em;">The Zoom link is on its way to your inbox. If it hasn't arrived in a few minutes, check your spam folder.</p>
+        </div>
     </div>
 </section>
 
@@ -1230,6 +1234,31 @@
 </footer>
 
 <script>
+// Inline registration submit — keeps registrants on the page instead of
+// dumping them on MailerLite's raw JSON response
+const regForm = document.querySelector('.reg-form');
+regForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = regForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch(regForm.action, { method: 'POST', body: new FormData(regForm) })
+        .then(r => r.json())
+        .then(d => {
+            if (!d || !d.success) throw new Error('subscribe failed');
+            regForm.hidden = true;
+            document.querySelector('.clipout .lede').hidden = true;
+            document.querySelector('.clipout .fineprint').hidden = true;
+            document.querySelector('.reg-success').hidden = false;
+        })
+        .catch(() => {
+            // Fall back to a plain form post (opens MailerLite's response in a new tab)
+            btn.disabled = false;
+            btn.textContent = "Register — It's Free";
+            regForm.submit();
+        });
+});
+
 // Scroll reveal
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealEls = document.querySelectorAll('.reveal');
