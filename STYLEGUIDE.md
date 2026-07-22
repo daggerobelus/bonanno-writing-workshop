@@ -128,7 +128,8 @@ https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,
 - Facts that must stay accurate: rates ($150/$180 per session; intensive $1,400/$2,000;
   async review $75/$110/$100/$150), package rules (billed upfront; free rescheduling
   within the package period — 6 weeks monthly, 20 weeks semester; semester adds 4 async
-  essay reviews), payment methods, the guarantee footnotes.
+  essay reviews), payment methods, the Intensive goal lines (Common App essay;
+  Common App essay + up to 2 supplemental essays) and the deposit footnote.
 - Newsletters: monthly "Advice from the Workshop"; issues live at
   `/writing-tips/issue-NN.html` and follow the issue template (see issue-01 for the
   canonical structure; 02 and 03 for the callback and spectrum variants).
