@@ -674,181 +674,6 @@
             color: var(--pencil);
         }
 
-        /* ── Intensive ── */
-        .intensive-band {
-            background: var(--paper-deep);
-            border-top: 1px solid var(--rule);
-            border-bottom: 1px solid var(--rule);
-            padding: 96px 0 90px;
-            margin-top: 90px;
-            position: relative;
-        }
-
-        .stamp {
-            position: absolute;
-            top: 54px;
-            right: 40px;
-            font-family: var(--mono);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--pencil);
-            border: 2px solid var(--pencil-soft);
-            border-radius: 3px;
-            padding: 8px 14px;
-            transform: rotate(6deg);
-            opacity: 0.85;
-            background: transparent;
-        }
-
-        .intensive-intro {
-            max-width: 40em;
-            color: var(--ink-soft);
-            margin: -16px 0 20px;
-        }
-
-        .intensive-meta { margin: 6px 0 30px; }
-
-        .tier-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 0;
-            border: 1px solid var(--rule);
-            background: var(--paper-card);
-            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 12px 30px rgba(38,33,23,0.09);
-            margin: 44px 0 26px;
-        }
-
-        .tier { padding: 42px 44px 38px; }
-
-        .tier + .tier { border-left: 1px solid var(--rule); }
-
-        .tier h3 {
-            font-family: var(--serif);
-            font-size: 24px;
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-
-        .tier-price {
-            font-family: var(--serif);
-            font-size: 44px;
-            font-weight: 500;
-            color: var(--pencil);
-            margin: 10px 0 20px;
-        }
-
-        .tier ul { list-style: none; }
-
-        .tier li {
-            position: relative;
-            padding: 5px 0 5px 26px;
-            font-size: 16px;
-            line-height: 1.55;
-        }
-
-        .tier li::before {
-            content: '—';
-            position: absolute;
-            left: 0;
-            color: var(--pencil);
-        }
-
-        .tier li.guarantee {
-            margin-top: 10px;
-            font-weight: 500;
-        }
-
-        .tier li.guarantee em {
-            font-style: normal;
-            background-image: linear-gradient(to right, var(--pencil-soft), var(--pencil-soft));
-            background-repeat: no-repeat;
-            background-size: 100% 2px;
-            background-position: 0 96%;
-        }
-
-        .intensive-cta-row {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .footnotes {
-            font-size: 13.5px;
-            color: var(--ink-faint);
-            line-height: 1.6;
-            font-family: var(--mono);
-            max-width: 46em;
-        }
-
-        .worked-with {
-            margin-top: 26px;
-            font-size: 16px;
-            color: var(--ink-soft);
-            max-width: 38em;
-        }
-
-        /* ── Other rates (quiet) ── */
-        .rates { padding-top: 84px; padding-bottom: 70px; }
-
-        .rates-note { color: var(--ink-soft); max-width: 36em; margin: -18px 0 40px; }
-
-        .menu-block { max-width: 640px; }
-
-        .menu-line {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            padding: 13px 0;
-            border-bottom: 1px solid var(--rule);
-            text-decoration: none;
-            transition: background 0.15s;
-        }
-
-        .menu-line:hover { background: rgba(168, 60, 40, 0.05); }
-
-        .menu-line .m-name {
-            font-family: var(--body);
-            font-weight: 500;
-            font-size: 17px;
-            white-space: nowrap;
-        }
-
-        .menu-line .m-turn {
-            font-family: var(--mono);
-            font-size: 13px;
-            color: var(--ink-faint);
-            white-space: nowrap;
-        }
-
-        .menu-line .m-dots {
-            flex: 1;
-            border-bottom: 2px dotted rgba(38, 33, 23, 0.28);
-            transform: translateY(-4px);
-        }
-
-        .menu-line .m-price {
-            font-family: var(--serif);
-            font-size: 22px;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        .menu-line .m-arrow {
-            color: var(--pencil);
-            font-size: 16px;
-            transition: transform 0.15s;
-        }
-
-        .menu-line:hover .m-arrow { transform: translateX(3px); }
-
-        .rates .hand-note { display: inline-block; margin-top: 26px; transform: rotate(-1.2deg); }
-
-        .rates .type-meta { display: block; margin-top: 10px; }
-
         /* ── Calendly fallback ── */
         .consult-section { padding-top: 0; padding-bottom: 90px; }
 
@@ -941,14 +766,10 @@
 
             .clipout { padding: 44px 32px 40px; }
 
-            .stamp { position: static; display: inline-block; margin-bottom: 24px; }
         }
 
         @media (max-width: 760px) {
             .section-head h2 { font-size: 28px; }
-
-            .tier { padding: 32px 26px; }
-            .tier + .tier { border-left: none; border-top: 1px solid var(--rule); }
 
             blockquote.pull p { font-size: 20px; }
 
@@ -1098,71 +919,11 @@
     </div>
 </section>
 
-<!-- ── Intensive ── -->
-<div class="intensive-band torn" id="intensive" style="margin-top: 0;">
-    <section class="ms">
-        <span class="stamp">Limited spots available</span>
-        <div class="section-head reveal">
-            <span class="section-no">§ 3</span>
-            <h2>College Essay Intensive</h2>
-        </div>
-        <p class="type-meta intensive-meta reveal">Accepting reservations — available August – January 15</p>
-        <p class="intensive-intro reveal">A private writing class for your student. Every student moves through a structured program and leaves with a finished, submission-ready essay.</p>
-
-        <div class="tier-grid reveal">
-            <div class="tier">
-                <h3>Common App Bootcamp</h3>
-                <div class="tier-price">$1,400</div>
-                <ul>
-                    <li>Structured 5-session program</li>
-                    <li>Written feedback on up to 5 drafts — included</li>
-                    <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
-                    <li class="guarantee">The Goal: <em>Your Common App essay</em></li>
-                </ul>
-            </div>
-            <div class="tier">
-                <h3>Full Application Workshop</h3>
-                <div class="tier-price">$2,000</div>
-                <ul>
-                    <li>Structured 7-session program</li>
-                    <li>Written feedback on up to 8 drafts — included</li>
-                    <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
-                    <li class="guarantee">The Goal: <em>Your Common App essay and up to 2 supplemental essays</em></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="intensive-cta-row reveal">
-            <a href="https://bonannoworkshop.com/#contact" class="btn btn-pencil">Reserve Your Spot</a>
-            <span class="hand-note" style="transform: rotate(-1.5deg);">deposit holds your spot †</span>
-        </div>
-
-        <p class="worked-with reveal">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
-
-        <p class="footnotes reveal" style="margin-top: 18px;">† Reservations are confirmed with a $300 non-refundable deposit, invoiced after we talk. Remaining balance due before your first session.</p>
-    </section>
-</div>
-
-<!-- ── Other rates (quiet) ── -->
-<section class="rates ms">
-    <div class="section-head reveal">
-        <span class="section-no">§ 4</span>
-        <h2>Prefer session-by-session?</h2>
-    </div>
-    <p class="rates-note reveal">Not every family wants the full program. I also work with students one session at a time.</p>
-    <div class="menu-block reveal">
-        <a class="menu-line" href="https://bonannoworkshop.com/#services"><span class="m-name">Application Essays</span><span class="m-turn">(per session)</span><span class="m-dots"></span><span class="m-price">$180</span><span class="m-arrow">→</span></a>
-        <a class="menu-line" href="https://bonannoworkshop.com/#services"><span class="m-name">Academic Tutoring</span><span class="m-turn">(per session)</span><span class="m-dots"></span><span class="m-price">$150</span><span class="m-arrow">→</span></a>
-    </div>
-    <span class="hand-note reveal">booking monthly (4 sessions) saves 10% — a full semester (16) saves 20%</span>
-    <span class="type-meta reveal">Packages are billed upfront and include free rescheduling within the package period (6 weeks monthly · 20 weeks semester) · semester packages also include 4 async essay reviews</span>
-</section>
-
 <!-- ── Testimonials ── -->
 <div class="quotes-band torn">
     <section class="ms">
         <div class="section-head reveal">
-            <span class="section-no">§ 5</span>
+            <span class="section-no">§ 3</span>
             <h2>What people say</h2>
         </div>
         <div class="quote-stack reveal">
