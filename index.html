@@ -163,6 +163,7 @@
             font-weight: 400;
             letter-spacing: 0.14em;
             text-transform: uppercase;
+            white-space: nowrap;
             text-decoration: none;
             color: var(--ink-soft);
             padding-bottom: 3px;
@@ -840,6 +841,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 34px;
             margin-bottom: 44px;
+            max-width: 560px; /* a lone sheet shouldn't stretch the full container */
         }
 
         .rate-sheet {
@@ -1519,29 +1521,9 @@
         }
 
         /* ── Responsive ── */
-        @media (max-width: 960px) {
-            .ms { padding: 0 28px; }
-
-            .hero { padding-top: 64px; padding-bottom: 80px; }
-            .hero-grid { grid-template-columns: 1fr; gap: 64px; }
-            .hero-sheet { max-width: 380px; margin: 0 auto; }
-
-            .about-grid { grid-template-columns: 1fr; gap: 54px; }
-            .polaroid { max-width: 280px; margin: 0 auto; }
-
-            .clipout { grid-template-columns: 1fr; padding: 44px 32px; gap: 48px; }
-
-            .review-grid { grid-template-columns: 1fr; gap: 56px; }
-
-            .contact-grid { grid-template-columns: 1fr; gap: 56px; }
-            .paper-form { padding: 36px 28px; transform: none; }
-
-            .stamp { position: static; display: inline-block; margin-bottom: 24px; }
-        }
-
-        @media (max-width: 760px) {
-            nav { padding: 14px 22px; }
-
+        /* The inline nav can't fit the full link set below ~1100px; collapse to the
+           Menu dropdown early rather than letting labels wrap. */
+        @media (max-width: 1100px) {
             .nav-toggle { display: block; }
 
             .nav-links {
@@ -1565,6 +1547,30 @@
             .nav-links a { display: block; padding: 14px 0; border-bottom: none; }
 
             nav { position: relative; }
+        }
+
+        @media (max-width: 960px) {
+            .ms { padding: 0 28px; }
+
+            .hero { padding-top: 64px; padding-bottom: 80px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 64px; }
+            .hero-sheet { max-width: 380px; margin: 0 auto; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 54px; }
+            .polaroid { max-width: 280px; margin: 0 auto; }
+
+            .clipout { grid-template-columns: 1fr; padding: 44px 32px; gap: 48px; }
+
+            .review-grid { grid-template-columns: 1fr; gap: 56px; }
+
+            .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+            .paper-form { padding: 36px 28px; transform: none; }
+
+            .stamp { position: static; display: inline-block; margin-bottom: 24px; }
+        }
+
+        @media (max-width: 760px) {
+            nav { padding: 14px 22px; }
 
             .section-head h2 { font-size: 28px; }
 
@@ -1589,7 +1595,7 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Tutoring</a></li>
-            <li><a href="#intensive">Intensive</a></li>
+            <li><a href="#intensive">Admissions Essays</a></li>
             <li><a href="#essay-review">Essay Review</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="/writing-tips">Writing Tips →</a></li>
@@ -1739,7 +1745,7 @@
         <h2>Tutoring services &amp; rates</h2>
     </div>
     <div class="avail-note reveal">
-        <span class="hand-note">now accepting new students — summer 2026</span>
+        <span class="hand-note">now accepting new students — fall 2026</span>
     </div>
     <p class="reveal" style="color: var(--ink-soft); max-width: 36em; margin: -26px 0 44px;">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
 
@@ -1753,18 +1759,6 @@
                 <li>Essay brainstorming through final draft</li>
                 <li>On-demand writing exercises in session</li>
                 <li>High school through graduate level</li>
-            </ul>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-        </article>
-        <article class="rate-sheet reveal">
-            <span class="type-label">Application Essays</span>
-            <div class="rate-price"><sup>$</sup>180</div>
-            <span class="type-meta rate-unit">per session</span>
-            <ul class="rate-list">
-                <li>Common App, supplements &amp; scholarships</li>
-                <li>Statements of purpose for grad school</li>
-                <li>Brainstorming through final polish</li>
-                <li>Dedicated, structured timeline</li>
             </ul>
             <a href="#contact" class="btn btn-pencil">Get in Touch</a>
         </article>
