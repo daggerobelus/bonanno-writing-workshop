@@ -836,12 +836,20 @@
 
         .avail-note .hand-note { transform: rotate(-1.5deg); }
 
+        /* Lone sheet + packages note side by side; the note fills what would
+           otherwise be trapped white space to the card's right. */
+        .rate-row {
+            display: grid;
+            grid-template-columns: minmax(300px, 560px) 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-bottom: 44px;
+        }
+
         .rate-sheets {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 34px;
-            margin-bottom: 44px;
-            max-width: 560px; /* a lone sheet shouldn't stretch the full container */
         }
 
         .rate-sheet {
@@ -900,11 +908,10 @@
         }
 
         .rate-note {
-            text-align: center;
-            margin: -12px 0 48px;
+            max-width: 24em;
         }
 
-        .rate-note .hand-note { display: inline-block; transform: rotate(-1.2deg); }
+        .rate-note .hand-note { display: inline-block; transform: rotate(-1.2deg); font-size: 24px; }
 
         /* ── Consult banner ── */
         .consult {
@@ -1561,6 +1568,8 @@
 
             .clipout { grid-template-columns: 1fr; padding: 44px 32px; gap: 48px; }
 
+            .rate-row { grid-template-columns: 1fr; gap: 40px; }
+
             .review-grid { grid-template-columns: 1fr; gap: 56px; }
 
             .contact-grid { grid-template-columns: 1fr; gap: 56px; }
@@ -1749,24 +1758,26 @@
     </div>
     <p class="reveal" style="color: var(--ink-soft); max-width: 36em; margin: -26px 0 44px;">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
 
-    <div class="rate-sheets">
-        <article class="rate-sheet reveal">
-            <span class="type-label">Academic Tutoring</span>
-            <div class="rate-price"><sup>$</sup>150</div>
-            <span class="type-meta rate-unit">per session</span>
-            <ul class="rate-list">
-                <li>Reading &amp; writing support for any course</li>
-                <li>Essay brainstorming through final draft</li>
-                <li>On-demand writing exercises in session</li>
-                <li>High school through graduate level</li>
-            </ul>
-            <a href="#contact" class="btn btn-pencil">Get in Touch</a>
-        </article>
-    </div>
+    <div class="rate-row">
+        <div class="rate-sheets">
+            <article class="rate-sheet reveal">
+                <span class="type-label">Academic Tutoring</span>
+                <div class="rate-price"><sup>$</sup>150</div>
+                <span class="type-meta rate-unit">per session</span>
+                <ul class="rate-list">
+                    <li>Reading &amp; writing support for any course</li>
+                    <li>Essay brainstorming through final draft</li>
+                    <li>On-demand writing exercises in session</li>
+                    <li>High school through graduate level</li>
+                </ul>
+                <a href="#contact" class="btn btn-pencil">Get in Touch</a>
+            </article>
+        </div>
 
-    <div class="rate-note reveal">
-        <span class="hand-note">booking monthly (4 sessions) saves 10% — a full semester (16) saves 20%</span>
-        <p class="type-meta" style="margin-top: 10px;">Packages are billed upfront and include free rescheduling within the package period (6 weeks monthly · 20 weeks semester) · semester packages also include 4 async essay reviews</p>
+        <aside class="rate-note reveal">
+            <span class="hand-note">booking monthly (4 sessions) saves 10% — a full semester (16) saves 20%</span>
+            <p class="type-meta" style="margin-top: 14px;">Packages are billed upfront and include free rescheduling within the package period (6 weeks monthly · 20 weeks semester) · semester packages also include 4 async essay reviews</p>
+        </aside>
     </div>
 
     <div class="consult reveal">
