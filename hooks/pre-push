@@ -1,0 +1,15 @@
+#!/bin/sh
+# Pre-push guard for bonannoworkshop.com.
+# The essay-review pricing rows must keep their four Stripe checkout links —
+# the July 2026 redesign silently replaced them with #contact placeholders
+# and the break went unnoticed for six weeks. Fail the push if they vanish.
+cd "$(git rev-parse --show-toplevel)" || exit 1
+count=$(grep -c 'href="https://buy\.stripe\.com/' index.html)
+if [ "$count" -lt 4 ]; then
+  echo "PUSH BLOCKED: index.html has $count buy.stripe.com checkout link(s); expected 4."
+  echo "The essay-review pricing rows have likely lost their Stripe hrefs."
+  echo "Restore them (see commit dce7bf7) or, if the change is intentional,"
+  echo "update hooks/pre-push to match the new expected count."
+  exit 1
+fi
+exit 0
