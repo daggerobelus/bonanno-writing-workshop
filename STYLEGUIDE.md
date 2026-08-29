@@ -127,9 +127,11 @@ https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,
   add teaching suggestions.
 - Facts that must stay accurate: rates ($150/session Academic Tutoring, $180/session
   Application Essays — the $180 card was retired Aug 23 2026 and restored Aug 29 2026;
-  async review $75/$110/$100/$150), package rules (billed upfront; free rescheduling
-  within the package period — 6 weeks monthly, 20 weeks semester; semester adds 4 async
-  essay reviews), and payment methods. The College Essay Intensive ($1,400/$2,000 +
+  async review $75/$110/$100/$150), package rules (one package as of Aug 29 2026: 8
+  sessions booked in advance saves 20% and includes 2 async essay reviews; billed
+  upfront; free rescheduling within the 12-week package period — expiry is N+4 weeks,
+  matching the bww-manager app; additional async reviews $50 each), and payment
+  methods. The College Essay Intensive ($1,400/$2,000 +
   deposit footnote) is off the site as of Aug 29 2026 — parked verbatim in
   `snippets/intensive-section.html` for easy restore; its CSS remains in index.html.
 - Newsletters: monthly "Advice from the Workshop"; issues live at
