@@ -836,20 +836,11 @@
 
         .avail-note .hand-note { transform: rotate(-1.5deg); }
 
-        /* Lone sheet + packages note side by side; the note fills what would
-           otherwise be trapped white space to the card's right. */
-        .rate-row {
-            display: grid;
-            grid-template-columns: minmax(300px, 560px) 1fr;
-            gap: 64px;
-            align-items: center;
-            margin-bottom: 44px;
-        }
-
         .rate-sheets {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 34px;
+            margin-bottom: 44px;
         }
 
         .rate-sheet {
@@ -908,10 +899,11 @@
         }
 
         .rate-note {
-            max-width: 24em;
+            text-align: center;
+            margin: -12px 0 48px;
         }
 
-        .rate-note .hand-note { display: inline-block; transform: rotate(-1.2deg); font-size: 24px; }
+        .rate-note .hand-note { display: inline-block; transform: rotate(-1.2deg); }
 
         /* ── Consult banner ── */
         .consult {
@@ -934,7 +926,7 @@
 
         .consult p { color: var(--ink-soft); max-width: 34em; font-size: 16.5px; }
 
-        /* ── Intensive ── */
+        /* ── Intensive (section parked in snippets/intensive-section.html; CSS kept for easy restore) ── */
         .intensive-band {
             background: var(--paper-deep);
             border-top: 1px solid var(--rule);
@@ -1568,8 +1560,6 @@
 
             .clipout { grid-template-columns: 1fr; padding: 44px 32px; gap: 48px; }
 
-            .rate-row { grid-template-columns: 1fr; gap: 40px; }
-
             .review-grid { grid-template-columns: 1fr; gap: 56px; }
 
             .contact-grid { grid-template-columns: 1fr; gap: 56px; }
@@ -1604,7 +1594,6 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Tutoring</a></li>
-            <li><a href="#intensive">Admissions Essays</a></li>
             <li><a href="#essay-review">Essay Review</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="/writing-tips">Writing Tips →</a></li>
@@ -1758,26 +1747,36 @@
     </div>
     <p class="reveal" style="color: var(--ink-soft); max-width: 36em; margin: -26px 0 44px;">Transparent pricing. All sessions are one-on-one over Zoom or in person in NYC.</p>
 
-    <div class="rate-row">
-        <div class="rate-sheets">
-            <article class="rate-sheet reveal">
-                <span class="type-label">Academic Tutoring</span>
-                <div class="rate-price"><sup>$</sup>150</div>
-                <span class="type-meta rate-unit">per session</span>
-                <ul class="rate-list">
-                    <li>Reading &amp; writing support for any course</li>
-                    <li>Essay brainstorming through final draft</li>
-                    <li>On-demand writing exercises in session</li>
-                    <li>High school through graduate level</li>
-                </ul>
-                <a href="#contact" class="btn btn-pencil">Get in Touch</a>
-            </article>
-        </div>
+    <div class="rate-sheets">
+        <article class="rate-sheet reveal">
+            <span class="type-label">Academic Tutoring</span>
+            <div class="rate-price"><sup>$</sup>150</div>
+            <span class="type-meta rate-unit">per session</span>
+            <ul class="rate-list">
+                <li>Reading &amp; writing support for any course</li>
+                <li>Essay brainstorming through final draft</li>
+                <li>On-demand writing exercises in session</li>
+                <li>High school through graduate level</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </article>
+        <article class="rate-sheet reveal">
+            <span class="type-label">Application Essays</span>
+            <div class="rate-price"><sup>$</sup>180</div>
+            <span class="type-meta rate-unit">per session</span>
+            <ul class="rate-list">
+                <li>Common App, supplements &amp; scholarships</li>
+                <li>Statements of purpose for grad school</li>
+                <li>Brainstorming through final polish</li>
+                <li>Dedicated, structured timeline</li>
+            </ul>
+            <a href="#contact" class="btn btn-pencil">Get in Touch</a>
+        </article>
+    </div>
 
-        <aside class="rate-note reveal">
-            <span class="hand-note">booking monthly (4 sessions) saves 10% — a full semester (16) saves 20%</span>
-            <p class="type-meta" style="margin-top: 14px;">Packages are billed upfront and include free rescheduling within the package period (6 weeks monthly · 20 weeks semester) · semester packages also include 4 async essay reviews</p>
-        </aside>
+    <div class="rate-note reveal">
+        <span class="hand-note">booking monthly (4 sessions) saves 10% — a full semester (16) saves 20%</span>
+        <p class="type-meta" style="margin-top: 10px;">Packages are billed upfront and include free rescheduling within the package period (6 weeks monthly · 20 weeks semester) · semester packages also include 4 async essay reviews</p>
     </div>
 
     <div class="consult reveal">
@@ -1789,56 +1788,13 @@
     </div>
 </section>
 
-<!-- ── Intensive ── -->
-<div class="intensive-band torn" id="intensive">
-    <section class="ms">
-        <span class="stamp">Limited spots available</span>
-        <div class="section-head reveal">
-            <span class="section-no">§ 3</span>
-            <h2>College Essay Intensive</h2>
-        </div>
-        <p class="type-meta intensive-meta reveal">Accepting reservations — available August – January 15</p>
-        <p class="intensive-intro reveal">A private writing class for your student. Every student moves through a structured program and leaves with a finished, submission-ready essay.</p>
-
-        <div class="tier-grid reveal">
-            <div class="tier">
-                <h3>Common App Bootcamp</h3>
-                <div class="tier-price">$1,400</div>
-                <ul>
-                    <li>Structured 5-session program</li>
-                    <li>Written feedback on up to 5 drafts — included</li>
-                    <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
-                    <li class="guarantee">The Goal: <em>Your Common App essay</em></li>
-                </ul>
-            </div>
-            <div class="tier">
-                <h3>Full Application Workshop</h3>
-                <div class="tier-price">$2,000</div>
-                <ul>
-                    <li>Structured 7-session program</li>
-                    <li>Written feedback on up to 8 drafts — included</li>
-                    <li>Extra draft reviews at $50 each (vs. $75 standalone)</li>
-                    <li class="guarantee">The Goal: <em>Your Common App essay and up to 2 supplemental essays</em></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="intensive-cta-row reveal">
-            <a href="#contact" class="btn btn-pencil">Reserve Your Spot</a>
-            <span class="hand-note" style="transform: rotate(-1.5deg);">deposit holds your spot †</span>
-        </div>
-
-        <p class="worked-with reveal">I've worked with students from <strong>UChicago Lab School</strong> and <strong>Chicago Public Schools' selective enrollment programs</strong> on college application essays.</p>
-
-        <p class="footnotes reveal" style="margin-top: 18px;">† Reservations are confirmed with a $300 non-refundable deposit, invoiced after we talk. Remaining balance due before your first session.</p>
-    </section>
-</div>
+<!-- College Essay Intensive section parked in snippets/intensive-section.html (Aug 2026) — paste back here to restore. -->
 
 <!-- ── Async review ── -->
 <section class="review ms" id="essay-review">
     <span class="proofmark proofmark-hand" aria-hidden="true" style="top: 20px; right: 6%; font-size: 280px;">^</span>
     <div class="section-head reveal">
-        <span class="section-no">§ 4</span>
+        <span class="section-no">§ 3</span>
         <h2>Async essay review</h2>
     </div>
     <span class="hand-note review-open-note reveal" style="transform: rotate(-1.5deg);">currently open — no appointment needed</span>
@@ -1881,7 +1837,7 @@
 <div class="quotes-band torn">
     <section class="ms">
         <div class="section-head reveal">
-            <span class="section-no">§ 5</span>
+            <span class="section-no">§ 4</span>
             <h2>What people say</h2>
         </div>
         <div class="quote-carousel reveal">
@@ -1916,7 +1872,7 @@
 <section class="faq ms" id="faq">
     <span class="proofmark proofmark-hand" aria-hidden="true" style="top: 50px; right: 3%; font-size: 110px; transform: rotate(-6deg);">stet.</span>
     <div class="section-head reveal">
-        <span class="section-no">§ 6</span>
+        <span class="section-no">§ 5</span>
         <h2>Questions, answered</h2>
     </div>
     <div class="faq-list reveal">
@@ -1972,7 +1928,7 @@
 <!-- ── Contact ── -->
 <section class="contact ms" id="contact">
     <div class="section-head reveal">
-        <span class="section-no">§ 7</span>
+        <span class="section-no">§ 6</span>
         <h2>Get in touch</h2>
     </div>
     <div class="contact-grid">

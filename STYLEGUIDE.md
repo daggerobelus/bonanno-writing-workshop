@@ -125,12 +125,13 @@ https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,
   newsletter issues, the "Imposter Claims" deck) — never invented. When in doubt, use
   placeholder text and ask her to supply wording. She's an experienced teacher; do not
   add teaching suggestions.
-- Facts that must stay accurate: rates ($150 per session — the $180/session Application
-  Essays card was retired Aug 2026, admissions work is intensives-only; intensive $1,400/$2,000;
+- Facts that must stay accurate: rates ($150/session Academic Tutoring, $180/session
+  Application Essays — the $180 card was retired Aug 23 2026 and restored Aug 29 2026;
   async review $75/$110/$100/$150), package rules (billed upfront; free rescheduling
   within the package period — 6 weeks monthly, 20 weeks semester; semester adds 4 async
-  essay reviews), payment methods, the Intensive goal lines (Common App essay;
-  Common App essay + up to 2 supplemental essays) and the deposit footnote.
+  essay reviews), and payment methods. The College Essay Intensive ($1,400/$2,000 +
+  deposit footnote) is off the site as of Aug 29 2026 — parked verbatim in
+  `snippets/intensive-section.html` for easy restore; its CSS remains in index.html.
 - Newsletters: monthly "Advice from the Workshop"; issues live at
   `/writing-tips/issue-NN.html` and follow the issue template (see issue-01 for the
   canonical structure; 02 and 03 for the callback and spectrum variants).
