@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Packages — Bonanno Writing Workshop</title>
+    <meta name="description" content="Custom tutoring packages at Bonanno Writing Workshop: build a package of sessions and async essay reviews and see the total.">
+    <meta name="robots" content="noindex">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Custom Packages — Bonanno Writing Workshop">
+    <meta property="og:description" content="Build a package of sessions and async essay reviews and see the total.">
+    <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
+    <meta property="og:url" content="https://bonannoworkshop.com/packages">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL55FCMMMT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KL55FCMMMT');
+    </script>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --paper: #faf5ea;
+            --paper-deep: #f2ead7;
+            --paper-card: #fffdf6;
+            --ink: #262117;
+            --ink-soft: #5c5443;
+            --ink-faint: #8a8171;
+            --pencil: #a83c28;
+            --pencil-soft: rgba(168, 60, 40, 0.55);
+            --pencil-faint: rgba(168, 60, 40, 0.22);
+            --rule: rgba(38, 33, 23, 0.14);
+            --serif: 'Fraunces', Georgia, serif;
+            --body: 'Newsreader', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --mono: 'Courier Prime', 'Courier New', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--body);
+            font-size: 17.5px;
+            line-height: 1.75;
+            color: var(--ink);
+            background: #e9e2d2;
+            padding: 40px 16px 56px;
+            overflow-x: clip;
+            text-wrap: pretty;
+        }
+
+        /* ── The sheet on the desk ── */
+        .sheet {
+            position: relative;
+            max-width: 780px;
+            margin: 0 auto;
+            background-color: var(--paper);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+            border: 1px solid var(--rule);
+            box-shadow: 0 2px 4px rgba(38,33,23,0.08), 0 18px 44px rgba(38,33,23,0.14);
+            padding: 0 0 44px;
+        }
+
+        /* ── Masthead ── */
+        .masthead {
+            padding: 44px 56px 0;
+            text-align: center;
+        }
+
+        .brand {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--ink);
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+
+        .brand em { font-style: italic; font-weight: 500; color: var(--pencil); }
+
+        .rules { border-top: 1px solid var(--ink); margin-bottom: 4px; }
+        .rules2 { border-top: 2px solid var(--pencil-faint); margin-bottom: 30px; }
+
+        .type-label {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--pencil);
+        }
+
+        .type-meta {
+            font-family: var(--mono);
+            font-size: 13px;
+            letter-spacing: 0.06em;
+            color: var(--ink-soft);
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.15;
+            margin: 12px 0 0;
+        }
+
+        h1 .squiggle { position: relative; white-space: nowrap; }
+
+        h1 .squiggle svg {
+            position: absolute;
+            left: -2%;
+            bottom: -0.12em;
+            width: 104%;
+            height: 0.24em;
+            overflow: visible;
+        }
+
+        h1 .squiggle path {
+            fill: none;
+            stroke: var(--pencil);
+            stroke-width: 2.4;
+            stroke-linecap: round;
+        }
+
+        .section { padding: 36px 56px 0; }
+
+        .intro p { color: var(--ink-soft); }
+
+        /* ── Calculator ── */
+        .calc {
+            margin-top: 0;
+            background: var(--paper-card);
+            border: 1px solid var(--rule);
+            box-shadow: 0 1px 2px rgba(38,33,23,0.06), 0 10px 26px rgba(38,33,23,0.09);
+            transform: rotate(-0.4deg);
+        }
+
+        .calc-inner { transform: rotate(0.4deg); padding: 36px 40px 34px; }
+
+        .calc-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--rule);
+            position: relative;
+        }
+
+        .calc-head::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 64px; height: 3px;
+            background: var(--pencil-soft);
+        }
+
+        .calc-head .type-label { color: var(--ink-soft); letter-spacing: 0.18em; }
+
+        /* Service toggle */
+        .seg {
+            display: flex;
+            border: 1px solid var(--ink-soft);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .seg input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+        .seg label {
+            font-family: var(--mono);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 10px 16px;
+            cursor: pointer;
+            color: var(--ink);
+            transition: background 0.15s, color 0.15s;
+            user-select: none;
+        }
+
+        .seg label + input + label { border-left: 1px solid var(--ink-soft); }
+
+        .seg input:checked + label { background: var(--ink); color: var(--paper); }
+        .seg input:focus-visible + label { outline: 2px solid var(--pencil); outline-offset: -2px; }
+
+        /* Controls */
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px 32px;
+            margin-bottom: 30px;
+        }
+
+        .field .type-label { display: block; margin-bottom: 10px; }
+
+        .stepper {
+            display: flex;
+            align-items: stretch;
+            border-bottom: 1.5px solid var(--ink-soft);
+        }
+
+        .stepper:focus-within { border-bottom-color: var(--pencil); }
+
+        .stepper button {
+            font-family: var(--mono);
+            font-size: 20px;
+            font-weight: 700;
+            width: 40px;
+            background: transparent;
+            border: none;
+            color: var(--pencil);
+            cursor: pointer;
+            line-height: 1;
+            transition: background 0.15s;
+        }
+
+        .stepper button:hover { background: rgba(168, 60, 40, 0.07); }
+        .stepper button:disabled { color: var(--ink-faint); cursor: default; background: transparent; }
+
+        .stepper input {
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 500;
+            color: var(--ink);
+            background: transparent;
+            border: none;
+            padding: 6px 0 4px;
+            outline: none;
+            -moz-appearance: textfield;
+        }
+
+        .stepper input::-webkit-outer-spin-button,
+        .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+        input[type="date"] {
+            width: 100%;
+            font-family: var(--mono);
+            font-size: 15px;
+            color: var(--ink);
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid var(--ink-soft);
+            padding: 13px 4px 11px;
+            outline: none;
+            border-radius: 0;
+            -webkit-appearance: none;
+        }
+
+        input[type="date"]:focus { border-bottom-color: var(--pencil); }
+        input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.55; }
+
+        /* Ledger */
+        .ledger { list-style: none; }
+
+        .ledger li {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 11px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .ledger li[hidden] { display: none; }
+
+        .l-name { font-weight: 500; font-size: 17px; }
+
+        .l-note {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--ink-faint);
+            white-space: nowrap;
+        }
+
+        .l-dots {
+            flex: 1;
+            border-bottom: 2px dotted rgba(38, 33, 23, 0.28);
+            transform: translateY(-4px);
+            min-width: 24px;
+        }
+
+        .l-price {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 500;
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .ledger .total {
+            border-bottom: none;
+            border-top: 1px solid var(--ink);
+            margin-top: 4px;
+            padding-top: 16px;
+        }
+
+        .ledger .total .l-name {
+            font-family: var(--mono);
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .ledger .total .l-price { font-size: 40px; line-height: 1; }
+        .ledger .total .l-price sup { font-size: 20px; font-weight: 400; vertical-align: 0.8em; margin-right: 1px; }
+
+        .savings {
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px dashed var(--pencil-soft);
+        }
+
+        .ledger-save .save-total { border-bottom: none; padding: 4px 0 10px; }
+        .ledger-save .save-total .l-name { font-weight: 500; }
+        .ledger-save .save-total .l-price { font-size: 26px; color: var(--pencil); }
+
+        .savings .hand-note { margin-top: 6px; }
+
+        .hand-note {
+            font-family: var(--hand);
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 1.25;
+            color: var(--pencil);
+            display: inline-block;
+            transform: rotate(-1.5deg);
+        }
+
+        .period {
+            margin-top: 26px;
+            padding: 16px 20px;
+            background: var(--paper-deep);
+            border-left: 3px solid var(--pencil-soft);
+        }
+
+        .period .type-label { display: block; margin-bottom: 4px; color: var(--ink-soft); letter-spacing: 0.18em; }
+        .period p { font-size: 16.5px; }
+        .period strong { font-weight: 500; }
+
+        /* ── Fine print & contact ── */
+        .fineprint {
+            margin-top: 34px;
+            padding-top: 22px;
+            border-top: 1px solid var(--rule);
+            font-size: 14.5px;
+            color: var(--ink-faint);
+            line-height: 1.7;
+        }
+
+        .fineprint p + p { margin-top: 6px; }
+
+        .contact {
+            margin-top: 30px;
+            display: flex;
+            align-items: baseline;
+            gap: 12px 20px;
+            flex-wrap: wrap;
+        }
+
+        .link-under {
+            font-family: var(--mono);
+            font-size: 13.5px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 2px solid var(--pencil-soft);
+            padding-bottom: 3px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .link-under:hover { color: var(--pencil); border-bottom-color: var(--pencil); }
+
+        footer {
+            text-align: center;
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            color: var(--ink-faint);
+            padding: 26px 20px 0;
+        }
+
+        @media (max-width: 720px) {
+            .controls { grid-template-columns: 1fr 1fr; }
+            .field-date { grid-column: 1 / -1; }
+        }
+
+        @media (max-width: 620px) {
+            body { padding: 18px 10px 40px; }
+            .masthead { padding: 34px 26px 0; }
+            .section { padding: 30px 26px 0; }
+            .calc-inner { padding: 28px 22px 26px; }
+            h1 { font-size: 31px; }
+            .ledger .total .l-price { font-size: 32px; }
+            .ledger li { flex-wrap: wrap; row-gap: 0; }
+            .ledger .l-note { order: 4; flex: 0 0 100%; white-space: normal; margin-top: -2px; }
+        }
+
+        @media (max-width: 420px) {
+            .controls { grid-template-columns: 1fr; }
+            .seg label { padding: 10px 12px; font-size: 11px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sheet">
+
+    <header class="masthead">
+        <a href="/" class="brand">Bonanno <em>Writing</em> Workshop</a>
+        <div class="rules"></div>
+        <div class="rules2"></div>
+        <span class="type-label">Custom Packages</span>
+        <h1>Build your <span class="squiggle">package<svg viewBox="0 0 300 14" aria-hidden="true"><path d="M3 9 C 40 3, 72 12, 112 7 S 190 3, 232 9 S 282 11, 297 6"/></svg></span></h1>
+    </header>
+
+    <section class="section intro">
+
+        <div class="calc" id="calc">
+            <div class="calc-inner">
+
+                <div class="calc-head">
+                    <span class="type-label">Package rate</span>
+                    <div class="seg" role="radiogroup" aria-label="Service">
+                        <input type="radio" name="service" id="svc-academic" value="academic" checked>
+                        <label for="svc-academic">Academic Tutoring</label>
+                        <input type="radio" name="service" id="svc-apps" value="apps">
+                        <label for="svc-apps">Application Essays</label>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="field">
+                        <label class="type-label" for="sessions">Sessions</label>
+                        <div class="stepper">
+                            <button type="button" data-step="sessions" data-dir="-1" aria-label="Fewer sessions">&minus;</button>
+                            <input type="number" id="sessions" min="8" max="60" step="1" value="8" inputmode="numeric" autocomplete="off">
+                            <button type="button" data-step="sessions" data-dir="1" aria-label="More sessions">+</button>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="type-label" for="reviews">Essay reviews</label>
+                        <div class="stepper">
+                            <button type="button" data-step="reviews" data-dir="-1" aria-label="Fewer essay reviews" disabled>&minus;</button>
+                            <input type="number" id="reviews" min="2" max="40" step="1" value="2" inputmode="numeric" autocomplete="off">
+                            <button type="button" data-step="reviews" data-dir="1" aria-label="More essay reviews">+</button>
+                        </div>
+                    </div>
+
+                    <div class="field field-date">
+                        <label class="type-label" for="start">First session</label>
+                        <input type="date" id="start" aria-label="First session date (optional)" aria-describedby="period-text" autocomplete="off">
+                    </div>
+                </div>
+
+                <ul class="ledger" aria-live="polite">
+                    <li>
+                        <span class="l-name" id="row-sessions-name">8 sessions</span>
+                        <span class="l-note" id="row-sessions-note">× $120</span>
+                        <span class="l-dots"></span>
+                        <span class="l-price" id="row-sessions-price">$960</span>
+                    </li>
+                    <li>
+                        <span class="l-name" id="row-included-name">2 async essay reviews</span>
+                        <span class="l-note" id="row-included-note">included · $150 value</span>
+                        <span class="l-dots"></span>
+                        <span class="l-price">$0</span>
+                    </li>
+                    <li id="row-extra" hidden>
+                        <span class="l-name" id="row-extra-name">1 additional essay review</span>
+                        <span class="l-note" id="row-extra-note">× $50</span>
+                        <span class="l-dots"></span>
+                        <span class="l-price" id="row-extra-price">$50</span>
+                    </li>
+                    <li class="total">
+                        <span class="l-name">Package total</span>
+                        <span class="l-dots"></span>
+                        <span class="l-price"><sup>$</sup><span id="total">960</span></span>
+                    </li>
+                </ul>
+
+                <div class="savings">
+                    <ul class="ledger ledger-save">
+                        <li class="save-total">
+                            <span class="l-name">Total savings</span>
+                            <span class="l-dots"></span>
+                            <span class="l-price" id="save-total-price">$390</span>
+                        </li>
+                    </ul>
+                    <span class="hand-note" id="savings-note">29% off compared to booking everything individually</span>
+                </div>
+
+                <div class="period">
+                    <span class="type-label">Package period</span>
+                    <p id="period-text"><strong>12 weeks</strong> to use the package, counted from your first session.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fineprint">
+            <p>Packages are billed upfront and include free rescheduling within the package period. Additional async essay reviews at $50 each.</p>
+            <p>Package clients pay via Zelle (914-960-4398), which I prefer, or Venmo (@bonannowriting), which I'm also happy to accept.</p>
+        </div>
+
+        <div class="contact">
+            <span class="type-label">Questions or ready to book</span>
+            <a class="link-under" href="mailto:sarah@bonannoworkshop.com">sarah@bonannoworkshop.com</a>
+        </div>
+    </section>
+
+</div>
+
+<footer>© 2026 Bonanno Writing Workshop · Brooklyn, N.Y.</footer>
+
+<script>
+(function () {
+    var RATES = {
+        academic: { pkg: 120, full: 150 },
+        apps:     { pkg: 144, full: 180 }
+    };
+    var BASE_SESSIONS = 8;
+    var BASE_REVIEWS = 2;
+    var SESSIONS_PER_REVIEW = 4;
+    var EXTRA_REVIEW = 50;
+    var FULL_REVIEW = 75;
+    var PERIOD_PAD_WEEKS = 4;
+
+    var $ = function (id) { return document.getElementById(id); };
+    var sessionsEl = $('sessions'), reviewsEl = $('reviews'), startEl = $('start');
+    var radios = document.querySelectorAll('input[name="service"]');
+
+    function money(n) { return '$' + n.toLocaleString('en-US'); }
+    function plural(n, word) { return n + ' ' + word + (n === 1 ? '' : 's'); }
+
+    function clamp(el) {
+        var min = +el.min, max = +el.max;
+        var v = parseInt(el.value, 10);
+        if (isNaN(v)) v = min;
+        v = Math.min(max, Math.max(min, v));
+        el.value = v;
+        return v;
+    }
+
+    function includedReviews(sessions) {
+        return BASE_REVIEWS + Math.floor((sessions - BASE_SESSIONS) / SESSIONS_PER_REVIEW);
+    }
+
+    function parseLocalDate(str) {
+        var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(str);
+        if (!m) return null;
+        var d = new Date(+m[1], +m[2] - 1, +m[3]);
+        return isNaN(d.getTime()) ? null : d;
+    }
+
+    function fmtDate(d) {
+        return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    }
+
+    function syncStepperButtons(el) {
+        var v = +el.value;
+        document.querySelectorAll('button[data-step="' + el.id + '"]').forEach(function (b) {
+            b.disabled = (b.dataset.dir === '-1' && v <= +el.min) || (b.dataset.dir === '1' && v >= +el.max);
+        });
+    }
+
+    // Reviews the family has deliberately added above the included count.
+    // Included reviews rise and fall with the session count; only this number bills at $50.
+    var extra = 0;
+
+    function update(fromReviews) {
+        var service = document.querySelector('input[name="service"]:checked').value;
+        var rate = RATES[service];
+        var sessions = clamp(sessionsEl);
+        var included = includedReviews(sessions);
+        reviewsEl.min = included;
+        if (fromReviews) {
+            extra = Math.max(0, clamp(reviewsEl) - included);
+        }
+        reviewsEl.value = included + extra;
+        var reviews = included + extra;
+
+        var sessionsCost = sessions * rate.pkg;
+        var extraCost = extra * EXTRA_REVIEW;
+        var total = sessionsCost + extraCost;
+        var savings = sessions * (rate.full - rate.pkg) + included * FULL_REVIEW + extra * (FULL_REVIEW - EXTRA_REVIEW);
+
+
+        $('row-sessions-name').textContent = plural(sessions, 'session');
+        $('row-sessions-note').textContent = '× ' + money(rate.pkg);
+        $('row-sessions-price').textContent = money(sessionsCost);
+
+        $('row-included-name').textContent = plural(included, 'async essay review');
+        $('row-included-note').textContent = 'included · ' + money(included * FULL_REVIEW) + ' value';
+
+        $('row-extra').hidden = extra === 0;
+        $('row-extra-name').textContent = plural(extra, 'additional essay review');
+        $('row-extra-note').textContent = '× ' + money(EXTRA_REVIEW);
+        $('row-extra-price').textContent = money(extraCost);
+
+        $('total').textContent = total.toLocaleString('en-US');
+
+        var fullPrice = sessions * rate.full + (included + extra) * FULL_REVIEW;
+        var pct = Math.round(savings / fullPrice * 100);
+
+        $('save-total-price').textContent = money(savings);
+        $('savings-note').textContent = pct + '% off compared to booking everything individually';
+
+        var weeks = sessions + PERIOD_PAD_WEEKS;
+        var start = parseLocalDate(startEl.value);
+        var periodEl = $('period-text');
+        if (start) {
+            var end = new Date(start.getTime());
+            end.setDate(end.getDate() + weeks * 7);
+            periodEl.innerHTML = '<strong>' + weeks + ' weeks</strong> to use the package. First session '
+                + fmtDate(start) + ' · expires <strong>' + fmtDate(end) + '</strong>.';
+        } else {
+            periodEl.innerHTML = '<strong>' + weeks + ' weeks</strong> to use the package, counted from your first session.';
+        }
+
+        syncStepperButtons(sessionsEl);
+        syncStepperButtons(reviewsEl);
+    }
+
+    document.querySelectorAll('button[data-step]').forEach(function (b) {
+        b.addEventListener('click', function () {
+            var el = $(b.dataset.step);
+            el.value = (parseInt(el.value, 10) || +el.min) + (+b.dataset.dir);
+            update(el === reviewsEl);
+        });
+    });
+
+    [sessionsEl, reviewsEl].forEach(function (el) {
+        el.addEventListener('input', function () {
+            if (el.value === '') return; // let the user clear the field mid-edit
+            update(el === reviewsEl);
+        });
+        el.addEventListener('blur', function () { update(el === reviewsEl); });
+    });
+    startEl.addEventListener('input', function () { update(false); });
+    startEl.addEventListener('change', function () { update(false); });
+    radios.forEach(function (r) { r.addEventListener('change', function () { update(false); }); });
+
+    update(false);
+})();
+</script>
+
+</body>
+</html>
