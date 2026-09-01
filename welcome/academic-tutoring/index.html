@@ -253,7 +253,8 @@
 
     .package-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: minmax(0, 420px);
+      justify-content: center;
       gap: 18px;
       margin-top: 4px;
       align-items: stretch;
@@ -481,26 +482,21 @@
       <div class="dinkus" aria-hidden="true"><svg viewBox="0 0 140 24"><g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"><g transform="translate(22,12) rotate(-8)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g><g transform="translate(70,12) rotate(5)"><path d="M-7 0 L7 0 M-3.5 -6.5 L3.5 6.5 M3.5 -6.5 L-3.5 6.5"/></g><g transform="translate(118,12) rotate(-3)"><path d="M-6 0 L6 0 M-3 -5.5 L3 5.5 M3 -5.5 L-3 5.5"/></g></g></svg></div>
       <div class="pkg-group-label">Packages</div>
       <div class="package-grid">
-        <div class="package-card">
-          <div class="pkg-name">Monthly</div>
-          <div class="pkg-price">$540</div>
-          <div class="pkg-unit">4 sessions</div>
-          <div class="pkg-rate">$135 / session</div>
-        </div>
         <div class="package-card featured">
-          <div class="pkg-name">Semester</div>
-          <div class="pkg-price">$1,920</div>
-          <div class="pkg-unit">16 sessions</div>
+          <div class="pkg-name">8-Session Package</div>
+          <div class="pkg-price">$960</div>
+          <div class="pkg-unit">8 sessions</div>
           <div class="pkg-rate">$120 / session</div>
-          <div class="pkg-extra">+ 4 async reviews included</div>
+          <div class="pkg-extra">+ 2 async essay reviews included</div>
         </div>
       </div>
       <div class="pkg-policies">
         <div class="pkg-policies-label">Package Terms</div>
         <ul>
-          <li><strong>Payment:</strong> Monthly and semester packages are paid in full upfront.</li>
-          <li><strong>Use-by window:</strong> Monthly packages are used within 6 weeks of purchase, semester packages within 20 weeks.</li>
+          <li><strong>Payment:</strong> Packages are paid in full upfront.</li>
+          <li><strong>Use-by window:</strong> Packages are used within 12 weeks of your first session.</li>
           <li><strong>Rescheduling:</strong> Reschedule sessions freely anytime within your package window.</li>
+          <li><strong>Additional reviews:</strong> Additional async essay reviews at $50 each.</li>
         </ul>
       </div>
     </section>
