@@ -125,10 +125,13 @@ https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,
   newsletter issues, the "Imposter Claims" deck) — never invented. When in doubt, use
   placeholder text and ask her to supply wording. She's an experienced teacher; do not
   add teaching suggestions.
-- Facts that must stay accurate: rates ($150/session Academic Tutoring, $180/session
+- Facts that must stay accurate: rates ($150/hr Academic Tutoring, $180/hr
   Application Essays — the $180 card was retired Aug 23 2026 and restored Aug 29 2026;
-  async review $75/$110/$100/$150), package rules (one package as of Aug 29 2026: 8
-  sessions booked in advance saves 20% and includes 2 async essay reviews; billed
+  async review $75/$110/$100/$150). Sessions are single hours — as of Sep 21 2026 every
+  rate reads "per hour"/"/hr" and package copy says "8 one-hour sessions" (site, packages
+  calculator, welcome packet, and bww-manager invoices/emails). Package rules (one package
+  as of Aug 29 2026: 8 one-hour sessions booked in advance saves 20% and includes 2 async
+  essay reviews; billed
   upfront; free rescheduling within the 12-week package period — expiry is N+4 weeks,
   matching the bww-manager app; additional async reviews $50 each), and payment
   methods. The College Essay Intensive ($1,400/$2,000 +

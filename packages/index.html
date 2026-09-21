@@ -454,7 +454,7 @@
 
                 <div class="controls">
                     <div class="field">
-                        <label class="type-label" for="sessions">Sessions</label>
+                        <label class="type-label" for="sessions">One-hour sessions</label>
                         <div class="stepper">
                             <button type="button" data-step="sessions" data-dir="-1" aria-label="Fewer sessions">&minus;</button>
                             <input type="number" id="sessions" min="8" max="60" step="1" value="8" inputmode="numeric" autocomplete="off">
@@ -479,8 +479,8 @@
 
                 <ul class="ledger" aria-live="polite">
                     <li>
-                        <span class="l-name" id="row-sessions-name">8 sessions</span>
-                        <span class="l-note" id="row-sessions-note">× $120</span>
+                        <span class="l-name" id="row-sessions-name">8 one-hour sessions</span>
+                        <span class="l-note" id="row-sessions-note">× $120/hr</span>
                         <span class="l-dots"></span>
                         <span class="l-price" id="row-sessions-price">$960</span>
                     </li>
@@ -610,8 +610,8 @@
         var savings = sessions * (rate.full - rate.pkg) + included * FULL_REVIEW + extra * (FULL_REVIEW - EXTRA_REVIEW);
 
 
-        $('row-sessions-name').textContent = plural(sessions, 'session');
-        $('row-sessions-note').textContent = '× ' + money(rate.pkg);
+        $('row-sessions-name').textContent = plural(sessions, 'one-hour session');
+        $('row-sessions-note').textContent = '× ' + money(rate.pkg) + '/hr';
         $('row-sessions-price').textContent = money(sessionsCost);
 
         $('row-included-name').textContent = plural(included, 'async essay review');
