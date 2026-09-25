@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Packages — Bonanno Writing Workshop</title>
-    <meta name="description" content="Custom tutoring packages at Bonanno Writing Workshop: build a package of sessions and async essay reviews and see the total.">
+    <meta name="description" content="Custom tutoring packages at Bonanno Writing Workshop: build a package of sessions and on-demand essay reviews and see the total.">
     <meta name="robots" content="noindex">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Custom Packages — Bonanno Writing Workshop">
-    <meta property="og:description" content="Build a package of sessions and async essay reviews and see the total.">
+    <meta property="og:description" content="Build a package of sessions and on-demand essay reviews and see the total.">
     <meta property="og:image" content="https://bonannoworkshop.com/og-image.png">
     <meta property="og:url" content="https://bonannoworkshop.com/packages">
 
@@ -485,7 +485,7 @@
                         <span class="l-price" id="row-sessions-price">$960</span>
                     </li>
                     <li>
-                        <span class="l-name" id="row-included-name">2 async essay reviews</span>
+                        <span class="l-name" id="row-included-name">2 on-demand essay reviews</span>
                         <span class="l-note" id="row-included-note">included · $150 value</span>
                         <span class="l-dots"></span>
                         <span class="l-price">$0</span>
@@ -614,7 +614,7 @@
         $('row-sessions-note').textContent = '× ' + money(rate.pkg) + '/hr';
         $('row-sessions-price').textContent = money(sessionsCost);
 
-        $('row-included-name').textContent = plural(included, 'async essay review');
+        $('row-included-name').textContent = plural(included, 'on-demand essay review');
         $('row-included-note').textContent = 'included · ' + money(included * FULL_REVIEW) + ' value';
 
         $('row-extra').hidden = extra === 0;
